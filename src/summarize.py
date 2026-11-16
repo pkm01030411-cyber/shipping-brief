@@ -249,10 +249,21 @@ def make_brief(client, cfg, articles: list[Article]) -> dict:
             f"서로 다른 주제로 고를 것.\n\n" + "\n\n".join(lines))
     brief = _call_tool(client, cfg, BRIEF_TOOL, user)
     valid = {a.id for a in articles}
-    brief["top"] = norm_refs(brief.get("top"), valid, scfg["top_n"], titles={a.title: a.id for a in articles})
-    if not brief["top"]:  # 그래도 비면 관련도 상위로 채움
-        brief["top"] = [{"id": a.id, "reason": "관련도 상위"} for a in
-                        sorted(articles, key=lambda a: -a.relevance)[: scfg["top_n"]]]
+    by_id = {a.id: a for a in articles}
+    raw_top = brief.get("top")
+    top = norm_refs(raw_top, valid, scfg["top_n"], titles={a.title: a.id for a in articles})
+    if len(top) < scfg["top_n"]:
+        log.warning("Top %d/%d만 인식됨 — 원본: %s", len(top), scfg["top_n"], str(raw_top)[:400].replace("\n", " "))
+        have = {t["id"] for t in top}
+        for a in sorted(articles, key=lambda a: -a.relevance):  # 모자라면 관련도 상위로 채움
+            if len(top) >= scfg["top_n"]:
+                break
+            if a.id not in have:
+                top.append({"id": a.id, "reason": ""}); have.add(a.id)
+    for t in top:  # 이유가 비면 기사의 '의미'로 대체
+        if not t["reason"]:
+            t["reason"] = by_id[t["id"]].why
+    brief["top"] = top
     brief["watch"] = [str(w) for w in (brief.get("watch") or []) if w]
     return brief
 
