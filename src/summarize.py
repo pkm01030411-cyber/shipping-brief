@@ -5,8 +5,10 @@ ANTHROPIC_API_KEY가 없으면 본문 첫 문단을 요약으로 쓰는 '오프�
 """
 from __future__ import annotations
 
+import json
 import logging
 import os
+import re
 
 from .common import Article, load_config, load_day, now_local, save_day, today_str
 
@@ -86,20 +88,46 @@ def _client():
     return anthropic.Anthropic()
 
 
+def _extract_json(text: str) -> dict | None:
+    """텍스트 응답에서 JSON 객체를 최대한 건져낸다 (```json ... ``` 또는 첫 { ~ 마지막 })."""
+    m = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", text, re.S)
+    cand = m.group(1) if m else None
+    if not cand:
+        s, e = text.find("{"), text.rfind("}")
+        cand = text[s:e + 1] if s != -1 and e > s else None
+    if not cand:
+        return None
+    try:
+        return json.loads(cand)
+    except json.JSONDecodeError:
+        return None
+
+
 def _call_tool(client, cfg, tool: dict, user_text: str) -> dict:
+    """구조화 출력. 일부 모델은 tool_choice 강제를 지원하지 않아 auto + 지시문으로 유도하고,
+    그래도 텍스트로 답하면 JSON을 파싱한다."""
     scfg = cfg["summarize"]
+    user_text += (f"\n\n반드시 `{tool['name']}` 도구를 호출해 결과를 제출하세요. "
+                  f"도구를 쓸 수 없다면 동일한 스키마의 JSON 객체만 ```json 블록으로 출력하세요.")
     resp = client.messages.create(
         model=scfg["model"],
         max_tokens=scfg["max_tokens"],
         system=SYSTEM,
         tools=[tool],
-        tool_choice={"type": "tool", "name": tool["name"]},
+        tool_choice={"type": "auto"},
         messages=[{"role": "user", "content": user_text}],
     )
+    texts = []
     for block in resp.content:
         if block.type == "tool_use" and block.name == tool["name"]:
             return block.input
-    raise RuntimeError("모델이 구조화 출력을 반환하지 않음")
+        if block.type == "text":
+            texts.append(block.text)
+    parsed = _extract_json("\n".join(texts))
+    if parsed is not None:
+        log.info("도구 호출 대신 텍스트 JSON 응답을 파싱함")
+        return parsed
+    raise RuntimeError("모델이 구조화 출력을 반환하지 않음: " + "\n".join(texts)[:300])
 
 
 def _interests_text(cfg) -> str:
