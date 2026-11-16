@@ -163,6 +163,19 @@ def norm_refs(items, valid: set[str], limit: int | None = None, reason_key: str 
     titles = {k.strip().lower(): v for k, v in (titles or {}).items()}  # title → id
     if isinstance(items, dict):
         items = [{"id": k, reason_key: v} for k, v in items.items()]
+    if isinstance(items, str):
+        # 도구 호출 포맷이 문자열로 새어 들어온 경우: <parameter name="id">ksg:1</parameter> ... 를 긁어낸다
+        params = re.findall(r'<parameter name="(\w+)">\s*(.*?)\s*(?:</parameter>|(?=<parameter)|(?=</item>)|$)', items, re.S)
+        parsed, cur = [], {}
+        for k, v in params:
+            if k == "id" and cur:
+                parsed.append(cur); cur = {}
+            cur[k] = v.strip()
+        if cur:
+            parsed.append(cur)
+        if not parsed:  # 그냥 id 나열
+            parsed = [{"id": m} for m in re.findall(r"[a-z]+:\d+", items)]
+        items = parsed
     for t in items or []:
         if isinstance(t, str):
             t = {"id": t, reason_key: ""}
