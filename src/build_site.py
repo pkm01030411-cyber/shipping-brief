@@ -86,8 +86,10 @@ def prepare_day(day: dict, cfg: dict) -> dict:
         sources[a["source_name"]] = sources.get(a["source_name"], 0) + 1
         source_keys[a["source"]] = a["source_name"]
     kw_counter = Counter(k for a in arts for k in a["kw"])
+    pubs = sorted(a["published"] for a in arts)
+    coverage = f"{fmt_time(pubs[0])} ~ {fmt_time(pubs[-1])} 기사" if pubs else ""
     return {**day, "articles": arts, "top": top, "rest": rest, "sources": sources,
-            "source_keys": list(source_keys.items()), "brief": brief,
+            "source_keys": list(source_keys.items()), "brief": brief, "coverage": coverage,
             "kw_counts": kw_counter.most_common(), "date_label": fmt_date(day["date"])}
 
 
@@ -138,7 +140,7 @@ def build() -> None:
     archive = []
     for d in days:
         day = load_day(d)
-        if not day:
+        if not day or not day.get("articles"):
             continue
         p = prepare_day(day, cfg)
         prepared[d] = p

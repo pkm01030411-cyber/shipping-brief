@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import logging
 
-from .common import (Article, Http, cutoff_time, known_urls, load_config,
+from .common import (Article, Http, cutoff_time, day_file, known_urls, load_config,
                      load_day, now_local, save_day, today_str)
 from .sources import cargonews, ksg
 
@@ -33,6 +33,13 @@ def run(date: str | None = None) -> dict:
             log.exception("%s 수집 중 오류: %s", key, e)
 
     articles.sort(key=lambda a: a.published, reverse=True)
+    if not articles:
+        # 새 기사가 없으면 빈 날짜를 만들지 않는다 (사이트는 최신 브리핑을 유지)
+        p = day_file(date)
+        if p.exists() and not (load_day(date) or {}).get("articles"):
+            p.unlink()
+        log.info("새 기사 없음 → data/%s.json 생성 안 함", date)
+        return {"date": date, "articles": [], "brief": {}}
     payload = {
         "date": date,
         "generated_at": now_local(cfg).isoformat(),
