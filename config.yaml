@@ -7,7 +7,26 @@ site:
   tagline: "코리아쉬핑가제트 · 카고뉴스 매일 10분 브리핑"
   timezone: "Asia/Seoul"
   # GitHub Pages 주소 (레포 이름에 맞게 수정) — 상대 경로만 쓰므로 비워 둬도 됩니다
-  base_url: ""
+  base_url: "https://pkm01030411-cyber.github.io/shipping-brief/"
+  short_name: "해운데일리"
+  # 관심 키워드 — 등장한 기사에 배지가 붙고, 상단에 "오늘 HMM 2건" 칩이 뜹니다. 자유롭게 수정.
+  highlight_keywords:
+    - "HMM"
+    - "ONE"
+    - "머스크"
+    - "MSC"
+    - "CMA CGM"
+    - "SCFI"
+    - "KCCI"
+    - "BDI"
+    - "북미항로"
+    - "유럽항로"
+    - "관세"
+    - "파업"
+    - "얼라이언스"
+    - "포워더"
+    - "북극항로"
+    - "러시아"
 
 collect:
   # 이 시간(시간 단위) 이내에 올라온 기사만 수집

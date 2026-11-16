@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% import "_article.html" as art %}
+{% block title %}#{{ tag }} · {{ site.title }}{% endblock %}
+{% block content %}
+<section class="brief-head">
+  <div class="dateline"><a href="{{ root }}tags.html" class="muted">← 모든 태그</a></div>
+  <h1 class="headline">#{{ tag }}</h1>
+  <p class="overview muted">{{ articles|length }}건 · {{ first_date }} ~ {{ last_date }}</p>
+</section>
+{% for date, group in by_date %}
+<section>
+  <h2 class="sec-title"><a href="{{ root }}day/{{ date }}.html">{{ date|fdate }}</a></h2>
+  <div class="cards">{% for a in group %}{{ art.card(a, root) }}{% endfor %}</div>
+</section>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,49 @@
+{# 기사 카드 매크로. mode: "top" (번호 큰 카드) | "card" (일반) #}
+{% macro attrs(a) -%}
+data-article="{{ a.id }}" data-title="{{ a.title }}" data-url="{{ a.url }}" data-source="{{ a.source }}"
+data-source-name="{{ a.source_name }}" data-date="{{ a.published[:10] }}" data-summary="{{ a.summary }}"
+data-tags="{{ a.tags|join('|') }}" data-low="{{ '1' if (a.relevance or 0) <= 2 else '0' }}"
+{%- endmacro %}
+
+{% macro kicker(a, root, show_rel=True) -%}
+<div class="kicker">
+  <span class="src">{{ a.source_name }}</span>{% if a.category %} · {{ a.category }}{% endif %} · {{ a.published|ftime }}
+  {% for kw in a.kw %}<span class="kw" title="관심 키워드">{{ kw }}</span>{% endfor %}
+  {% if show_rel and a.relevance %}<span class="rel" title="관련도 {{ a.relevance }}/5">{{ "●" * a.relevance }}{{ "○" * (5 - a.relevance) }}</span>{% endif %}
+</div>
+{%- endmacro %}
+
+{% macro actions() -%}
+<div class="actions">
+  <button class="btn-read" aria-pressed="false" title="읽음으로 표시"><span class="chk"></span></button>
+  <button class="btn-star" aria-pressed="false" title="스크랩">☆</button>
+</div>
+{%- endmacro %}
+
+{% macro tags(a, root) -%}
+{% if a.tags %}<div class="tags">{% for t in a.tags %}<a class="tag" href="{{ root }}tag/{{ t|tagslug }}.html">{{ t }}</a>{% endfor %}</div>{% endif %}
+{%- endmacro %}
+
+{% macro top_item(a, n, root) -%}
+<li class="top-item" {{ attrs(a) }}>
+  <div class="top-num">{{ n }}</div>
+  <div class="top-body">
+    {{ kicker(a, root, show_rel=False) }}
+    <h3><a class="origin-link" href="{{ a.url }}" target="_blank" rel="noopener">{{ a.title }}</a></h3>
+    {% if a.subtitle %}<p class="subtitle">{{ a.subtitle }}</p>{% endif %}
+    <p class="summary">{{ a.summary }}</p>
+    {% if a.reason %}<p class="reason"><b>왜 지금</b> {{ a.reason }}</p>{% elif a.why %}<p class="reason"><b>의미</b> {{ a.why }}</p>{% endif %}
+    <div class="card-foot">{{ tags(a, root) }}{{ actions() }}</div>
+  </div>
+</li>
+{%- endmacro %}
+
+{% macro card(a, root, show_date=False) -%}
+<article class="card rel-{{ a.relevance or 0 }}" {{ attrs(a) }}>
+  {{ kicker(a, root) }}
+  <h3><a class="origin-link" href="{{ a.url }}" target="_blank" rel="noopener">{{ a.title }}</a></h3>
+  <p class="summary">{{ a.summary }}</p>
+  {% if a.why %}<p class="why">{{ a.why }}</p>{% endif %}
+  <div class="card-foot">{{ tags(a, root) }}{{ actions() }}</div>
+</article>
+{%- endmacro %}
