@@ -1,0 +1,60 @@
+# ─────────────────────────────────────────────
+#  해운물류 데일리 브리핑 설정
+# ─────────────────────────────────────────────
+
+site:
+  title: "해운물류 데일리"
+  tagline: "코리아쉬핑가제트 · 카고뉴스 매일 10분 브리핑"
+  timezone: "Asia/Seoul"
+  # GitHub Pages 주소 (레포 이름에 맞게 수정) — 상대 경로만 쓰므로 비워 둬도 됩니다
+  base_url: ""
+
+collect:
+  # 이 시간(시간 단위) 이내에 올라온 기사만 수집
+  window_hours: 30
+  # 소스별 최대 기사 수 (비용 상한)
+  max_per_source: 25
+  # 요청 간 대기 (초) — 사이트에 부담 주지 않기
+  delay_seconds: 0.7
+  user_agent: "Mozilla/5.0 (compatible; ShippingBriefBot/1.0; personal daily-reading bot)"
+
+sources:
+  ksg:
+    enabled: true
+    name: "코리아쉬핑가제트"
+    # 수집할 카테고리 (코드: 이름). 라이프/연재소설/인사 등은 제외
+    categories:
+      LPG: "해운"
+      XHJ: "물류"
+      RKC: "항만"
+      ZFX: "무역"
+      WMS: "항공"
+      WVE: "조선"
+    pages_per_category: 2
+  cargonews:
+    enabled: true
+    name: "카고뉴스"
+    rss: "https://www.cargonews.co.kr/rss/allArticle.xml"
+    # 제외할 섹션 (동정/인사/행사 등). 기사 제목·링크로 판단이 어려워 키워드로 거릅니다
+    skip_title_keywords: ["부고", "인사]", "[인사", "동정"]
+
+summarize:
+  model: "claude-sonnet-5-5"
+  max_tokens: 8000
+  # 한 번의 API 호출에 넣을 기사 수
+  batch_size: 12
+  # 기사 본문을 이 글자 수까지만 모델에 전달 (비용 관리)
+  body_chars: 2500
+  # 관심사 — 관련도 점수와 Top 3 선정에 반영됩니다. 자유롭게 수정하세요.
+  interests:
+    - "컨테이너 정기선사 (ONE, HMM, 머스크, MSC, CMA CGM, 코스코 등)와 얼라이언스 동향"
+    - "해상 운임 지수 (SCFI, KCCI, BDI 등)와 운임 전망"
+    - "포워더·국제물류주선업, 복합운송"
+    - "선복·스케줄·항로 개편, 북미·유럽·아시아역내 항로"
+    - "항만 운영, 파업, 공급망 차질"
+    - "관세·무역정책이 물동량에 미치는 영향"
+    - "러시아·중앙아시아·북극항로 등 유라시아 물류"
+  # 요약 후 기사 본문을 data/*.json에 남길지 (false 권장: 저작권·저장소 용량)
+  keep_body: false
+  # 관심사에서 멀어도 '꼭 알아야 할 큰 뉴스'는 모델이 알아서 올립니다
+  top_n: 3

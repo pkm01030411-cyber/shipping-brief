@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}지난 브리핑 · {{ site.title }}{% endblock %}
+{% block content %}
+<section class="brief-head">
+  <h1 class="headline">지난 브리핑</h1>
+  <p class="overview muted">{{ archive|length }}일치</p>
+</section>
+<ul class="archive">
+  {% for d in archive %}
+  <li>
+    <a href="{{ root }}day/{{ d.date }}.html">
+      <span class="arch-date">{{ d.label }}</span>
+      <span class="arch-head">{{ d.headline or "브리핑" }}</span>
+      <span class="arch-count">{{ d.count }}건</span>
+    </a>
+  </li>
+  {% else %}
+  <li class="muted">아직 수집된 브리핑이 없습니다.</li>
+  {% endfor %}
+</ul>
+{% endblock %}

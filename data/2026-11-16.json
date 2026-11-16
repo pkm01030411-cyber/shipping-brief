@@ -1,0 +1,208 @@
+{
+  "date": "2026-11-16",
+  "generated_at": "2026-11-16T22:40:00+09:00",
+  "brief": {
+    "headline": "항만 노사 갈등 확산, 한→미 물동량은 견조",
+    "overview": "유럽 항만 파업과 LA·롱비치 경비직 협상이 겹치며 공급망 리스크가 다시 부각됐다. 반면 1~10월 한국발 미국향 컨테이너 물동량은 3.8% 늘어 수요 자체는 아직 탄탄하다. 중국 산둥머린의 인천-르자오 직항 신설과 페덱스 광저우 허브 가동처럼 중국발 네트워크 확장도 눈에 띈다. 포워더 업계에선 CH로빈슨의 AI 에이전트 도입이 업무 방식 변화를 예고한다.",
+    "top": [
+      {
+        "id": "ksg:148502",
+        "reason": "20일 협상 시한을 앞두고 서안 항만 전면 중단 가능성이 열려 있어 북미 노선 화주·포워더에게 가장 직접적인 변수다."
+      },
+      {
+        "id": "cargonews:61242",
+        "reason": "관세 불확실성에도 한국발 미국향 물량이 늘었다는 점은 북미 항로 수요를 판단하는 기준 데이터다."
+      },
+      {
+        "id": "cargonews:61243",
+        "reason": "글로벌 대형 포워더가 운송·통관 업무에 AI 에이전트를 투입한 사례로, 포워더 직무의 미래를 보여준다."
+      }
+    ],
+    "watch": [
+      "11월 20일 PMA-ILWU 26지부 협상 시한과 연대 파업 여부",
+      "스페인 CGT 총파업 이후 유럽 내륙 운송 정상화 속도",
+      "북미 항로 11~12월 운임(SCFI 미서안)의 방향"
+    ],
+    "model": "claude-sonnet-5-5",
+    "summarized_at": "2026-11-16T22:41:00+09:00"
+  },
+  "articles": [
+    {
+      "id": "ksg:148502",
+      "source": "ksg",
+      "source_name": "코리아쉬핑가제트",
+      "title": "유럽·북미 항만 노사 갈등 표면화…물류 차질 우려",
+      "url": "https://www.ksg.co.kr/news/main_newsView.jsp?pNum=148502",
+      "published": "2026-11-16T09:07:00+09:00",
+      "category": "해운",
+      "subtitle": "LA·롱비치항 협상 장기화…20일까지 연장",
+      "author": "박한솔 기자",
+      "body": "",
+      "summary": "10월 30일 유럽 22개국 115개 항만이 참여한 공동행동 이후 프랑스·이탈리아·그리스 항만에서 24시간 파업이 이어졌고, 함부르크항 운영사 HHLA는 올해 영업이익 전망을 1억~1억2천만유로로 낮췄다. 미국 LA·롱비치항에서는 경비직 노조(ILWU 26지부)와 PMA가 단체협약을 11월 20일까지 연장했지만, 파업 시 하역·사무직이 연대해 터미널이 멈출 수 있다는 우려가 나온다.",
+      "why": "북미 서안 항만이 멈추면 한국발 수출 화물의 우회·지연이 즉시 발생하므로 포워더 실무에서 가장 먼저 체크해야 할 리스크다.",
+      "tags": [
+        "항만파업",
+        "LA·롱비치",
+        "ILWU",
+        "공급망"
+      ],
+      "relevance": 5
+    },
+    {
+      "id": "cargonews:61242",
+      "source": "cargonews",
+      "source_name": "카고뉴스",
+      "title": "韓→美 ‘컨’ 204만TEU로 3.8% 증가",
+      "url": "https://www.cargonews.co.kr/news/articleView.html?idxno=61242",
+      "published": "2026-11-16T08:34:04+09:00",
+      "category": "해운",
+      "subtitle": "",
+      "author": "김종휘 기자",
+      "body": "",
+      "summary": "데카르트 데이터마인 집계 기준 1~10월 미국 수입 컨테이너 물동량은 2,419만TEU로 전년 대비 2.3% 늘었고, 아시아발은 1,761만TEU(+3.6%)였다. 한국발 미국향 물동량은 204만TEU로 3.8% 증가해 아시아발 전체의 11.6%를 차지했다.",
+      "why": "관세 변수 속에서도 한국발 북미 수요가 유지되고 있다는 것은 선사 선복 배정과 운임 협상의 기초 데이터가 된다.",
+      "tags": [
+        "북미항로",
+        "물동량",
+        "TEU"
+      ],
+      "relevance": 5
+    },
+    {
+      "id": "cargonews:61243",
+      "source": "cargonews",
+      "source_name": "카고뉴스",
+      "title": "CH로빈슨, 포워딩업무에 ‘린AI’ 도입",
+      "url": "https://www.cargonews.co.kr/news/articleView.html?idxno=61243",
+      "published": "2026-11-16T14:51:54+09:00",
+      "category": "물류",
+      "subtitle": "",
+      "author": "임조은 기자",
+      "body": "",
+      "summary": "미국 CH로빈슨이 해상·항공 운송과 통관 주선 업무를 수행하는 AI 에이전트를 도입했다. 단일 배송에 10여 개 에이전트가 협력하는 구조로, 인간 감독을 유지하면서 처리 속도와 정밀성을 높이겠다는 계획이다.",
+      "why": "포워더 핵심 업무가 자동화되는 흐름에서 '어떤 역량이 남는가'를 취준생이 미리 고민하게 만드는 사례다.",
+      "tags": [
+        "CH로빈슨",
+        "포워더",
+        "AI"
+      ],
+      "relevance": 4
+    },
+    {
+      "id": "ksg:148481",
+      "source": "ksg",
+      "source_name": "코리아쉬핑가제트",
+      "title": "中 산둥머린, 인천-르자오 직항로 신설",
+      "url": "https://www.ksg.co.kr/news/main_newsView.jsp?pNum=148481",
+      "published": "2026-11-16T09:08:00+09:00",
+      "category": "항만",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "인천항만공사에 따르면 중국 산둥머린이 인천과 르자오(日照)를 잇는 컨테이너 직항 노선을 새로 개설했다. 한중 항로 서비스가 하나 늘어난 셈이다.",
+      "why": "아시아역내 항로의 선복 추가는 한중 간 운임과 스케줄 선택지에 바로 영향을 준다.",
+      "tags": [
+        "한중항로",
+        "인천항",
+        "신규항로"
+      ],
+      "relevance": 4
+    },
+    {
+      "id": "cargonews:61245",
+      "source": "cargonews",
+      "source_name": "카고뉴스",
+      "title": "페덱스, 광저우 터미널 본격 운영",
+      "url": "https://www.cargonews.co.kr/news/articleView.html?idxno=61245",
+      "published": "2026-11-16T17:42:06+09:00",
+      "category": "항공",
+      "subtitle": "",
+      "author": "김시오 편집장",
+      "body": "",
+      "summary": "페덱스가 16일부터 중국 광저우공항에 4만5천㎡ 규모의 제4국제화물터미널 운영을 시작했다. 시간당 최대 2만8천건 분류가 가능해 연간 처리능력이 10만t을 넘는다.",
+      "why": "중국 남부발 항공특송 허브가 커지면 한국 경유 환적 수요에도 간접 영향이 있다.",
+      "tags": [
+        "페덱스",
+        "항공화물",
+        "광저우"
+      ],
+      "relevance": 3
+    },
+    {
+      "id": "ksg:148511",
+      "source": "ksg",
+      "source_name": "코리아쉬핑가제트",
+      "title": "CJ대한통운, 창립 96주년…수익구조 개선 박차",
+      "url": "https://www.ksg.co.kr/news/main_newsView.jsp?pNum=148511",
+      "published": "2026-11-16T14:17:00+09:00",
+      "category": "물류",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "CJ대한통운이 창립 96주년을 맞아 사업별 경쟁력 강화와 수익구조 개선을 강조했다. 3분기 매출은 전년 대비 9% 증가했다.",
+      "why": "국내 최대 종합물류사의 방향성은 국내 물류 취업 시장 분위기를 가늠하는 지표다.",
+      "tags": [
+        "CJ대한통운",
+        "실적"
+      ],
+      "relevance": 3
+    },
+    {
+      "id": "cargonews:61244",
+      "source": "cargonews",
+      "source_name": "카고뉴스",
+      "title": "KMI, 중장기 연구 방향 강화 논의",
+      "url": "https://www.cargonews.co.kr/news/articleView.html?idxno=61244",
+      "published": "2026-11-16T17:16:15+09:00",
+      "category": "정책",
+      "subtitle": "",
+      "author": "김종휘 기자",
+      "body": "",
+      "summary": "한국해양수산개발원이 하반기 정책자문위원회를 열고 2025~2028 중장기 연구 추진방향과 올해 성과를 공유했다.",
+      "why": "KMI 보고서는 업계 분석의 기본 자료라 연구 방향 변화는 참고할 만하다.",
+      "tags": [
+        "KMI",
+        "정책"
+      ],
+      "relevance": 2
+    },
+    {
+      "id": "ksg:148506",
+      "source": "ksg",
+      "source_name": "코리아쉬핑가제트",
+      "title": "[표] 주간 중고선 가격동향",
+      "url": "https://www.ksg.co.kr/news/main_newsView.jsp?pNum=148506",
+      "published": "2026-11-16T14:25:00+09:00",
+      "category": "해운",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "선종·선령별 주간 중고선 가격을 정리한 표 기사다.",
+      "why": "",
+      "tags": [
+        "중고선",
+        "선가"
+      ],
+      "relevance": 1
+    },
+    {
+      "id": "cargonews:61241",
+      "source": "cargonews",
+      "source_name": "카고뉴스",
+      "title": "DHL, 13년 연속 소셜미디어 대상",
+      "url": "https://www.cargonews.co.kr/news/articleView.html?idxno=61241",
+      "published": "2026-11-16T08:30:00+09:00",
+      "category": "동정",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "DHL코리아가 대한민국소통어워즈에서 운송·물류 부문 소셜미디어 대상을 13년 연속 수상했다.",
+      "why": "",
+      "tags": [
+        "DHL",
+        "수상"
+      ],
+      "relevance": 1
+    }
+  ]
+}

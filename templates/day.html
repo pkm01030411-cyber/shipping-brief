@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}{{ day.date_label }} · {{ site.title }}{% endblock %}
+{% block content %}
+{% set b = day.brief %}
+<section class="brief-head">
+  <div class="dateline">
+    <span class="date">{{ day.date_label }}</span>
+    <span class="meta">
+      {% for name, n in day.sources.items() %}<span class="src-pill">{{ name }} {{ n }}</span>{% endfor %}
+      <span class="muted">총 {{ day.articles|length }}건 · 약 {{ (3 + day.articles|length * 0.25)|round|int }}분</span>
+    </span>
+  </div>
+  {% if b.headline %}<h1 class="headline">{{ b.headline }}</h1>{% endif %}
+  {% if b.overview %}<p class="overview">{{ b.overview }}</p>{% endif %}
+  {% if b.offline %}<p class="notice">⚠ API 키 없이 생성된 브리핑입니다 (AI 요약 없음).</p>{% endif %}
+</section>
+
+{% if day.top %}
+<section class="top">
+  <h2 class="sec-title">오늘 꼭 읽을 {{ day.top|length }}건</h2>
+  <ol class="top-list">
+    {% for a in day.top %}
+    <li class="top-item">
+      <div class="top-num">{{ loop.index }}</div>
+      <div class="top-body">
+        <div class="kicker"><span class="src">{{ a.source_name }}</span>{% if a.category %} · {{ a.category }}{% endif %} · {{ a.published|ftime }}</div>
+        <h3><a href="{{ a.url }}" target="_blank" rel="noopener">{{ a.title }}</a></h3>
+        {% if a.subtitle %}<p class="subtitle">{{ a.subtitle }}</p>{% endif %}
+        <p class="summary">{{ a.summary }}</p>
+        {% if a.reason %}<p class="reason"><b>왜 지금</b> {{ a.reason }}</p>{% elif a.why %}<p class="reason"><b>의미</b> {{ a.why }}</p>{% endif %}
+        {% if a.tags %}<div class="tags">{% for t in a.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+{% endif %}
+
+{% if b.watch %}
+<section class="watch">
+  <h2 class="sec-title">지켜볼 포인트</h2>
+  <ul>{% for w in b.watch %}<li>{{ w }}</li>{% endfor %}</ul>
+</section>
+{% endif %}
+
+{% if day.rest %}
+<section class="rest">
+  <h2 class="sec-title">나머지 기사 <span class="muted">관련도순</span></h2>
+  <div class="cards">
+    {% for a in day.rest %}
+    <article class="card rel-{{ a.relevance or 0 }}">
+      <div class="kicker">
+        <span class="src">{{ a.source_name }}</span>{% if a.category %} · {{ a.category }}{% endif %} · {{ a.published|ftime }}
+        {% if a.relevance %}<span class="rel" title="관련도 {{ a.relevance }}/5">{{ "●" * a.relevance }}{{ "○" * (5 - a.relevance) }}</span>{% endif %}
+      </div>
+      <h3><a href="{{ a.url }}" target="_blank" rel="noopener">{{ a.title }}</a></h3>
+      <p class="summary">{{ a.summary }}</p>
+      {% if a.why %}<p class="why">{{ a.why }}</p>{% endif %}
+      {% if a.tags %}<div class="tags">{% for t in a.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>{% endif %}
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<nav class="pager">
+  {% if prev %}<a href="{{ root }}day/{{ prev }}.html">← {{ prev }}</a>{% else %}<span></span>{% endif %}
+  <a href="{{ root }}archive.html">전체 목록</a>
+  {% if next %}<a href="{{ root }}day/{{ next }}.html">{{ next }} →</a>{% else %}<span></span>{% endif %}
+</nav>
+{% endblock %}
