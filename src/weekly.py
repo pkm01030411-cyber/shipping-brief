@@ -13,7 +13,7 @@ from datetime import timedelta
 from pathlib import Path
 
 from .common import DATA_DIR, Article, all_days, load_config, load_day, now_local, today_str
-from .summarize import SYSTEM, _call_tool, _client
+from .summarize import SYSTEM, _call_tool, _client, norm_refs
 
 log = logging.getLogger("brief.weekly")
 WEEKLY_DIR = DATA_DIR / "weekly"
@@ -123,9 +123,18 @@ def run(end_date: str | None = None, only_monday: bool = False) -> dict | None:
                 f"themes의 article_ids와 top의 id는 반드시 아래 목록의 id만 사용할 것.\n\n" + "\n".join(lines))
         review = _call_tool(client, cfg, WEEKLY_TOOL, user)
         valid = {a["id"] for a in arts}
-        review["top"] = [t for t in review.get("top", []) if t.get("id") in valid][:5]
-        for t in review.get("themes", []):
-            t["article_ids"] = [i for i in t.get("article_ids", []) if i in valid]
+        review["top"] = norm_refs(review.get("top"), valid, 5)
+        themes = []
+        for t in review.get("themes") or []:
+            if not isinstance(t, dict):
+                continue
+            ids = t.get("article_ids") or []
+            if isinstance(ids, str):
+                ids = [ids]
+            themes.append({"title": str(t.get("title", "")), "body": str(t.get("body", "")),
+                           "article_ids": [i for i in ids if i in valid]})
+        review["themes"] = themes
+        review["questions"] = [str(q) for q in (review.get("questions") or []) if q]
         review["model"] = cfg["summarize"]["model"]
 
     tag_counts = Counter(t for a in arts for t in a.get("tags", []))

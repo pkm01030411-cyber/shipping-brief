@@ -155,6 +155,23 @@ def _call_tool(client, cfg, tool: dict, user_text: str) -> dict:
     raise RuntimeError("모델이 구조화 출력을 반환하지 않음: " + "\n".join(texts)[:300])
 
 
+def norm_refs(items, valid: set[str], limit: int | None = None, reason_key: str = "reason") -> list[dict]:
+    """모델이 [{'id','reason'}] 대신 ['id', ...] 또는 {'id': 'reason'} 형태로 줘도 받아준다."""
+    out, seen = [], set()
+    if isinstance(items, dict):
+        items = [{"id": k, reason_key: v} for k, v in items.items()]
+    for t in items or []:
+        if isinstance(t, str):
+            t = {"id": t, reason_key: ""}
+        if not isinstance(t, dict):
+            continue
+        i = str(t.get("id", "")).strip()
+        if i in valid and i not in seen:
+            seen.add(i)
+            out.append({"id": i, reason_key: str(t.get(reason_key, "") or "").strip()})
+    return out[:limit] if limit else out
+
+
 def _interests_text(cfg) -> str:
     return "\n".join(f"- {i}" for i in cfg["summarize"]["interests"])
 
@@ -182,8 +199,14 @@ def summarize_articles(client, cfg, articles: list[Article]) -> None:
             a.summary = item.get("summary", "").strip()
             a.why = item.get("why", "").strip()
             a.insight = (item.get("insight") or "").strip()
-            a.terms = [{"term": t.get("term", "").strip(), "explanation": t.get("explanation", "").strip()}
-                       for t in (item.get("terms") or []) if isinstance(t, dict) and t.get("term")][:3]
+            terms = []
+            for t in (item.get("terms") or []):
+                if isinstance(t, dict) and t.get("term"):
+                    terms.append({"term": str(t["term"]).strip(), "explanation": str(t.get("explanation", "")).strip()})
+                elif isinstance(t, str) and ":" in t:
+                    k, v = t.split(":", 1)
+                    terms.append({"term": k.strip(), "explanation": v.strip()})
+            a.terms = terms[:3]
             a.tags = [t.strip() for t in item.get("tags", []) if t.strip()][:4]
             a.relevance = max(1, min(5, int(item.get("relevance", 3))))
         for a in batch:
@@ -204,7 +227,8 @@ def make_brief(client, cfg, articles: list[Article]) -> dict:
             f"서로 다른 주제로 고를 것.\n\n" + "\n\n".join(lines))
     brief = _call_tool(client, cfg, BRIEF_TOOL, user)
     valid = {a.id for a in articles}
-    brief["top"] = [t for t in brief.get("top", []) if t.get("id") in valid][: scfg["top_n"]]
+    brief["top"] = norm_refs(brief.get("top"), valid, scfg["top_n"])
+    brief["watch"] = [str(w) for w in (brief.get("watch") or []) if w]
     return brief
 
 
