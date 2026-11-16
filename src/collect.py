@@ -51,6 +51,28 @@ def run(date: str | None = None) -> dict:
     return payload
 
 
+def refetch_bodies(articles: list[Article]) -> int:
+    """본문이 비어 있는 기사(저장 시 지운 것)를 원문 URL에서 다시 가져온다. 재요약용."""
+    cfg = load_config()
+    http = Http(cfg)
+    n = 0
+    for a in articles:
+        if a.body:
+            continue
+        mod = SOURCES.get(a.source)
+        if not mod:
+            continue
+        try:
+            detail = mod.parse_article(http.get(a.url).text, cfg)
+            if detail.get("body"):
+                a.body = detail["body"]
+                n += 1
+        except Exception as e:  # noqa: BLE001
+            log.warning("본문 재수집 실패 %s: %s", a.url, e)
+    log.info("본문 재수집: %d건", n)
+    return n
+
+
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     run()

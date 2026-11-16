@@ -286,6 +286,9 @@ def run(date: str | None = None, force: bool = False) -> dict:
     if force:
         for a in articles:
             a.summary = ""
+        if any(not a.body for a in articles):
+            from .collect import refetch_bodies  # 저장 시 지운 본문을 원문에서 다시 가져옴
+            refetch_bodies(articles)
 
     client = _client()
     if client is None:
