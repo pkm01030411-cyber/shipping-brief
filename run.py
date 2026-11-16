@@ -31,7 +31,15 @@ def main() -> int:
         if not args.skip_collect:
             collect.run(args.date)
         if not args.skip_summarize:
-            summarize.run(args.date, force=args.resummarize)
+            target = args.date
+            if args.resummarize and not target:
+                # 오늘 파일이 없으면(새 기사 0건) 가장 최근 브리핑을 다시 요약
+                from src.common import all_days, load_day, today_str, load_config
+                today = today_str(load_config())
+                if not (load_day(today) or {}).get("articles"):
+                    days = all_days()
+                    target = days[0] if days else None
+            summarize.run(target, force=args.resummarize)
         if args.weekly:
             weekly.run(args.date)
         elif args.weekly_if_monday:
