@@ -123,7 +123,8 @@ def run(end_date: str | None = None, only_monday: bool = False) -> dict | None:
                 f"themes의 article_ids와 top의 id는 반드시 아래 목록의 id만 사용할 것.\n\n" + "\n".join(lines))
         review = _call_tool(client, cfg, WEEKLY_TOOL, user)
         valid = {a["id"] for a in arts}
-        review["top"] = norm_refs(review.get("top"), valid, 5)
+        titles = {a["title"]: a["id"] for a in arts}
+        review["top"] = norm_refs(review.get("top"), valid, 5, titles=titles)
         themes = []
         for t in review.get("themes") or []:
             if not isinstance(t, dict):
@@ -132,7 +133,7 @@ def run(end_date: str | None = None, only_monday: bool = False) -> dict | None:
             if isinstance(ids, str):
                 ids = [ids]
             themes.append({"title": str(t.get("title", "")), "body": str(t.get("body", "")),
-                           "article_ids": [i for i in ids if i in valid]})
+                           "article_ids": [r["id"] for r in norm_refs(list(ids), valid, titles=titles)]})
         review["themes"] = themes
         review["questions"] = [str(q) for q in (review.get("questions") or []) if q]
         review["model"] = cfg["summarize"]["model"]

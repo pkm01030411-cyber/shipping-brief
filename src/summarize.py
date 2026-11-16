@@ -27,7 +27,8 @@ SYSTEM = """당신은 해운·물류 전문지를 매일 읽고 핵심만 추려
 - 인사·동정·수상·행사 소식은 relevance 1~2.
 
 용어 해설(terms):
-- 기사에 나온 업계 용어·약어·제도 중 취준생이 모를 법한 것을 0~3개. 각각 한 문장(40자 내외)으로 실무 맥락까지.
+- 기사에 나온 업계 용어·약어·제도·지표·기업 유형 중 취준생이 정확히 설명 못 할 법한 것을 1~3개. 각각 한 문장(40자 내외)으로 실무 맥락까지.
+  기사에 그런 용어가 정말 하나도 없을 때만 빈 배열. 예: 3PL, 포워더, 환적, 선복, 얼라이언스, BAF, D/O, 복합운송, 풀필먼트, 항만배후단지, 터미널 운영사(TOC)도 대상.
   예) "PSS(성수기 부가료): 선사가 성수기 수요 증가를 이유로 기본 운임에 얹는 추가 요금. 화주는 보통 2~4주 전 공지를 받는다."
 - TEU, 컨테이너처럼 누구나 아는 말은 넣지 말 것. 기사에 없는 용어도 넣지 말 것.
 - 같은 날 다른 기사에서 이미 나왔을 법한 기본 용어는 가장 관련 깊은 기사 하나에만.
@@ -155,9 +156,11 @@ def _call_tool(client, cfg, tool: dict, user_text: str) -> dict:
     raise RuntimeError("모델이 구조화 출력을 반환하지 않음: " + "\n".join(texts)[:300])
 
 
-def norm_refs(items, valid: set[str], limit: int | None = None, reason_key: str = "reason") -> list[dict]:
-    """모델이 [{'id','reason'}] 대신 ['id', ...] 또는 {'id': 'reason'} 형태로 줘도 받아준다."""
+def norm_refs(items, valid: set[str], limit: int | None = None, reason_key: str = "reason",
+              titles: dict[str, str] | None = None) -> list[dict]:
+    """모델이 [{'id','reason'}] 대신 ['id', ...], {'id': 'reason'}, 대괄호 붙은 id, 제목 등으로 줘도 받아준다."""
     out, seen = [], set()
+    titles = {k.strip().lower(): v for k, v in (titles or {}).items()}  # title → id
     if isinstance(items, dict):
         items = [{"id": k, reason_key: v} for k, v in items.items()]
     for t in items or []:
@@ -165,10 +168,16 @@ def norm_refs(items, valid: set[str], limit: int | None = None, reason_key: str 
             t = {"id": t, reason_key: ""}
         if not isinstance(t, dict):
             continue
-        i = str(t.get("id", "")).strip()
-        if i in valid and i not in seen:
+        raw = str(t.get("id") or t.get("article_id") or t.get("title") or "").strip().strip("[]")
+        i = raw if raw in valid else None
+        if i is None:  # 'ksg:148502' 없이 숫자만 왔거나 제목을 준 경우
+            cands = [v for v in valid if v.endswith(":" + raw)]
+            i = cands[0] if len(cands) == 1 else titles.get(raw.lower())
+        if i and i not in seen:
             seen.add(i)
             out.append({"id": i, reason_key: str(t.get(reason_key, "") or "").strip()})
+    if not out and items:
+        log.warning("참조 정규화 실패 — 원본: %s", str(items)[:300])
     return out[:limit] if limit else out
 
 
@@ -227,7 +236,10 @@ def make_brief(client, cfg, articles: list[Article]) -> dict:
             f"서로 다른 주제로 고를 것.\n\n" + "\n\n".join(lines))
     brief = _call_tool(client, cfg, BRIEF_TOOL, user)
     valid = {a.id for a in articles}
-    brief["top"] = norm_refs(brief.get("top"), valid, scfg["top_n"])
+    brief["top"] = norm_refs(brief.get("top"), valid, scfg["top_n"], titles={a.title: a.id for a in articles})
+    if not brief["top"]:  # 그래도 비면 관련도 상위로 채움
+        brief["top"] = [{"id": a.id, "reason": "관련도 상위"} for a in
+                        sorted(articles, key=lambda a: -a.relevance)[: scfg["top_n"]]]
     brief["watch"] = [str(w) for w in (brief.get("watch") or []) if w]
     return brief
 
