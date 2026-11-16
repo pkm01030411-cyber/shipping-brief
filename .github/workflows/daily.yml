@@ -2,12 +2,16 @@ name: Daily shipping brief
 
 on:
   schedule:
-    # 매일 07:00 KST (= 22:00 UTC 전날). GitHub cron은 UTC 기준.
-    - cron: "0 22 * * *"
+    # 매일 18:30 KST (= 09:30 UTC). GitHub cron은 UTC 기준. 그날 낮에 올라온 기사를 저녁에 브리핑.
+    - cron: "30 9 * * *"
   workflow_dispatch:        # Actions 탭에서 수동 실행 버튼
     inputs:
       weekly:
         description: "주간 리뷰도 지금 생성 (지난 7일)"
+        type: boolean
+        default: false
+      resummarize:
+        description: "오늘 기사 요약을 처음부터 다시 (프롬프트 변경 후)"
         type: boolean
         default: false
 
@@ -37,11 +41,10 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          if [ "${{ inputs.weekly }}" = "true" ]; then
-            python run.py --weekly
-          else
-            python run.py --weekly-if-monday
-          fi
+          FLAGS="--weekly-if-monday"
+          [ "${{ inputs.weekly }}" = "true" ] && FLAGS="--weekly"
+          [ "${{ inputs.resummarize }}" = "true" ] && FLAGS="$FLAGS --resummarize"
+          python run.py $FLAGS
 
       - name: Commit data
         run: |

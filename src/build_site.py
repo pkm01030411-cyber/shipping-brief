@@ -86,10 +86,18 @@ def prepare_day(day: dict, cfg: dict) -> dict:
         sources[a["source_name"]] = sources.get(a["source_name"], 0) + 1
         source_keys[a["source"]] = a["source_name"]
     kw_counter = Counter(k for a in arts for k in a["kw"])
+    # 오늘의 용어: 기사별 terms를 모아 중복 제거 (관련도 높은 기사 우선)
+    glossary, seen_terms = [], set()
+    for a in sorted(arts, key=lambda x: -(x.get("relevance") or 0)):
+        for t in a.get("terms", []) or []:
+            key = re.sub(r"[\s()（）]", "", t["term"].split("(")[0]).lower()
+            if key and key not in seen_terms:
+                seen_terms.add(key)
+                glossary.append({**t, "url": a["url"], "title": a["title"]})
     pubs = sorted(a["published"] for a in arts)
     coverage = f"{fmt_time(pubs[0])} ~ {fmt_time(pubs[-1])} 기사" if pubs else ""
     return {**day, "articles": arts, "top": top, "rest": rest, "sources": sources,
-            "source_keys": list(source_keys.items()), "brief": brief, "coverage": coverage,
+            "source_keys": list(source_keys.items()), "brief": brief, "coverage": coverage, "glossary": glossary,
             "kw_counts": kw_counter.most_common(), "date_label": fmt_date(day["date"])}
 
 
@@ -155,12 +163,13 @@ def build() -> None:
         html = day_tpl.render(site=site, day=prepared[d], prev=prev_d, next=next_d, root="../", nav="today")
         (SITE_DIR / "day" / f"{d}.html").write_text(html, encoding="utf-8")
 
+    # 오늘 = 가장 최근 날짜
     if days:
         html = day_tpl.render(site=site, day=prepared[days[0]], prev=days[1] if len(days) > 1 else None,
                               next=None, root="", nav="today")
     else:
         html = env.get_template("empty.html").render(site=site, root="", nav="today")
-    (SITE_DIR / "index.html").write_text(html, encoding="utf-8")
+    (SITE_DIR / "today.html").write_text(html, encoding="utf-8")
 
     (SITE_DIR / "archive.html").write_text(
         env.get_template("archive.html").render(site=site, archive=archive, root="", nav="archive"), encoding="utf-8")
@@ -225,6 +234,25 @@ def build() -> None:
     if not weeks:
         (SITE_DIR / "weekly.html").write_text(
             env.get_template("weekly_empty.html").render(site=site, root="", nav="weekly"), encoding="utf-8")
+
+    # 대문(홈)
+    latest_week = None
+    if weeks and load_week(weeks[0]):
+        w = load_week(weeks[0])
+        latest_week = {**w, "label": f"{w['week'][:4]}년 {int(w['week'][-2:])}주차"}
+    kw_counter: Counter = Counter()
+    for d in days[:7]:
+        for kw, n in prepared[d]["kw_counts"]:
+            kw_counter[kw] += n
+    kw_top = kw_counter.most_common(8)
+    kw_max = kw_top[0][1] if kw_top else 1
+    kw_trend = [(k, n, round(n / kw_max, 2)) for k, n in kw_top]
+    home = env.get_template("home.html").render(
+        site=site, root="", nav="home",
+        latest=prepared[days[0]] if days else None, days=days,
+        total_articles=sum(len(prepared[d]["articles"]) for d in days),
+        week=latest_week, kw_trend=kw_trend, archive=archive, top_tags=tag_index[:14])
+    (SITE_DIR / "index.html").write_text(home, encoding="utf-8")
 
     # PWA
     manifest = {

@@ -3,7 +3,7 @@
    모든 상태는 localStorage에만 저장됩니다 (서버 없음). */
 (function () {
   "use strict";
-  var KEY_READ = "sb:read", KEY_STAR = "sb:star", KEY_FILTER = "sb:filter";
+  var KEY_READ = "sb:read", KEY_STAR = "sb:star", KEY_FILTER = "sb:filter", KEY_DAYS = "sb:days";
 
   function load(k, d) { try { return JSON.parse(localStorage.getItem(k)) || d; } catch (e) { return d; } }
   function save(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
@@ -14,8 +14,20 @@
 
   // ── 읽음 ────────────────────────────────────────────────
   function isRead(id) { return !!read[id]; }
+  function todayKey() { var d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
+  function noteDay() { var days = load(KEY_DAYS, {}); days[todayKey()] = 1; save(KEY_DAYS, days); }
+  function streak() {
+    var days = load(KEY_DAYS, {}), n = 0, d = new Date();
+    // 오늘 아직 안 읽었으면 어제부터 센다
+    if (!days[todayKey()]) d.setDate(d.getDate() - 1);
+    for (;;) {
+      var k = d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+      if (!days[k]) break; n++; d.setDate(d.getDate() - 1);
+    }
+    return n;
+  }
   function setRead(id, v) {
-    if (v) read[id] = Date.now(); else delete read[id];
+    if (v) { read[id] = Date.now(); noteDay(); } else delete read[id];
     save(KEY_READ, read); render();
   }
   function toggleRead(el) { var id = el.dataset.article; setRead(id, !isRead(id)); }
@@ -39,6 +51,14 @@
   // ── 렌더 ───────────────────────────────────────────────
   function render() {
     var total = 0, done = 0, visibleEls = [];
+    // 홈: 오늘 기사 id 목록으로 진행률 계산
+    var home = document.querySelector("[data-today-ids]");
+    if (home && !items.length) {
+      var ids = home.dataset.todayIds.split("|").filter(Boolean);
+      total = ids.length; done = ids.filter(isRead).length;
+    }
+    var st = document.getElementById("streak"); if (st) st.textContent = streak();
+    var hs = document.getElementById("home-star"); if (hs) hs.textContent = Object.keys(star).length;
     items.forEach(function (el) {
       var id = el.dataset.article;
       var r = isRead(id), s = !!star[id];
@@ -87,7 +107,7 @@
     else if (t.dataset.filterSource) { setFilter({ source: t.dataset.filterSource }); }
     else if (t.id === "toggle-low") { setFilter({ showLow: !filter.showLow }); }
     else if (t.id === "toggle-hide-read") { setFilter({ hideRead: !filter.hideRead }); }
-    else if (t.id === "mark-all-read") { items.forEach(function (el) { read[el.dataset.article] = Date.now(); }); save(KEY_READ, read); render(); }
+    else if (t.id === "mark-all-read") { items.forEach(function (el) { read[el.dataset.article] = Date.now(); }); noteDay(); save(KEY_READ, read); render(); }
     else if (t.classList.contains("origin-link")) {
       // 원문을 열면 자동으로 읽음 처리
       var el = t.closest("[data-article]"); if (el && !isRead(el.dataset.article)) setRead(el.dataset.article, true);

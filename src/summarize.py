@@ -24,7 +24,19 @@ SYSTEM = """당신은 해운·물류 전문지를 매일 읽고 핵심만 추려
 - tags는 2~4개, 짧은 명사 (예: HMM, SCFI, 북미항로, 관세, 파업, 항공화물).
 - relevance는 독자 관심사와의 관련도 1~5. 단, 관심사에서 멀어도 업계 전체에 큰 뉴스면 4 이상.
 - 표/지수 나열 기사([표] …)는 relevance 2 이하, 요약은 핵심 수치 1~2개만.
-- 인사·동정·수상·행사 소식은 relevance 1~2."""
+- 인사·동정·수상·행사 소식은 relevance 1~2.
+
+용어 해설(terms):
+- 기사에 나온 업계 용어·약어·제도 중 취준생이 모를 법한 것을 0~3개. 각각 한 문장(40자 내외)으로 실무 맥락까지.
+  예) "PSS(성수기 부가료): 선사가 성수기 수요 증가를 이유로 기본 운임에 얹는 추가 요금. 화주는 보통 2~4주 전 공지를 받는다."
+- TEU, 컨테이너처럼 누구나 아는 말은 넣지 말 것. 기사에 없는 용어도 넣지 말 것.
+- 같은 날 다른 기사에서 이미 나왔을 법한 기본 용어는 가장 관련 깊은 기사 하나에만.
+
+인사이트(insight):
+- why가 "왜 중요한가"라면 insight는 "그래서 어떻게 읽어야 하나" — 1~2문장.
+- 기사 밖의 맥락과 연결할 것: 다른 선사·항로에 미칠 파급, 운임·선복·물동량 사이의 인과, 과거 유사 사례, 화주·포워더·선사 각자의 손익.
+- 추측은 "~가능성이 있다", "~로 해석할 수 있다"로 표시. 기사에 없는 수치를 지어내지 말 것.
+- 면접에서 "이 뉴스를 어떻게 보느냐"고 물었을 때 답할 수 있는 수준의 한 줄 관점이면 충분하다."""
 
 ARTICLE_TOOL = {
     "name": "submit_summaries",
@@ -40,10 +52,23 @@ ARTICLE_TOOL = {
                         "id": {"type": "string"},
                         "summary": {"type": "string", "description": "2~3문장 핵심 요약"},
                         "why": {"type": "string", "description": "왜 중요한지 1문장"},
+                        "insight": {"type": "string", "description": "어떻게 읽어야 하는지 — 맥락·파급·해석 1~2문장"},
+                        "terms": {
+                            "type": "array",
+                            "description": "업계 용어 해설 0~3개",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "term": {"type": "string", "description": "용어 (약어면 풀네임 병기: 'PSS(성수기 부가료)')"},
+                                    "explanation": {"type": "string", "description": "한 문장 해설, 실무 맥락 포함"},
+                                },
+                                "required": ["term", "explanation"],
+                            },
+                        },
                         "tags": {"type": "array", "items": {"type": "string"}},
                         "relevance": {"type": "integer", "minimum": 1, "maximum": 5},
                     },
-                    "required": ["id", "summary", "why", "tags", "relevance"],
+                    "required": ["id", "summary", "why", "insight", "terms", "tags", "relevance"],
                 },
             }
         },
@@ -156,6 +181,9 @@ def summarize_articles(client, cfg, articles: list[Article]) -> None:
                 continue
             a.summary = item.get("summary", "").strip()
             a.why = item.get("why", "").strip()
+            a.insight = (item.get("insight") or "").strip()
+            a.terms = [{"term": t.get("term", "").strip(), "explanation": t.get("explanation", "").strip()}
+                       for t in (item.get("terms") or []) if isinstance(t, dict) and t.get("term")][:3]
             a.tags = [t.strip() for t in item.get("tags", []) if t.strip()][:4]
             a.relevance = max(1, min(5, int(item.get("relevance", 3))))
         for a in batch:

@@ -54,6 +54,15 @@
 </section>
 {% endif %}
 
+{% if day.glossary %}
+<section class="glossary">
+  <h2 class="sec-title">오늘의 용어 <span class="muted">{{ day.glossary|length }}개</span></h2>
+  <dl class="terms big">
+    {% for t in day.glossary %}<div><dt>{{ t.term }}</dt><dd>{{ t.explanation }} <a class="term-src" href="{{ t.url }}" target="_blank" rel="noopener" title="{{ t.title }}">↗</a></dd></div>{% endfor %}
+  </dl>
+</section>
+{% endif %}
+
 {% if day.rest %}
 <section class="rest">
   <h2 class="sec-title">나머지 기사 <span class="muted">관련도순</span></h2>

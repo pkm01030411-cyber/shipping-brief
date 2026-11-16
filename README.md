@@ -4,7 +4,7 @@
 "오늘 꼭 읽을 3건 + 나머지 관련도순"으로 정리해 GitHub Pages에 올려주는 개인 브리핑 사이트입니다.
 
 ```
-매일 07:00 KST (GitHub Actions)
+매일 18:30 KST (GitHub Actions)
   ├─ 1. collect    KSG 카테고리 크롤링 + 카고뉴스 RSS  →  data/YYYY-MM-DD.json
   ├─ 2. summarize  Claude 요약·관련도·Top 3·지켜볼 포인트 →  (같은 파일에 추가)
   ├─ 3. build      Jinja2 템플릿으로 정적 HTML 생성      →  site/
@@ -43,7 +43,7 @@ git push -u origin main
 저장소 → **Actions → "Daily shipping brief" → Run workflow**
 2~3분 뒤 `https://<내아이디>.github.io/shipping-brief/` 에서 확인.
 
-이후엔 매일 아침 7시에 자동으로 돌아갑니다.
+이후엔 매일 저녁 18:30에 자동으로 돌아갑니다 (그날 낮에 올라온 기사를 저녁에 정리).
 
 > 샘플 데이터 `data/2026-11-16.json`이 들어 있습니다. 첫 실제 실행 후 지워도 되고 그대로 둬도 됩니다.
 
@@ -77,6 +77,8 @@ API 키가 없으면 **오프라인 모드**로 동작합니다 (본문 첫 문�
 
 | 기능 | 설명 |
 |---|---|
+| 대문(홈) | 오늘의 핵심·읽기 진행·연속 읽은 날·주간 리뷰·7일 키워드 흐름을 한눈에. 브리핑 본문은 "오늘"(`today.html`) |
+| 용어 해설 · 인사이트 | 기사마다 Sonnet이 업계 용어 0~3개를 한 줄 해설(▸), "어떻게 읽어야 하나" 인사이트 한 줄. 하루치 용어는 "오늘의 용어"에 모임 |
 | 읽음 체크 · 진행 바 | 기사 카드의 ☐ 를 누르거나 원문을 열면 읽음 처리. 상단 바에 "n / 17 읽음". 브라우저(localStorage)에 저장 |
 | 출처 필터 · 읽은 것 숨기기 | 상단 칩. 설정은 다음 방문에도 유지 |
 | 낮은 관련도 접기 | 관련도 1~2 기사는 기본 접힘, "더 보기"로 펼침 |
@@ -90,7 +92,7 @@ API 키가 없으면 **오프라인 모드**로 동작합니다 (본문 첫 문�
 
 > 읽음·스크랩 상태는 서버가 없어 **브라우저별**로 저장됩니다. 폰과 PC는 따로예요. 스크랩은 내보내기로 백업하세요.
 
-주간 리뷰를 지금 바로 보고 싶으면 Actions → Run workflow에서 **weekly** 체크.
+주간 리뷰를 지금 바로 보고 싶으면 Actions → Run workflow에서 **weekly** 체크. 프롬프트를 바꾼 뒤 오늘 요약을 다시 만들려면 **resummarize** 체크.
 
 ## 3. 내 입맛에 맞게 바꾸기 — `config.yaml`
 
@@ -106,6 +108,7 @@ summarize:
 
 그 외:
 - `collect.window_hours` — 몇 시간 이내 기사를 모을지 (기본 30시간, 하루 1회 실행 기준 여유분)
+- 실행 시각은 `.github/workflows/daily.yml`의 cron (UTC 기준, 현재 09:30 = 18:30 KST)
 - `collect.max_per_source` — 소스별 상한 (비용 상한 역할)
 - `sources.ksg.categories` — KSG에서 볼 카테고리
 - `summarize.batch_size` / `body_chars` — API 호출당 기사 수, 본문 전달 길이

@@ -22,12 +22,12 @@
 <body>
 <header class="masthead">
   <div class="wrap">
-    <a class="brand" href="{{ root }}index.html">
+    <a class="brand" href="{{ root }}index.html" title="홈">
       <span class="brand-mark">⚓</span>
       <span class="brand-name">{{ site.title }}</span>
     </a>
     <nav>
-      <a href="{{ root }}index.html" {% if nav == 'today' %}class="on"{% endif %}>오늘</a>
+      <a href="{{ root }}today.html" {% if nav == 'today' %}class="on"{% endif %}>오늘</a>
       <a href="{{ root }}weekly.html" {% if nav == 'weekly' %}class="on"{% endif %}>주간</a>
       <a href="{{ root }}tags.html" {% if nav == 'tags' %}class="on"{% endif %}>태그</a>
       <a href="{{ root }}scrap.html" {% if nav == 'scrap' %}class="on"{% endif %}>스크랩 <span id="star-count" class="badge"></span></a>

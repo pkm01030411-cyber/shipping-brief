@@ -24,8 +24,13 @@ data-tags="{{ a.tags|join('|') }}" data-low="{{ '1' if (a.relevance or 0) <= 2 e
 {% if a.tags %}<div class="tags">{% for t in a.tags %}<a class="tag" href="{{ root }}tag/{{ t|tagslug }}.html">{{ t }}</a>{% endfor %}</div>{% endif %}
 {%- endmacro %}
 
+{% macro extras(a) -%}
+{% if a.insight %}<p class="insight"><b>인사이트</b> {{ a.insight }}</p>{% endif %}
+{% if a.terms %}<dl class="terms">{% for t in a.terms %}<div><dt>{{ t.term }}</dt><dd>{{ t.explanation }}</dd></div>{% endfor %}</dl>{% endif %}
+{%- endmacro %}
+
 {% macro top_item(a, n, root) -%}
-<li class="top-item" {{ attrs(a) }}>
+<li class="top-item" id="a-{{ n }}" {{ attrs(a) }}>
   <div class="top-num">{{ n }}</div>
   <div class="top-body">
     {{ kicker(a, root, show_rel=False) }}
@@ -33,6 +38,7 @@ data-tags="{{ a.tags|join('|') }}" data-low="{{ '1' if (a.relevance or 0) <= 2 e
     {% if a.subtitle %}<p class="subtitle">{{ a.subtitle }}</p>{% endif %}
     <p class="summary">{{ a.summary }}</p>
     {% if a.reason %}<p class="reason"><b>왜 지금</b> {{ a.reason }}</p>{% elif a.why %}<p class="reason"><b>의미</b> {{ a.why }}</p>{% endif %}
+    {{ extras(a) }}
     <div class="card-foot">{{ tags(a, root) }}{{ actions() }}</div>
   </div>
 </li>
@@ -44,6 +50,7 @@ data-tags="{{ a.tags|join('|') }}" data-low="{{ '1' if (a.relevance or 0) <= 2 e
   <h3><a class="origin-link" href="{{ a.url }}" target="_blank" rel="noopener">{{ a.title }}</a></h3>
   <p class="summary">{{ a.summary }}</p>
   {% if a.why %}<p class="why">{{ a.why }}</p>{% endif %}
+  {{ extras(a) }}
   <div class="card-foot">{{ tags(a, root) }}{{ actions() }}</div>
 </article>
 {%- endmacro %}

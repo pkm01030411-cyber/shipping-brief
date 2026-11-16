@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block title %}{{ site.title }} — {{ site.tagline }}{% endblock %}
+{% block content %}
+<section class="hero">
+  <p class="hero-kicker">{{ site.tagline }}</p>
+  <h1 class="hero-title">매일 저녁 18:30,<br>해운·물류 하루를 10분에.</h1>
+  <div class="hero-stats">
+    <div class="stat"><b id="streak">–</b><span>연속 읽은 날</span></div>
+    <div class="stat"><b>{{ days|length }}</b><span>쌓인 브리핑</span></div>
+    <div class="stat"><b>{{ total_articles }}</b><span>누적 기사</span></div>
+    <div class="stat"><b id="home-star">–</b><span>스크랩</span></div>
+  </div>
+</section>
+
+{% if latest %}
+<section class="today-card" data-today-ids="{{ latest.articles|map(attribute='id')|join('|') }}">
+  <div class="today-head">
+    <div>
+      <div class="dateline"><span class="date">{{ latest.date_label }}</span><span class="muted">{{ latest.articles|length }}건 · 약 {{ (3 + latest.articles|length * 0.25)|round|int }}분 · {{ latest.coverage }}</span></div>
+      <h2 class="headline">{{ latest.brief.headline }}</h2>
+    </div>
+  </div>
+  <p class="overview">{{ latest.brief.overview }}</p>
+  <div id="progress" class="progress home-progress" role="progressbar">
+    <div class="progress-track"><div class="progress-fill"></div></div>
+    <span class="progress-text">0 / {{ latest.articles|length }} 읽음</span>
+  </div>
+  {% if latest.top %}
+  <ol class="mini-top">
+    {% for a in latest.top %}
+    <li><span class="n">{{ loop.index }}</span><a href="{{ root }}today.html#a-{{ loop.index }}">{{ a.title }}</a><span class="muted">{{ a.source_name }}</span></li>
+    {% endfor %}
+  </ol>
+  {% endif %}
+  <div class="cta-row">
+    <a class="cta" href="{{ root }}today.html">오늘 브리핑 읽기 →</a>
+    {% if latest.kw_counts %}<span class="kw-row">{% for kw, n in latest.kw_counts[:5] %}<a class="kw-chip" href="{{ root }}tag/{{ kw|tagslug }}.html">{{ kw }} <b>{{ n }}</b></a>{% endfor %}</span>{% endif %}
+  </div>
+</section>
+{% else %}
+<section class="today-card"><p class="muted">아직 브리핑이 없습니다. 첫 실행 후 이 자리에 오늘의 브리핑이 나타납니다.</p></section>
+{% endif %}
+
+<div class="home-grid">
+  <section class="panel">
+    <h2 class="sec-title">주간 리뷰</h2>
+    {% if week %}
+      <a class="panel-link" href="{{ root }}weekly.html"><b>{{ week.label }}</b> · {{ week.review.headline }}</a>
+      <p class="muted small">{{ week.review.overview[:140] }}{% if week.review.overview|length > 140 %}…{% endif %}</p>
+    {% else %}
+      <p class="muted small">첫 주간 리뷰는 다음 월요일 저녁에 생성됩니다. 지난 7일의 흐름·꼭 기억할 기사·면접용 질문을 정리해 드려요.</p>
+    {% endif %}
+  </section>
+
+  <section class="panel">
+    <h2 class="sec-title">최근 7일 키워드</h2>
+    {% if kw_trend %}
+    <ul class="trend">
+      {% for kw, n, bar in kw_trend %}<li><a href="{{ root }}tag/{{ kw|tagslug }}.html">{{ kw }}</a><span class="bar" style="--w:{{ bar }}"></span><b>{{ n }}</b></li>{% endfor %}
+    </ul>
+    {% else %}<p class="muted small">관심 키워드가 등장하면 여기에 흐름이 쌓입니다.</p>{% endif %}
+  </section>
+
+  <section class="panel">
+    <h2 class="sec-title">지난 브리핑</h2>
+    <ul class="recent">
+      {% for d in archive[:7] %}
+      <li><a href="{{ root }}day/{{ d.date }}.html"><span class="muted">{{ d.date[5:] }}</span> {{ d.headline or "브리핑" }}</a></li>
+      {% endfor %}
+    </ul>
+    <a class="more" href="{{ root }}archive.html">전체 보기 →</a>
+  </section>
+
+  <section class="panel">
+    <h2 class="sec-title">자주 나온 태그</h2>
+    <div class="tag-cloud small">
+      {% for t in top_tags %}<a class="tag-big" href="{{ root }}tag/{{ t.name|tagslug }}.html">{{ t.name }} <b>{{ t.count }}</b></a>{% endfor %}
+    </div>
+    <a class="more" href="{{ root }}tags.html">모든 태그 →</a>
+  </section>
+</div>
+
+<section class="howto">
+  <h2 class="sec-title">이 사이트 쓰는 법</h2>
+  <div class="howto-grid">
+    <div><b>1</b> 저녁 18:30 이후 "오늘"에서 <em>꼭 읽을 3건</em>부터. 접힌 기사는 여유 있을 때.</div>
+    <div><b>2</b> 카드의 ☐ 로 읽음 표시 — 진행 바가 차고, 연속 읽은 날이 쌓입니다.</div>
+    <div><b>3</b> 자소서·면접에 쓸 기사는 ☆ 스크랩 → Markdown으로 내보내기.</div>
+    <div><b>4</b> 모르는 용어는 카드 안 <em>▸ 용어</em>와 "오늘의 용어"에서. 월요일엔 주간 리뷰로 한 주를 복기.</div>
+  </div>
+</section>
+{% endblock %}

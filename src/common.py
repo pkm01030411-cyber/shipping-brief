@@ -55,6 +55,8 @@ class Article:
     # ── 요약 단계에서 채워짐 ──
     summary: str = ""
     why: str = ""
+    insight: str = ""            # 어떻게 읽어야 하나 (맥락·파급)
+    terms: list[dict] = field(default_factory=list)   # [{term, explanation}]
     tags: list[str] = field(default_factory=list)
     relevance: int = 0           # 1~5
 
@@ -63,8 +65,8 @@ class Article:
 
     @classmethod
     def from_dict(cls, d: dict) -> "Article":
-        return cls(**{k: d.get(k, "" if k not in ("tags", "relevance") else ([] if k == "tags" else 0))
-                      for k in cls.__dataclass_fields__})
+        defaults = {"tags": [], "terms": [], "relevance": 0}
+        return cls(**{k: d.get(k, defaults.get(k, "")) for k in cls.__dataclass_fields__})
 
 
 # ── HTTP ────────────────────────────────────────────────────────
