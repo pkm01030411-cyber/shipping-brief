@@ -108,6 +108,9 @@ def run(end_date: str | None = None, only_monday: bool = False) -> dict | None:
         return None
     wid = week_id(end)
     start = (end - timedelta(days=6)).isoformat()
+    if only_monday and (WEEKLY_DIR / f"{wid}.json").exists():
+        log.info("주간 리뷰 %s 이미 있음 → 건너뜀", wid)
+        return load_week(wid)
 
     client = _client()
     if client is None:

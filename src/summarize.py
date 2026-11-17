@@ -301,6 +301,11 @@ def run(date: str | None = None, force: bool = False) -> dict:
             from .collect import refetch_bodies  # 저장 시 지운 본문을 원문에서 다시 가져옴
             refetch_bodies(articles)
 
+    # 새로 요약할 기사가 없고 브리핑이 이미 있으면 건너뜀 (백업 실행 시 API 비용 중복 방지)
+    if not force and day.get("brief", {}).get("top") and all(a.summary for a in articles):
+        log.info("새 기사 없음 · 브리핑 존재 → 요약 건너뜀")
+        return day
+
     client = _client()
     if client is None:
         log.warning("ANTHROPIC_API_KEY 없음 → 오프라인 모드")

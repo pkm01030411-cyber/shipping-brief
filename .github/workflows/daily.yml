@@ -3,7 +3,10 @@ name: Daily shipping brief
 on:
   schedule:
     # 매일 18:30 KST (= 09:30 UTC). GitHub cron은 UTC 기준. 그날 낮에 올라온 기사를 저녁에 브리핑.
-    - cron: "30 9 * * *"
+    # GitHub 스케줄러는 지연·누락이 있어 백업 실행을 둔다. 새 기사가 없으면 API를 호출하지 않으므로 비용 중복 없음.
+    - cron: "30 9 * * *"     # 18:30 KST
+    - cron: "7 11 * * *"     # 20:07 KST (백업 · 늦게 올라온 기사 보충)
+    - cron: "13 13 * * *"    # 22:13 KST (백업)
   workflow_dispatch:        # Actions 탭에서 수동 실행 버튼
     inputs:
       weekly:
