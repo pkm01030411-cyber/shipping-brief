@@ -17,6 +17,10 @@ on:
         description: "오늘 기사 요약을 처음부터 다시 (프롬프트 변경 후)"
         type: boolean
         default: false
+      backfill_geo:
+        description: "과거 기사에 국제정세 태깅 추가 (정세 대시보드용, 1회)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write           # data/ 커밋
@@ -47,6 +51,7 @@ jobs:
           FLAGS="--weekly-if-monday"
           [ "${{ inputs.weekly }}" = "true" ] && FLAGS="--weekly"
           [ "${{ inputs.resummarize }}" = "true" ] && FLAGS="$FLAGS --resummarize"
+          [ "${{ inputs.backfill_geo }}" = "true" ] && FLAGS="$FLAGS --backfill-geo"
           python run.py $FLAGS
 
       - name: Commit data

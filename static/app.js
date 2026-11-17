@@ -178,6 +178,27 @@
   }
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
 
+  // ── 정세 대시보드: 기간 토글, 앵커로 카드 열기 ─────────────────
+  var geoRoot = document.getElementById("geo-root");
+  if (geoRoot) {
+    var setPeriod = function (p) {
+      geoRoot.dataset.period = p;
+      document.querySelectorAll("[data-geo-period]").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.geoPeriod === p); });
+      save("sb:geoPeriod", p);
+    };
+    setPeriod(load("sb:geoPeriod", "30"));
+    document.addEventListener("click", function (e) {
+      var b = e.target.closest("[data-geo-period]"); if (b) setPeriod(b.dataset.geoPeriod);
+    });
+    var openHash = function () {
+      var id = decodeURIComponent(location.hash.slice(1)); if (!id) return;
+      var el = document.getElementById(id); if (!el) return;
+      if (el.tagName === "DETAILS") el.open = true;
+      el.classList.add("is-target"); setTimeout(function () { el.classList.remove("is-target"); }, 1600);
+    };
+    window.addEventListener("hashchange", openHash); openHash();
+  }
+
   // ── PWA 서비스워커 ──────────────────────────────────────
   if ("serviceWorker" in navigator && location.protocol === "https:") {
     var root = document.documentElement.dataset.root || "";

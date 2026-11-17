@@ -241,3 +241,161 @@ kbd { font: inherit; font-size: 11px; padding: 0 5px; border: 1px solid var(--li
   .home-grid, .howto-grid { grid-template-columns: 1fr; }
   .today-card { padding: 18px 16px; }
 }
+
+/* ───────── 국제정세 대시보드 ───────── */
+:root {
+  --imp-n2: #b42318; --imp-n2-ink: #fff;
+  --imp-n1: #f6d0c4; --imp-n1-ink: #7a1f10;
+  --imp-0:  #e3e6ea; --imp-0-ink:  #3d4752;
+  --imp-p1: #cddcea; --imp-p1-ink: #0f3d5e;
+  --imp-p2: #0f3d5e; --imp-p2-ink: #fff;
+  --heat-n: #d1495b; --heat-0: #8f9aa6; --heat-p: #2f6a9c;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --imp-n2: #f07a6c; --imp-n2-ink: #1a0b09;
+    --imp-n1: #5e2a22; --imp-n1-ink: #f9d6cc;
+    --imp-0:  #2f3a45; --imp-0-ink:  #cdd5dc;
+    --imp-p1: #22405b; --imp-p1-ink: #d3e5f5;
+    --imp-p2: #9fc3df; --imp-p2-ink: #0c1a27;
+    --heat-n: #f07a6c; --heat-0: #7d8994; --heat-p: #7fb0d8;
+  }
+}
+.imp-n2 { --imp: var(--imp-n2); --imp-ink: var(--imp-n2-ink); --heat: var(--heat-n); }
+.imp-n1 { --imp: var(--imp-n1); --imp-ink: var(--imp-n1-ink); --heat: var(--heat-n); }
+.imp-0  { --imp: var(--imp-0);  --imp-ink: var(--imp-0-ink);  --heat: var(--heat-0); }
+.imp-p1 { --imp: var(--imp-p1); --imp-ink: var(--imp-p1-ink); --heat: var(--heat-p); }
+.imp-p2 { --imp: var(--imp-p2); --imp-ink: var(--imp-p2-ink); --heat: var(--heat-p); }
+.imp-none { --imp: transparent; --imp-ink: var(--ink-3); --heat: transparent; }
+.imp-chip { display: inline-block; min-width: 38px; padding: 1px 7px; border-radius: 5px; background: var(--imp); color: var(--imp-ink);
+  font-size: 12px; font-weight: 600; text-align: center; font-variant-numeric: tabular-nums; line-height: 1.6; }
+.imp-chip.imp-none { border: 1px dashed var(--line); }
+
+/* 기간 토글: p7/p30 블록 */
+#geo-root[data-period="30"] .p7, #geo-root[data-period="7"] .p30 { display: none !important; }
+.period-bar { position: sticky; top: 54px; z-index: 3; display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
+  background: var(--paper); padding: 10px 0; margin: 0 0 18px; border-bottom: 1px solid var(--line); font-size: 13px; }
+.small-inline { font-size: 12.5px; }
+.warn { font-size: 13px; color: #8a5a00; background: var(--gold-soft); border-radius: 6px; padding: 6px 10px; margin: 10px 0 0; }
+@media (prefers-color-scheme: dark) { .warn { color: var(--gold); } }
+.warn.small { font-size: 12.5px; padding: 4px 8px; margin: 0 0 8px; }
+.empty { background: var(--card); border: 1px dashed var(--line); border-radius: 10px; padding: 18px; color: var(--ink-2); font-size: 14px; text-align: center; }
+.howto-line { font-size: 13px; color: var(--ink-2); margin: 10px 0 0; line-height: 1.6; }
+.howto-line b { color: var(--navy); font-weight: 600; margin-right: 6px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.is-target { outline: 2px solid var(--gold); outline-offset: 3px; transition: outline-color .4s; }
+
+/* 요약 타일 */
+.geo-tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.gtile { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+a.gtile[href]:hover { border-color: var(--navy); text-decoration: none; }
+.gt-label { font-size: 12px; color: var(--ink-3); }
+.gt-value { font-family: var(--serif); font-size: 19px; line-height: 1.3; color: var(--ink); overflow-wrap: anywhere; }
+.gt-value.num { font-size: 28px; color: var(--navy); }
+.gt-value small { font-size: 14px; margin-left: 2px; color: var(--ink-3); }
+.gt-meta { font-size: 12.5px; color: var(--ink-2); }
+.arrow { font-weight: 700; margin-left: 2px; }
+
+/* 요충지 보드 */
+.cp-board { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; align-items: start; }
+.cp-card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
+.cp-card summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 12px 14px; }
+.cp-card summary::-webkit-details-marker { display: none; }
+.cp-card summary::after { content: "▾"; color: var(--ink-3); font-size: 12px; transition: transform .2s; }
+.cp-card[open] summary::after { transform: rotate(180deg); }
+.cp-card summary:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; border-radius: 10px; }
+.cp-name { font-weight: 600; font-size: 15px; }
+.cp-stat { display: flex; align-items: center; gap: 8px; margin-left: auto; font-variant-numeric: tabular-nums; }
+.cp-stat.is-zero { opacity: .55; }
+.cp-count { font-size: 13px; color: var(--ink-2); min-width: 30px; text-align: right; }
+.cp-body { padding: 0 14px 12px; border-top: 1px solid var(--line); padding-top: 10px; }
+.cp-articles { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; font-size: 14px; }
+.cp-articles li { display: grid; grid-template-columns: auto 1fr; gap: 2px 8px; align-items: baseline; }
+.cp-articles li > .muted { grid-column: 2; font-size: 12px; }
+.cp-note { grid-column: 2; margin: 2px 0 0; font-size: 13px; color: var(--ink-2); }
+
+/* 항로 도식 */
+.route-wrap { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 8px; overflow-x: auto; }
+.route-svg { display: block; width: 100%; min-width: 620px; height: auto; }
+.route-svg .grid, .trend-svg .grid { stroke: var(--line); stroke-width: 1; }
+.route-svg .region { fill: var(--ink-3); font-size: 13px; opacity: .55; letter-spacing: .1em; }
+.route-svg .route { fill: none; stroke: var(--ink-3); stroke-width: 2; opacity: .55; stroke-linejoin: round; }
+.route-svg .route.dashed { stroke-dasharray: 5 5; }
+.route-svg .route:hover { opacity: 1; stroke: var(--navy); }
+.route-svg .port { fill: var(--ink-2); }
+.route-svg .port.home { fill: var(--navy); stroke: var(--gold); stroke-width: 2; }
+.route-svg .port-lbl { fill: var(--ink-2); font-size: 11px; }
+.route-svg .cp { fill: var(--imp); stroke: var(--card); stroke-width: 2; }
+.route-svg .cp.imp-none, .route-svg .cp.zero { fill: var(--card); stroke: var(--ink-3); stroke-dasharray: 2 2; stroke-width: 1.5; }
+.route-svg .cp-lbl { fill: var(--ink); font-size: 12px; font-weight: 600; paint-order: stroke; stroke: var(--card); stroke-width: 3px; }
+.route-svg a:focus-visible .cp { stroke: var(--gold); stroke-width: 3; }
+#geo-root[data-period="30"] .cp-dot.p7, #geo-root[data-period="7"] .cp-dot.p30 { display: none; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12.5px; color: var(--ink-2); margin-top: 8px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.lg { width: 12px; height: 12px; border-radius: 50%; background: var(--imp); display: inline-block; }
+.lg.imp-none { background: transparent; border: 1.5px dashed var(--ink-3); }
+.lg-line { width: 22px; border-top: 2px solid var(--ink-3); display: inline-block; }
+.lg-line.dashed { border-top-style: dashed; }
+
+/* 히트맵 */
+.table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--card); }
+.heat { border-collapse: collapse; width: 100%; font-size: 13px; font-variant-numeric: tabular-nums; }
+.heat th, .heat td { padding: 7px 6px; text-align: center; border-bottom: 1px solid var(--line); }
+.heat thead th { font-weight: 500; color: var(--ink-3); font-size: 12px; white-space: nowrap; }
+.heat tbody th { text-align: left; font-weight: 600; white-space: nowrap; padding-left: 12px; }
+.heat td.num, .heat th.num { text-align: right; padding-right: 12px; color: var(--ink-2); }
+.heat .hc { background: color-mix(in srgb, var(--heat) calc(var(--o) * 55%), var(--card)); min-width: 38px; }
+.heat .hc span { font-weight: 600; color: var(--ink); }
+.heat .hc .dot { color: var(--ink-3); font-weight: 400; }
+.heat tr.is-empty th { color: var(--ink-3); font-weight: 400; }
+.heat tbody tr:last-child > * { border-bottom: 0; }
+
+/* 추이 · 가로 막대 */
+.chart-wrap { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 10px; }
+.trend-svg { display: block; width: 100%; height: auto; }
+.trend-svg .axis { fill: var(--ink-3); font-size: 11px; font-variant-numeric: tabular-nums; }
+.trend-svg .lbl { font-size: 12px; font-weight: 600; }
+.hbars { list-style: none; margin: 14px 0 6px; padding: 0; display: grid; gap: 8px; }
+.hbars li { display: grid; grid-template-columns: 150px 1fr 32px 50px; gap: 10px; align-items: center; font-size: 14px; }
+.hb-label { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hb-track { height: 10px; background: var(--navy-soft); border-radius: 999px; overflow: hidden; }
+.hb-fill { display: block; height: 100%; width: calc(var(--w) * 100%); background: var(--navy); border-radius: 999px; }
+.hb-num { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-2); }
+.geo-interview { background: var(--navy-soft); border-radius: 12px; padding: 16px 18px; }
+.geo-interview p { margin: 0; font-size: 14.5px; color: var(--ink-2); }
+
+/* 기사 카드의 정세 칩 */
+.geo-chips { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin: 0 0 8px; font-size: 12px; }
+.gc-ico { color: var(--ink-3); }
+.gc { padding: 1px 8px; border-radius: 999px; border: 1px solid var(--line); color: var(--ink-2); }
+.gc.cp { border-color: var(--navy); color: var(--navy); }
+.gc:hover { background: var(--navy); color: #fff; text-decoration: none; }
+
+/* 홈 미니 카드 */
+.panel.wide { grid-column: 1 / -1; }
+.geo-mini-list { list-style: none; margin: 0 0 8px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.geo-mini-list li { display: flex; align-items: center; gap: 8px; font-size: 15px; }
+
+@media (max-width: 900px) { .geo-tiles { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) {
+  .cp-board { grid-template-columns: 1fr; }
+  .hbars li { grid-template-columns: 96px 1fr 26px 46px; gap: 8px; font-size: 13px; }
+}
+@media (max-width: 480px) {
+  .period-bar { top: 48px; }
+  .geo-tiles { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .gtile { padding: 11px; }
+  .gt-value { font-size: 16px; }
+  .gt-value.num { font-size: 24px; }
+}
+
+/* 대비 보정: 선택된 칩 글자는 배경 반대색, 차트 표식은 3:1 이상 전용 색 */
+.chip[aria-pressed="true"] { color: var(--paper); }
+:root { --mk-n2: #b42318; --mk-n1: #cf553b; --mk-0: #7b8692; --mk-p1: #4f7fae; --mk-p2: #0f3d5e; }
+@media (prefers-color-scheme: dark) {
+  :root { --mk-n2: #f07a6c; --mk-n1: #c9644f; --mk-0: #8a96a2; --mk-p1: #5e93c2; --mk-p2: #9fc3df; }
+}
+.imp-n2 { --mk: var(--mk-n2); } .imp-n1 { --mk: var(--mk-n1); } .imp-0 { --mk: var(--mk-0); }
+.imp-p1 { --mk: var(--mk-p1); } .imp-p2 { --mk: var(--mk-p2); }
+.route-svg .cp { fill: var(--mk); }
+.lg { background: var(--mk); }

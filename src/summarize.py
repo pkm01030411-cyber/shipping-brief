@@ -11,6 +11,7 @@ import os
 import re
 
 from .common import Article, load_config, load_day, now_local, save_day, today_str
+from .geo import PROMPT as GEO_PROMPT, SCHEMA_PROPS as GEO_SCHEMA, norm_geo
 
 log = logging.getLogger("brief.summarize")
 
@@ -37,7 +38,7 @@ SYSTEM = """당신은 해운·물류 전문지를 매일 읽고 핵심만 추려
 - why가 "왜 중요한가"라면 insight는 "그래서 어떻게 읽어야 하나" — 1~2문장.
 - 기사 밖의 맥락과 연결할 것: 다른 선사·항로에 미칠 파급, 운임·선복·물동량 사이의 인과, 과거 유사 사례, 화주·포워더·선사 각자의 손익.
 - 추측은 "~가능성이 있다", "~로 해석할 수 있다"로 표시. 기사에 없는 수치를 지어내지 말 것.
-- 면접에서 "이 뉴스를 어떻게 보느냐"고 물었을 때 답할 수 있는 수준의 한 줄 관점이면 충분하다."""
+- 면접에서 "이 뉴스를 어떻게 보느냐"고 물었을 때 답할 수 있는 수준의 한 줄 관점이면 충분하다.""" + "\n" + GEO_PROMPT
 
 ARTICLE_TOOL = {
     "name": "submit_summaries",
@@ -68,8 +69,9 @@ ARTICLE_TOOL = {
                         },
                         "tags": {"type": "array", "items": {"type": "string"}},
                         "relevance": {"type": "integer", "minimum": 1, "maximum": 5},
+                        **GEO_SCHEMA,
                     },
-                    "required": ["id", "summary", "why", "insight", "terms", "tags", "relevance"],
+                    "required": ["id", "summary", "why", "insight", "terms", "tags", "relevance", *GEO_SCHEMA.keys()],
                 },
             }
         },
@@ -224,6 +226,10 @@ def summarize_articles(client, cfg, articles: list[Article]) -> None:
             a.terms = terms[:3]
             a.tags = [t.strip() for t in item.get("tags", []) if t.strip()][:4]
             a.relevance = max(1, min(5, int(item.get("relevance", 3))))
+            try:
+                a.geo = norm_geo(item)
+            except Exception as e:  # noqa: BLE001 — 태깅 실패가 요약을 막지 않게
+                log.warning("geo 파싱 실패 %s: %s", a.id, e)
         for a in batch:
             if not a.summary:  # 모델이 빠뜨린 경우 대비
                 a.summary = a.body[:200].replace("\n", " ") + "…"

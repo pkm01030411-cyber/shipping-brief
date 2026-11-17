@@ -11,7 +11,7 @@ import argparse
 import logging
 import sys
 
-from src import build_site, collect, summarize, weekly
+from src import build_site, collect, geo, summarize, weekly
 
 
 def main() -> int:
@@ -23,6 +23,7 @@ def main() -> int:
     ap.add_argument("--resummarize", action="store_true")
     ap.add_argument("--weekly", action="store_true", help="주간 리뷰 강제 생성 (지난 7일)")
     ap.add_argument("--weekly-if-monday", action="store_true", help="월요일이면 지난주 리뷰 생성 (워크플로용)")
+    ap.add_argument("--backfill-geo", action="store_true", help="geo 태깅이 없는 과거 기사에 국제정세 태깅만 추가")
     args = ap.parse_args()
 
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
@@ -40,6 +41,8 @@ def main() -> int:
                     days = all_days()
                     target = days[0] if days else None
             summarize.run(target, force=args.resummarize)
+        if args.backfill_geo:
+            geo.backfill()
         if args.weekly:
             weekly.run(args.date)
         elif args.weekly_if_monday:

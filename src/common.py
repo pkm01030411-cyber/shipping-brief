@@ -59,13 +59,14 @@ class Article:
     terms: list[dict] = field(default_factory=list)   # [{term, explanation}]
     tags: list[str] = field(default_factory=list)
     relevance: int = 0           # 1~5
+    geo: dict = field(default_factory=dict)  # 국제정세 태깅 ({} = 아직 분석 안 함)
 
     def to_dict(self) -> dict:
         return asdict(self)
 
     @classmethod
     def from_dict(cls, d: dict) -> "Article":
-        defaults = {"tags": [], "terms": [], "relevance": 0}
+        defaults = {"tags": [], "terms": [], "relevance": 0, "geo": {}}
         return cls(**{k: d.get(k, defaults.get(k, "")) for k in cls.__dataclass_fields__})
 
 

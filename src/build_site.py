@@ -14,6 +14,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from .common import (SITE_DIR, STATIC_DIR, TEMPLATE_DIR, all_days, load_config,
                      load_day, now_local)
+from . import geo as geo_mod
 from .weekly import all_weeks, load_week
 
 log = logging.getLogger("brief.build")
@@ -132,6 +133,10 @@ def build() -> None:
     env.filters["ftime"] = fmt_time
     env.filters["fdate"] = fmt_date
     env.filters["tagslug"] = tag_slug
+    env.filters["impcls"] = geo_mod.impact_class
+    env.filters["impfmt"] = geo_mod.fmt_impact
+    env.filters["geoslug"] = geo_mod.slug
+    env.globals["country_ko"] = geo_mod.COUNTRY_KO
 
     if SITE_DIR.exists():
         shutil.rmtree(SITE_DIR)
@@ -235,6 +240,19 @@ def build() -> None:
         (SITE_DIR / "weekly.html").write_text(
             env.get_template("weekly_empty.html").render(site=site, root="", nav="weekly"), encoding="utf-8")
 
+    # 국제정세 대시보드
+    seen_ids, all_articles = set(), []
+    for d in days:
+        for a in prepared[d]["articles"]:
+            if a["id"] not in seen_ids:
+                seen_ids.add(a["id"]); all_articles.append(a)
+    g = geo_mod.aggregate(all_articles, now_local(cfg).date(), load_week(weeks[0]) if weeks else None)
+    (SITE_DIR / "geo.html").write_text(env.get_template("geo.html").render(
+        site=site, root="", nav="geo", g=g,
+        route_svg=geo_mod.route_svg(g["periods"][30]["chokepoints"], g["periods"][7]["chokepoints"]),
+        trend_svg=geo_mod.trend_svg(g["trend"])), encoding="utf-8")
+    (SITE_DIR / "geo.json").write_text(json.dumps(g, ensure_ascii=False, default=str), encoding="utf-8")
+
     # 대문(홈)
     latest_week = None
     if weeks and load_week(weeks[0]):
@@ -251,7 +269,10 @@ def build() -> None:
         site=site, root="", nav="home",
         latest=prepared[days[0]] if days else None, days=days,
         total_articles=sum(len(prepared[d]["articles"]) for d in days),
-        week=latest_week, kw_trend=kw_trend, archive=archive, top_tags=tag_index[:14])
+        week=latest_week, kw_trend=kw_trend, archive=archive, top_tags=tag_index[:14],
+        geo_top=sorted([c for c in g["periods"][30]["chokepoints"] if c["count"]],
+                       key=lambda c: (-c["count"], c["avg"] or 0))[:3],
+        geo_line=g["line"], geo_tiles=g["tiles"])
     (SITE_DIR / "index.html").write_text(home, encoding="utf-8")
 
     # PWA

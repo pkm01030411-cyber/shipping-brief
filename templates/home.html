@@ -42,6 +42,23 @@
 {% endif %}
 
 <div class="home-grid">
+  <section class="panel wide geo-mini">
+    <h2 class="sec-title">이번 달 정세 <span class="muted">최근 30일 많이 언급된 요충지</span></h2>
+    {% if geo_top %}
+    <ul class="geo-mini-list">
+      {% for c in geo_top %}
+      <li><a href="{{ root }}geo.html#cp-{{ c.slug }}"><b>{{ c.name }}</b></a>
+        <span class="imp-chip {{ c.cls }}" title="평균 영향 (−2~+2)">{{ c.avg_label }}</span>
+        <span class="muted">{{ c.count }}건 <span title="{{ c.arrow_label }}">{{ c.arrow }}</span></span></li>
+      {% endfor %}
+    </ul>
+    {% if geo_line %}<p class="muted small">{{ geo_line.text }}</p>{% endif %}
+    {% else %}
+    <p class="muted small">아직 요충지가 언급된 기사가 없습니다. 기사가 쌓이면 홍해·수에즈·파나마 같은 해상 요충지의 흐름이 여기에 나타납니다.</p>
+    {% endif %}
+    <a class="more" href="{{ root }}geo.html">정세 대시보드 →</a>
+  </section>
+
   <section class="panel">
     <h2 class="sec-title">주간 리뷰</h2>
     {% if week %}
