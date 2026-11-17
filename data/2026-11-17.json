@@ -32,7 +32,15 @@
         "IAG카고",
         "말레이시아항공"
       ],
-      "relevance": 3
+      "relevance": 3,
+      "geo": {
+        "regions": [],
+        "countries": [],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": 0,
+        "note": ""
+      }
     },
     {
       "id": "cargonews:61252",
@@ -60,7 +68,20 @@
         "아프리카항로",
         "할증료"
       ],
-      "relevance": 3
+      "relevance": 3,
+      "geo": {
+        "regions": [
+          "아프리카",
+          "동아시아"
+        ],
+        "countries": [
+          "TZ"
+        ],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": 0,
+        "note": ""
+      }
     },
     {
       "id": "cargonews:61251",
@@ -82,7 +103,15 @@
         "인도노선",
         "증편"
       ],
-      "relevance": 1
+      "relevance": 1,
+      "geo": {
+        "regions": [],
+        "countries": [],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": 0,
+        "note": ""
+      }
     },
     {
       "id": "ksg:148520",
@@ -114,7 +143,15 @@
         "물류자동화",
         "풀필먼트"
       ],
-      "relevance": 3
+      "relevance": 3,
+      "geo": {
+        "regions": [],
+        "countries": [],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": 0,
+        "note": ""
+      }
     },
     {
       "id": "ksg:148437",
@@ -142,7 +179,23 @@
         "아시아역내",
         "인도네시아"
       ],
-      "relevance": 4
+      "relevance": 4,
+      "geo": {
+        "regions": [
+          "동아시아",
+          "동남아"
+        ],
+        "countries": [
+          "CN",
+          "ID"
+        ],
+        "chokepoints": [],
+        "drivers": [
+          "공급망 재편"
+        ],
+        "impact": 1,
+        "note": "중국-인도네시아 역내 항로에 선사들이 선복 공유로 서비스를 늘리며 아시아 역내 연결성이 강화된다."
+      }
     },
     {
       "id": "ksg:148519",
@@ -174,7 +227,15 @@
         "예지보전",
         "터미널"
       ],
-      "relevance": 2
+      "relevance": 2,
+      "geo": {
+        "regions": [],
+        "countries": [],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": 0,
+        "note": ""
+      }
     },
     {
       "id": "cargonews:61250",
@@ -206,7 +267,23 @@
         "철도운송",
         "유라시아"
       ],
-      "relevance": 4
+      "relevance": 4,
+      "geo": {
+        "regions": [
+          "러시아·CIS",
+          "동아시아"
+        ],
+        "countries": [
+          "RU",
+          "CN"
+        ],
+        "chokepoints": [],
+        "drivers": [
+          "공급망 재편"
+        ],
+        "impact": 1,
+        "note": "러시아 남부에서 극동을 거쳐 중국 등 아시아로 향하는 철도 연계 물류 서비스가 확대되는 흐름이다."
+      }
     },
     {
       "id": "cargonews:61249",
@@ -234,7 +311,15 @@
         "GSSA",
         "항공화물"
       ],
-      "relevance": 2
+      "relevance": 2,
+      "geo": {
+        "regions": [],
+        "countries": [],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": 0,
+        "note": ""
+      }
     },
     {
       "id": "cargonews:61248",
@@ -256,7 +341,15 @@
         "AI",
         "테시브"
       ],
-      "relevance": 2
+      "relevance": 2,
+      "geo": {
+        "regions": [],
+        "countries": [],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": 0,
+        "note": ""
+      }
     },
     {
       "id": "ksg:148500",
@@ -284,7 +377,26 @@
         "아시아역내",
         "신규항로"
       ],
-      "relevance": 3
+      "relevance": 3,
+      "geo": {
+        "regions": [
+          "동아시아",
+          "동남아",
+          "남아시아"
+        ],
+        "countries": [
+          "CN",
+          "IN",
+          "MY",
+          "VN"
+        ],
+        "chokepoints": [],
+        "drivers": [
+          "공급망 재편"
+        ],
+        "impact": 1,
+        "note": "중국·베트남·인도를 잇는 역내 신항로로 아시아-인도 간 공급망 연결이 확대된다."
+      }
     },
     {
       "id": "cargonews:61247",
@@ -312,7 +424,26 @@
         "2027전망",
         "홍해"
       ],
-      "relevance": 4
+      "relevance": 4,
+      "geo": {
+        "regions": [
+          "중동",
+          "유럽",
+          "북미"
+        ],
+        "countries": [
+          "US"
+        ],
+        "chokepoints": [
+          "홍해·바브엘만데브"
+        ],
+        "drivers": [
+          "분쟁·안보",
+          "관세·무역정책"
+        ],
+        "impact": 1,
+        "note": "중동전쟁 마무리와 홍해 정기선 공급력이 전쟁 전의 50% 수준까지 회복되며 해상 서비스가 안정되고, 미국·유럽의 중국발 전자상거래 규제가 수요 구조에 영향을 준다."
+      }
     },
     {
       "id": "ksg:148518",
@@ -344,7 +475,15 @@
         "지상조업",
         "공항"
       ],
-      "relevance": 2
+      "relevance": 2,
+      "geo": {
+        "regions": [],
+        "countries": [],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": 0,
+        "note": ""
+      }
     },
     {
       "id": "ksg:148517",
@@ -376,7 +515,15 @@
         "에너지화물",
         "중국항만"
       ],
-      "relevance": 2
+      "relevance": 2,
+      "geo": {
+        "regions": [],
+        "countries": [],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": 0,
+        "note": ""
+      }
     },
     {
       "id": "ksg:148507",
@@ -408,7 +555,15 @@
         "팬스타아크로",
         "해운IT"
       ],
-      "relevance": 3
+      "relevance": 3,
+      "geo": {
+        "regions": [],
+        "countries": [],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": 0,
+        "note": ""
+      }
     },
     {
       "id": "ksg:148503",
@@ -444,7 +599,26 @@
         "AI서버",
         "아시아-북미"
       ],
-      "relevance": 4
+      "relevance": 4,
+      "geo": {
+        "regions": [
+          "중동",
+          "동아시아",
+          "북미"
+        ],
+        "countries": [
+          "US",
+          "IR",
+          "AE"
+        ],
+        "chokepoints": [],
+        "drivers": [
+          "분쟁·안보",
+          "에너지·유가"
+        ],
+        "impact": -1,
+        "note": "미국-이란 전쟁으로 중동 노선 운항이 차질을 빚고 항공유가 배럴당 184.5달러로 급등해 항공화물 수익성 부담이 커졌다."
+      }
     },
     {
       "id": "cargonews:61246",
@@ -476,7 +650,15 @@
         "운임인상",
         "GRI"
       ],
-      "relevance": 4
+      "relevance": 4,
+      "geo": {
+        "regions": [],
+        "countries": [],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": 0,
+        "note": ""
+      }
     }
   ],
   "brief": {

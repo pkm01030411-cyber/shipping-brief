@@ -31,7 +31,15 @@
         "3PL",
         "공동물류"
       ],
-      "relevance": 2
+      "relevance": 2,
+      "geo": {
+        "regions": [],
+        "countries": [],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": 0,
+        "note": ""
+      }
     },
     {
       "id": "cargonews:61245",
@@ -58,7 +66,19 @@
         "광저우공항",
         "항공화물"
       ],
-      "relevance": 3
+      "relevance": 3,
+      "geo": {
+        "regions": [
+          "동아시아"
+        ],
+        "countries": [
+          "CN"
+        ],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": 0,
+        "note": ""
+      }
     },
     {
       "id": "ksg:148513",
@@ -85,7 +105,15 @@
         "항만안전",
         "여수해수청"
       ],
-      "relevance": 1
+      "relevance": 1,
+      "geo": {
+        "regions": [],
+        "countries": [],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": 0,
+        "note": ""
+      }
     },
     {
       "id": "cargonews:61244",
@@ -112,7 +140,19 @@
         "북극항로",
         "해상공급망"
       ],
-      "relevance": 2
+      "relevance": 2,
+      "geo": {
+        "regions": [
+          "북극"
+        ],
+        "countries": [],
+        "chokepoints": [
+          "북극항로"
+        ],
+        "drivers": [],
+        "impact": 0,
+        "note": "KMI가 해상공급망 위기와 북극항로 등 국제 해양질서 변화에 대응해 연구 방향을 개편하겠다는 내용이나 구체적 정세 변화는 다루지 않는다."
+      }
     },
     {
       "id": "ksg:148510",
@@ -143,7 +183,15 @@
         "CBAM",
         "인재양성"
       ],
-      "relevance": 1
+      "relevance": 1,
+      "geo": {
+        "regions": [],
+        "countries": [],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": 0,
+        "note": ""
+      }
     },
     {
       "id": "ksg:148509",
@@ -175,7 +223,15 @@
         "AI",
         "HS코드"
       ],
-      "relevance": 2
+      "relevance": 2,
+      "geo": {
+        "regions": [],
+        "countries": [],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": 0,
+        "note": ""
+      }
     },
     {
       "id": "cargonews:61243",
@@ -207,7 +263,21 @@
         "AI",
         "통관"
       ],
-      "relevance": 4
+      "relevance": 4,
+      "geo": {
+        "regions": [
+          "북미"
+        ],
+        "countries": [
+          "US"
+        ],
+        "chokepoints": [],
+        "drivers": [
+          "관세·무역정책"
+        ],
+        "impact": 0,
+        "note": "미국의 신규 관세와 강화된 규정 준수 규칙으로 통관 업무 부담이 커진 환경에서 AI 도입이 이뤄졌다."
+      }
     },
     {
       "id": "ksg:148506",
@@ -228,7 +298,15 @@
         "중고선",
         "선가"
       ],
-      "relevance": 1
+      "relevance": 1,
+      "geo": {
+        "regions": [],
+        "countries": [],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": 0,
+        "note": ""
+      }
     },
     {
       "id": "ksg:148511",
@@ -260,7 +338,15 @@
         "풀필먼트",
         "3PL"
       ],
-      "relevance": 3
+      "relevance": 3,
+      "geo": {
+        "regions": [],
+        "countries": [],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": 0,
+        "note": ""
+      }
     },
     {
       "id": "ksg:148505",
@@ -281,7 +367,15 @@
         "중고선",
         "선가지수"
       ],
-      "relevance": 1
+      "relevance": 1,
+      "geo": {
+        "regions": [],
+        "countries": [],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": 0,
+        "note": ""
+      }
     },
     {
       "id": "ksg:148481",
@@ -313,7 +407,20 @@
         "한중항로",
         "아시아역내"
       ],
-      "relevance": 4
+      "relevance": 4,
+      "geo": {
+        "regions": [
+          "동아시아"
+        ],
+        "countries": [
+          "CN",
+          "KR"
+        ],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": 1,
+        "note": "한·중 간 인천-르자오 직항로 신설로 인천-산둥성 교역 물동량 연결이 확대된다."
+      }
     },
     {
       "id": "ksg:148502",
@@ -349,7 +456,25 @@
         "유럽항만",
         "공급망"
       ],
-      "relevance": 5
+      "relevance": 5,
+      "geo": {
+        "regions": [
+          "유럽",
+          "북미"
+        ],
+        "countries": [
+          "FR",
+          "DE",
+          "US",
+          "ES"
+        ],
+        "chokepoints": [],
+        "drivers": [
+          "노사·파업"
+        ],
+        "impact": -2,
+        "note": "유럽 22개국 항만 공동행동과 미국 LA·롱비치항 경비직 협상 난항으로 하역 지연과 공급망 불확실성이 커지고 있다."
+      }
     },
     {
       "id": "ksg:148499",
@@ -385,7 +510,15 @@
         "택배",
         "계약물류"
       ],
-      "relevance": 3
+      "relevance": 3,
+      "geo": {
+        "regions": [],
+        "countries": [],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": 0,
+        "note": ""
+      }
     },
     {
       "id": "cargonews:61242",
@@ -413,7 +546,26 @@
         "물동량",
         "관세"
       ],
-      "relevance": 4
+      "relevance": 4,
+      "geo": {
+        "regions": [
+          "동아시아",
+          "동남아",
+          "북미"
+        ],
+        "countries": [
+          "US",
+          "CN",
+          "VN",
+          "KR"
+        ],
+        "chokepoints": [],
+        "drivers": [
+          "공급망 재편"
+        ],
+        "impact": 1,
+        "note": "미국 수입에서 중국 비중은 정체(+1.2%)된 반면 베트남(+19.2%)·태국(+21.9%) 등 동남아발 물량이 크게 늘어 아시아발 대미 공급망이 분산되는 흐름을 보여준다."
+      }
     },
     {
       "id": "cargonews:61241",
@@ -435,7 +587,15 @@
         "수상",
         "소셜미디어"
       ],
-      "relevance": 1
+      "relevance": 1,
+      "geo": {
+        "regions": [],
+        "countries": [],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": 0,
+        "note": ""
+      }
     },
     {
       "id": "cargonews:61240",
@@ -467,7 +627,18 @@
         "북유럽항로",
         "운임"
       ],
-      "relevance": 4
+      "relevance": 4,
+      "geo": {
+        "regions": [
+          "동아시아",
+          "유럽"
+        ],
+        "countries": [],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": -1,
+        "note": "아시아발 북유럽항로에 PSS가 부과돼 화주 운임 부담이 커지지만, 기사에 특정 국제정세 사건은 언급되지 않는다."
+      }
     },
     {
       "id": "cargonews:61239",
@@ -495,7 +666,15 @@
         "항공노선",
         "시애틀-오사카"
       ],
-      "relevance": 1
+      "relevance": 1,
+      "geo": {
+        "regions": [],
+        "countries": [],
+        "chokepoints": [],
+        "drivers": [],
+        "impact": 0,
+        "note": ""
+      }
     }
   ],
   "brief": {
