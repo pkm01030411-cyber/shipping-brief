@@ -85,21 +85,14 @@ BRIEF_TOOL = {
         "properties": {
             "headline": {"type": "string", "description": "오늘 하루를 요약하는 한 줄 제목 (30자 내외)"},
             "overview": {"type": "string", "description": "오늘 뉴스 전체의 흐름을 3~4문장으로. 서로 다른 기사를 연결해 맥락을 줄 것."},
-            "top": {
-                "type": "array",
-                "items": {
-                    "type": "object",
-                    "properties": {
-                        "id": {"type": "string"},
-                        "reason": {"type": "string", "description": "오늘 꼭 읽어야 하는 이유 1문장"},
-                    },
-                    "required": ["id", "reason"],
-                },
-            },
+            "top_ids": {"type": "array", "items": {"type": "string"},
+                        "description": "꼭 읽을 기사 id 목록 (예: [\"ksg:148502\", \"cargonews:61242\"]) — 중요한 순서대로"},
+            "top_reasons": {"type": "array", "items": {"type": "string"},
+                            "description": "top_ids와 같은 순서로, 각 기사를 오늘 꼭 읽어야 하는 이유 1문장"},
             "watch": {"type": "array", "items": {"type": "string"},
                       "description": "앞으로 지켜볼 포인트 2~3개 (각 1문장)"},
         },
-        "required": ["headline", "overview", "top", "watch"],
+        "required": ["headline", "overview", "top_ids", "top_reasons", "watch"],
     },
 }
 
@@ -250,8 +243,14 @@ def make_brief(client, cfg, articles: list[Article]) -> dict:
     brief = _call_tool(client, cfg, BRIEF_TOOL, user)
     valid = {a.id for a in articles}
     by_id = {a.id: a for a in articles}
-    raw_top = brief.get("top")
+    ids, reasons = brief.pop("top_ids", None), brief.pop("top_reasons", None) or []
+    if isinstance(ids, list):
+        raw_top = [{"id": i, "reason": reasons[k] if k < len(reasons) and isinstance(reasons[k], str) else ""}
+                   for k, i in enumerate(ids)]
+    else:
+        raw_top = ids if ids is not None else brief.get("top")
     top = norm_refs(raw_top, valid, scfg["top_n"], titles={a.title: a.id for a in articles})
+    brief["top_source"] = "model" if len(top) >= scfg["top_n"] else "fallback"
     if len(top) < scfg["top_n"]:
         log.warning("Top %d/%d만 인식됨 — 원본: %s", len(top), scfg["top_n"], str(raw_top)[:400].replace("\n", " "))
         have = {t["id"] for t in top}
@@ -301,10 +300,21 @@ def run(date: str | None = None, force: bool = False) -> dict:
             from .collect import refetch_bodies  # 저장 시 지운 본문을 원문에서 다시 가져옴
             refetch_bodies(articles)
 
-    # 새로 요약할 기사가 없고 브리핑이 이미 있으면 건너뜀 (백업 실행 시 API 비용 중복 방지)
-    if not force and day.get("brief", {}).get("top") and all(a.summary for a in articles):
-        log.info("새 기사 없음 · 브리핑 존재 → 요약 건너뜀")
-        return day
+    # 새로 요약할 기사가 없고 브리핑이 이미 정상이면 건너뜀 (백업 실행 시 API 비용 중복 방지)
+    old_brief = day.get("brief", {}) or {}
+    if not force and all(a.summary for a in articles):
+        if old_brief.get("top") and old_brief.get("top_source") == "model":
+            log.info("새 기사 없음 · 브리핑 존재 → 요약 건너뜀")
+            return day
+        client = _client()
+        if client is not None:  # Top이 대체 로직으로 채워졌던 날은 브리핑만 다시 생성 (호출 1회)
+            log.info("브리핑만 다시 생성")
+            brief = make_brief(client, cfg, articles)
+            brief["model"] = cfg["summarize"]["model"]
+            brief["summarized_at"] = now_local(cfg).isoformat()
+            day["brief"] = brief
+            save_day(date, day)
+            return day
 
     client = _client()
     if client is None:
