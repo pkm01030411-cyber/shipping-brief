@@ -284,6 +284,15 @@ def aggregate(articles: list[dict], today: date, weekly: dict | None = None) -> 
                 "date": a["published"][:10], "impact": a["geo"].get("impact", 0), "note": a["geo"].get("note", ""),
                 "chokepoints": a["geo"].get("chokepoints", []), "countries": a["geo"].get("countries", [])}
 
+    first_day = min((_pub_date(a) for a in analyzed), default=today)
+
+    def compare(cur_n: int, prev_n: int, p: int) -> tuple[str, str]:
+        # 직전 기간 전체가 데이터 수집 이전이면 비교하지 않는다 (가짜 '증가' 방지)
+        prev_start = today - timedelta(days=2 * p - 1)
+        if first_day > prev_start:
+            return "–", "비교할 직전 기간 데이터 없음"
+        return trend_arrow(cur_n, prev_n)
+
     periods = {}
     for p in (7, 30):
         cur, prev = window(p), window(p, p)
@@ -295,7 +304,7 @@ def aggregate(articles: list[dict], today: date, weekly: dict | None = None) -> 
                 hit = [a for a in rows_cur if k in a["geo"].get(field, [])]
                 hit_prev = [a for a in rows_prev if k in a["geo"].get(field, [])]
                 avg = _avg([a["geo"].get("impact", 0) for a in hit])
-                arrow, arrow_label = trend_arrow(len(hit), len(hit_prev))
+                arrow, arrow_label = compare(len(hit), len(hit_prev), p)
                 out.append({
                     "name": k, "slug": slug(k), "count": len(hit), "prev": len(hit_prev),
                     "avg": avg, "avg_label": fmt_impact(avg), "cls": impact_class(avg),
@@ -330,7 +339,7 @@ def aggregate(articles: list[dict], today: date, weekly: dict | None = None) -> 
         "driver": top_drv if top_drv and top_drv["count"] else None,
         "articles": {"count": w["count"], "prev": w["prev_count"],
                      "analyzed": len([a for a in analyzed if _pub_date(a) > today - timedelta(days=7)]),
-                     "arrow": trend_arrow(w["count"], w["prev_count"])},
+                     "arrow": compare(w["count"], w["prev_count"], 7)},
     }
 
     # 지역 × 주 히트맵 (최근 8주, ISO week)
@@ -362,8 +371,7 @@ def aggregate(articles: list[dict], today: date, weekly: dict | None = None) -> 
     for c in daily.values():
         totals.update(c)
     top_drivers = [k for k, _ in totals.most_common(5)]
-    first_data = min((_pub_date(a) for a in analyzed), default=today)
-    days_of_data = (today - first_data).days + 1
+    days_of_data = (today - first_day).days + 1
     series = []
     for drv in top_drivers:
         raw = [daily[d][drv] for d in span]

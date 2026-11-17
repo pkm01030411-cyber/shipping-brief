@@ -67,6 +67,9 @@ def test_aggregate_windows_and_tiles():
     assert p7["low_sample"] is True
     assert {c["name"] for c in p30["countries"]} == {"YE", "US"}
     assert p30["countries"][0]["bar"] == 1.0
+    # 데이터가 11/5부터라 직전 7일(11/5~11/11)은 비교 가능, 직전 30일은 불가
+    assert red["arrow"] == "↑"
+    assert p30["chokepoints"][0]["arrow"] == "–" and "데이터 없음" in p30["chokepoints"][0]["arrow_label"]
 
 
 def test_aggregate_heat_and_trend():
