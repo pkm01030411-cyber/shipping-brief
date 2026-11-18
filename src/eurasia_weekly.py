@@ -13,7 +13,7 @@ from collections import Counter
 from datetime import datetime, timedelta
 
 from .common import Http, load_config, now_local, today_str
-from .eurasia import EDIR, SYSTEM, all_edays, load_eday
+from .eurasia import EDIR, SYSTEM, all_edays, as_list, load_eday
 from .sources import eurasia as src
 from .summarize import _call_tool, _client, norm_refs
 from .weekly import week_id
@@ -143,20 +143,20 @@ def run(end_date: str | None = None, only_monday: bool = False) -> dict | None:
         review = _call_tool(client, cfg, WEEKLY_TOOL, user, system=SYSTEM, max_tokens=cfg["eurasia"]["max_tokens"])
         valid = {a["id"] for a in arts}
         titles = {a["title"]: a["id"] for a in arts}
-        ids, reasons = review.pop("top_ids", None) or [], review.pop("top_reasons", None) or []
+        ids, reasons = as_list(review.pop("top_ids", None)), as_list(review.pop("top_reasons", None))
         review["top"] = norm_refs([{"id": i, "reason": reasons[n] if n < len(reasons) else ""}
                                    for n, i in enumerate(ids)] if isinstance(ids, list) else ids,
                                   valid, 5, titles=titles)
         themes = []
-        for t in review.get("themes") or []:
+        for t in as_list(review.get("themes")):
             if isinstance(t, dict):
                 tids = t.get("article_ids") or []
                 themes.append({"title": str(t.get("title", "")), "body": str(t.get("body", "")),
                                "article_ids": [r["id"] for r in norm_refs(list(tids) if isinstance(tids, list) else [tids],
                                                                           valid, titles=titles)]})
         review["themes"] = themes
-        kid, ks, kp = (review.pop("kotra_ids", None) or [], review.pop("kotra_summaries", None) or [],
-                       review.pop("kotra_points", None) or [])
+        kid, ks, kp = (as_list(review.pop("kotra_ids", None)), as_list(review.pop("kotra_summaries", None)),
+                       as_list(review.pop("kotra_points", None)))
         by_k = {}
         for n, i in enumerate(kid if isinstance(kid, list) else []):
             i = str(i).strip("[] ")
@@ -164,7 +164,7 @@ def run(end_date: str | None = None, only_monday: bool = False) -> dict | None:
         for k in kotra:
             k["summary"], k["point"] = by_k.get(k["id"], (k["summary_raw"], ""))
             k["summary"] = k["summary"] or k["summary_raw"]
-        review["questions"] = [str(q) for q in review.get("questions") or [] if q]
+        review["questions"] = [str(q) for q in as_list(review.get("questions")) if q]
         review["model"] = cfg["summarize"]["model"]
 
     for k in kotra:

@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import json
 import logging
+import re
 from dataclasses import dataclass
 from datetime import timedelta
 
@@ -48,27 +49,50 @@ SYSTEM = """당신은 러시아·유라시아 정세를 매일 추려 주는 지
 
 SCREEN_TOOL = {
     "name": "submit_screening",
-    "description": "후보 기사마다 한국어 제목과 관련도 점수를 제출한다.",
+    "description": "후보 기사마다 한국어 제목과 관련도 점수를 제출한다. 세 배열은 같은 길이·같은 순서.",
     "input_schema": {
         "type": "object",
         "properties": {
-            "items": {
-                "type": "array",
-                "items": {
-                    "type": "object",
-                    "properties": {
-                        "id": {"type": "string"},
-                        "title_ko": {"type": "string", "description": "자연스러운 한국어 제목 (40자 내외)"},
-                        "score": {"type": "integer", "minimum": 1, "maximum": 5,
-                                  "description": "독자 관심사 관련도·중요도 1~5"},
-                    },
-                    "required": ["id", "title_ko", "score"],
-                },
-            }
+            "ids": {"type": "array", "items": {"type": "string"}, "description": "후보 id (예: meduza:1a2b3c4d5e) — 입력 순서대로 전부"},
+            "titles_ko": {"type": "array", "items": {"type": "string"}, "description": "ids와 같은 순서의 한국어 제목 (40자 내외)"},
+            "scores": {"type": "array", "items": {"type": "integer"}, "description": "ids와 같은 순서의 관련도 1~5"},
         },
-        "required": ["items"],
+        "required": ["ids", "titles_ko", "scores"],
     },
 }
+
+
+def as_list(x) -> list:
+    """모델이 배열 대신 JSON 문자열이나 도구 마크업 문자열을 줄 때도 리스트로 복원한다."""
+    if isinstance(x, list):
+        out = []
+        for v in x:
+            if isinstance(v, str) and v.strip().startswith(("{", "[")):
+                try:
+                    v = json.loads(v)
+                except json.JSONDecodeError:
+                    pass
+            out.extend(v if isinstance(v, list) else [v])
+        return out
+    if isinstance(x, str):
+        t = x.strip()
+        if t.startswith(("[", "{")):
+            try:
+                v = json.loads(t)
+                return as_list(v if isinstance(v, list) else [v])
+            except json.JSONDecodeError:
+                pass
+        blocks = re.split(r"<item>|(?=<parameter name=\"id\">)", t)
+        items = []
+        for b in blocks:
+            params = dict(re.findall(r'<parameter name="(\w+)">\s*(.*?)\s*(?:</parameter>|(?=<parameter)|(?=</item>)|$)', b, re.S))
+            if params:
+                items.append(params)
+        if items:
+            return items
+        return [v.strip() for v in t.split("\n") if v.strip()]
+    return [] if x is None else [x]
+
 
 ARTICLE_TOOL = {
     "name": "submit_summaries",
@@ -174,16 +198,30 @@ def screen(client, cfg, cands: list[dict]) -> None:
         except Exception as e:  # noqa: BLE001
             log.warning("선별 실패 → 최신순 대체: %s", e)
             continue
-        by_id = {c["id"]: c for c in batch}
-        for it in res.get("items", []) or []:
-            c = by_id.get(str(it.get("id", "")).strip("[]"))
-            if c is None:
-                continue
-            c["title_ko"] = str(it.get("title_ko") or "").strip()
-            try:
-                c["score"] = max(1, min(5, int(it.get("score", 0))))
-            except (TypeError, ValueError):
-                pass
+        try:
+            by_id = {c["id"]: c for c in batch}
+            raw_ids = res.get("ids")
+            ids = (re.findall(r"[a-z]+:[0-9a-f]{10}", raw_ids) if isinstance(raw_ids, str) and not raw_ids.strip().startswith("[")
+                   else as_list(raw_ids))
+            titles, scores = as_list(res.get("titles_ko")), as_list(res.get("scores"))
+            if not ids and res.get("items"):  # 혹시 items 형태로 답한 경우
+                its = [i for i in as_list(res.get("items")) if isinstance(i, dict)]
+                ids = [i.get("id") for i in its]; titles = [i.get("title_ko") for i in its]; scores = [i.get("score") for i in its]
+            n_ok = 0
+            for k, raw in enumerate(ids):
+                c = by_id.get(str(raw).strip("[]\" "))
+                if c is None:
+                    continue
+                n_ok += 1
+                c["title_ko"] = str(titles[k]).strip() if k < len(titles) and titles[k] else ""
+                try:
+                    c["score"] = max(1, min(5, int(scores[k])))
+                except (IndexError, TypeError, ValueError):
+                    pass
+            if n_ok < len(batch) // 2:
+                log.warning("선별 응답 인식 %d/%d — 원본 키: %s, 앞부분: %s", n_ok, len(batch), list(res), str(res)[:300])
+        except Exception as e:  # noqa: BLE001 — 응답 모양이 이상해도 최신순 대체로 계속
+            log.warning("선별 응답 해석 실패: %s — %s", e, str(res)[:300])
 
 
 def pick(cands: list[dict], already: int, ecfg: dict) -> tuple[list[dict], list[dict]]:
@@ -222,29 +260,35 @@ def summarize(client, cfg, arts: list[EArticle]) -> None:
         except Exception as e:  # noqa: BLE001
             log.warning("요약 실패: %s", e)
             continue
-        by_id = {a.id: a for a in batch}
-        for it in res.get("items", []) or []:
-            a = by_id.get(str(it.get("id", "")).strip("[]"))
-            if not a:
-                continue
-            a.title = str(it.get("title_ko") or a.title).strip()
-            a.summary = str(it.get("summary") or "").strip()
-            a.why = str(it.get("why") or "").strip()
-            a.logistics = str(it.get("logistics") or "").strip()
-            a.insight = str(it.get("insight") or "").strip()
-            terms = []
-            for t in it.get("terms") or []:
-                if isinstance(t, dict) and t.get("term"):
-                    terms.append({"term": str(t["term"]).strip(), "explanation": str(t.get("explanation", "")).strip()})
-                elif isinstance(t, str) and ":" in t:
-                    k, v = t.split(":", 1)
-                    terms.append({"term": k.strip(), "explanation": v.strip()})
-            a.terms = terms[:2]
-            a.tags = [str(t).strip() for t in it.get("tags") or [] if str(t).strip()][:4]
-            try:
-                a.relevance = max(1, min(5, int(it.get("relevance", a.score or 3))))
-            except (TypeError, ValueError):
-                a.relevance = a.score or 3
+        try:
+            by_id = {a.id: a for a in batch}
+            items = [i for i in as_list(res.get("items")) if isinstance(i, dict)]
+            if len(items) < len(batch):
+                log.warning("요약 응답 %d/%d건 — 앞부분: %s", len(items), len(batch), str(res)[:300])
+            for it in items:
+                a = by_id.get(str(it.get("id", "")).strip("[]"))
+                if not a:
+                    continue
+                a.title = str(it.get("title_ko") or a.title).strip()
+                a.summary = str(it.get("summary") or "").strip()
+                a.why = str(it.get("why") or "").strip()
+                a.logistics = str(it.get("logistics") or "").strip()
+                a.insight = str(it.get("insight") or "").strip()
+                terms = []
+                for t in as_list(it.get("terms")):
+                    if isinstance(t, dict) and t.get("term"):
+                        terms.append({"term": str(t["term"]).strip(), "explanation": str(t.get("explanation", "")).strip()})
+                    elif isinstance(t, str) and ":" in t:
+                        k, v = t.split(":", 1)
+                        terms.append({"term": k.strip(), "explanation": v.strip()})
+                a.terms = terms[:2]
+                a.tags = [str(t).strip() for t in as_list(it.get("tags")) if str(t).strip()][:4]
+                try:
+                    a.relevance = max(1, min(5, int(it.get("relevance", a.score or 3))))
+                except (TypeError, ValueError):
+                    a.relevance = a.score or 3
+        except Exception as e:  # noqa: BLE001
+            log.warning("요약 응답 해석 실패: %s — %s", e, str(res)[:300])
 
 
 def make_brief(client, cfg, arts: list[EArticle]) -> dict:
@@ -259,7 +303,9 @@ def make_brief(client, cfg, arts: list[EArticle]) -> dict:
     brief = _call_tool(client, cfg, BRIEF_TOOL, user, system=SYSTEM, max_tokens=ecfg["max_tokens"])
     valid = {a.id for a in arts}
     by_id = {a.id: a for a in arts}
-    ids, reasons = brief.pop("top_ids", None), brief.pop("top_reasons", None) or []
+    ids, reasons = brief.pop("top_ids", None), as_list(brief.pop("top_reasons", None))
+    if isinstance(ids, str):
+        ids = as_list(ids)
     raw = ([{"id": i, "reason": reasons[k] if k < len(reasons) and isinstance(reasons[k], str) else ""}
             for k, i in enumerate(ids)] if isinstance(ids, list) else (ids or brief.get("top")))
     top = norm_refs(raw, valid, n, titles={a.title: a.id for a in arts})
@@ -273,7 +319,7 @@ def make_brief(client, cfg, arts: list[EArticle]) -> dict:
     for t in top:
         t["reason"] = t["reason"] or by_id[t["id"]].why
     brief["top"] = top
-    brief["watch"] = [str(w) for w in brief.get("watch") or [] if w]
+    brief["watch"] = [str(w) for w in as_list(brief.get("watch")) if w]
     return brief
 
 

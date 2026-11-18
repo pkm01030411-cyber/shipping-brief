@@ -128,8 +128,9 @@ class FakeClient:
         ids = [l.split("]")[0].split("[")[-1] for l in user.splitlines() if l.startswith("[")]
         ids += [l.split('"')[1] for l in user.splitlines() if l.startswith("<article id=")]
         if tool["name"] == "submit_screening":
-            return {"items": [{"id": i, "title_ko": f"한국어 제목 {i}", "score": 1 if "theater" in user.split(i)[1][:80] else 4}
-                              for i in ids]}
+            # Sonnet 5.5가 실제로 그랬듯 배열을 JSON 문자열로 돌려주는 경우까지 재현
+            return {"ids": json.dumps(ids), "titles_ko": [f"한국어 제목 {i}" for i in ids],
+                    "scores": [1 if "theater" in user.split(i)[1][:80] else 4 for i in ids]}
         if tool["name"] == "submit_summaries":
             return {"items": [{"id": i, "title_ko": f"번역 제목 {i}", "summary": "요약입니다.", "why": "의미.",
                                "logistics": "물류 영향.", "insight": "해석.", "terms": [{"term": "TSR", "explanation": "철도"}],
@@ -183,3 +184,12 @@ def test_weekly_skips_when_not_monday(monkeypatch):
     monkeypatch.setattr(euw, "load_config", lambda: cfg)
     monkeypatch.setattr(euw, "now_local", lambda c: datetime(2026, 11, 18, 19, tzinfo=KST))  # 수요일
     assert euw.run(only_monday=True) is None
+
+
+def test_as_list_recovers_stringified_arrays():
+    assert eu.as_list('["a:1", "b:2"]') == ["a:1", "b:2"]
+    assert eu.as_list(['{"id": "x"}']) == [{"id": "x"}]
+    leaked = '<item><parameter name="id">mt:abc</parameter><parameter name="score">4</parameter></item>'
+    assert eu.as_list(leaked) == [{"id": "mt:abc", "score": "4"}]
+    assert eu.as_list("첫째, 제목\n둘째") == ["첫째, 제목", "둘째"]
+    assert eu.as_list(None) == []
