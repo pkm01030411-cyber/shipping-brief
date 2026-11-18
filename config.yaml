@@ -77,3 +77,83 @@ summarize:
   keep_body: false
   # 관심사에서 멀어도 '꼭 알아야 할 큰 뉴스'는 모델이 알아서 올립니다
   top_n: 3
+
+# ─────────────────────────────────────────────
+#  러시아·유라시아 정세 (별도 섹션: eurasia.html)
+#  흐름: 소스별 새 기사 후보 → 제목·리드로 관련도 선별(1회 호출) → 상위 10~15건만 본문 수집
+#        → 한국어 번역 요약 → 오늘의 브리핑. KOTRA 무역관 뉴스는 월요일 주간 리뷰에 사용.
+# ─────────────────────────────────────────────
+eurasia:
+  enabled: true
+  title: "러시아·유라시아"
+  # 이 시간 안에 올라온 기사만 후보 (날짜만 주는 피드가 있어 조금 넉넉하게. 중복은 URL로 제거)
+  window_hours: 40
+  # 하루 게재 건수: 관련도 3 이상 상위 max_daily건, 부족하면 2점짜리로 min_daily까지 채움
+  min_daily: 10
+  max_daily: 15
+  top_n: 3
+  batch_size: 8
+  body_chars: 3000
+  max_tokens: 9000
+  interests:
+    - "러시아 대외정책·제재·우크라이나 전쟁의 전개와 협상"
+    - "러시아 경제(루블·유가·재정·수출입)와 대외무역 구조 변화"
+    - "북극항로(NSR)·북극 LNG·러시아 항만(블라디보스토크·상트페테르부르크·무르만스크)·시베리아횡단철도(TSR)"
+    - "중앙아시아·코카서스 정세와 중간회랑(TITR)·카스피해 물류"
+    - "중국·인도·튀르키예·한국과 러시아·유라시아의 관계"
+    - "그림자 선단·유조선·해상 제재 집행, 해운·조선 산업"
+  # stance: 카드에 표시되는 '출처 시각' 라벨 — 편향을 의식하며 읽도록
+  sources:
+    moscowtimes:
+      enabled: true
+      name: "The Moscow Times"
+      stance: "독립 언론 · 암스테르담"
+      kind: rss
+      url: "https://www.themoscowtimes.com/rss/news"
+      body_selectors: [".article__block--html"]
+      max_candidates: 35
+    meduza:
+      enabled: true
+      name: "Meduza"
+      stance: "독립 언론 · 리가"
+      kind: rss
+      url: "https://meduza.io/rss/en/all"
+      max_candidates: 35
+    eurasianet:
+      enabled: true
+      name: "Eurasianet"
+      stance: "중앙아·코카서스 전문지 · 미국"
+      kind: rss
+      url: "https://eurasianet.org/rss"
+      max_candidates: 15
+    timesca:
+      enabled: true
+      name: "The Times of Central Asia"
+      stance: "중앙아 지역 매체"
+      kind: rss
+      url: "https://timesca.com/feed/"
+      body_selectors: [".entry-content"]
+      max_candidates: 20
+    barents:
+      enabled: true
+      name: "The Barents Observer"
+      stance: "북극 독립 언론 · 노르웨이"
+      kind: barents
+      url: "https://www.thebarentsobserver.com/"
+      max_candidates: 15
+    portnews:
+      enabled: true
+      name: "PortNews"
+      stance: "러시아 해운 업계지 · 상트페테르부르크"
+      kind: portnews
+      url: "https://portnews.ru/news/"
+      max_candidates: 40
+  # KOTRA 해외시장뉴스 (러시아·CIS 무역관) — 주간 리뷰 전용
+  kotra:
+    enabled: true
+    name: "KOTRA 해외시장뉴스"
+    stance: "한국 정부기관 · 무역관"
+    # UN 국가 코드: 러시아, 카자흐스탄, 우즈베키스탄, 아제르바이잔, 벨라루스, 키르기스스탄, 조지아, 우크라이나
+    countries: {"643": "러시아", "398": "카자흐스탄", "860": "우즈베키스탄", "31": "아제르바이잔",
+                "112": "벨라루스", "417": "키르기스스탄", "268": "조지아", "804": "우크라이나"}
+    max_items: 15

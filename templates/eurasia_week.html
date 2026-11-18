@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% import "_article.html" as art %}
+{% block title %}유라시아 주간 리뷰 {{ week.label if week else "" }} · {{ site.title }}{% endblock %}
+{% block mtitle %}유라시아 주간{% endblock %}
+{% block msub %}{{ week.label if week else "" }}{% endblock %}
+{% block content %}
+{% if not week %}
+<section class="brief-head">
+  <h1 class="headline">러시아·유라시아 주간 리뷰</h1>
+  <p class="overview">매주 월요일 저녁, 지난 7일의 유라시아 기사와 <b>KOTRA 해외시장뉴스 러시아·CIS 무역관</b> 소식을 묶어
+  한 주의 흐름 · 무역관 뉴스 요약과 실무 시사점 · 면접용 질문을 정리합니다. 첫 리뷰는 다음 월요일에 생성됩니다.</p>
+</section>
+{% else %}
+{% set r = week.review %}
+<section class="brief-head">
+  <div class="dateline">
+    <span class="date">유라시아 주간 리뷰 · {{ week.label }}</span>
+    <span class="muted">{{ week.start }} ~ {{ week.end }} · 기사 {{ week.article_count }}건 · KOTRA {{ week.kotra|length }}건</span>
+  </div>
+  <h1 class="headline">{{ r.headline }}</h1>
+  <p class="overview">{{ r.overview }}</p>
+  {% if r.offline %}<p class="notice">⚠ API 키 없이 생성된 리뷰입니다.</p>{% endif %}
+</section>
+
+{% if r.themes %}
+<section>
+  <h2 class="sec-title">이번 주 흐름</h2>
+  <div class="themes">
+    {% for t in r.themes %}
+    <div class="theme">
+      <h3>{{ t.title }}</h3>
+      <p>{{ t.body }}</p>
+      {% if t.article_ids %}<div class="theme-links">
+        {% for id in t.article_ids %}{% set a = week.by_id.get(id) %}{% if a %}<a href="{{ a.url }}" target="_blank" rel="noopener">{{ a.title }}</a>{% endif %}{% endfor %}
+      </div>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if week.kotra %}
+<section class="kotra">
+  <h2 class="sec-title">KOTRA 무역관 소식 <span class="muted">러시아·CIS · {{ week.kotra|length }}건</span></h2>
+  <ul class="kotra-list">
+    {% for k in week.kotra %}
+    <li>
+      <div class="kicker"><span class="src">{{ k.kbc }}</span> · {{ k.country }} · {{ k.board }} · {{ k.date[5:].replace('-', '.') }}</div>
+      <h3><a href="{{ k.url }}" target="_blank" rel="noopener">{{ k.title }}</a></h3>
+      {% if k.summary %}<p class="summary">{{ k.summary }}</p>{% endif %}
+      {% if k.point %}<p class="logi"><b>실무 시사점</b> {{ k.point }}</p>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% if week.top %}
+<section class="top">
+  <h2 class="sec-title">이번 주 꼭 기억할 {{ week.top|length }}건</h2>
+  <ol class="top-list">{% for a in week.top %}{{ art.top_item(a, loop.index, root) }}{% endfor %}</ol>
+</section>
+{% endif %}
+
+{% if r.questions %}
+<section class="watch">
+  <h2 class="sec-title">생각해볼 질문 <span class="muted">면접·자소서용</span></h2>
+  <ul>{% for q in r.questions %}<li>{{ q }}</li>{% endfor %}</ul>
+</section>
+{% endif %}
+
+<nav class="pager">
+  {% if prev %}<a href="{{ root }}eurasia/week-{{ prev }}.html">← {{ prev }}</a>{% else %}<span></span>{% endif %}
+  <a href="{{ root }}eurasia.html">유라시아 브리핑</a>
+  {% if next %}<a href="{{ root }}eurasia/week-{{ next }}.html">{{ next }} →</a>{% else %}<span></span>{% endif %}
+</nav>
+{% endif %}
+{% endblock %}

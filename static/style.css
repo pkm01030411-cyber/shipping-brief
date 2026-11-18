@@ -453,3 +453,28 @@ a.gtile[href]:hover { border-color: var(--navy); text-decoration: none; }
 
 /* 모바일 전용 요소: mobile.css가 로드될 때만 보인다 */
 .m-only, .m-nav, .m-snackbar { display: none !important; }
+
+/* ── 러시아·유라시아 섹션 ── */
+.stance { display: inline-block; padding: 0 7px; border-radius: 999px; background: var(--navy-soft); color: var(--navy);
+  font-size: 0.6875rem; font-weight: 500; line-height: 1.6; white-space: nowrap; }
+.orig { margin: -2px 0 8px; font-size: 0.8125rem; color: var(--ink-3); line-height: 1.5; }
+.orig span { font-size: 0.6875rem; border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; margin-right: 4px; }
+.logi { margin: 0 0 8px; padding: 8px 12px; border-radius: 6px; background: var(--navy-soft); font-size: 0.90625rem; color: var(--ink-2); }
+.logi b { color: var(--navy); font-weight: 600; margin-right: 6px; }
+.eu-note { font-size: 0.8125rem; margin: 12px 0 0; }
+.screened { margin: 28px 0; }
+.screened summary { cursor: pointer; list-style: none; }
+.screened summary::-webkit-details-marker { display: none; }
+.screened summary .sec-title::before { content: "▸ "; color: var(--ink-3); }
+.screened details[open] summary .sec-title::before { content: "▾ "; }
+.scr-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 0.875rem; }
+.scr-list li { display: flex; flex-wrap: wrap; gap: 2px 8px; align-items: baseline; padding: 6px 0; border-bottom: 1px dashed var(--line); }
+.scr-list .muted { font-size: 0.75rem; }
+.src-guide { margin: 28px 0; font-size: 0.875rem; }
+.src-guide ul { list-style: none; margin: 0 0 8px; padding: 0; display: grid; gap: 6px; }
+.src-guide li b { font-weight: 600; margin-right: 4px; }
+.kotra-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.kotra-list li { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.kotra-list h3 { font-family: var(--serif); font-size: 1.0625rem; margin: 0 0 6px; line-height: 1.45; }
+.kotra-list .summary { margin: 0 0 8px; color: var(--ink-2); font-size: 0.9375rem; }
+.eu-mini .mini-top { margin-bottom: 4px; }

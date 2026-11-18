@@ -9,6 +9,7 @@ data-tags="{{ a.tags|join('|') }}" data-low="{{ '1' if (a.relevance or 0) <= 2 e
 <div class="kicker">
   <span class="src">{{ a.source_name }}</span>{% if a.category %} · {{ a.category }}{% endif %} · {{ a.published|ftime }}
   {% for kw in a.kw %}<span class="kw" title="관심 키워드">{{ kw }}</span>{% endfor %}
+  {% if a.stance %}<span class="stance" title="출처 시각 — 매체의 위치를 의식하며 읽기">{{ a.stance }}</span>{% endif %}
   {% if show_rel and a.relevance %}<span class="rel" title="관련도 {{ a.relevance }}/5">{{ "●" * a.relevance }}{{ "○" * (5 - a.relevance) }}</span>{% endif %}
 </div>
 {%- endmacro %}
@@ -42,7 +43,12 @@ data-tags="{{ a.tags|join('|') }}" data-low="{{ '1' if (a.relevance or 0) <= 2 e
 <button type="button" class="m-more-btn m-only" aria-expanded="false">해설 보기</button>
 {%- endmacro %}
 
+{% macro orig(a) -%}
+<p class="orig" lang="{{ a.lang or 'en' }}"><span>원제</span> {{ a.orig_title }}</p>
+{%- endmacro %}
+
 {% macro extras(a) -%}
+{% if a.logistics %}<p class="logi"><b>물류·무역</b> {{ a.logistics }}</p>{% endif %}
 {% if a.insight %}<p class="insight"><b>인사이트</b> {{ a.insight }}</p>{% endif %}
 {% if a.terms %}<dl class="terms">{% for t in a.terms %}<div><dt>{{ t.term }}</dt><dd>{{ t.explanation }}</dd></div>{% endfor %}</dl>{% endif %}
 {%- endmacro %}
@@ -56,7 +62,7 @@ data-tags="{{ a.tags|join('|') }}" data-low="{{ '1' if (a.relevance or 0) <= 2 e
   <div class="top-body">
     {{ kicker(a, root, show_rel=False) }}
     <h3><a class="origin-link" href="{{ a.url }}" target="_blank" rel="noopener">{{ a.title }}</a></h3>
-    {% if a.subtitle %}<p class="subtitle">{{ a.subtitle }}</p>{% endif %}
+    {% if a.orig_title %}{{ orig(a) }}{% elif a.subtitle %}<p class="subtitle">{{ a.subtitle }}</p>{% endif %}
     <p class="summary">{{ a.summary }}</p>
     {{ more_btn(a) }}
     <div class="m-extras">
@@ -74,6 +80,7 @@ data-tags="{{ a.tags|join('|') }}" data-low="{{ '1' if (a.relevance or 0) <= 2 e
   {{ anchor(a) }}
   {{ kicker(a, root) }}
   <h3><a class="origin-link" href="{{ a.url }}" target="_blank" rel="noopener">{{ a.title }}</a></h3>
+  {% if a.orig_title %}{{ orig(a) }}{% endif %}
   <p class="summary">{{ a.summary }}</p>
   {{ more_btn(a) }}
   <div class="m-extras">

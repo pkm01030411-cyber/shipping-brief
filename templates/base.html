@@ -35,6 +35,7 @@
     <nav class="top-nav">
       <a href="{{ root }}today.html" {% if nav == 'today' %}class="on"{% endif %}>오늘</a>
       <a href="{{ root }}geo.html" {% if nav == 'geo' %}class="on"{% endif %}>정세</a>
+      <a href="{{ root }}eurasia.html" {% if nav == 'eurasia' %}class="on"{% endif %}>유라시아</a>
       <a href="{{ root }}weekly.html" {% if nav == 'weekly' %}class="on"{% endif %}>주간</a>
       <a href="{{ root }}tags.html" {% if nav == 'tags' %}class="on"{% endif %}>태그</a>
       <a href="{{ root }}scrap.html" {% if nav == 'scrap' %}class="on"{% endif %}>스크랩 <span id="star-count" class="badge"></span></a>
@@ -48,7 +49,7 @@
 {% block content %}{% endblock %}
 </main>
 <footer class="wrap foot">
-  <p>{{ site.tagline }} · 요약은 AI가 생성했으며 원문 확인을 권장합니다. 각 기사의 저작권은 해당 매체에 있습니다.</p>
+  <p>{% block foot_lead %}{{ site.tagline }}{% endblock %} · 요약은 AI가 생성했으며 원문 확인을 권장합니다. 각 기사의 저작권은 해당 매체에 있습니다.</p>
   <p class="muted">빌드 {{ site.built_at }}<span class="kbd-hint"> · 단축키 <kbd>?</kbd></span></p>
 </footer>
 <div id="kbd-help" class="kbd-help">
@@ -61,7 +62,7 @@
 </div>
 {# ── 모바일 전용 (mobile.css가 없으면 보이지 않음) ── #}
 <nav class="m-nav m-only" aria-label="주요 메뉴">
-  {% set more_on = nav in ('weekly', 'tags', 'archive') %}
+  {% set more_on = nav in ('weekly', 'tags', 'archive', 'eurasia') %}
   <a href="{{ root }}index.html" class="m-nav-item" {% if nav == 'home' %}aria-current="page"{% endif %}>
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6h-4v6H5a1 1 0 0 1-1-1z"/></svg><span>홈</span></a>
   <a href="{{ root }}today.html" class="m-nav-item" {% if nav == 'today' %}aria-current="page"{% endif %}>
@@ -77,6 +78,7 @@
 </nav>
 <template id="tpl-more">
   <ul class="m-list">
+    <li><a href="{{ root }}eurasia.html"><b>러시아·유라시아</b><span>정세 기사 한국어 요약 · 매일 10~15건</span></a></li>
     <li><a href="{{ root }}weekly.html"><b>주간 리뷰</b><span>지난 7일 흐름과 면접용 질문</span></a></li>
     <li><a href="{{ root }}tags.html"><b>태그</b><span>이슈별로 모아보기</span></a></li>
     <li><a href="{{ root }}archive.html"><b>지난 브리핑</b><span>날짜별 목록</span></a></li>

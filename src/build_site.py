@@ -16,6 +16,8 @@ from .common import (SITE_DIR, STATIC_DIR, TEMPLATE_DIR, all_days, load_config,
                      load_day, now_local)
 from . import geo as geo_mod
 from .weekly import all_weeks, load_week
+from . import eurasia as eu_mod
+from . import eurasia_weekly as euw_mod
 
 log = logging.getLogger("brief.build")
 
@@ -126,6 +128,75 @@ def build_feed(site: dict, days: list[dict]) -> str:
 </channel></rss>"""
 
 
+# ── 러시아·유라시아 섹션 ─────────────────────────────────────────
+def build_eurasia(env, site: dict, cfg: dict) -> tuple[dict | None, list[dict]]:
+    """eurasia.html · eurasia/YYYY-MM-DD.html · eurasia-archive.html · eurasia-weekly.html.
+    반환: (최신 하루치 — 홈 패널용, 전체 게재 기사 — 태그 페이지용)"""
+    ecfg = cfg.get("eurasia") or {}
+    (SITE_DIR / "eurasia").mkdir(parents=True, exist_ok=True)
+    eu_sources = [{"name": v["name"], "stance": v.get("stance", "")} for v in (ecfg.get("sources") or {}).values()
+                  if v.get("enabled", True)]
+    if (ecfg.get("kotra") or {}).get("enabled"):
+        k = ecfg["kotra"]
+        eu_sources.append({"name": k["name"], "stance": k.get("stance", ""), "note": "러시아·CIS 무역관 — 주간 리뷰에 수록"})
+    prepared: dict[str, dict] = {}
+    archive = []
+    for d in eu_mod.all_edays():
+        day = eu_mod.load_eday(d)
+        if not day or not day.get("articles"):
+            continue
+        p = prepare_day(day, cfg)
+        p["screened"] = sorted(day.get("screened", []), key=lambda x: (-(x.get("score") or 0), x.get("published", "")))
+        prepared[d] = p
+        archive.append({"date": d, "label": p["date_label"], "count": len(day["articles"]),
+                        "headline": p["brief"].get("headline", "")})
+    days = list(prepared)
+    tpl = env.get_template("eurasia.html")
+    for i, d in enumerate(days):
+        prev_d = days[i + 1] if i + 1 < len(days) else None
+        next_d = days[i - 1] if i > 0 else None
+        (SITE_DIR / "eurasia" / f"{d}.html").write_text(
+            tpl.render(site=site, day=prepared[d], prev=prev_d, next=next_d, root="../", nav="eurasia",
+                       eu_sources=eu_sources), encoding="utf-8")
+    if days:
+        html = tpl.render(site=site, day=prepared[days[0]], prev=days[1] if len(days) > 1 else None, next=None,
+                          root="", nav="eurasia", eu_sources=eu_sources)
+    else:
+        html = env.get_template("eurasia_empty.html").render(site=site, root="", nav="eurasia")
+    (SITE_DIR / "eurasia.html").write_text(html, encoding="utf-8")
+    (SITE_DIR / "eurasia-archive.html").write_text(
+        env.get_template("eurasia_archive.html").render(site=site, archive=archive, root="", nav="eurasia"),
+        encoding="utf-8")
+
+    keywords = cfg["site"].get("highlight_keywords", [])
+    weeks = euw_mod.all_eweeks()
+    wtpl = env.get_template("eurasia_week.html")
+    for i, wid in enumerate(weeks):
+        w = euw_mod.load_eweek(wid)
+        if not w:
+            continue
+        by_id = {a["id"]: annotate(a, keywords) for a in w.get("articles", [])}
+        top = [{**by_id[t["id"]], "reason": t.get("reason", "")} for t in w["review"].get("top", []) if t["id"] in by_id]
+        ctx = {**w, "by_id": by_id, "top": top, "label": f"{w['week'][:4]}년 {int(w['week'][-2:])}주차"}
+        nav_kw = dict(prev=weeks[i + 1] if i + 1 < len(weeks) else None, next=weeks[i - 1] if i > 0 else None)
+        (SITE_DIR / "eurasia" / f"week-{wid}.html").write_text(
+            wtpl.render(site=site, week=ctx, root="../", nav="eurasia", **nav_kw), encoding="utf-8")
+        if i == 0:
+            (SITE_DIR / "eurasia-weekly.html").write_text(
+                wtpl.render(site=site, week=ctx, root="", nav="eurasia", **nav_kw), encoding="utf-8")
+    if not weeks:
+        (SITE_DIR / "eurasia-weekly.html").write_text(
+            wtpl.render(site=site, week=None, root="", nav="eurasia", prev=None, next=None), encoding="utf-8")
+
+    seen, arts = set(), []
+    for d in days:
+        for a in prepared[d]["articles"]:
+            if a["id"] not in seen:
+                seen.add(a["id"]); arts.append(a)
+    log.info("유라시아: %d일치, 주간 %d개", len(days), len(weeks))
+    return (prepared[days[0]] if days else None), arts
+
+
 # ── 빌드 ────────────────────────────────────────────────────────
 def build() -> None:
     cfg = load_config()
@@ -165,7 +236,7 @@ def build() -> None:
     env.globals["latest_date"] = days[0] if days else ""
     env.globals["latest_ids"] = "|".join(a["id"] for a in prepared[days[0]]["articles"]) if days else ""
     env.globals["mtitles"] = {"home": site["title"], "today": "브리핑", "geo": "국제정세", "weekly": "주간 리뷰",
-                              "tags": "태그", "scrap": "스크랩", "archive": "지난 브리핑"}
+                              "tags": "태그", "scrap": "스크랩", "archive": "지난 브리핑", "eurasia": "러시아·유라시아"}
 
     day_tpl = env.get_template("day.html")
     for i, d in enumerate(days):
@@ -185,16 +256,23 @@ def build() -> None:
     (SITE_DIR / "archive.html").write_text(
         env.get_template("archive.html").render(site=site, archive=archive, root="", nav="archive"), encoding="utf-8")
 
+    # 러시아·유라시아 섹션 (태그 페이지에도 함께 모음)
+    eu_latest, eu_articles = build_eurasia(env, site, cfg)
+
     # 태그 페이지
     by_tag: dict[str, list[dict]] = defaultdict(list)
     for d in days:
         for a in prepared[d]["articles"]:
             for t in a.get("tags", []):
                 by_tag[t].append(a)
+    for a in eu_articles:
+        for t in a.get("tags", []):
+            by_tag[t].append(a)
     # 관심 키워드도 태그처럼 페이지 생성 (태그에 없더라도 본문 매칭으로)
     for kw in cfg["site"].get("highlight_keywords", []):
         if kw not in by_tag:
-            hits = [a for d in days for a in prepared[d]["articles"] if kw in a["kw"]]
+            hits = [a for d in days for a in prepared[d]["articles"] if kw in a["kw"]] + \
+                   [a for a in eu_articles if kw in a["kw"]]
             if hits:
                 by_tag[kw] = hits
     tag_tpl = env.get_template("tag.html")
@@ -203,7 +281,7 @@ def build() -> None:
     for t, arts in by_tag.items():
         # 같은 기사가 두 번 들어가지 않게
         seen, uniq = set(), []
-        for a in arts:
+        for a in sorted(arts, key=lambda a: a["published"], reverse=True):
             if a["id"] not in seen:
                 seen.add(a["id"]); uniq.append(a)
         groups: dict[str, list[dict]] = defaultdict(list)
@@ -287,7 +365,7 @@ def build() -> None:
         week=latest_week, kw_trend=kw_trend, archive=archive, top_tags=tag_index[:14],
         geo_top=sorted([c for c in g["periods"][30]["chokepoints"] if c["count"]],
                        key=lambda c: (-c["count"], c["avg"] or 0))[:3],
-        geo_line=g["line"], geo_tiles=g["tiles"])
+        geo_line=g["line"], geo_tiles=g["tiles"], eu=eu_latest)
     (SITE_DIR / "index.html").write_text(home, encoding="utf-8")
 
     # PWA
@@ -306,13 +384,15 @@ def build() -> None:
              "icons": [{"src": "static/sc-today.png", "sizes": "96x96", "type": "image/png"}]},
             {"name": "국제정세", "short_name": "정세", "url": "./geo.html",
              "icons": [{"src": "static/sc-geo.png", "sizes": "96x96", "type": "image/png"}]},
+            {"name": "러시아·유라시아", "short_name": "유라시아", "url": "./eurasia.html",
+             "icons": [{"src": "static/sc-geo.png", "sizes": "96x96", "type": "image/png"}]},
             {"name": "스크랩", "short_name": "스크랩", "url": "./scrap.html",
              "icons": [{"src": "static/sc-scrap.png", "sizes": "96x96", "type": "image/png"}]},
         ],
     }
     (SITE_DIR / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
     # 오프라인용 미리 캐시: 핵심 페이지 + 최근 7일 브리핑 + 정적 파일
-    precache = ["./", "./index.html", "./today.html", "./geo.html", "./scrap.html", "./weekly.html", "./archive.html",
+    precache = ["./", "./index.html", "./today.html", "./geo.html", "./eurasia.html", "./scrap.html", "./weekly.html", "./archive.html",
                 "./manifest.json", "./static/style.css", "./static/mobile.css", "./static/app.js", "./static/mobile.js",
                 "./static/icon-192.png", "./static/icon-maskable-192.png"]
     precache += [f"./day/{d}.html" for d in days[:7]]

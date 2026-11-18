@@ -51,6 +51,9 @@
   // ── 렌더 ───────────────────────────────────────────────
   function render() {
     var total = 0, done = 0, visibleEls = [];
+    // 저장된 출처 필터가 이 페이지에 없는 출처면(예: 해운 브리핑에서 고른 필터로 유라시아 페이지를 연 경우) 전체로 본다
+    var src = filter.source;
+    if (src !== "all" && !document.querySelector('[data-filter-source="' + src + '"]')) src = "all";
     // 홈: 오늘 기사 id 목록으로 진행률 계산
     var home = document.querySelector("[data-today-ids]");
     if (home && !items.length) {
@@ -68,7 +71,7 @@
       var sb = el.querySelector(".btn-star"); if (sb) { sb.setAttribute("aria-pressed", s); sb.textContent = s ? "★" : "☆"; sb.title = s ? "스크랩 해제" : "스크랩"; }
 
       var low = el.dataset.low === "1";
-      var hidden = (filter.source !== "all" && el.dataset.source !== filter.source)
+      var hidden = (src !== "all" && el.dataset.source !== src)
                 || (low && !filter.showLow)
                 || (filter.hideRead && r);
       el.classList.toggle("is-hidden", hidden);
@@ -85,7 +88,7 @@
     }
     // 필터 칩 상태
     document.querySelectorAll("[data-filter-source]").forEach(function (c) {
-      c.setAttribute("aria-pressed", c.dataset.filterSource === filter.source);
+      c.setAttribute("aria-pressed", c.dataset.filterSource === src);
     });
     var hr = document.getElementById("toggle-hide-read"); if (hr) hr.setAttribute("aria-pressed", filter.hideRead);
     var lowBtn = document.getElementById("toggle-low");
@@ -141,7 +144,8 @@
   });
 
   // ── 스크랩 페이지 ────────────────────────────────────────
-  var SOURCE_NAMES = { ksg: "코리아쉬핑가제트", cargonews: "카고뉴스" };
+  var SOURCE_NAMES = { ksg: "코리아쉬핑가제트", cargonews: "카고뉴스", moscowtimes: "The Moscow Times", meduza: "Meduza",
+    eurasianet: "Eurasianet", timesca: "The Times of Central Asia", barents: "The Barents Observer", portnews: "PortNews" };
   Object.keys(star).forEach(function (k) { var a = star[k]; if (a && SOURCE_NAMES[a.source]) a.source = SOURCE_NAMES[a.source]; });
   var scrapRoot = document.getElementById("scrap-list");
   if (scrapRoot) {

@@ -21,6 +21,10 @@ on:
         description: "과거 기사에 국제정세 태깅 추가 (정세 대시보드용, 1회)"
         type: boolean
         default: false
+      eurasia_resummarize:
+        description: "오늘 러시아·유라시아 기사 요약을 처음부터 다시"
+        type: boolean
+        default: false
 
 permissions:
   contents: write           # data/ 커밋
@@ -52,6 +56,7 @@ jobs:
           [ "${{ inputs.weekly }}" = "true" ] && FLAGS="--weekly"
           [ "${{ inputs.resummarize }}" = "true" ] && FLAGS="$FLAGS --resummarize"
           [ "${{ inputs.backfill_geo }}" = "true" ] && FLAGS="$FLAGS --backfill-geo"
+          [ "${{ inputs.eurasia_resummarize }}" = "true" ] && FLAGS="$FLAGS --eurasia-resummarize"
           python run.py $FLAGS
 
       - name: Commit data

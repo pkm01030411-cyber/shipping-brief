@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}지난 유라시아 브리핑 · {{ site.title }}{% endblock %}
+{% block mtitle %}지난 유라시아 브리핑{% endblock %}
+{% block content %}
+<section class="brief-head">
+  <h1 class="headline">지난 러시아·유라시아 브리핑</h1>
+  <p class="overview muted">{{ archive|length }}일치 · <a href="{{ root }}eurasia-weekly.html">주간 리뷰 보기 →</a></p>
+</section>
+<div class="m-search m-only" role="search"><input type="search" placeholder="날짜·헤드라인 검색" aria-label="지난 유라시아 브리핑 검색" data-target=".archive li" enterkeyhint="search"></div>
+<ul class="archive">
+  {% for d in archive %}
+  <li>
+    <a href="{{ root }}eurasia/{{ d.date }}.html">
+      <span class="arch-date">{{ d.label }}</span>
+      <span class="arch-head">{{ d.headline or "브리핑" }}</span>
+      <span class="arch-count">{{ d.count }}건</span>
+    </a>
+  </li>
+  {% else %}
+  <li class="muted">아직 수집된 브리핑이 없습니다.</li>
+  {% endfor %}
+</ul>
+{% endblock %}

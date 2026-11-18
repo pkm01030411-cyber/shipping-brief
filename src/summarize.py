@@ -124,7 +124,8 @@ def _extract_json(text: str) -> dict | None:
         return None
 
 
-def _call_tool(client, cfg, tool: dict, user_text: str) -> dict:
+def _call_tool(client, cfg, tool: dict, user_text: str, system: str | None = None,
+               max_tokens: int | None = None) -> dict:
     """구조화 출력. 일부 모델은 tool_choice 강제를 지원하지 않아 auto + 지시문으로 유도하고,
     그래도 텍스트로 답하면 JSON을 파싱한다."""
     scfg = cfg["summarize"]
@@ -132,8 +133,8 @@ def _call_tool(client, cfg, tool: dict, user_text: str) -> dict:
                   f"도구를 쓸 수 없다면 동일한 스키마의 JSON 객체만 ```json 블록으로 출력하세요.")
     resp = client.messages.create(
         model=scfg["model"],
-        max_tokens=scfg["max_tokens"],
-        system=SYSTEM,
+        max_tokens=max_tokens or scfg["max_tokens"],
+        system=system or SYSTEM,
         tools=[tool],
         tool_choice={"type": "auto"},
         messages=[{"role": "user", "content": user_text}],
