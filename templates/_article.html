@@ -41,8 +41,11 @@ data-tags="{{ a.tags|join('|') }}" data-low="{{ '1' if (a.relevance or 0) <= 2 e
 {% if a.terms %}<dl class="terms">{% for t in a.terms %}<div><dt>{{ t.term }}</dt><dd>{{ t.explanation }}</dd></div>{% endfor %}</dl>{% endif %}
 {%- endmacro %}
 
+{% macro anchor(a) -%}<span class="art-anchor" id="art-{{ a.id|artslug }}"></span>{%- endmacro %}
+
 {% macro top_item(a, n, root) -%}
 <li class="top-item" id="a-{{ n }}" {{ attrs(a) }}>
+  {{ anchor(a) }}
   <div class="top-num">{{ n }}</div>
   <div class="top-body">
     {{ kicker(a, root, show_rel=False) }}
@@ -59,6 +62,7 @@ data-tags="{{ a.tags|join('|') }}" data-low="{{ '1' if (a.relevance or 0) <= 2 e
 
 {% macro card(a, root, show_date=False) -%}
 <article class="card rel-{{ a.relevance or 0 }}" {{ attrs(a) }}>
+  {{ anchor(a) }}
   {{ kicker(a, root) }}
   <h3><a class="origin-link" href="{{ a.url }}" target="_blank" rel="noopener">{{ a.title }}</a></h3>
   <p class="summary">{{ a.summary }}</p>

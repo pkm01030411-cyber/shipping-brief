@@ -18,7 +18,7 @@ from datetime import date, datetime, timedelta
 log = logging.getLogger("brief.geo")
 
 # ── 어휘 ────────────────────────────────────────────────────────
-REGIONS = ["동아시아", "동남아", "남아시아", "중동", "유럽", "북미", "중남미", "아프리카", "러시아·CIS", "북극"]
+REGIONS = ["동아시아", "동남아", "남아시아", "중동", "유럽", "북미", "중남미", "아프리카", "러시아·CIS", "북극", "오세아니아"]
 CHOKEPOINTS = ["홍해·바브엘만데브", "수에즈", "파나마", "호르무즈", "말라카", "흑해·보스포루스", "북극항로", "대만해협"]
 DRIVERS = ["관세·무역정책", "분쟁·안보", "제재", "노사·파업", "기후·운하수위", "에너지·유가", "공급망 재편", "환경규제"]
 
@@ -39,6 +39,7 @@ _ALIASES = {
     "동북아": "동아시아", "아시아": "동아시아", "동남아시아": "동남아", "아세안": "동남아",
     "인도": "남아시아", "미국": "북미", "북아메리카": "북미", "남미": "중남미", "라틴아메리카": "중남미",
     "러시아": "러시아·CIS", "cis": "러시아·CIS", "중앙아시아": "러시아·CIS", "eu": "유럽",
+    "호주": "오세아니아", "대양주": "오세아니아", "태평양도서국": "오세아니아",
 }
 
 COUNTRY_KO = {
@@ -449,76 +450,103 @@ def trend_svg(trend: dict, width: int = 720, height: int = 220) -> str:
     return "".join(out)
 
 
-# ── SVG: 항로 도식 (부산 중심, 태평양 중심 정거원통 근사) ────────────────
-MAP_W, MAP_H, LAT_TOP, LAT_BOTTOM = 800, 340, 86, -40
+# ── 세계지도 (정거원통, 본초자오선 중심) ─────────────────────────────
+MAP_W, LAT_TOP, LAT_BOTTOM = 1000, 85, -58
+MAP_H = round(MAP_W * (LAT_TOP - LAT_BOTTOM) / 360)  # 397 — 경도·위도 1도가 같은 길이
 
 
 def _xy(lon: float, lat: float, w: int = MAP_W, h: int = MAP_H) -> tuple[float, float]:
-    x = ((lon + 25) % 360) / 360 * w
+    """경위도 → SVG 좌표. scripts/build_world_path.py 도 이 함수를 쓴다."""
+    x = (lon + 180) / 360 * w
     y = (LAT_TOP - lat) / (LAT_TOP - LAT_BOTTOM) * h
     return round(x, 1), round(y, 1)
 
 
-PORTS = {  # 표시용 거점
-    "부산": (129.0, 35.1), "로테르담": (4.5, 51.9), "LA·롱비치": (-118.2, 33.8),
-"만사니요": (-104.3, 19.1), "산투스": (-46.3, -23.9),
+# 지도에 점을 찍는 대표 지역 (순서 고정). 세부 지역·국가마다 찍지 않는다.
+MAP_REGIONS = ["동아시아", "동남아시아", "남아시아", "중동", "유럽", "러시아·CIS",
+               "북미", "중남미", "아프리카", "오세아니아"]
+# 태깅 지역(geo.REGIONS) → 대표 지역. 북극은 북극항로가 러시아 연안을 따라가므로 러시아·CIS로.
+REGION_TO_MAP = {"동아시아": "동아시아", "동남아": "동남아시아", "남아시아": "남아시아", "중동": "중동",
+                 "유럽": "유럽", "러시아·CIS": "러시아·CIS", "북극": "러시아·CIS", "북미": "북미",
+                 "중남미": "중남미", "아프리카": "아프리카", "오세아니아": "오세아니아"}
+COUNTRY_TO_MAP = {
+    **{c: "동아시아" for c in ("KR", "CN", "JP", "TW", "HK", "MN", "KP")},
+    **{c: "동남아시아" for c in ("SG", "VN", "TH", "MY", "ID", "PH", "MM", "KH")},
+    **{c: "남아시아" for c in ("IN", "BD", "LK", "PK")},
+    **{c: "중동" for c in ("AE", "SA", "IR", "IL", "YE", "TR", "QA", "OM")},
+    **{c: "유럽" for c in ("DE", "NL", "BE", "FR", "GB", "IT", "ES", "PT", "GR", "DK", "NO", "SE",
+                          "FI", "PL", "UA", "EE", "CH")},
+    **{c: "러시아·CIS" for c in ("RU", "KZ", "UZ")},
+    **{c: "북미" for c in ("US", "CA", "MX")},
+    **{c: "중남미" for c in ("PA", "BR", "CL", "PE", "CO", "AR")},
+    **{c: "아프리카" for c in ("EG", "ZA", "KE", "TZ", "NG", "MA", "DJ")},
+    **{c: "오세아니아" for c in ("AU", "NZ")},
 }
-CP_POS = {
-    "홍해·바브엘만데브": (43.4, 12.6), "수에즈": (32.5, 30.0), "파나마": (-79.9, 9.1),
-    "호르무즈": (56.3, 26.5), "말라카": (100.5, 3.0), "흑해·보스포루스": (29.0, 41.1),
-    "북극항로": (110.0, 76.5), "대만해협": (119.5, 24.5),
-}
-ROUTES = [  # (이름, 경유점[lon,lat], 점선 여부)
-    ("아시아–북미 서안", [(129, 35.1), (150, 40), (180, 42), (-150, 40), (-118.2, 33.8)], False),
-    ("아시아–유럽 (수에즈)", [(129, 35.1), (119.5, 24.5), (110, 12), (103.8, 1.3), (80, 6), (55, 13),
-                           (43.4, 12.6), (37, 22), (32.5, 30), (20, 34), (-5.6, 36), (-10, 44), (4.5, 51.9)], False),
-    ("아시아–유럽 (희망봉 우회)", [(103.8, 1.3), (80, -5), (50, -25), (18.5, -36), (0, -20), (-18, 10),
-                              (-15, 35), (-10, 46), (4.5, 51.9)], True),
-    ("아시아–중남미", [(129, 35.1), (160, 25), (-150, 20), (-104.3, 19.1), (-79.9, 9.1), (-70, 2),
-                     (-55, -10), (-46.3, -23.9)], False),
-    ("북극항로", [(129, 35.1), (142, 47), (160, 60), (175, 67), (150, 73), (110, 76.5), (60, 74),
-                (33, 70), (15, 62), (4.5, 51.9)], True),
-]
-REGION_LABELS = {"유럽": (34, 57), "중동": (64, 36), "아프리카": (22, 2), 
-                 "동아시아": (108, 44), "러시아·CIS": (85, 62), "북극": (62, 80),
-                 "북미": (-100, 50), "중남미": (-62, -14)}
+# 점 위치 (경도, 위도) — 대륙의 시각적 중심. 가까운 아시아 3곳은 서로 겹치지 않게 벌려 둠.
+MAP_POS = {"동아시아": (116, 37), "동남아시아": (106, 8), "남아시아": (78, 21), "중동": (46, 28),
+           "유럽": (14, 50), "러시아·CIS": (78, 60), "북미": (-100, 42), "중남미": (-62, -12),
+           "아프리카": (20, 3), "오세아니아": (134, -25)}
 
 
-def route_svg(cps_30: list[dict], cps_7: list[dict]) -> str:
-    """초크포인트 점의 색은 평균 impact, 크기는 기사 수. 기간 토글은 data 속성 + CSS로."""
+def map_regions_of(a: dict) -> list[str]:
+    """기사 하나가 걸리는 대표 지역들 (중복 없이, MAP_REGIONS 순서)."""
+    g = a.get("geo") or {}
+    hits = {REGION_TO_MAP[r] for r in g.get("regions", []) if r in REGION_TO_MAP}
+    if not hits:  # 지역 태그가 없으면 국가로
+        hits = {COUNTRY_TO_MAP[c] for c in g.get("countries", []) if c in COUNTRY_TO_MAP}
+    return [r for r in MAP_REGIONS if r in hits]
+
+
+def map_regions(day_date: str | None, day_articles: list[dict]) -> dict:
+    """당일 기사 → 대표 지역별 집계 {date, regions:[...], unmapped, selected}."""
+    buckets: dict[str, list[dict]] = {r: [] for r in MAP_REGIONS}
+    unmapped = 0
+    for a in day_articles:
+        rs = map_regions_of(a)
+        if not rs:
+            unmapped += 1
+        for r in rs:
+            buckets[r].append(a)
+    regions = []
+    for r in MAP_REGIONS:
+        arts = sorted(buckets[r], key=lambda a: (-abs((a.get("geo") or {}).get("impact", 0)),
+                                                -(a.get("relevance") or 0), a["published"]))
+        avg = _avg([(a.get("geo") or {}).get("impact", 0) for a in arts])
+        x, y = _xy(*MAP_POS[r])
+        n = len(arts)
+        regions.append({
+            "name": r, "slug": slug(r), "count": n, "avg": avg, "avg_label": fmt_impact(avg),
+            "cls": impact_class(avg), "x": x, "y": y,
+            "px": round(x / MAP_W * 100, 2), "py": round(y / MAP_H * 100, 2),  # HTML 겹침용 %
+            "d": round(2 * min(22, max(9, 9 + (n ** 0.5 - 1) * 6.5))) if n else 0,  # 지름 18~44px
+            "articles": [{
+                "id": a["id"], "anchor": "art-" + re.sub(r"[^0-9a-z가-힣]+", "-", a["id"].lower()).strip("-"),
+                "title": a["title"], "url": a["url"], "source": a.get("source_name", ""),
+                "time": a["published"][11:16], "relevance": a.get("relevance") or 0,
+                "impact": (a.get("geo") or {}).get("impact", 0), "note": (a.get("geo") or {}).get("note", ""),
+                "countries": (a.get("geo") or {}).get("countries", []),
+            } for a in arts],
+        })
+    with_dots = [r for r in regions if r["count"]]
+    selected = max(with_dots, key=lambda r: (r["count"], -(r["avg"] or 0)))["slug"] if with_dots else None
+    return {"date": day_date, "regions": regions, "unmapped": unmapped, "selected": selected,
+            "mapped": sum(1 for a in day_articles if map_regions_of(a))}
+
+
+def world_map_svg(map_data: dict, land_path: str) -> str:
+    """육지 + 위도 보조선 + 0건 지역의 옅은 이름. 점(버튼)은 템플릿이 HTML로 겹친다."""
     w, h = MAP_W, MAP_H
-    out = [f'<svg viewBox="0 0 {w} {h}" class="route-svg" role="img" aria-labelledby="route-title route-desc">',
-           '<title id="route-title">부산 출발 주요 간선과 해상 요충지</title>']
-    hot = [f"{c['name']} {c['count']}건 평균 {c['avg_label']}" for c in cps_30 if c["count"]]
-    out.append(f'<desc id="route-desc">최근 30일 언급된 요충지: {", ".join(hot) or "없음"}</desc>')
-    for lat in (60, 30, 0, -30):  # 위도 보조선
+    counts = ", ".join(f"{r['name']} {r['count']}건" for r in map_data["regions"] if r["count"])
+    out = [f'<svg viewBox="0 0 {w} {h}" class="world-svg" role="img" aria-labelledby="map-title map-desc" '
+           f'preserveAspectRatio="xMidYMid meet">',
+           '<title id="map-title">당일 브리핑 기사가 다룬 지역</title>',
+           f'<desc id="map-desc">{map_data.get("date") or ""} 브리핑 기준: {counts or "지역이 특정된 기사 없음"}</desc>']
+    for lat in (60, 30, 0, -30):
         y = _xy(0, lat)[1]
         out.append(f'<line x1="0" x2="{w}" y1="{y}" y2="{y}" class="grid"/>')
-    for name, (lon, lat) in REGION_LABELS.items():
-        x, y = _xy(lon, lat)
-        out.append(f'<text x="{x}" y="{y}" class="region" text-anchor="middle">{name}</text>')
-    for name, pts, dashed in ROUTES:
-        xy = [_xy(lon, lat) for lon, lat in pts]
-        d = "M" + " L".join(f"{x},{y}" for x, y in xy)
-        cls = "route dashed" if dashed else "route"
-        out.append(f'<path d="{d}" class="{cls}"><title>{name}</title></path>')
-    for name, (lon, lat) in PORTS.items():
-        x, y = _xy(lon, lat)
-        cls = "port home" if name == "부산" else "port"
-        out.append(f'<circle cx="{x}" cy="{y}" r="{5 if name == "부산" else 3}" class="{cls}"/>')
-        out.append(f'<text x="{x}" y="{y - 8}" class="port-lbl" text-anchor="middle">{name}</text>')
-    by7 = {c["name"]: c for c in cps_7}
-    for c in cps_30:
-        lon, lat = CP_POS[c["name"]]
-        x, y = _xy(lon, lat)
-        c7 = by7.get(c["name"], {"count": 0, "cls": "imp-none", "avg_label": "–"})
-        for period, cc in (("30", c), ("7", c7)):
-            r = 5 + min(11, (cc["count"] ** 0.5) * 3.2) if cc["count"] else 4
-            out.append(f'<a href="#cp-{c["slug"]}" class="cp-dot p{period}">'
-                       f'<circle cx="{x}" cy="{y}" r="{r:.1f}" class="cp {cc["cls"]}{" zero" if not cc["count"] else ""}"/>'
-                       f'<title>{c["name"]}: {cc["count"]}건, 평균 영향 {cc["avg_label"]}</title></a>')
-        anchor = "end" if x > 640 or c["name"] in ("수에즈", "흑해·보스포루스") else "start"
-        dx = -10 if anchor == "end" else 10
-        out.append(f'<text x="{x + dx}" y="{y + 4}" class="cp-lbl" text-anchor="{anchor}">{c["name"]}</text>')
+    out.append(f'<path d="{land_path}" class="land"/>')
+    for r in map_data["regions"]:
+        if not r["count"]:
+            out.append(f'<text x="{r["x"]}" y="{r["y"] + 4}" class="region-off" text-anchor="middle">{r["name"]}</text>')
     out.append("</svg>")
     return "".join(out)

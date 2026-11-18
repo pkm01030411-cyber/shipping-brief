@@ -53,7 +53,7 @@
   <span class="muted">기간</span>
   <button class="chip" data-geo-period="7" aria-pressed="false">최근 7일</button>
   <button class="chip" data-geo-period="30" aria-pressed="true">최근 30일</button>
-  <span class="muted small-inline">요충지 · 항로 · 국가에 적용</span>
+  <span class="muted small-inline">요충지 · 국가에 적용</span>
 </div>
 
 {# ── 2. 요충지 위험 보드 ── #}
@@ -94,16 +94,79 @@
   <p class="howto-line"><b>어떻게 읽나</b> 숫자는 기사들이 해운 흐름에 준 영향의 평균입니다 (−2 큰 차질 ~ +2 큰 개선). 화살표는 직전 같은 기간 대비 언급 건수 변화예요. 언급이 많고 음수일수록 지금 압박받는 곳입니다.</p>
 </section>
 
-{# ── 3. 항로 도식 ── #}
-<section aria-labelledby="map-h">
-  <h2 class="sec-title" id="map-h">부산 출발 간선과 요충지</h2>
-  <div class="route-wrap">{{ route_svg|safe }}</div>
-  <div class="legend">
-    <span><i class="lg imp-n2"></i>큰 차질 (≤ −1.3)</span><span><i class="lg imp-n1"></i>차질</span>
-    <span><i class="lg imp-0"></i>중립</span><span><i class="lg imp-p1"></i>개선</span>
-    <span><i class="lg imp-none"></i>언급 없음</span><span><i class="lg-line dashed"></i>우회·대체 항로</span>
+{# ── 3. 오늘의 세계 지도 ── #}
+{% set M = g.map %}
+<section aria-labelledby="map-h" class="map-section">
+  <h2 class="sec-title" id="map-h">오늘의 세계 지도 {% if M.date %}<span class="muted">{{ M.date_short }} 브리핑 기준</span>{% endif %}</h2>
+  <div class="world-wrap">
+    {{ map_svg|safe }}
+    {% for r in M.regions if r.count %}
+    <button type="button" class="map-dot {{ r.cls }}" data-map-region="{{ r.slug }}"
+            aria-controls="map-{{ r.slug }}" aria-pressed="{{ 'true' if r.slug == M.selected else 'false' }}"
+            style="left:{{ r.px }}%; top:{{ r.py }}%; --d:{{ r.d }}px"
+            title="{{ r.name }}: {{ r.count }}건, 평균 영향 {{ r.avg_label }}">
+      <span class="md-circle" aria-hidden="true">{{ r.count }}</span>
+      <span class="md-label">{{ r.name }} <span class="sr-only">{{ r.count }}건, 평균 영향 {{ r.avg_label }}</span></span>
+    </button>
+    {% endfor %}
+    {% if not M.mapped %}
+    <p class="map-empty">이 날 브리핑에는 지역이 특정된 기사가 없습니다.</p>
+    {% endif %}
   </div>
-  <p class="howto-line"><b>어떻게 읽나</b> 점이 클수록 기사에 많이 등장했고, 색은 위 보드의 평균 영향과 같습니다. 실선은 주력 간선, 점선은 희망봉 우회·북극항로 같은 대체 항로예요. 점을 누르면 해당 요충지 카드로 이동합니다.</p>
+  {% if M.mapped %}
+  <div class="map-chips" role="group" aria-label="지역 선택">
+    {% for r in M.regions|selectattr('count')|sort(attribute='count', reverse=True) %}
+    <button type="button" class="chip {{ r.cls }}" data-map-region="{{ r.slug }}" aria-controls="map-{{ r.slug }}"
+            aria-pressed="{{ 'true' if r.slug == M.selected else 'false' }}"><i aria-hidden="true"></i>{{ r.name }} {{ r.count }}</button>
+    {% endfor %}
+  </div>
+  {% endif %}
+  <div class="legend">
+    <span>점 크기 = 기사 수</span>
+    <span>색 = 평균 영향</span>
+    <span><i class="lg imp-n2"></i>큰 차질</span><span><i class="lg imp-n1"></i>차질</span>
+    <span><i class="lg imp-0"></i>중립</span><span><i class="lg imp-p1"></i>개선</span>
+    {% if M.unmapped %}<span class="muted">지도에 없는 기사 {{ M.unmapped }}건 (지역 정보 없음)</span>{% endif %}
+  </div>
+
+{% macro item(a) %}
+  <li>
+    <span class="imp-chip {{ a.impact|impcls }}" title="해운 흐름에 대한 영향 (−2~+2)">{{ a.impact|impfmt }}</span>
+    <div class="mp-body">
+      <a class="mp-title" href="{{ a.url }}" target="_blank" rel="noopener">{{ a.title }}</a>
+      <div class="mp-meta">
+        <span class="muted">{{ a.source }} · {{ a.time }}</span>
+        {% for c in a.countries %}<span class="gc">{{ country_ko.get(c, c) }}</span>{% endfor %}
+        <a class="mp-brief" href="{{ root }}day/{{ M.date }}.html#{{ a.anchor }}">브리핑에서 보기 →</a>
+      </div>
+      {% if a.note %}<p class="mp-note">{{ a.note }}</p>{% endif %}
+    </div>
+  </li>
+{% endmacro %}
+  {% if M.mapped %}
+  <div class="map-panels" id="map-panels">
+    {% for r in M.regions if r.count %}
+    <section class="map-panel{{ ' is-active' if r.slug == M.selected }}" id="map-{{ r.slug }}" data-panel="{{ r.slug }}"
+             aria-labelledby="mp-{{ r.slug }}">
+      <h3 id="mp-{{ r.slug }}" class="mp-head">
+        <span class="mp-name">{{ r.name }}</span>
+        <span class="muted">· {{ M.date_short }} · {{ r.count }}건 ·</span>
+        <span class="mp-imp"><span class="muted">평균 영향</span> <span class="imp-chip {{ r.cls }}">{{ r.avg_label }}</span></span>
+      </h3>
+      <ul class="mp-list">
+        {% for a in r.articles[:(6 if r.count >= 10 else r.count)] %}{{ item(a) }}{% endfor %}
+      </ul>
+      {% if r.count >= 10 %}
+      <details class="mp-more">
+        <summary>더 보기 ({{ r.count - 6 }}건)</summary>
+        <ul class="mp-list">{% for a in r.articles[6:] %}{{ item(a) }}{% endfor %}</ul>
+      </details>
+      {% endif %}
+    </section>
+    {% endfor %}
+  </div>
+  {% endif %}
+  <p class="howto-line"><b>어떻게 읽나</b> 가장 최근 브리핑 하루치 기사를 대표 지역별로 모았습니다. 점이 클수록 그 지역 기사가 많고, 색은 그 기사들이 해운 흐름에 준 영향의 평균이에요(빨강 차질 · 남색 개선). 점을 누르면 아래에 그 지역 기사가 나옵니다. 여러 지역에 걸친 기사는 각 지역에 모두 들어갑니다.</p>
 </section>
 
 {# ── 4. 지역 × 주 히트맵 ── #}

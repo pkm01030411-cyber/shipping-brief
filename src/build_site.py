@@ -136,6 +136,7 @@ def build() -> None:
     env.filters["impcls"] = geo_mod.impact_class
     env.filters["impfmt"] = geo_mod.fmt_impact
     env.filters["geoslug"] = geo_mod.slug
+    env.filters["artslug"] = lambda i: re.sub(r"[^0-9a-z가-힣]+", "-", str(i).lower()).strip("-")
     env.globals["country_ko"] = geo_mod.COUNTRY_KO
 
     if SITE_DIR.exists():
@@ -247,9 +248,18 @@ def build() -> None:
             if a["id"] not in seen_ids:
                 seen_ids.add(a["id"]); all_articles.append(a)
     g = geo_mod.aggregate(all_articles, now_local(cfg).date(), load_week(weeks[0]) if weeks else None)
+    # 오늘의 세계 지도: 가장 최근 브리핑 하루치만
+    map_date = days[0] if days else None
+    g["map"] = geo_mod.map_regions(map_date, prepared[map_date]["articles"] if map_date else [])
+    if map_date:
+        _d = datetime.strptime(map_date, "%Y-%m-%d")
+        g["map"]["date_short"] = f"{_d.month}월 {_d.day}일({WEEKDAYS[_d.weekday()]})"
+    else:
+        g["map"]["date_short"] = ""
+    land_path = (STATIC_DIR / "world-land.path.txt").read_text(encoding="utf-8")
     (SITE_DIR / "geo.html").write_text(env.get_template("geo.html").render(
         site=site, root="", nav="geo", g=g,
-        route_svg=geo_mod.route_svg(g["periods"][30]["chokepoints"], g["periods"][7]["chokepoints"]),
+        map_svg=geo_mod.world_map_svg(g["map"], land_path),
         trend_svg=geo_mod.trend_svg(g["trend"])), encoding="utf-8")
     (SITE_DIR / "geo.json").write_text(json.dumps(g, ensure_ascii=False, default=str), encoding="utf-8")
 

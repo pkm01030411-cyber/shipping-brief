@@ -92,11 +92,63 @@ def test_aggregate_empty():
     assert g["geo_count"] == 0 and g["line"] is None and g["heat"]["max"] == 0
     assert g["tiles"]["chokepoint"] is None and g["tiles"]["region"] is None
     assert geo.trend_svg(g["trend"]) == ""
-    svg = geo.route_svg(g["periods"][30]["chokepoints"], g["periods"][7]["chokepoints"])
-    assert svg.count('class="cp-dot p30"') == 8 and "부산" in svg
+    m = geo.map_regions(None, [])
+    assert m["selected"] is None and m["mapped"] == 0 and len(m["regions"]) == len(geo.MAP_REGIONS)
 
 
 def test_impact_class_bounds():
     assert [geo.impact_class(v) for v in (None, -2, -1.25, -1, -0.4, 0, 0.39, 0.4, 1.25)] == \
         ["imp-none", "imp-n2", "imp-n2", "imp-n1", "imp-n1", "imp-0", "imp-0", "imp-p1", "imp-p2"]
     assert geo.fmt_impact(-1.5) == "−1.5" and geo.fmt_impact(0.5) == "+0.5" and geo.fmt_impact(None) == "–"
+
+
+# ── 오늘의 세계 지도 ──────────────────────────────────────────
+def test_map_multi_region_no_duplicates():
+    a = _art(1, "2026-11-17", regions=["동아시아", "남아시아", "동아시아"], countries=["CN"], impact=-1)
+    m = geo.map_regions("2026-11-17", [a])
+    by = {r["name"]: r for r in m["regions"]}
+    assert by["동아시아"]["count"] == 1 and by["남아시아"]["count"] == 1   # 각 지역에 한 번씩
+    assert sum(r["count"] for r in m["regions"]) == 2 and m["mapped"] == 1
+    assert by["동아시아"]["articles"][0]["anchor"] == "art-x-1"
+
+
+def test_map_country_fallback_and_unmapped():
+    arts = [_art(1, "2026-11-17", countries=["DE"]),           # 지역 없음 → 국가로 유럽
+            _art(2, "2026-11-17", countries=["KR"]),           # 한국만 → 동아시아
+            _art(3, "2026-11-17", regions=["북극"]),            # 북극 → 러시아·CIS
+            _art(4, "2026-11-17", regions=["동남아"]),          # 태깅명 '동남아' → 동남아시아
+            _art(5, "2026-11-17", countries=["AU"]),
+            _art(6, "2026-11-17", drivers=["관세·무역정책"])]   # 지역도 국가도 없음
+    m = geo.map_regions("2026-11-17", arts)
+    by = {r["name"]: r["count"] for r in m["regions"]}
+    assert by["유럽"] == 1 and by["동아시아"] == 1 and by["러시아·CIS"] == 1
+    assert by["동남아시아"] == 1 and by["오세아니아"] == 1
+    assert m["unmapped"] == 1 and m["mapped"] == 5
+
+
+def test_map_sort_selected_and_dots():
+    arts = [_art(1, "2026-11-17", regions=["유럽"], impact=0),
+            _art(2, "2026-11-17", regions=["유럽"], impact=-2),
+            _art(3, "2026-11-17", regions=["중동"], impact=1)]
+    m = geo.map_regions("2026-11-17", arts)
+    eu = next(r for r in m["regions"] if r["name"] == "유럽")
+    assert [a["id"] for a in eu["articles"]] == ["x:2", "x:1"]        # |impact| 큰 순
+    assert m["selected"] == geo.slug("유럽") and eu["avg"] == -1.0
+    assert 18 <= eu["d"] <= 44 and next(r for r in m["regions"] if r["name"] == "북미")["d"] == 0
+    svg = geo.world_map_svg(m, "M0 0l1 1z")
+    # 0건 지역은 이름만 옅게, 점(버튼)은 템플릿이 건수 있는 지역에만 만든다
+    assert svg.count('class="region-off"') == len(geo.MAP_REGIONS) - 2
+    assert "유럽 2건" in svg and "<desc" in svg
+
+
+def test_projection_bounds():
+    W, H = geo.MAP_W, geo.MAP_H
+    for lon, lat in [(0, 0), (180, 0), (-180, 0), (0, geo.LAT_TOP), (0, geo.LAT_BOTTOM)]:
+        x, y = geo._xy(lon, lat)
+        assert 0 <= x <= W and 0 <= y <= H
+    assert geo._xy(-180, 0)[0] == 0 and geo._xy(180, 0)[0] == W
+    for name, (lon, lat) in geo.MAP_POS.items():  # 모든 대표 지역 점이 지도 안
+        x, y = geo._xy(lon, lat)
+        assert 0 < x < W and 0 < y < H, name
+    assert set(geo.MAP_POS) == set(geo.MAP_REGIONS)
+    assert set(geo.COUNTRY_KO) <= set(geo.COUNTRY_TO_MAP)   # 국가 표가 모든 코드를 커버

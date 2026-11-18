@@ -190,8 +190,26 @@
     document.addEventListener("click", function (e) {
       var b = e.target.closest("[data-geo-period]"); if (b) setPeriod(b.dataset.geoPeriod);
     });
+    // 지도: JS가 있을 때만 패널을 하나씩 보여준다 (없으면 전부 펼쳐진 채)
+    geoRoot.classList.add("js-map");
+    var selectRegion = function (slugName, focusPanel) {
+      var panel = document.getElementById("map-" + slugName); if (!panel) return false;
+      document.querySelectorAll(".map-panel").forEach(function (p) { p.classList.toggle("is-active", p === panel); });
+      document.querySelectorAll("[data-map-region]").forEach(function (d) { d.setAttribute("aria-pressed", d.dataset.mapRegion === slugName); });
+      if (focusPanel) panel.scrollIntoView({ block: "nearest", behavior: "smooth" });
+      return true;
+    };
+    document.addEventListener("click", function (e) {
+      var d = e.target.closest("[data-map-region]"); if (!d) return;
+      selectRegion(d.dataset.mapRegion, true);
+      if (history.replaceState) history.replaceState(null, "", "#map-" + d.dataset.mapRegion);
+    });
     var openHash = function () {
       var id = decodeURIComponent(location.hash.slice(1)); if (!id) return;
+      if (id.indexOf("map-") === 0 && selectRegion(id.slice(4), false)) {
+        var sec = document.querySelector(".map-section"); if (sec) sec.scrollIntoView({ block: "start" });
+        return;
+      }
       var el = document.getElementById(id); if (!el) return;
       if (el.tagName === "DETAILS") el.open = true;
       el.classList.add("is-target"); setTimeout(function () { el.classList.remove("is-target"); }, 1600);
