@@ -1,61 +1,28 @@
-import os, re, json, sys, time
-import requests, feedparser
+import os, re, json, time, requests, feedparser
+from urllib.parse import urljoin
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36 shipping-brief"}
-os.makedirs("out", exist_ok=True)
-FEEDS = {
- "mt_news": "https://www.themoscowtimes.com/rss/news",
- "mt_feeds": "https://www.themoscowtimes.com/feeds/news.xml",
- "meduza_en": "https://meduza.io/rss/en/all",
- "meduza_ru": "https://meduza.io/rss/all",
- "eurasianet_rss": "https://eurasianet.org/rss.xml",
- "eurasianet_feed": "https://eurasianet.org/feed",
- "eurasianet_rss2": "https://eurasianet.org/rss",
- "tca": "https://timesca.com/feed/",
- "barents_rss": "https://www.thebarentsobserver.com/rss",
- "barents_feed": "https://www.thebarentsobserver.com/feed",
- "barents_en": "https://thebarentsobserver.com/en/rss.xml",
- "portnews_en_rss": "https://en.portnews.ru/rss/",
- "portnews_en_rss2": "https://en.portnews.ru/rss.xml",
- "portnews_ru_rss": "https://portnews.ru/rss/",
- "hnn": "https://www.highnorthnews.com/en/rss.xml",
-}
-PAGES = {
- "portnews_en_news": "https://en.portnews.ru/news/",
- "barents_home": "https://www.thebarentsobserver.com/",
- "eurasianet_home": "https://eurasianet.org/",
- "kotra_dream": "https://dream.kotra.or.kr/kotranews/index.do",
- "kotra_news_list": "https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=410",
- "kotra_rss": "https://dream.kotra.or.kr/kotranews/rss.do",
-}
-rep = {}
-def get(u):
-    t=time.time()
+os.makedirs("out2", exist_ok=True)
+rep={}
+def save(k,u):
     try:
-        r = requests.get(u, headers=UA, timeout=25)
-        return r, round(time.time()-t,1), None
+        r=requests.get(u,headers=UA,timeout=25)
+        open(f"out2/{k}","wb").write(r.content[:800000])
+        rep[k]={"url":u,"status":r.status_code,"final":r.url,"bytes":len(r.content),"ctype":r.headers.get("content-type")}
+        return r
     except Exception as e:
-        return None, round(time.time()-t,1), repr(e)[:200]
-for k,u in FEEDS.items():
-    r,dt,err = get(u)
-    d = {"url":u,"sec":dt,"err":err}
-    if r is not None:
-        d.update(status=r.status_code, ctype=r.headers.get("content-type"), final=r.url, bytes=len(r.content))
-        open(f"out/{k}.txt","wb").write(r.content[:400000])
-        f = feedparser.parse(r.content)
-        d["entries"] = len(f.entries)
-        d["sample"] = [{"title":e.get("title"),"link":e.get("link"),"pub":e.get("published"),"summ_len":len(e.get("summary","") or ""),"content_len":sum(len(c.get("value","")) for c in e.get("content",[]) or [])} for e in f.entries[:4]]
-        if f.entries:
-            link = f.entries[0].get("link")
-            ar,adt,aerr = get(link)
-            d["article"] = {"url":link,"status":getattr(ar,"status_code",None),"sec":adt,"err":aerr}
-            if ar is not None: open(f"out/{k}__article.html","wb").write(ar.content[:600000])
-    rep[k]=d; print(k, json.dumps({x:d.get(x) for x in ("status","entries","sec","err")}), flush=True)
-for k,u in PAGES.items():
-    r,dt,err = get(u)
-    d={"url":u,"sec":dt,"err":err}
-    if r is not None:
-        d.update(status=r.status_code, final=r.url, bytes=len(r.content))
-        open(f"out/{k}.html","wb").write(r.content[:600000])
-        d["rss_links"] = re.findall(r'<link[^>]+(?:rss|atom)[^>]*>', r.text)[:5]
-    rep[k]=d; print(k, d.get("status"), d.get("err"), flush=True)
-json.dump(rep, open("out/report.json","w"), ensure_ascii=False, indent=1)
+        rep[k]={"url":u,"err":repr(e)[:200]}; return None
+r=save("kotra_rsspage.html","https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=720")
+if r is not None:
+    urls=sorted(set(re.findall(r'(?:https?://dream\.kotra\.or\.kr)?/kotranews/[^"\'\s<>]*rss[^"\'\s<>]*',r.text,re.I)))
+    rep["kotra_rss_urls"]=urls[:60]
+    for i,u in enumerate(urls[:6]):
+        rr=save(f"kotra_rss_{i}.xml",urljoin("https://dream.kotra.or.kr",u.replace('&amp;','&')))
+save("pn_home.html","https://en.portnews.ru/")
+save("pn_day.html","https://en.portnews.ru/news/2026-11-17/")
+save("pn_art.html","https://en.portnews.ru/news/399780/")
+save("pn_ru_news.html","https://portnews.ru/news/")
+save("bo_art.html","https://www.thebarentsobserver.com/news/pressure-builds-on-wellconnected-russian-businessman-who-wants-to-buy-norwegian-arctic-copper-mine/462079")
+for k,u in [("bo_sitemap.xml","https://www.thebarentsobserver.com/sitemap.xml"),("bo_newssitemap.xml","https://www.thebarentsobserver.com/news-sitemap.xml"),("bo_robots.txt","https://www.thebarentsobserver.com/robots.txt"),("bo_news.html","https://www.thebarentsobserver.com/news"),("bo_rss_xml","https://www.thebarentsobserver.com/rss.xml"),("bo_feed_xml","https://www.thebarentsobserver.com/feed.xml")]:
+    save(k,u)
+json.dump(rep,open("out2/report.json","w"),ensure_ascii=False,indent=1)
+print(json.dumps(rep,ensure_ascii=False,indent=1))
