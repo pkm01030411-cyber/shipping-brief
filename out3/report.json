@@ -1,0 +1,37 @@
+{
+ "nat_ru.html": {
+  "status": 200,
+  "final": "https://dream.kotra.or.kr/kotranews/cms/nation/actionNatIemList.do?pageNo=&pagePerCnt=10&SITE_NO=3&MENU_ID=220&CONTENTS_NO=1&pRegnCd=03&pNatCd=643",
+  "bytes": 90180
+ },
+ "list70.html": {
+  "status": 200,
+  "final": "https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=70",
+  "bytes": 110041
+ },
+ "boardlist_ru.html": {
+  "status": 200,
+  "final": "https://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardList.do?SITE_NO=3&MENU_ID=70&CONTENTS_NO=1&pNatCd=643&pageNo=1&pagePerCnt=20",
+  "bytes": 68056
+ },
+ "boardlist_ru2.html": {
+  "status": 200,
+  "final": "https://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardList.do?SITE_NO=3&MENU_ID=70&CONTENTS_NO=1&pNatCd=643",
+  "bytes": 68056
+ },
+ "detail.html": {
+  "status": 200,
+  "final": "https://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&MENU_ID=180&CONTENTS_NO=1&pNttSn=244954",
+  "bytes": 288519
+ },
+ "ukr1590.html": {
+  "status": 200,
+  "final": "https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1590",
+  "bytes": 107856
+ },
+ "search_ru.html": {
+  "status": 200,
+  "final": "https://dream.kotra.or.kr/kotranews/search.do?query=%EB%9F%AC%EC%8B%9C%EC%95%84",
+  "bytes": 101444
+ }
+}
