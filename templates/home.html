@@ -3,7 +3,7 @@
 {% block content %}
 <section class="hero">
   <p class="hero-kicker">{{ site.tagline }}</p>
-  <h1 class="hero-title">매일 저녁 18:30,<br>해운·물류 하루를 10분에.</h1>
+  <h1 class="hero-title">매일 {{ publish_short }},<br>해운·물류 하루를 10분에.</h1>
   <div class="hero-stats">
     <div class="stat"><b id="streak">–</b><span>연속 읽은 날</span></div>
     <div class="stat"><b>{{ days|length }}</b><span>쌓인 브리핑</span></div>
@@ -78,7 +78,7 @@
       <a class="panel-link" href="{{ root }}weekly.html"><b>{{ week.label }}</b> · {{ week.review.headline }}</a>
       <p class="muted small">{{ week.review.overview[:140] }}{% if week.review.overview|length > 140 %}…{% endif %}</p>
     {% else %}
-      <p class="muted small">첫 주간 리뷰는 다음 월요일 저녁에 생성됩니다. 지난 7일의 흐름·꼭 기억할 기사·면접용 질문을 정리해 드려요.</p>
+      <p class="muted small">첫 주간 리뷰는 다음 월요일 게재 시각에 생성됩니다. 지난 7일의 흐름·꼭 기억할 기사·면접용 질문을 정리해 드려요.</p>
     {% endif %}
   </section>
 
@@ -113,7 +113,7 @@
 <section class="howto">
   <h2 class="sec-title">이 사이트 쓰는 법</h2>
   <div class="howto-grid">
-    <div><b>1</b> 저녁 18:30 이후 "오늘"에서 <em>꼭 읽을 3건</em>부터. 접힌 기사는 여유 있을 때.</div>
+    <div><b>1</b> {{ publish_hint }}가 올라오면 "오늘"에서 <em>꼭 읽을 3건</em>부터. 접힌 기사는 여유 있을 때.</div>
     <div><b>2</b> 카드의 ☐ 로 읽음 표시 — 진행 바가 차고, 연속 읽은 날이 쌓입니다.</div>
     <div><b>3</b> 자소서·면접에 쓸 기사는 ☆ 스크랩 → Markdown으로 내보내기.</div>
     <div><b>4</b> 모르는 용어는 카드 안 <em>▸ 용어</em>와 "오늘의 용어"에서. 월요일엔 주간 리뷰로 한 주를 복기.</div>

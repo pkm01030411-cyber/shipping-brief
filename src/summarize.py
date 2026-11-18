@@ -303,9 +303,9 @@ def run(date: str | None = None, force: bool = False) -> dict:
     if force:
         for a in articles:
             a.summary = ""
-        if any(not a.body for a in articles):
-            from .collect import refetch_bodies  # 저장 시 지운 본문을 원문에서 다시 가져옴
-            refetch_bodies(articles)
+    if any(not a.body and not a.summary for a in articles):
+        from .collect import refetch_bodies  # 본문은 저장소에 두지 않으므로 캐시·원문에서 다시
+        refetch_bodies([a for a in articles if not a.summary])
 
     # 새로 요약할 기사가 없고 브리핑이 이미 정상이면 건너뜀 (백업 실행 시 API 비용 중복 방지)
     old_brief = day.get("brief", {}) or {}

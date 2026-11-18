@@ -11,7 +11,7 @@
     <span class="date">러시아·유라시아 · {{ day.date_label }}</span>
     <span class="meta">
       {% for name, n in day.sources.items() %}<span class="src-pill">{{ name }} {{ n }}</span>{% endfor %}
-      <span class="muted">게재 {{ day.articles|length }}건{% if day.screened %} · 후보 {{ day.articles|length + day.screened|length }}건 중{% endif %} · 약 {{ (3 + day.articles|length * 0.4)|round|int }}분</span>
+      <span class="muted">게재 {{ day.articles|length }}건{% if day.screened %} · 후보 {{ day.articles|length + day.screened|length }}건 중{% endif %} · 약 {{ (3 + day.articles|length * 0.4)|round|int }}분{% if day.pub_label %} · {{ day.pub_label }}{% endif %}</span>
     </span>
   </div>
   {% if b.headline %}<h1 class="headline">{{ b.headline }}</h1>{% endif %}

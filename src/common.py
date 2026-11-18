@@ -130,6 +130,30 @@ def all_days() -> list[str]:
     return sorted((p.stem for p in DATA_DIR.glob("????-??-??.json")), reverse=True)
 
 
+def is_published(day: dict | None) -> bool:
+    """게재된 날짜인가. published_at 필드가 없는 파일은 예전 방식(수집 즉시 게재)이라 게재된 것으로 본다."""
+    return bool(day) and ("published_at" not in day or bool(day.get("published_at")))
+
+
+def published_days() -> list[str]:
+    return [d for d in all_days() if is_published(load_day(d))]
+
+
+# ── 본문 임시 보관 (저장소에 커밋하지 않음: .gitignore의 cache/) ─────────
+CACHE_DIR = ROOT / "cache" / "bodies"
+
+
+def cache_body(aid: str, body: str) -> None:
+    if body:
+        CACHE_DIR.mkdir(parents=True, exist_ok=True)
+        (CACHE_DIR / (aid.replace(":", "_").replace("/", "_") + ".txt")).write_text(body, encoding="utf-8")
+
+
+def cached_body(aid: str) -> str:
+    p = CACHE_DIR / (aid.replace(":", "_").replace("/", "_") + ".txt")
+    return p.read_text(encoding="utf-8") if p.exists() else ""
+
+
 def known_urls(days_back: int = 14) -> set[str]:
     """최근 N일간 이미 수집한 기사 URL (중복 방지)."""
     urls: set[str] = set()
@@ -138,10 +162,6 @@ def known_urls(days_back: int = 14) -> set[str]:
         for a in day.get("articles", []):
             urls.add(a["url"])
     return urls
-
-
-def cutoff_time(cfg: dict) -> datetime:
-    return now_local(cfg) - timedelta(hours=cfg["collect"]["window_hours"])
 
 
 def parse_kst(s: str, cfg: dict) -> datetime | None:

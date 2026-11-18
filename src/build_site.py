@@ -12,8 +12,8 @@ from urllib.parse import quote
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from .common import (SITE_DIR, STATIC_DIR, TEMPLATE_DIR, all_days, load_config,
-                     load_day, now_local)
+from .common import (SITE_DIR, STATIC_DIR, TEMPLATE_DIR, all_days, is_published, load_config,
+                     load_day, now_local, published_days)
 from . import geo as geo_mod
 from .weekly import all_weeks, load_week
 from . import eurasia as eu_mod
@@ -101,7 +101,17 @@ def prepare_day(day: dict, cfg: dict) -> dict:
     coverage = f"{fmt_time(pubs[0])} ~ {fmt_time(pubs[-1])} 기사" if pubs else ""
     return {**day, "articles": arts, "top": top, "rest": rest, "sources": sources,
             "source_keys": list(source_keys.items()), "brief": brief, "coverage": coverage, "glossary": glossary,
-            "kw_counts": kw_counter.most_common(), "date_label": fmt_date(day["date"])}
+            "kw_counts": kw_counter.most_common(), "date_label": fmt_date(day["date"]),
+            "pub_label": _pub_label(day)}
+
+
+def _pub_label(day: dict) -> str:
+    """'11.19 07:08 발행' — 날짜 파일은 기사 발행일 기준이라, 브리핑이 언제 나왔는지 따로 보여준다."""
+    p = day.get("published_at")
+    if not p:
+        return ""
+    dt = datetime.fromisoformat(p)
+    return f"{dt.month}.{dt.day} {dt.strftime('%H:%M')} 발행"
 
 
 # ── RSS 출력 ────────────────────────────────────────────────────
@@ -143,7 +153,7 @@ def build_eurasia(env, site: dict, cfg: dict) -> tuple[dict | None, list[dict]]:
     archive = []
     for d in eu_mod.all_edays():
         day = eu_mod.load_eday(d)
-        if not day or not day.get("articles"):
+        if not day or not day.get("articles") or not is_published(day):
             continue
         p = prepare_day(day, cfg)
         p["screened"] = sorted(day.get("screened", []), key=lambda x: (-(x.get("score") or 0), x.get("published", "")))
@@ -220,7 +230,7 @@ def build() -> None:
     site["base_url"] = (site.get("base_url") or "").rstrip("/") + "/" if site.get("base_url") else ""
 
     # 하루치 페이지
-    days = all_days()
+    days = published_days()  # 게재 시각 전인 날짜는 사이트에 내지 않음
     prepared: dict[str, dict] = {}
     archive = []
     for d in days:
@@ -235,6 +245,11 @@ def build() -> None:
     # 모든 페이지 공통: 최신 브리핑(하단 내비 '오늘' 배지용), 모바일 앱 바 제목
     env.globals["latest_date"] = days[0] if days else ""
     env.globals["latest_ids"] = "|".join(a["id"] for a in prepared[days[0]]["articles"]) if days else ""
+    from . import schedule as sch
+    pt = sch.publish_time(cfg, "shipping")
+    env.globals["publish_hint"] = (("아침 " if pt.hour < 12 else "저녁 ") + pt.strftime("%H:%M") +
+                                   (" 이후 전날 기사" if sch.publish_day(cfg, "shipping") == "yesterday" else " 이후 그날 기사"))
+    env.globals["publish_short"] = ("아침 " if pt.hour < 12 else "저녁 ") + pt.strftime("%H:%M")
     env.globals["mtitles"] = {"home": site["title"], "today": "브리핑", "geo": "국제정세", "weekly": "주간 리뷰",
                               "tags": "태그", "scrap": "스크랩", "archive": "지난 브리핑", "eurasia": "러시아·유라시아"}
 

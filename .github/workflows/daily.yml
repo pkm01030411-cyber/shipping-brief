@@ -2,27 +2,30 @@ name: Daily shipping brief
 
 on:
   schedule:
-    # 매일 18:30 KST (= 09:30 UTC). GitHub cron은 UTC 기준. 그날 낮에 올라온 기사를 저녁에 브리핑.
-    # GitHub 스케줄러는 지연·누락이 있어 백업 실행을 둔다. 새 기사가 없으면 API를 호출하지 않으므로 비용 중복 없음.
-    - cron: "30 9 * * *"     # 18:30 KST
-    - cron: "7 11 * * *"     # 20:07 KST (백업 · 늦게 올라온 기사 보충)
-    - cron: "13 13 * * *"    # 22:13 KST (백업)
-  workflow_dispatch:        # Actions 탭에서 수동 실행 버튼
+    # 30분마다 점검 — 실제로 무엇을 언제 할지는 config.yaml의 schedule:이 정한다(수집·게재 시각).
+    # GitHub 스케줄러가 늦거나 한 번 건너뛰어도 다음 점검에서 밀린 일을 처리한다.
+    # 할 일이 없으면 1분 안에 끝나고 커밋·배포하지 않는다.
+    - cron: "7,37 * * * *"
+  workflow_dispatch:        # Actions 탭의 수동 실행 버튼
     inputs:
+      now:
+        description: "지금 바로 수집하고 전날 브리핑 게재 (일정 무시)"
+        type: boolean
+        default: false
       weekly:
         description: "주간 리뷰도 지금 생성 (지난 7일)"
         type: boolean
         default: false
       resummarize:
-        description: "오늘 기사 요약을 처음부터 다시 (프롬프트 변경 후)"
+        description: "최근 게재일 해운물류 요약을 처음부터 다시 (프롬프트 변경 후)"
+        type: boolean
+        default: false
+      eurasia_resummarize:
+        description: "최근 게재일 러시아·유라시아 요약을 처음부터 다시"
         type: boolean
         default: false
       backfill_geo:
         description: "과거 기사에 국제정세 태깅 추가 (정세 대시보드용, 1회)"
-        type: boolean
-        default: false
-      eurasia_resummarize:
-        description: "오늘 러시아·유라시아 기사 요약을 처음부터 다시"
         type: boolean
         default: false
 
@@ -38,6 +41,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
     steps:
       - uses: actions/checkout@v4
 
@@ -48,31 +53,42 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Collect, summarize, build
+      - name: Collect / publish (as scheduled)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          FLAGS="--weekly-if-monday"
-          [ "${{ inputs.weekly }}" = "true" ] && FLAGS="--weekly"
+          FLAGS=""
+          [ "${{ inputs.now }}" = "true" ] && FLAGS="$FLAGS --now"
+          [ "${{ inputs.weekly }}" = "true" ] && FLAGS="$FLAGS --weekly"
           [ "${{ inputs.resummarize }}" = "true" ] && FLAGS="$FLAGS --resummarize"
-          [ "${{ inputs.backfill_geo }}" = "true" ] && FLAGS="$FLAGS --backfill-geo"
           [ "${{ inputs.eurasia_resummarize }}" = "true" ] && FLAGS="$FLAGS --eurasia-resummarize"
+          [ "${{ inputs.backfill_geo }}" = "true" ] && FLAGS="$FLAGS --backfill-geo"
           python run.py $FLAGS
 
       - name: Commit data
+        id: commit
         run: |
           git config user.name "brief-bot"
           git config user.email "brief-bot@users.noreply.github.com"
           git add data/
-          git diff --cached --quiet || git commit -m "brief: $(TZ=Asia/Seoul date +%F)"
-          git push
+          if git diff --cached --quiet; then
+            echo "변경 없음 → 커밋·배포 생략"
+            # 수동 실행은 코드·템플릿 변경 반영을 위해 항상 배포
+            [ "${{ github.event_name }}" = "workflow_dispatch" ] && echo "changed=true" >> "$GITHUB_OUTPUT" || echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -q -m "brief: $(TZ=Asia/Seoul date '+%F %H:%M')"
+            git pull -q --rebase && git push -q
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
 
-      - uses: actions/upload-pages-artifact@v3
+      - if: steps.commit.outputs.changed == 'true'
+        uses: actions/upload-pages-artifact@v3
         with:
           path: site
 
   deploy:
     needs: build
+    if: needs.build.outputs.changed == 'true'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

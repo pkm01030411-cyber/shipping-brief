@@ -13,9 +13,9 @@ import json
 import logging
 import re
 from dataclasses import dataclass
-from datetime import timedelta
+from datetime import datetime, time, timedelta
 
-from .common import DATA_DIR, Article, Http, load_config, now_local, today_str
+from .common import DATA_DIR, Article, Http, cache_body, cached_body, load_config, now_local, today_str
 from .sources import eurasia as src
 from .summarize import BRIEF_TOOL, _call_tool, _client, norm_refs
 
@@ -168,6 +168,7 @@ def known_urls(days_back: int = 21) -> set[str]:
         day = load_eday(d) or {}
         urls |= {a["url"] for a in day.get("articles", [])}
         urls |= {s["url"] for s in day.get("screened", [])}
+        urls |= {s["url"] for s in day.get("pending", [])}
     return urls
 
 
@@ -336,34 +337,67 @@ def offline_brief(cfg, arts: list[EArticle]) -> dict:
 
 
 # ── 실행 ────────────────────────────────────────────────────────
-def gather(cfg, http, known: set[str]) -> list[dict]:
+def sweep(keys: list[str], start) -> dict[str, int]:
+    """소스들을 훑어 새 후보를 '발행일(한국 시간)' 날짜 파일의 pending에 쌓는다. API 호출 없음.
+    RSS에 실린 본문은 cache/에만 두고, 저장소엔 제목·리드만."""
+    cfg = load_config()
     ecfg = cfg["eurasia"]
-    cutoff = now_local(cfg) - timedelta(hours=float(ecfg["window_hours"]))
-    cands: list[dict] = []
-    for key, scfg in ecfg["sources"].items():
-        if not scfg.get("enabled", True):
+    http = Http(cfg)
+    known = known_urls()
+    tz = now_local(cfg).tzinfo
+    by_date: dict[str, list[dict]] = {}
+    for key in keys:
+        scfg = ecfg["sources"].get(key)
+        if not scfg or not scfg.get("enabled", True):
             continue
         try:
-            got = src.collect_candidates(key, scfg, cfg, http, cutoff, known)
+            got = src.collect_candidates(key, scfg, cfg, http, start, known)
         except Exception as e:  # noqa: BLE001 — 한 소스가 막혀도 나머지는 진행
             log.warning("%s 목록 실패: %s", key, e)
             continue
-        for c in got:
-            c["id"] = src.cand_id(key, c["url"])
-            c["source_name"], c["stance"] = scfg["name"], scfg.get("stance", "")
-            c["score"], c["title_ko"] = 0, ""
         log.info("%s: 새 후보 %d건", key, len(got))
-        cands += got
-    return cands
+        for c in got:
+            cid = src.cand_id(key, c["url"])
+            cache_body(cid, c.get("body", ""))
+            pub = (c.get("published") or now_local(cfg)).astimezone(tz)
+            known.add(c["url"])
+            by_date.setdefault(pub.date().isoformat(), []).append({
+                "id": cid, "source": key, "source_name": scfg["name"], "stance": scfg.get("stance", ""),
+                "url": c["url"], "title": c["title"], "description": (c.get("description") or "")[:400],
+                "category": c.get("category", ""), "published": pub.isoformat()})
+    added = {}
+    for d, items in by_date.items():
+        day = load_eday(d) or {"date": d, "articles": [], "screened": [], "pending": [], "brief": {}, "published_at": None}
+        day.setdefault("pending", [])
+        day["pending"] += items
+        day["collected_at"] = now_local(cfg).isoformat(timespec="seconds")
+        save_eday(d, day)
+        added[d] = len(items)
+        log.info("data/eurasia/%s.json ← 후보 %d건 (대기 %d건)", d, len(items), len(day["pending"]))
+    return added
 
 
-def run(date: str | None = None, force: bool = False) -> dict | None:
+def _cand(p: dict) -> dict:
+    """저장된 대기 후보 → 처리용 dict (published를 datetime으로, 캐시 본문 복원)."""
+    from datetime import datetime as _dt
+    c = dict(p)
+    c["published"] = _dt.fromisoformat(p["published"]) if p.get("published") else None
+    c["body"] = cached_body(p["id"])
+    c["score"], c["title_ko"] = 0, ""
+    return c
+
+
+def publish(date: str, force: bool = False) -> dict | None:
+    """대기 후보를 선별·요약해 브리핑을 만들고 게재한다(이미 게재된 날이면 늦게 들어온 후보만 보충)."""
     cfg = load_config()
     ecfg = cfg.get("eurasia") or {}
     if not ecfg.get("enabled"):
         return None
-    date = date or today_str(cfg)
-    day = load_eday(date) or {"date": date, "articles": [], "screened": [], "brief": {}}
+    day = load_eday(date)
+    if day is None:
+        return None
+    if not day.get("published_at"):
+        day["published_at"] = now_local(cfg).isoformat(timespec="seconds")
     arts = [EArticle.from_dict(a) for a in day.get("articles", [])]
     http = Http(cfg)
     if force:  # 재요약: 저장 때 지운 본문을 원문에서 다시 가져온다
@@ -371,11 +405,11 @@ def run(date: str | None = None, force: bool = False) -> dict | None:
             a.summary = ""
             scfg = ecfg["sources"].get(a.source, {})
             try:
-                a.body = src.fetch_body({"url": a.url, "body": "", "published": None}, scfg, http)
+                a.body = src.fetch_body({"url": a.url, "body": cached_body(a.id), "published": None}, scfg, http)
             except Exception as e:  # noqa: BLE001
                 log.warning("본문 재수집 실패 %s: %s", a.url, e)
-    known = known_urls() | {a.url for a in arts}
-    cands = gather(cfg, http, known)
+    cands = [_cand(p) for p in day.get("pending", [])]
+    day["pending"] = []
     client = _client()
 
     new_arts: list[EArticle] = []
@@ -413,9 +447,8 @@ def run(date: str | None = None, force: bool = False) -> dict | None:
     arts += new_arts
 
     if not arts:
-        if day.get("screened"):
-            save_eday(date, day)
-        log.info("유라시아: 게재할 기사 없음")
+        save_eday(date, day)
+        log.info("유라시아 %s: 게재할 기사 없음", date)
         return day
 
     need_brief = bool(new_arts) or force or not day.get("brief", {}).get("top") \
@@ -448,6 +481,17 @@ def run(date: str | None = None, force: bool = False) -> dict | None:
     save_eday(date, day)
     log.info("유라시아 저장: %d건 → data/eurasia/%s.json", len(arts), date)
     return day
+
+
+def run(date: str | None = None, force: bool = False) -> dict | None:
+    """(수동) 지금 모든 소스를 어제 0시부터 훑고 date(기본 오늘)를 바로 게재."""
+    cfg = load_config()
+    if not (cfg.get("eurasia") or {}).get("enabled"):
+        return None
+    now = now_local(cfg)
+    start = datetime.combine(now.date() - timedelta(days=1), time(0), tzinfo=now.tzinfo)
+    sweep([k for k, v in cfg["eurasia"]["sources"].items() if v.get("enabled", True)], start)
+    return publish(date or today_str(cfg), force=force)
 
 
 if __name__ == "__main__":

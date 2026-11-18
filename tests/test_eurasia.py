@@ -107,10 +107,11 @@ class FakeHttp:
 <item><title>Moscow theater premiere</title><link>https://www.themoscowtimes.com/a2</link><pubDate>{t}</pubDate></item>
 </channel></rss>""")
         if "portnews.ru/news/" == url[-len("portnews.ru/news/"):]:
-            d = now.date()
+            t0 = now - timedelta(minutes=5)
+            d = t0.date()
             months = list(E._RU_MONTHS)
             return FakeResp(f"""<div class='page_newsList'><div class='date_hr'><p>{d.day} {months[d.month - 1]} {d.year}</p></div>
-<div class='nl_item'><p class='onlytime'>00:01</p><a href='/news/1/' title='Росморречфлот усилит северный завоз'><p>x</p></a>
+<div class='nl_item'><p class='onlytime'>{t0.strftime("%H:%M")}</p><a href='/news/1/' title='Росморречфлот усилит северный завоз'><p>x</p></a>
 <div class='nl_rubric_name'><a><p>судоходство</p></a></div></div></div>""")
         if url.endswith("/a1") or url.endswith("/a2"):
             return FakeResp("<div class='article__block--html'><p>" + "Body text about fuel exports and rail. " * 5 + "</p></div>")
@@ -143,6 +144,8 @@ class FakeClient:
 
 @pytest.fixture
 def sandbox(tmp_path, monkeypatch):
+    import src.common as common
+    monkeypatch.setattr(common, "CACHE_DIR", tmp_path / "cache")
     monkeypatch.setattr(eu, "EDIR", tmp_path / "eurasia")
     monkeypatch.setattr(eu, "Http", FakeHttp)
     cfg = json.loads(json.dumps(CFG))
@@ -155,8 +158,11 @@ def sandbox(tmp_path, monkeypatch):
     return tmp_path
 
 
+TODAY = datetime.now(KST).date().isoformat()
+
+
 def test_run_end_to_end(sandbox):
-    day = eu.run("2026-11-18")
+    day = eu.run(TODAY)
     arts = day["articles"]
     # 연극 기사(1점)는 빠지고, 2건 게재 (min_daily를 못 채워도 1점은 넣지 않음)
     assert {a["source"] for a in arts} == {"moscowtimes", "portnews"}
@@ -167,14 +173,28 @@ def test_run_end_to_end(sandbox):
     assert day["brief"]["top_source"] == "model" and len(day["brief"]["top"]) == 2
     assert FakeClient.calls == ["submit_screening", "submit_summaries", "submit_brief"]
     # 백업 실행: 새 기사 없음 → API 호출 없음
+    assert day["published_at"] and day["pending"] == []
     FakeClient.calls = []
-    eu.run("2026-11-18")
+    eu.run(TODAY)
     assert FakeClient.calls == []
+
+
+def test_sweep_then_publish_later(sandbox):
+    """수집은 대기열에만 쌓고(API 0회), 게재 때 선별·요약."""
+    start = datetime.now(KST).replace(hour=0, minute=0) - timedelta(days=1)
+    added = eu.sweep(["moscowtimes", "portnews"], start)
+    assert sum(added.values()) == 3 and FakeClient.calls == []
+    day = eu.load_eday(TODAY)
+    assert day["published_at"] is None and len(day["pending"]) == 3
+    assert all("body" not in p for p in day["pending"])          # 본문은 저장소에 안 남김
+    assert eu.sweep(["moscowtimes", "portnews"], start) == {}     # 같은 기사 다시 안 쌓음
+    day = eu.publish(TODAY)
+    assert len(day["articles"]) == 2 and day["published_at"]
 
 
 def test_run_offline(sandbox, monkeypatch):
     monkeypatch.setattr(eu, "_client", lambda: None)
-    day = eu.run("2026-11-18")
+    day = eu.run(TODAY)
     assert day["brief"]["offline"] and len(day["articles"]) == 3
     assert FakeClient.calls == []
 

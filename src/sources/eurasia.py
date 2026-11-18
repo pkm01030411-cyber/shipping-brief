@@ -223,6 +223,16 @@ def collect_candidates(key: str, scfg: dict, cfg: dict, http, cutoff: datetime, 
     kind = scfg.get("kind", "rss")
     if kind == "rss":
         items = parse_rss(http.get(scfg["url"]).text, key, cfg)
+        # 피드가 짧은 곳(Times of Central Asia: 10건)은 WordPress 페이지 피드를 더 읽는다
+        for n in range(2, int(scfg.get("feed_pages", 1)) + 1):
+            if items and min((i["published"] for i in items if i.get("published")), default=cutoff) < cutoff:
+                break  # 이미 수집 범위 이전까지 닿음
+            sep = "&" if "?" in scfg["url"] else "?"
+            try:
+                items += parse_rss(http.get(f"{scfg['url']}{sep}paged={n}").text, key, cfg)
+            except Exception as e:  # noqa: BLE001
+                log.warning("%s 피드 %d쪽 실패: %s", key, n, e)
+                break
     elif kind == "barents":
         items = parse_barents_home(http.get(scfg["url"]).text)
         items = [it for it in items if it["url"] not in known][:cap]
@@ -232,9 +242,12 @@ def collect_candidates(key: str, scfg: dict, cfg: dict, http, cutoff: datetime, 
             except Exception as e:  # noqa: BLE001
                 log.warning("Barents 기사 메타 실패 %s: %s", it["url"], e)
     elif kind == "portnews":
+        # 날짜별 목록 페이지(모스크바 날짜)를 수집 시작일부터 오늘까지
         today = datetime.now(MSK).date()
+        first = cutoff.astimezone(MSK).date()
+        dates = [today - timedelta(days=i) for i in range((today - first).days + 1)][:5]
         items = []
-        for i, d in enumerate([today, today - timedelta(days=1)]):
+        for i, d in enumerate(dates):
             url = scfg["url"] if i == 0 else f"{scfg['url'].rstrip('/')}/{d.isoformat()}/"
             try:
                 items += parse_portnews_list(http.get(url).text, d)

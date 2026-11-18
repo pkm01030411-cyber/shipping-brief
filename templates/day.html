@@ -11,6 +11,7 @@
       {% for name, n in day.sources.items() %}<span class="src-pill">{{ name }} {{ n }}</span>{% endfor %}
       <span class="muted">총 {{ day.articles|length }}건 · 약 {{ (3 + day.articles|length * 0.25)|round|int }}분</span>
       {% if day.coverage %}<span class="muted coverage">{{ day.coverage }}</span>{% endif %}
+      {% if day.pub_label %}<span class="muted">{{ day.pub_label }}</span>{% endif %}
     </span>
   </div>
   {% if b.headline %}<h1 class="headline">{{ b.headline }}</h1>{% endif %}

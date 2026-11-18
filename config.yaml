@@ -28,11 +28,29 @@ site:
     - "북극항로"
     - "러시아"
 
+# ─────────────────────────────────────────────
+#  수집·게재 일정 (모두 한국 시간, "HH:MM")
+#  - 수집(collect): 이 시각에 소스를 훑어 새 기사를 '기사 발행일' 날짜에 모아 둔다 (요약 안 함 · API 비용 0)
+#  - 게재(publish): 이 시각에 대상일 기사를 요약·브리핑해 사이트에 올린다
+#  - day: yesterday = 아침에 '전날' 기사 게재 / today = 그날 기사를 당일 게재(예: 저녁 18:30)
+#  GitHub이 30분마다 점검하므로 '설정 시각 이후 첫 점검(최대 30분 안팎)'에 실행됩니다.
+#  덮어쓰기 우선순위: sources(소스별) > sections(섹션별) > 맨 위 기본값
+# ─────────────────────────────────────────────
+schedule:
+  collect: ["07:00"]         # 기본 수집 시각 (여러 개 가능: ["13:00", "07:00"])
+  publish: "07:00"           # 기본 게재 시각
+  day: yesterday
+  sections:
+    shipping: {}             # 해운물류 브리핑   예) {publish: "06:30"}
+    eurasia: {}              # 러시아·유라시아   예) {publish: "07:30", collect: ["07:20"]}
+  sources:
+    # Meduza 피드는 최근 30건(약 20시간)만 남아서 낮에 한 번 더 훑어야 전날 오전 기사까지 잡힌다
+    meduza: {collect: ["13:00", "07:00"]}
+    # 예) ksg: {collect: ["06:00"]}   cargonews: {collect: ["06:30"]}   portnews: {collect: ["08:00"]}
+
 collect:
-  # 이 시간(시간 단위) 이내에 올라온 기사만 수집
-  window_hours: 30
-  # 소스별 최대 기사 수 (비용 상한)
-  max_per_source: 25
+  # 한 번 수집할 때 소스별 최대 기사 수 (비용 상한 — 하루치가 이보다 많으면 최신순으로 자름)
+  max_per_source: 50
   # 요청 간 대기 (초) — 사이트에 부담 주지 않기
   delay_seconds: 0.7
   user_agent: "Mozilla/5.0 (compatible; ShippingBriefBot/1.0; personal daily-reading bot)"
@@ -86,8 +104,6 @@ summarize:
 eurasia:
   enabled: true
   title: "러시아·유라시아"
-  # 이 시간 안에 올라온 기사만 후보 (날짜만 주는 피드가 있어 조금 넉넉하게. 중복은 URL로 제거)
-  window_hours: 40
   # 하루 게재 건수: 관련도 3 이상 상위 max_daily건, 부족하면 2점짜리로 min_daily까지 채움
   min_daily: 10
   max_daily: 15
@@ -111,14 +127,14 @@ eurasia:
       kind: rss
       url: "https://www.themoscowtimes.com/rss/news"
       body_selectors: [".article__block--html"]
-      max_candidates: 35
+      max_candidates: 60
     meduza:
       enabled: true
       name: "Meduza"
       stance: "독립 언론 · 리가"
       kind: rss
       url: "https://meduza.io/rss/en/all"
-      max_candidates: 35
+      max_candidates: 40
     eurasianet:
       enabled: true
       name: "Eurasianet"
@@ -133,7 +149,8 @@ eurasia:
       kind: rss
       url: "https://timesca.com/feed/"
       body_selectors: [".entry-content"]
-      max_candidates: 20
+      feed_pages: 3          # 피드가 10건뿐이라 2·3쪽까지 읽음
+      max_candidates: 40
     barents:
       enabled: true
       name: "The Barents Observer"
@@ -147,7 +164,7 @@ eurasia:
       stance: "러시아 해운 업계지 · 상트페테르부르크"
       kind: portnews
       url: "https://portnews.ru/news/"
-      max_candidates: 40
+      max_candidates: 80
   # KOTRA 해외시장뉴스 (러시아·CIS 무역관) — 주간 리뷰 전용
   kotra:
     enabled: true
