@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+	<channel>
+		<title>The Moscow Times - Independent News From Russia</title>
+		<link>https://www.themoscowtimes.com/news</link>
+		<description>The Moscow Times offers everything you need to know about Russia: Breaking news, top stories, business,
+			analysis, opinion, multimedia</description>
+		<atom:link rel="self" href="https://www.themoscowtimes.com/rss/news"></atom:link>
+		<language>en-us</language>
+		<lastBuildDate>Wed, 18 Nov 2026 14:54:10 +0300</lastBuildDate>
+		<ttl>600</ttl>
+				<item>
+			<title>Ukraine Sidesteps Starlink Throttling With Crimea Bridge Strike
+</title>
+			<link>https://www.themoscowtimes.com/2026/11/18/ukraine-sidesteps-starlink-throttling-with-crimea-bridge-strike-a94295</link>
+			<description>
+								Ukraine has attacked the bridge several times during the war. A truck bomb in October 2022 killed four people and limited the bridge's capacity for months.			</description>
+			<pubDate>Wed, 18 Nov 2026 14:23:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/18/ukraine-sidesteps-starlink-throttling-with-crimea-bridge-strike-a94295</guid>
+		</item>
+				<item>
+			<title>Putin Hails Russia’s Economic Resilience and Touts Closer Ties With China at APEC</title>
+			<link>https://www.themoscowtimes.com/2026/11/18/putin-hails-russias-economic-resilience-and-touts-closer-ties-with-china-at-apec-a94296</link>
+			<description>
+								Putin claimed that Russia had become Europe’s largest economy despite Western sanctions, even as his own government forecasts growth of just 0.4% this year.			</description>
+			<pubDate>Wed, 18 Nov 2026 13:57:37 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/18/putin-hails-russias-economic-resilience-and-touts-closer-ties-with-china-at-apec-a94296</guid>
+		</item>
+				<item>
+			<title>Russia Targets Political Prisoner Donors With ‘Extremism’ Charges</title>
+			<link>https://www.themoscowtimes.com/2026/11/18/russia-targets-political-prisoner-donors-with-extremism-charges-a94293</link>
+			<description>
+								The FSB accused the donors of financing the late Kremlin critic Alexei Navalny’s Anti-Corruption Foundation, which Russia outlawed as “extremist” in 2021.			</description>
+			<pubDate>Wed, 18 Nov 2026 13:02:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/18/russia-targets-political-prisoner-donors-with-extremism-charges-a94293</guid>
+		</item>
+				<item>
+			<title>Ukrainian Drones Target Krasnodar Region Refineries</title>
+			<link>https://www.themoscowtimes.com/2026/11/18/ukrainian-drones-target-krasnodar-region-refineries-a94294</link>
+			<description>
+								Russia’s Defense Ministry said it intercepted 183 Ukrainian drones over Russian regions overnight.			</description>
+			<pubDate>Wed, 18 Nov 2026 12:39:56 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/18/ukrainian-drones-target-krasnodar-region-refineries-a94294</guid>
+		</item>
+				<item>
+			<title>Xi and Putin Blast Western 'Protectionism,' Sanctions as Trump Lands in China</title>
+			<link>https://www.themoscowtimes.com/2026/11/18/xi-and-putin-blast-western-protectionism-sanctions-as-trump-lands-in-china-a94292</link>
+			<description>
+								The three men are due to meet on Thursday and potentially discuss Russia's war with Ukraine and the U.S. war in Iran, as well as other flashpoints.			</description>
+			<pubDate>Wed, 18 Nov 2026 11:02:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/18/xi-and-putin-blast-western-protectionism-sanctions-as-trump-lands-in-china-a94292</guid>
+		</item>
+				<item>
+			<title>19 Killed in Military Transport Plane Crash in Siberia</title>
+			<link>https://www.themoscowtimes.com/2026/11/18/at-least-13-killed-in-military-transport-plane-crash-in-kemerovo-region-reports-a94289</link>
+			<description>
+								Reports said the aircraft may have crashed while attempting an attempted emergency landing.			</description>
+			<pubDate>Wed, 18 Nov 2026 10:12:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/18/at-least-13-killed-in-military-transport-plane-crash-in-kemerovo-region-reports-a94289</guid>
+		</item>
+				<item>
+			<title>Partner of Putin’s Eldest Daughter Named Head of New Novatek Subsidiary – Mozhem Obyasnit</title>
+			<link>https://www.themoscowtimes.com/2026/11/17/novatek-names-putins-son-in-law-as-head-of-new-mineral-exploration-subsidiary-mozhem-obyasnit-a94288</link>
+			<description>
+								Yevgeny Nagorny has also served since December 2023 as CEO of Murmansk-Transgaz, another Novatek subsidiary responsible for pipeline infrastructure for the Murmansk LNG project.			</description>
+			<pubDate>Tue, 17 Nov 2026 19:17:54 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/17/novatek-names-putins-son-in-law-as-head-of-new-mineral-exploration-subsidiary-mozhem-obyasnit-a94288</guid>
+		</item>
+				<item>
+			<title>Birkin Bags, Pop Songs and a Messy Divorce: How Two Gay Bloggers Broke the Russian Internet</title>
+			<link>https://www.themoscowtimes.com/2026/11/17/birkin-bags-pop-songs-and-a-messy-divorce-how-two-gay-bloggers-broke-the-russian-internet-a94254</link>
+			<description>
+								What does the viral fallout between two openly gay bloggers say about a country that has cracked down on LGBTQ+ expression?			</description>
+			<pubDate>Tue, 17 Nov 2026 18:58:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/17/birkin-bags-pop-songs-and-a-messy-divorce-how-two-gay-bloggers-broke-the-russian-internet-a94254</guid>
+		</item>
+				<item>
+			<title>Moscow Court Jails Exiled Journalist Andrei Soldatov to 10 Years in Absentia</title>
+			<link>https://www.themoscowtimes.com/2026/11/17/moscow-court-jails-exiled-journalist-andrei-soldatov-to-10-years-in-absentia-a94287</link>
+			<description>
+								Soldatov said the case was opened “at the behest” of the FSB’s internal security department after he reported on the agency’s foreign and political intelligence branch.			</description>
+			<pubDate>Tue, 17 Nov 2026 17:50:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/17/moscow-court-jails-exiled-journalist-andrei-soldatov-to-10-years-in-absentia-a94287</guid>
+		</item>
+				<item>
+			<title>Maker of Russia’s Iconic Alyonka Chocolate Eyes Expansion in China, Morocco and Oman</title>
+			<link>https://www.themoscowtimes.com/2026/11/17/maker-of-russias-iconic-alyonka-chocolate-eyes-expansion-in-china-morocco-and-oman-a94285</link>
+			<description>
+								The chocolate brand is one of the most famous confectionery items produced in Russia.			</description>
+			<pubDate>Tue, 17 Nov 2026 16:37:59 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/17/maker-of-russias-iconic-alyonka-chocolate-eyes-expansion-in-china-morocco-and-oman-a94285</guid>
+		</item>
+				<item>
+			<title>Missing Pro-War Blogger May Face Treason Charges Over Oleshky Evacuation Post</title>
+			<link>https://www.themoscowtimes.com/2026/11/17/missing-pro-war-blogger-may-face-treason-charges-over-oleshky-evacuation-post-a94283</link>
+			<description>
+								Vladimir Romanov had suggested that the optics of the U.S.-brokered ceasefire and evacuation effort in Oleshky were unfavorable for Russia.			</description>
+			<pubDate>Tue, 17 Nov 2026 15:55:13 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/17/missing-pro-war-blogger-may-face-treason-charges-over-oleshky-evacuation-post-a94283</guid>
+		</item>
+				<item>
+			<title>FSB Says It Killed 2, Detained 4 Over Alleged Ukrainian Sabotage Plot</title>
+			<link>https://www.themoscowtimes.com/2026/11/17/fsb-says-it-killed-2-detained-4-over-alleged-ukrainian-sabotage-plot-a94284</link>
+			<description>
+								The latest deaths bring the number of suspects killed by FSB officers during arrest operations this year to 14.			</description>
+			<pubDate>Tue, 17 Nov 2026 14:50:44 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/17/fsb-says-it-killed-2-detained-4-over-alleged-ukrainian-sabotage-plot-a94284</guid>
+		</item>
+				<item>
+			<title>Ukrainian Drones Hit Gazprom Refinery in Bashkortostan in Second Record Overnight Attack</title>
+			<link>https://www.themoscowtimes.com/2026/11/17/ukrainian-drones-hit-gazprom-refinery-in-bashkortostan-in-second-record-overnight-attack-a94282</link>
+			<description>
+								The Defense Ministry said it intercepted a record 1,441 Ukrainian drones over Russian regions and annexed Crimea.			</description>
+			<pubDate>Tue, 17 Nov 2026 12:50:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/17/ukrainian-drones-hit-gazprom-refinery-in-bashkortostan-in-second-record-overnight-attack-a94282</guid>
+		</item>
+				<item>
+			<title>Ukraine Strikes Crimean Bridge for Second Day as Russia Pounds Kyiv Bridges</title>
+			<link>https://www.themoscowtimes.com/2026/11/17/ukraine-strikes-crimean-bridge-for-second-day-as-russia-pounds-kyiv-bridges-a94281</link>
+			<description>
+								Tuesday’s closure on the bridge came less than a day after traffic resumed following a drone attack that shut the crossing for more than 16 hours.			</description>
+			<pubDate>Tue, 17 Nov 2026 11:31:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/17/ukraine-strikes-crimean-bridge-for-second-day-as-russia-pounds-kyiv-bridges-a94281</guid>
+		</item>
+				<item>
+			<title>Russia Warns U.K. Over G20 Presidency After London Says Putin Won't Come to Its Summit    </title>
+			<link>https://www.themoscowtimes.com/2026/11/16/russia-warns-uk-over-g20-presidency-after-london-says-putin-wont-come-to-its-summit-a94280</link>
+			<description>
+								Russia remains a member of the G20 despite Western efforts to isolate it over its war in Ukraine.			</description>
+			<pubDate>Mon, 16 Nov 2026 21:04:40 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/16/russia-warns-uk-over-g20-presidency-after-london-says-putin-wont-come-to-its-summit-a94280</guid>
+		</item>
+				<item>
+			<title>Russia Loses UN Telecoms Agency Leadership Vote</title>
+			<link>https://www.themoscowtimes.com/2026/11/16/russia-loses-un-telecoms-agency-leadership-vote-a94276</link>
+			<description>
+								Countries vie for ITU posts because winning can give them more influence on important topics such as AI standards and global radio spectrum allocation.			</description>
+			<pubDate>Mon, 16 Nov 2026 19:22:55 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/16/russia-loses-un-telecoms-agency-leadership-vote-a94276</guid>
+		</item>
+				<item>
+			<title>Kremlin Aide Denies Russia Agreed to Include Europe in Ukraine Peace Talks</title>
+			<link>https://www.themoscowtimes.com/2026/11/16/kremlin-aide-denies-russia-agreed-to-include-europe-in-ukraine-peace-talks-a94279</link>
+			<description>
+								&quot;A great deal would have to be done before that could be agreed,&quot; Kremlin aide Yury Ushakov said.			</description>
+			<pubDate>Mon, 16 Nov 2026 19:18:29 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/16/kremlin-aide-denies-russia-agreed-to-include-europe-in-ukraine-peace-talks-a94279</guid>
+		</item>
+				<item>
+			<title>Suspect Arrested Over Moscow Car Bombing of Pro-Russian Ukrainian PM’s Ex-Aide</title>
+			<link>https://www.themoscowtimes.com/2026/11/16/suspect-arrested-over-moscow-car-bombing-of-pro-russian-ukrainian-pms-ex-aide-a94278</link>
+			<description>
+								Scammers posed as bank employees before coercing the woman into planting the bomb.			</description>
+			<pubDate>Mon, 16 Nov 2026 19:12:51 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/16/suspect-arrested-over-moscow-car-bombing-of-pro-russian-ukrainian-pms-ex-aide-a94278</guid>
+		</item>
+				<item>
+			<title>Russia’s Indigenous Languages Are Dying. Can a New Wave of Activism Save Them?</title>
+			<link>https://www.themoscowtimes.com/2026/11/16/russias-indigenous-languages-are-dying-can-a-new-wave-of-activism-save-them-a94259</link>
+			<description>
+								As Russia’s war in Ukraine threatens its Indigenous languages, writers, teachers and activists are fighting to keep them alive — often from exile.			</description>
+			<pubDate>Mon, 16 Nov 2026 18:04:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/16/russias-indigenous-languages-are-dying-can-a-new-wave-of-activism-save-them-a94259</guid>
+		</item>
+				<item>
+			<title>Opposition Politician Yulia Galyamina Fined $24 Over Phone Check Refusal</title>
+			<link>https://www.themoscowtimes.com/2026/11/16/opposition-politician-yulia-galyamina-fined-24-over-phone-check-refusal-a94277</link>
+			<description>
+								Officers said they wanted to inspect Galyamina’s phone over suspected links to “extremism and terrorism,” which she denies.			</description>
+			<pubDate>Mon, 16 Nov 2026 17:20:22 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/16/opposition-politician-yulia-galyamina-fined-24-over-phone-check-refusal-a94277</guid>
+		</item>
+				<item>
+			<title>Kremlin Says Putin-Xi-Trump Meeting in China Will Have Major Impact on Global Affairs </title>
+			<link>https://www.themoscowtimes.com/2026/11/16/kremlin-says-putin-xi-trump-meeting-in-china-will-have-major-impact-on-global-affairs-a94268</link>
+			<description>
+								The three leaders are due to sit down together at the same time as China hosts a summit of the APEC forum in Shenzhen.			</description>
+			<pubDate>Mon, 16 Nov 2026 17:00:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/16/kremlin-says-putin-xi-trump-meeting-in-china-will-have-major-impact-on-global-affairs-a94268</guid>
+		</item>
+				<item>
+			<title>Wildberries Brushes Off EU Sanctions on Billionaire Founder Tatiana Kim</title>
+			<link>https://www.themoscowtimes.com/2026/11/16/wildberries-brushes-off-eu-sanctions-on-billionaire-founder-tatiana-kim-a94274</link>
+			<description>
+								The latest packet of sanctions targeted 12 people and 101 entities. 			</description>
+			<pubDate>Mon, 16 Nov 2026 16:36:35 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/16/wildberries-brushes-off-eu-sanctions-on-billionaire-founder-tatiana-kim-a94274</guid>
+		</item>
+				<item>
+			<title>Risk of Nuclear Accident in Ukraine Increasing This Winter, Atomic Safety Regulators Say</title>
+			<link>https://www.themoscowtimes.com/2026/11/16/risk-of-nuclear-accident-in-ukraine-increasing-this-winter-atomic-safety-regulators-say-a94273</link>
+			<description>
+								Moscow has stepped up its drone and missile attacks on Ukrainian energy installations in recent weeks.			</description>
+			<pubDate>Mon, 16 Nov 2026 15:16:40 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/16/risk-of-nuclear-accident-in-ukraine-increasing-this-winter-atomic-safety-regulators-say-a94273</guid>
+		</item>
+				<item>
+			<title>Convicted Nemtsov Killers Secretly Freed Under Guise of Ukraine War Service – Proekt</title>
+			<link>https://www.themoscowtimes.com/2026/11/16/convicted-nemtsov-killers-secretly-freed-under-guise-of-ukraine-war-service-proekt-a94271</link>
+			<description>
+								Of the five Chechen men who were sentenced to prison terms for the shooting, only one served a full prison sentence.			</description>
+			<pubDate>Mon, 16 Nov 2026 15:10:39 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/16/convicted-nemtsov-killers-secretly-freed-under-guise-of-ukraine-war-service-proekt-a94271</guid>
+		</item>
+				<item>
+			<title>Estonia to Close Border Crossings With Russia After Foiled Sabotage Attempt</title>
+			<link>https://www.themoscowtimes.com/2026/11/16/estonia-to-close-border-crossings-with-russia-after-foiled-sabotage-attempt-a94269</link>
+			<description>
+								Moscow has repeatedly denied European accusations of orchestrating arson and sabotage campaigns across the continent.			</description>
+			<pubDate>Mon, 16 Nov 2026 13:44:32 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/16/estonia-to-close-border-crossings-with-russia-after-foiled-sabotage-attempt-a94269</guid>
+		</item>
+				<item>
+			<title>Kremlin Tells United Russia Lawmakers to Prepare for ‘Victory’ in Ukraine</title>
+			<link>https://www.themoscowtimes.com/2026/11/16/kremlin-tells-united-russia-lawmakers-to-prepare-for-victory-in-ukraine-a94270</link>
+			<description>
+								“They said everyone should be ready for victory, when those who took part in the fighting return all at once,” one source told Vedomosti.			</description>
+			<pubDate>Mon, 16 Nov 2026 13:14:56 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/16/kremlin-tells-united-russia-lawmakers-to-prepare-for-victory-in-ukraine-a94270</guid>
+		</item>
+				<item>
+			<title>Russian Junior Hockey Team to Miss Worlds Over Canada Restrictions, IIHF Confirms</title>
+			<link>https://www.themoscowtimes.com/2026/11/16/russian-junior-hockey-team-to-miss-worlds-over-canada-restrictions-iihf-confirms-a94267</link>
+			<description>
+								The Russian Ice Hockey Federation called the IIHF's decision “unacceptable and unlawful” and said it would appeal to the International Olympic Committee to resolve the situation.			</description>
+			<pubDate>Mon, 16 Nov 2026 12:45:02 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/16/russian-junior-hockey-team-to-miss-worlds-over-canada-restrictions-iihf-confirms-a94267</guid>
+		</item>
+				<item>
+			<title>Ukraine Hits Crimean Bridge Amid Record Overnight Drone Attack</title>
+			<link>https://www.themoscowtimes.com/2026/11/16/ukraine-hits-crimean-bridge-amid-record-overnight-drone-attack-a94265</link>
+			<description>
+								Russia’s Defense Ministry said it intercepted 1,336 Ukrainian drones over Russian regions and Crimea overnight.			</description>
+			<pubDate>Mon, 16 Nov 2026 12:16:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/16/ukraine-hits-crimean-bridge-amid-record-overnight-drone-attack-a94265</guid>
+		</item>
+				<item>
+			<title>U.S. and Russia to Oppose Talks on Limiting Autonomous Weapons</title>
+			<link>https://www.themoscowtimes.com/2026/11/16/us-and-russia-to-oppose-talks-on-limiting-autonomous-weapons-a94266</link>
+			<description>
+								Semi-autonomous, AI-assisted weapons have already been used in Ukraine, Sudan and the Middle East, despite ethical concerns.			</description>
+			<pubDate>Mon, 16 Nov 2026 11:57:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/16/us-and-russia-to-oppose-talks-on-limiting-autonomous-weapons-a94266</guid>
+		</item>
+				<item>
+			<title>At Least 1 Killed as Ukraine Strikes Industrial Sites Across Russia</title>
+			<link>https://www.themoscowtimes.com/2026/11/15/at-least-1-killed-as-ukraine-strikes-industrial-sites-across-russia-a94264</link>
+			<description>
+								Ukraine’s military claimed responsibility for strikes in Tatarstan, saying it had targeted the Nizhnekamskneftekhim petrochemical complex.			</description>
+			<pubDate>Sun, 15 Nov 2026 15:32:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/15/at-least-1-killed-as-ukraine-strikes-industrial-sites-across-russia-a94264</guid>
+		</item>
+				<item>
+			<title>Zelensky Escalates Criticism of SpaceX Over Speed Caps</title>
+			<link>https://www.themoscowtimes.com/2026/11/14/zelensky-a94262</link>
+			<description>
+								Zelensky said the speed restrictions made it more difficult for Ukrainian air defense units to intercept Russian jet-powered drones and made Ukrainian cities more vulnerable.			</description>
+			<pubDate>Sat, 14 Nov 2026 18:16:59 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/14/zelensky-a94262</guid>
+		</item>
+				<item>
+			<title>Russian Youth Agency Deputy Chief Arrested in Fraud Probe</title>
+			<link>https://www.themoscowtimes.com/2026/11/13/russian-youth-agency-deputy-chief-arrested-in-fraud-probe-a94258</link>
+			<description>
+								Denis Ashirov, who has served as the agency’s state secretary and deputy head since July 2022, faces up to 10 years in prison if convicted of large-scale fraud.			</description>
+			<pubDate>Fri, 13 Nov 2026 19:03:34 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/13/russian-youth-agency-deputy-chief-arrested-in-fraud-probe-a94258</guid>
+		</item>
+				<item>
+			<title>Kremlin Says It’s Ready for Civilian Evacuation From Ukraine’s Kostiantynivka</title>
+			<link>https://www.themoscowtimes.com/2026/11/13/kremlin-says-its-ready-for-civilian-evacuation-from-ukraines-kostiantynivka-a94257</link>
+			<description>
+								Kyiv has expressed concerns that Moscow might wish to use ceasefires for such missions to enable its military to regroup.			</description>
+			<pubDate>Fri, 13 Nov 2026 16:59:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/13/kremlin-says-its-ready-for-civilian-evacuation-from-ukraines-kostiantynivka-a94257</guid>
+		</item>
+				<item>
+			<title>Russian Oil Discounts Hit 3-Year High as Middle East Supplies Recover</title>
+			<link>https://www.themoscowtimes.com/2026/11/13/russian-oil-discounts-hit-3-year-high-as-middle-east-supplies-recover-a94256</link>
+			<description>
+								Analysts said rising supplies from Persian Gulf producers were increasing competition for Urals.			</description>
+			<pubDate>Fri, 13 Nov 2026 16:04:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/13/russian-oil-discounts-hit-3-year-high-as-middle-east-supplies-recover-a94256</guid>
+		</item>
+				<item>
+			<title>Seized Western Businesses Donate $86M to Russian War Effort</title>
+			<link>https://www.themoscowtimes.com/2026/11/13/seized-western-businesses-donate-86m-to-russian-war-effort-a94252</link>
+			<description>
+								The donations have been used to buy drones, vehicles, communications systems and other equipment for Russian troops, Bloomberg reported.			</description>
+			<pubDate>Fri, 13 Nov 2026 14:04:52 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/13/seized-western-businesses-donate-86m-to-russian-war-effort-a94252</guid>
+		</item>
+				<item>
+			<title>Russia Says Europeans Can Join Ukraine Peace Talks if They Show 'Readiness to Contribute'</title>
+			<link>https://www.themoscowtimes.com/2026/11/13/russia-says-europeans-can-join-ukraine-peace-talks-if-they-show-readiness-to-contribute-a94236</link>
+			<description>
+								Yet the Russian leader said Washington must work with its European allies to understand if they want peace or war in Ukraine.			</description>
+			<pubDate>Fri, 13 Nov 2026 14:04:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/13/russia-says-europeans-can-join-ukraine-peace-talks-if-they-show-readiness-to-contribute-a94236</guid>
+		</item>
+				<item>
+			<title>Ukrainian Drone Attack Kills 4 Workers, Sparks Fire at Volgograd Oil Refinery</title>
+			<link>https://www.themoscowtimes.com/2026/11/13/ukrainian-drone-attack-kills-4-workers-sparks-fire-at-volgograd-oil-refinery-a94250</link>
+			<description>
+								The exiled news outlet Astra said it identified the facility as the largest Lukoil oil refinery in southern Russia.			</description>
+			<pubDate>Fri, 13 Nov 2026 12:26:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/13/ukrainian-drone-attack-kills-4-workers-sparks-fire-at-volgograd-oil-refinery-a94250</guid>
+		</item>
+				<item>
+			<title>Former Aide to Pro-Russian Ukrainian PM Seriously Injured in Moscow Car Blast</title>
+			<link>https://www.themoscowtimes.com/2026/11/13/former-aide-to-pro-russian-ukrainian-pm-seriously-injured-in-moscow-car-blast-a94251</link>
+			<description>
+								Sergei Zavorotny, 72, moved to Russia after the 2014 Maidan Revolution that toppled Viktor Yanukovych.			</description>
+			<pubDate>Fri, 13 Nov 2026 11:54:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/13/former-aide-to-pro-russian-ukrainian-pm-seriously-injured-in-moscow-car-blast-a94251</guid>
+		</item>
+				<item>
+			<title>Kushner Says U.S. Working Toward 'Largest Prisoner Exchange' of Russia's War in Ukraine</title>
+			<link>https://www.themoscowtimes.com/2026/11/13/kushner-says-us-working-toward-largest-prisoner-exchange-of-russias-war-in-ukraine-a94249</link>
+			<description>
+								The deal would potentially reunite &quot;thousands of people with their families,&quot; the White House special envoy wrote on X, without giving details.			</description>
+			<pubDate>Fri, 13 Nov 2026 11:40:28 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/13/kushner-says-us-working-toward-largest-prisoner-exchange-of-russias-war-in-ukraine-a94249</guid>
+		</item>
+				<item>
+			<title>Russia Jails Prominent Human Rights Lawyer 12 Years for Treason</title>
+			<link>https://www.themoscowtimes.com/2026/11/12/russia-jails-prominent-human-rights-lawyer-12-years-for-treason-a94248</link>
+			<description>
+								Maria Bontsler, 66, became known for taking on some of the toughest politically motivated cases throughout her career.			</description>
+			<pubDate>Thu, 12 Nov 2026 20:16:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/12/russia-jails-prominent-human-rights-lawyer-12-years-for-treason-a94248</guid>
+		</item>
+				<item>
+			<title>Russian Police Chief Accused of Running Gang That Abducted Men for Ukraine War</title>
+			<link>https://www.themoscowtimes.com/2026/11/12/russian-police-chief-accused-of-running-gang-that-abducted-men-for-ukraine-war-a94240</link>
+			<description>
+								The Ivanovo case follows reports of similar schemes in the Vologda and Sverdlovsk regions.			</description>
+			<pubDate>Thu, 12 Nov 2026 19:26:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/12/russian-police-chief-accused-of-running-gang-that-abducted-men-for-ukraine-war-a94240</guid>
+		</item>
+				<item>
+			<title>Finland Moves to Bar Russian Athletes From Entry Over Ukraine War</title>
+			<link>https://www.themoscowtimes.com/2026/11/12/finland-moves-to-bar-russian-athletes-from-entry-over-ukraine-war-a94246</link>
+			<description>
+								“As long as Russia’s war of aggression continues, Russian athletes have no business in Finland,&quot; said Foreign Minister Elina Valtonen.			</description>
+			<pubDate>Thu, 12 Nov 2026 18:28:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/12/finland-moves-to-bar-russian-athletes-from-entry-over-ukraine-war-a94246</guid>
+		</item>
+				<item>
+			<title>Russian Officer Appeals to Putin to Drop Fraud Charges Against Scammed Son </title>
+			<link>https://www.themoscowtimes.com/2026/11/12/russian-officer-appeals-to-putin-to-drop-fraud-charges-against-scammed-son-a94244</link>
+			<description>
+											</description>
+			<pubDate>Thu, 12 Nov 2026 17:18:36 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/12/russian-officer-appeals-to-putin-to-drop-fraud-charges-against-scammed-son-a94244</guid>
+		</item>
+				<item>
+			<title>Finland Says It Detected Strike on Russian Warship in Baltic Sea</title>
+			<link>https://www.themoscowtimes.com/2026/11/12/finland-says-it-detected-strike-on-russian-warship-in-baltic-sea-a94245</link>
+			<description>
+								It was not immediately clear if there were any casualties or what had caused the strike.			</description>
+			<pubDate>Thu, 12 Nov 2026 17:03:29 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/12/finland-says-it-detected-strike-on-russian-warship-in-baltic-sea-a94245</guid>
+		</item>
+				<item>
+			<title>Ukraine War Turns Black Sea Into World’s Deadliest Shipping Lane – WSJ</title>
+			<link>https://www.themoscowtimes.com/2026/11/12/ukraine-war-turns-black-sea-into-worlds-deadliest-shipping-lane-wsj-a94243</link>
+			<description>
+								Maritime security firm Ambrey recorded more than 300 attacks in the Black Sea this year as Russia and Ukraine traded strikes on ships and ports. 			</description>
+			<pubDate>Thu, 12 Nov 2026 15:23:52 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/12/ukraine-war-turns-black-sea-into-worlds-deadliest-shipping-lane-wsj-a94243</guid>
+		</item>
+				<item>
+			<title>Zelensky Says Starshield Speed Limited Again, Hampering Ukraine's Defenses</title>
+			<link>https://www.themoscowtimes.com/2026/11/12/zelensky-says-starshield-speed-limited-again-hampering-ukraines-defenses-a94241</link>
+			<description>
+								“This helps Russians kill more Ukrainians and carry out more accurate strikes on Ukraine,” Zelensky said. 			</description>
+			<pubDate>Thu, 12 Nov 2026 14:58:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/12/zelensky-says-starshield-speed-limited-again-hampering-ukraines-defenses-a94241</guid>
+		</item>
+				<item>
+			<title>Over 11K Foreign Fighters Killed in Ukraine – Rosstat Leaks</title>
+			<link>https://www.themoscowtimes.com/2026/11/12/over-11k-foreign-fighters-killed-in-ukraine-rosstat-leaks-a94237</link>
+			<description>
+								Of the 11,335 foreign fatalities, just over 6,000 of those killed were born outside Russia but had obtained Russian citizenship prior to their deaths. 			</description>
+			<pubDate>Thu, 12 Nov 2026 14:03:10 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/12/over-11k-foreign-fighters-killed-in-ukraine-rosstat-leaks-a94237</guid>
+		</item>
+				<item>
+			<title>Brazilian Buyers Balk at Price of Russian Diesel Shunned by U.S. Importers – Bloomberg</title>
+			<link>https://www.themoscowtimes.com/2026/11/12/brazilian-buyers-balk-at-price-of-russian-diesel-shunned-by-us-importers-bloomberg-a94239</link>
+			<description>
+								Brazilian traders told Bloomberg that prices weren’t attractive relative to U.S.-made fuel.			</description>
+			<pubDate>Thu, 12 Nov 2026 13:46:16 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/12/brazilian-buyers-balk-at-price-of-russian-diesel-shunned-by-us-importers-bloomberg-a94239</guid>
+		</item>
+				<item>
+			<title>St. Petersburg Car Blast Kills Russian Aerospace Forces Officer
+</title>
+			<link>https://www.themoscowtimes.com/2026/11/12/st-petersburg-car-blast-kills-russian-aerospace-forces-officer-a94235</link>
+			<description>
+								The officer was the second Russian military official to be killed in a car bomb explosion in the same neighborhood this year.			</description>
+			<pubDate>Thu, 12 Nov 2026 12:23:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/12/st-petersburg-car-blast-kills-russian-aerospace-forces-officer-a94235</guid>
+		</item>
+				<item>
+			<title>Russia’s AI Ambitions Take a Hit With Ukrainian Data Center Strikes</title>
+			<link>https://www.themoscowtimes.com/2026/11/11/russias-ai-ambitions-take-a-hit-with-ukrainian-data-center-strikes-a94108</link>
+			<description>
+								Russia’s drive to develop “sovereign” AI was already struggling. Then came the drone strikes.			</description>
+			<pubDate>Wed, 11 Nov 2026 20:34:00 +0300</pubDate>
+			<guid>https://www.themoscowtimes.com/2026/11/11/russias-ai-ambitions-take-a-hit-with-ukrainian-data-center-strikes-a94108</guid>
+		</item>
+			</channel>
+</rss>
