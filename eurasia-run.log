@@ -1,0 +1,12 @@
+INFO brief.eurasia: moscowtimes: 새 후보 15건
+INFO brief.eurasia: meduza: 새 후보 30건
+INFO brief.eurasia: eurasianet: 새 후보 1건
+INFO brief.eurasia: timesca: 새 후보 10건
+INFO brief.eurasia: barents: 새 후보 2건
+INFO brief.eurasia: portnews: 새 후보 40건
+INFO brief.eurasia: 후보 98건 → 게재 15건 (기존 0건), 제외 83건
+INFO brief.eurasia: 유라시아 저장: 15건 → data/eurasia/2026-11-18.json
+INFO brief.eurasia.weekly: KOTRA 러시아·CIS: 1건 (2026-11-12~2026-11-18)
+INFO brief.eurasia.weekly: 유라시아 주간 리뷰 생성: 2026-W47 (기사 15, KOTRA 1)
+INFO brief.build: 유라시아: 1일치, 주간 1개
+INFO brief.build: 사이트 생성: 0일치, 태그 0개, 주간 0개 → site/
