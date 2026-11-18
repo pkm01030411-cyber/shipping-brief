@@ -1480,6 +1480,116 @@
       "title_ko": "알마티 스카이트레인 사업에 전용 버스차로 철거",
       "score": 1,
       "published": "2026-11-18T21:35:14+09:00"
+    },
+    {
+      "id": "portnews:1155ad0619",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399761/",
+      "title": "ГК «Дело» и Korwell проработают судоходные сервисы для развития российско-корейской логистики",
+      "title_ko": "델로 그룹·코르웰, 러시아-한국 물류 해운 서비스 공동 검토",
+      "score": 4,
+      "published": "2026-11-18T17:30:00+09:00"
+    },
+    {
+      "id": "portnews:773a6b1447",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399753/",
+      "title": "Владимир Путин: Доля АТР во внешней торговле России составляет 53%",
+      "title_ko": "푸틴 \"러시아 대외무역에서 아태지역 비중 53%\"",
+      "score": 4,
+      "published": "2026-11-18T15:23:00+09:00"
+    },
+    {
+      "id": "portnews:8592af24de",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399752/",
+      "title": "Порт Усть-Луга планируется связать с вьетнамским Ми Тхюи в рамках маршрута «Восток — Запад»",
+      "title_ko": "우스트루가항, 동서 노선으로 베트남 미투이와 연결 추진",
+      "score": 3,
+      "published": "2026-11-18T15:51:00+09:00"
+    },
+    {
+      "id": "portnews:d16e0f2ed0",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399747/",
+      "title": "Ставки фрахта на танкеры-продуктовозы в октябре продолжили рост во всех сегментах",
+      "title_ko": "10월 석유제품 운반 탱커 운임 전 부문 계속 상승",
+      "score": 3,
+      "published": "2026-11-18T15:05:00+09:00"
+    },
+    {
+      "id": "portnews:e0ef65e5c4",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399749/",
+      "title": "Ставки фрахта на танкеры VLCC продолжили стремительный рост в октябре 2026 года",
+      "title_ko": "VLCC 탱커 운임 2026년 10월 급등세 지속",
+      "score": 3,
+      "published": "2026-11-18T14:00:00+09:00"
+    },
+    {
+      "id": "portnews:e6d78a26fb",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399754/",
+      "title": "Александр Пошивай возглавил проекты по развитию опорной сети морских портов и внутренних водных путей",
+      "title_ko": "알렉산드르 포쉬바이, 항만 기간망·내륙수로 개발 프로젝트 총괄",
+      "score": 2,
+      "published": "2026-11-18T16:38:00+09:00"
+    },
+    {
+      "id": "eurasianet:b5a0415803",
+      "source": "eurasianet",
+      "source_name": "Eurasianet",
+      "url": "https://eurasianet.org/uzbekistans-judicial-reforms-on-trial-four-judges-convicted-for-unjust-decision",
+      "title": "Uzbekistan’s judicial reforms on trial: Four judges convicted for “unjust decision”",
+      "title_ko": "우즈베키스탄 사법개혁 시험대: 판사 4명 '부당 판결' 유죄",
+      "score": 2,
+      "published": "2026-11-18T12:00:00+09:00"
+    },
+    {
+      "id": "portnews:888406ac6a",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399759/",
+      "title": "На углубление и расширение подходного канала порта Гетеборг направят $227 млн",
+      "title_ko": "예테보리항 진입수로 준설·확장에 2억 2,700만 달러 투입",
+      "score": 1,
+      "published": "2026-11-18T17:09:00+09:00"
+    },
+    {
+      "id": "portnews:5f253d5b42",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399757/",
+      "title": "Сухогруз «Утренний» встал на ремонт в плавдок «Красной кузницы»",
+      "title_ko": "건화물선 '우트렌니', 크라스나야 쿠즈니차 플로팅 독에서 수리",
+      "score": 1,
+      "published": "2026-11-18T16:53:00+09:00"
+    },
+    {
+      "id": "portnews:af9c568989",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399751/",
+      "title": "Из акватории Красногорска (Сахалин) удалены 9 затонувших судов",
+      "title_ko": "사할린 크라스노고르스크 해역서 침몰선 9척 인양·제거",
+      "score": 1,
+      "published": "2026-11-18T14:44:00+09:00"
+    },
+    {
+      "id": "portnews:134b876397",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399750/",
+      "title": "«Нониус Инжиниринг» поддерживает Форум дноуглубительных компаний: в центре внимания — технологии и данные",
+      "title_ko": "노니우스 엔지니어링, 준설업체 포럼 후원: 기술·데이터 주목",
+      "score": 1,
+      "published": "2026-11-18T14:22:00+09:00"
     }
   ],
   "brief": {
@@ -1508,8 +1618,8 @@
     "model": "claude-sonnet-5-5",
     "summarized_at": "2026-11-18T21:31:42.276062+09:00"
   },
-  "generated_at": "2026-11-19T00:07:34.245986+09:00",
+  "generated_at": "2026-11-19T07:36:00.682197+09:00",
   "pending": [],
-  "collected_at": "2026-11-19T00:07:25+09:00",
+  "collected_at": "2026-11-19T07:35:53+09:00",
   "published_at": "2026-11-19T00:07:25+09:00"
 }
