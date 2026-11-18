@@ -1,0 +1,2223 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr" class="resp_fonts" data-hostpath="labrador&#x2F;http-404">
+    <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                
+                <script>
+                    // Classic script so async third-party tags can read page data before the deferred module runs.
+                    window.labPageData = {
+                        url: 'https://www.thebarentsobserver.com/labrador/http-404',
+                        pageType: 'front',
+                        pageId: '100291',
+                        section: 'labrador/http-404',
+                        subsection: 'http-404',
+                        title: '',
+                        seotitle: '404 - thebarentsobserver',
+                        sometitle: '404 - thebarentsobserver',
+                        description: '',
+                        seodescription: '',
+                        somedescription: '',
+                        device: 'desktop',
+                        cms: 'labrador',
+                        cmsVersion: '4.2.24',
+                        contentLanguage: 'en-GB',
+                        published: '',
+                        modified: '2024-09-05 12:51:00',
+                        
+                        
+                        
+                        tags: [],
+                        bylines: [],
+                        site: {
+                            domain: 'https://www.thebarentsobserver.com',
+                            id: '2',
+                            alias: 'thebarentsobserver',
+                            name: 'thebarentsobserver'
+                        },
+                        paid: 0,
+                        paywall: 'internal'
+                    };
+                </script>
+                <script>
+                    window.labClientAPIReady = new Promise(function (resolve) {
+                        document.addEventListener(
+                            'labClientAPIReady',
+                            function () { resolve(window.labClientAPI); },
+                            { once: true }
+                        );
+                    });
+                </script>
+                <script type="module">
+                    import { ClientAPI } from '/view-resources/baseview/public/common/ClientAPI/index.js?v=1793778822-L4';
+                    window.labClientAPI = new ClientAPI({
+                        pageData: window.labPageData,
+                        debug: false
+                    });
+                    document.dispatchEvent(new Event('labClientAPIReady'));
+                </script>
+
+                <title>404 - thebarentsobserver</title>
+                <meta name="title" content="404 - thebarentsobserver">
+                <meta name="description" content="">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                        <meta name="robots" content="max-snippet:-1">
+                <meta property="og:type" content="website">
+                <meta property="og:title" content="404 - thebarentsobserver">
+                <meta property="og:description" content="">
+                <meta property="og:site_name" content="thebarentsobserver">
+
+                <meta name="google-site-verification" content="YdYiAI0nWawRwI9E4-PH_ddErZMQgCaQJPT8C3irg2E">
+                <script src="https://assets.mailmojo.no/sdk.js" data-token="Dgw4GSCTrOtseIGd08SubD9WtNyjc3" async></script><script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script><script >
+
+PayPal.Donation.Button({
+
+env:'production',
+
+hosted_button_id:'KSLE85AR8JDAE',
+
+image: {
+
+src:'https://www.paypalobjects.com/en_US/NO/i/btn/btn_donateCC_LG.gif',
+
+alt:'Donate with PayPal button',
+
+title:'PayPal - The safer, easier way to pay online!',
+
+}
+
+}).render('#donate-button');
+
+</script>
+                
+                
+                
+<script>
+const PROVIDER_CONFIG = null
+;
+
+if (PROVIDER_CONFIG && !window.__labradorPaywallClientAPIInitialized) {
+    window.__labradorPaywallClientAPIInitialized = true;
+
+    const LOG_PREFIX = '[Paywall:' + PROVIDER_CONFIG.provider + ']';
+
+    function checkAuthState() {
+        if (!window.userStatus) {
+            return;
+        }
+        window.userStatus.verify().then(function() {
+            var status = window.userStatus.getStatus(PROVIDER_CONFIG.right);
+            var engagentlyToken = window.userStatus.getEngagently();
+
+            if (status >= 2) {
+                window.labClientAPI.emit('accessGranted', {
+                    provider: PROVIDER_CONFIG.provider,
+                    paid: status,
+                    engagentlyToken: engagentlyToken
+                });
+            } else {
+                var data = { provider: PROVIDER_CONFIG.provider, paid: status || 0 };
+                if (engagentlyToken) data.engagentlyToken = engagentlyToken;
+                window.labClientAPI.emit('accessDenied', data);
+            }
+        }).catch(function(err) {
+            window.labClientAPI.emit('accessDenied', { provider: PROVIDER_CONFIG.provider, paid: 0 });
+        });
+    }
+
+    window.labClientAPIReady.then(function(api) {
+        api.set(PROVIDER_CONFIG.provider + 'PaywallHelper', {
+            checkNow: function() { return (window.userStatus && window.userStatus.getStatus(PROVIDER_CONFIG.right)) || 0; },
+            getStatus: checkAuthState
+        });
+        checkAuthState();
+    });
+}
+</script>
+                <meta property="og:url" content="https://www.thebarentsobserver.com/labrador/http-404">
+                        <link type="image/png" rel="icon" sizes="32x32" href="/view-resources/dachser2/public/thebarentsobserver/favicon-32x32.png">
+                    
+                <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900" rel="stylesheet" >
+                <link rel="stylesheet" href="/view-resources/view/css/grid.css?v=1793778822-L4">
+                <link rel="stylesheet" href="/view-resources/view/css/main.css?v=1793778822-L4">
+                <link rel="stylesheet" href="/view-resources/view/css/colors.css?v=1793778822-L4">
+                <link rel="stylesheet" href="/view-resources/view/css/print.css?v=1793778822-L4" media="print">
+                <link rel="stylesheet" href="/view-resources/view/css/foundation-icons/foundation-icons.css?v=1793778822-L4">
+                <link rel="stylesheet" href="/view-resources/view/css/site/thebarentsobserver.css?v=1793778822-L4">
+                <style data-key="custom_properties">
+                    :root{--primary: rgba(255,140,0,1);--secondary: rgba(67,156,225,1);--white: rgba(255,255,255,1);--black: rgba(0,0,0,1);--bg-primary: rgba(255,140,0,1);--bg-secondary: rgba(67,156,225,1);--bg-white: rgba(255,255,255,1);--bg-black: rgba(0,0,0,1);}
+                </style>
+                <style data-key="background_colors">
+                    .bg-primary {background-color: rgba(255,140,0,1);}.bg-secondary {background-color: rgba(67,156,225,1);}.bg-white {background-color: rgba(255,255,255,1);}.bg-black {background-color: rgba(0,0,0,1);color: #fff;}@media (max-width: 1023px) { .color_mobile_bg-primary {background-color: rgba(255,140,0,1);}}@media (max-width: 1023px) { .color_mobile_bg-secondary {background-color: rgba(67,156,225,1);}}@media (max-width: 1023px) { .color_mobile_bg-white {background-color: rgba(255,255,255,1);}}@media (max-width: 1023px) { .color_mobile_bg-black {background-color: rgba(0,0,0,1);color: #fff;}}
+                </style>
+                <style data-key="background_colors_opacity">
+                    .bg-primary.op-bg_20 {background-color: rgba(255, 140, 0, 0.2);}.bg-primary.op-bg_40 {background-color: rgba(255, 140, 0, 0.4);}.bg-primary.op-bg_60 {background-color: rgba(255, 140, 0, 0.6);}.bg-primary.op-bg_80 {background-color: rgba(255, 140, 0, 0.8);}.bg-secondary.op-bg_20 {background-color: rgba(67, 156, 225, 0.2);}.bg-secondary.op-bg_40 {background-color: rgba(67, 156, 225, 0.4);}.bg-secondary.op-bg_60 {background-color: rgba(67, 156, 225, 0.6);}.bg-secondary.op-bg_80 {background-color: rgba(67, 156, 225, 0.8);}.bg-white.op-bg_20 {background-color: rgba(255, 255, 255, 0.2);}.bg-white.op-bg_40 {background-color: rgba(255, 255, 255, 0.4);}.bg-white.op-bg_60 {background-color: rgba(255, 255, 255, 0.6);}.bg-white.op-bg_80 {background-color: rgba(255, 255, 255, 0.8);}.bg-black.op-bg_20 {background-color: rgba(0, 0, 0, 0.2);color: #fff;}.bg-black.op-bg_40 {background-color: rgba(0, 0, 0, 0.4);color: #fff;}.bg-black.op-bg_60 {background-color: rgba(0, 0, 0, 0.6);color: #fff;}.bg-black.op-bg_80 {background-color: rgba(0, 0, 0, 0.8);color: #fff;}@media (max-width: 1023px) { .color_mobile_bg-primary.op-bg_20 {background-color: rgba(255, 140, 0, 0.2);}}@media (max-width: 1023px) { .color_mobile_bg-primary.op-bg_40 {background-color: rgba(255, 140, 0, 0.4);}}@media (max-width: 1023px) { .color_mobile_bg-primary.op-bg_60 {background-color: rgba(255, 140, 0, 0.6);}}@media (max-width: 1023px) { .color_mobile_bg-primary.op-bg_80 {background-color: rgba(255, 140, 0, 0.8);}}@media (max-width: 1023px) { .color_mobile_bg-secondary.op-bg_20 {background-color: rgba(67, 156, 225, 0.2);}}@media (max-width: 1023px) { .color_mobile_bg-secondary.op-bg_40 {background-color: rgba(67, 156, 225, 0.4);}}@media (max-width: 1023px) { .color_mobile_bg-secondary.op-bg_60 {background-color: rgba(67, 156, 225, 0.6);}}@media (max-width: 1023px) { .color_mobile_bg-secondary.op-bg_80 {background-color: rgba(67, 156, 225, 0.8);}}@media (max-width: 1023px) { .color_mobile_bg-white.op-bg_20 {background-color: rgba(255, 255, 255, 0.2);}}@media (max-width: 1023px) { .color_mobile_bg-white.op-bg_40 {background-color: rgba(255, 255, 255, 0.4);}}@media (max-width: 1023px) { .color_mobile_bg-white.op-bg_60 {background-color: rgba(255, 255, 255, 0.6);}}@media (max-width: 1023px) { .color_mobile_bg-white.op-bg_80 {background-color: rgba(255, 255, 255, 0.8);}}@media (max-width: 1023px) { .color_mobile_bg-black.op-bg_20 {background-color: rgba(0, 0, 0, 0.2);color: #fff;}}@media (max-width: 1023px) { .color_mobile_bg-black.op-bg_40 {background-color: rgba(0, 0, 0, 0.4);color: #fff;}}@media (max-width: 1023px) { .color_mobile_bg-black.op-bg_60 {background-color: rgba(0, 0, 0, 0.6);color: #fff;}}@media (max-width: 1023px) { .color_mobile_bg-black.op-bg_80 {background-color: rgba(0, 0, 0, 0.8);color: #fff;}}
+                </style>
+                <style data-key="border_colors">
+                    .border-bg-primary{--border-color: var(--bg-primary);}.mobile_border-bg-primary{--mobile-border-color: var(--bg-primary);}.border-bg-secondary{--border-color: var(--bg-secondary);}.mobile_border-bg-secondary{--mobile-border-color: var(--bg-secondary);}.border-bg-white{--border-color: var(--bg-white);}.mobile_border-bg-white{--mobile-border-color: var(--bg-white);}.border-bg-black{--border-color: var(--bg-black);}.mobile_border-bg-black{--mobile-border-color: var(--bg-black);}
+                </style>
+                <style data-key="font_colors">
+                    .primary {color: rgba(255,140,0,1) !important;}.secondary {color: rgba(67,156,225,1) !important;}.white {color: rgba(255,255,255,1) !important;}.black {color: rgba(0,0,0,1) !important;}@media (max-width: 1023px) { .color_mobile_primary {color: rgba(255,140,0,1) !important;}}@media (max-width: 1023px) { .color_mobile_secondary {color: rgba(67,156,225,1) !important;}}@media (max-width: 1023px) { .color_mobile_white {color: rgba(255,255,255,1) !important;}}@media (max-width: 1023px) { .color_mobile_black {color: rgba(0,0,0,1) !important;}}
+                </style>
+                <style data-key="image_gradient">
+                    .image-gradient-bg-primary{--background-color: var(--bg-primary);}.color_mobile_image-gradient-bg-primary{--mobile-background-color: var(--bg-primary);}.image-gradient-bg-secondary{--background-color: var(--bg-secondary);}.color_mobile_image-gradient-bg-secondary{--mobile-background-color: var(--bg-secondary);}.image-gradient-bg-white{--background-color: var(--bg-white);}.color_mobile_image-gradient-bg-white{--mobile-background-color: var(--bg-white);}.image-gradient-bg-black{--background-color: var(--bg-black);}.color_mobile_image-gradient-bg-black{--mobile-background-color: var(--bg-black);}
+                </style>
+                <style data-key="custom_css_variables">
+                :root {
+                    --lab_page_width: 1088px;
+                    --lab_columns_gutter: 11px;
+                    --lab_focus_ring_color: #005fcc;
+                    --lab_social_hover_color: #008cba;
+                    --space-top: 120;
+                    --space-top-adnuntiusAd: ;
+                }
+
+                @media(max-width: 767px) {
+                    :root {
+                        --lab_columns_gutter: 10px;
+                    }
+                }
+
+                @media(min-width: 767px) {
+                    :root {
+                    }
+                }
+                </style>
+<script src="/view-resources/public/common/JWTCookie.js?v=1793778822-L4"></script>
+<script src="/view-resources/public/common/Paywall.js?v=1793778822-L4"></script>
+                <script>
+                window.Dac = window.Dac || {};
+                (function () {
+                    if (navigator) {
+                        window.Dac.clientData = {
+                            language: navigator.language,
+                            userAgent: navigator.userAgent,
+                            innerWidth: window.innerWidth,
+                            innerHeight: window.innerHeight,
+                            deviceByMediaQuery: getDeviceByMediaQuery(),
+                            labDevice: 'desktop', // Device from labrador
+                            device: 'desktop', // Device from varnish
+                            paywall: {
+                                isAuthenticated: isPaywallAuthenticated(),
+                                toggleAuthenticatedContent: toggleAuthenticatedContent,
+                                requiredProducts: [],
+                            },
+                            page: {
+                                id: '100291',
+                                extId: ''
+                            },
+                            siteAlias: 'thebarentsobserver',
+                            debug: window.location.href.includes('debug=1')
+                        };
+                        function getDeviceByMediaQuery() {
+                            if (window.matchMedia('(max-width: 767px)').matches) return 'mobile';
+                            if (window.matchMedia('(max-width: 1023px)').matches) return 'tablet';
+                            return 'desktop';
+                        }
+
+                        function isPaywallAuthenticated() {
+                            if (window.Dac && window.Dac.JWTCookie) {
+                                var JWTCookie = new Dac.JWTCookie({ debug: false });
+                                return JWTCookie.isAuthenticated();
+                            }
+                            return false;
+                        }
+
+                        function toggleAuthenticatedContent(settings) {
+                            if (!window.Dac || !window.Dac.Paywall) {
+                                return;
+                            }
+                            var Paywall = new Dac.Paywall();
+                            var updateDOM = Paywall.updateDOM;
+
+                            if(settings && settings.displayUserName) {
+                                var userName = Paywall.getUserName().then((userName) => {
+                                    updateDOM(userName !== false, userName, settings.optionalGreetingText);
+                                });
+                            } else {
+                                updateDOM(window.Dac.clientData.paywall.isAuthenticated);
+                            }
+                        }
+                    }
+                }());
+                </script>
+
+                    <script type="module" src="/view-resources/baseview/public/common/baseview/moduleHandlers.js?v=1793778822-L4" data-cookieconsent="ignore"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5H501S5BYS"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5H501S5BYS');
+</script>
+                <link href="https://fonts.googleapis.com/css?family=Merriweather:regular,300,300italic,italic,700,700italic,900,900italic" rel="stylesheet" >
+                <link href="https://fonts.googleapis.com/css?family=Inter:regular,300,300italic,italic,700,700italic,900,900italic" rel="stylesheet" >
+                <style id="dachser-vieweditor-styles">
+                    body { font-family: "Inter"; font-weight: normal; font-style: normal; }
+                    .articleHeader .headline { font-family: "Merriweather"; font-weight: normal; font-style: normal; }
+                    .articleHeader .subtitle { font-family: "Merriweather"; font-weight: normal; font-style: normal; }
+                    article.column .content .headline { font-family: "Merriweather"; font-weight: 700; font-style: normal; }
+                    article.column .content .subtitle { font-family: "Merriweather"; font-weight: normal; font-style: normal; }
+                    header#nav, header.pageHeader { font-family: "Inter"; font-weight: 700; font-style: normal; font-size: 1rem; }@media (max-width: 767px) { .resp_fonts header#nav, header.pageHeader {font-size: calc(0.262vw * 16); } }
+                    .dropdownMenu ul li, .pageHeader .hamburger .hamburger-container .dropdownMenu ul li { font-family: "Inter"; font-weight: normal; font-style: normal; font-size: 1.25rem; }@media (max-width: 767px) { .resp_fonts .dropdownMenu ul li, .pageHeader .hamburger .hamburger-container .dropdownMenu ul li {font-size: calc(0.262vw * 16); } }
+                    .font-Merriweather { font-family: "Merriweather" !important; }
+                    .font-Merriweather.font-weight-normal { font-weight: normal !important; }
+                    .font-Merriweather.font-weight-light { font-weight: 300 !important; }
+                    .font-Merriweather.font-weight-bold { font-weight: 700 !important; }
+                    .font-Merriweather.font-weight-black { font-weight: 900 !important; }
+                    .font-Inter { font-family: "Inter" !important; }
+                    .font-Inter.font-weight-normal { font-weight: normal !important; }
+                    .font-Inter.font-weight-light { font-weight: 300 !important; }
+                    .font-Inter.font-weight-bold { font-weight: 700 !important; }
+                    .font-Inter.font-weight-black { font-weight: 900 !important; }
+                </style>
+                <style id="css_variables"></style>
+                <script data-cookieconsent="ignore">
+                    window.dachserData = {
+                        _data: {},
+                        _instances: {},
+                        get: function(key) {
+                            return dachserData._data[key] || null;
+                        },
+                        set: function(key, value) {
+                            dachserData._data[key] = value;
+                        },
+                        push: function(key, value) {
+                            if (!dachserData._data[key]) {
+                                dachserData._data[key] = [];
+                            }
+                            dachserData._data[key].push(value);
+                        },
+                        setInstance: function(key, identifier, instance) {
+                            if (!dachserData._instances[key]) {
+                                dachserData._instances[key] = {};
+                            }
+                            dachserData._instances[key][identifier] = instance;
+                        },
+                        getInstance: function(key, identifier) {
+                            return dachserData._instances[key] ? dachserData._instances[key][identifier] || null : null;
+                        },
+                        reflow: () => {}
+                    };
+                </script>
+                
+
+                <script type="application/ld+json">
+                    [{"@context":"http://schema.org","@type":"WebSite","name":"thebarentsobserver","url":"https://www.thebarentsobserver.com"},{"@context":"https://schema.org","@type":"WebPage","url":"https://www.thebarentsobserver.com/labrador/http-404","name":"404 - thebarentsobserver","description":"","publisher":{"@type":"Organization","name":"thebarentsobserver","url":"https://www.thebarentsobserver.com","@id":"https://www.thebarentsobserver.com","logo":{"@type":"ImageObject","url":"https://www.thebarentsobserver.com/view-resources/dachser2/public/thebarentsobserver/logo.png"}}}]
+                </script>                
+                
+                
+                
+                
+
+
+
+
+<script>
+var k5aMeta = { "title": "404 - thebarentsobserver", "teasertitle": "", "kicker": "", "url": "https://www.thebarentsobserver.com/en/energy/2013/03/misc/jquery-extend-3.4.0.js", "subsection": "http-404", "login": (Dac.clientData.paywall.isAuthenticated ? 1 : 0), "subscriber": (Dac.clientData.paywall.isAuthenticated ? 1 : 0), "subscriberId": (Dac.clientData.subscriberId ? `"${ Dac.clientData.subscriberId }"` : "") };
+</script>
+        <script>
+        (function () {
+            var sources = [
+                '//cl.k5a.io/6156b8c81b4d741e051f44c2.js',
+            ];
+
+            function load() {
+                for (var i = 0; i < sources.length; i++) {
+                    var script = document.createElement('script');
+                    script.src = sources[i];
+                    script.async = true;
+                    document.head.appendChild(script);
+                }
+            }
+
+            // Kilkaya reads k5aMeta once, when it boots. On a paid article behind a
+            // client-side paywall the reader's access is not known while the head is
+            // parsed, so partial/lab4/analytics/kilkaya_metadata publishes k5aMetaReady
+            // and we hold off until the metadata is correct. Everywhere else the values
+            // are right already and Kilkaya loads immediately.
+            if (window.k5aMetaReady) {
+                window.k5aMetaReady.then(load);
+            } else {
+                load();
+            }
+        }());
+        </script>
+        
+    </head>
+    <body class="l4 front site_thebarentsobserver"
+        
+        >
+
+        
+        
+        <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+            setScrollbarWidth();
+            window.addEventListener('resize', setScrollbarWidth);
+        });
+        function setScrollbarWidth() {
+            const root = document.querySelector(':root');
+            const width = (window.innerWidth - document.body.offsetWidth < 21) ? window.innerWidth - document.body.offsetWidth : 15;
+            root.style.setProperty('--lab-scrollbar-width', `${ width }px`);
+        }
+        </script>
+
+        
+        <a href="#main" class="skip-link">Jump to main content</a>
+
+        <header class="pageElement pageHeader">
+    <div class="section">
+    <div class="section pageHeaderTop">
+    <div class="row">
+<figure class="logo logo--mobile" style="--logo-height:53px">
+    <a href="//thebarentsobserver.com" aria-label="Go to frontpage">
+        <img src="/view-resources/dachser2/public/thebarentsobserver/logo.png"
+            alt="Go to frontpage. Logo, thebarentsobserver.com"
+            width="540"
+            height="53">
+    </a>
+</figure>
+
+<figure class="logo logo--primary">
+    <a href="//thebarentsobserver.com" aria-label="Go to frontpage">
+        <img src="/view-resources/dachser2/public/thebarentsobserver/logo.png"
+            alt="Go to frontpage. Logo, thebarentsobserver.com"
+            width="540"
+            >
+    </a>
+</figure>
+
+<figure class="logo logo--secondary" style="--logo-height:53px">
+    <a href="//thebarentsobserver.com" aria-label="Go to frontpage">
+        <img src="/view-resources/dachser2/public/thebarentsobserver/logo.png"
+            alt="Go to frontpage. Logo, thebarentsobserver.com"
+            width="540"
+            height="53">
+    </a>
+</figure>
+<a class="link pageHeaderSlogan" href="https:&#x2F;&#x2F;thebarentsobserver.com&#x2F;support-us"><p class="text">Fight Censorship!</p>
+<p class="text">Contribute</p>
+</a>
+</div>
+
+</div>
+<div class="section pageHeaderBottom">
+    <div class="row">
+    <div class="hamburger to-be-expanded" data-id="pageElements-11">
+    <div class="positionRelative">
+        <span class="hamburger-button hamburger-expander ">
+            <button class="burger-btn" aria-label="Open menu" aria-expanded="false" aria-controls="hamburger-container" aria-haspopup="menu">
+                    <i class="open fi-list"></i>
+                    <i class="close fi-x"></i>
+            </button>
+        </span>
+    </div>
+
+        <div class="hamburger-container" id="hamburger-container">
+            <div class="row">
+<nav class="navigation dropdownMenu">
+	<ul class="menu-list">
+			<li class="first-list-item has-children dac-hidden-desktop-up">
+					<span tabindex="0"></span>
+				<ul class="children">
+					<li class="lab-menu-child-item dac-hidden-desktop-up">
+							<a href="/tag/video" target="_self" class="lab-menu-child-link">Video</a>
+					</li>
+					<li class="lab-menu-child-item dac-hidden-desktop-up">
+							<a href="/tag/podcast" target="_self" class="lab-menu-child-link">Podcast</a>
+					</li>
+					<li class="lab-menu-child-item ">
+							<a href="/opinion" target="_self" class="lab-menu-child-link">Opinion</a>
+					</li>
+				</ul>
+			</li>
+			<li class="first-list-item has-children">
+					<span tabindex="0"></span>
+				<ul class="children">
+					<li class="lab-menu-child-item ">
+							<a href="/tag/security" target="_self" class="lab-menu-child-link">Security</a>
+					</li>
+					<li class="lab-menu-child-item ">
+							<a href="/tag/democracy%20and%20media" target="_self" class="lab-menu-child-link">Democracy and media</a>
+					</li>
+					<li class="lab-menu-child-item ">
+							<a href="/tag/climate%20crisis" target="_self" class="lab-menu-child-link">Climate crisis</a>
+					</li>
+					<li class="lab-menu-child-item ">
+							<a href="/tag/travel" target="_self" class="lab-menu-child-link">Travel</a>
+					</li>
+				</ul>
+			</li>
+			<li class="first-list-item has-children">
+					<span tabindex="0"></span>
+				<ul class="children">
+					<li class="lab-menu-child-item ">
+							<a href="/about-us" target="_self" class="lab-menu-child-link">About us</a>
+					</li>
+					<li class="lab-menu-child-item ">
+							<a href="/advertise" target="_self" class="lab-menu-child-link">Advertise with us</a>
+					</li>
+					<li class="lab-menu-child-item ">
+							<a href="/newsletter" target="_self" class="lab-menu-child-link">Newsletter</a>
+					</li>
+				</ul>
+			</li>
+			<li class="first-list-item social-icons has-children">
+					<span tabindex="0"></span>
+				<ul class="children">
+					<li class="lab-menu-child-item ">
+							<a href="https://bsky.app/profile/thebarentsobserver.com" target="_self" class="lab-menu-child-link">Bluesky</a>
+					</li>
+					<li class="lab-menu-child-item ">
+							<a href="https://www.facebook.com/BarentsObserver" target="_self" class="lab-menu-child-link">Facebook</a>
+					</li>
+					<li class="lab-menu-child-item ">
+							<a href="https://www.instagram.com/barentsobserver/" target="_self" class="lab-menu-child-link">Instagram</a>
+					</li>
+					<li class="lab-menu-child-item ">
+							<a href="https://t.me/BarentsObserver" target="_self" class="lab-menu-child-link">Telegram</a>
+					</li>
+					<li class="lab-menu-child-item ">
+							<a href="https://www.linkedin.com/company/the-barents-observer/" target="_self" class="lab-menu-child-link">LinkedIn</a>
+					</li>
+					<li class="lab-menu-child-item ">
+							<a href="https://x.com/BarentsNews" target="_self" class="lab-menu-child-link">X</a>
+					</li>
+				</ul>
+			</li>
+	</ul>
+</nav>
+
+
+
+	<script>
+		(function () {
+			const menuLinks = document.querySelectorAll(`nav.dropdownMenu ul li a`);
+			for (let i = 0; i < menuLinks.length; i++) {
+				const link = menuLinks[i].pathname;
+				if (link === window.location.pathname) {
+					menuLinks[i].parentElement.classList.add('lab-link-active');
+				} else {
+					menuLinks[i].parentElement.classList.remove('lab-link-active');
+				}
+			}
+		})();
+	</script>
+
+
+            </div>
+        </div>
+</div>
+
+<script>
+    (function(){
+        const burgerButton = document.querySelector('[data-id="pageElements-11"] .burger-btn');
+        const dropdownCloseSection = document.querySelector('[data-id="pageElements-11"] .dropdown-close-section');
+        const hamburgerContainer = document.querySelector('[data-id="pageElements-11"] .hamburger-container');
+
+        function toggleDropdown() {
+            // Toggle the expanded class and aria-expanded attribute
+            document.querySelector('[data-id="pageElements-11"].hamburger.to-be-expanded').classList.toggle('expanded');
+            burgerButton.setAttribute('aria-expanded', burgerButton.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+            burgerButton.setAttribute('aria-label', burgerButton.getAttribute('aria-expanded') === 'true' ? 'Close menu' : 'Open menu');
+
+            // This doesn't seem to do anything? But there's styling dependent on it some places
+            document.body.classList.toggle('hamburger-expanded');
+        }
+
+        function getFocusableElements() {
+            if (!hamburgerContainer) return [];
+            return Array.from(hamburgerContainer.querySelectorAll(
+                'a[href], button:not([disabled]), input:not([disabled]), ' +
+                'select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+            )).filter(function(el) {
+                if (el.closest('[hidden]')) return false;
+                if (getComputedStyle(el).visibility === 'hidden') return false;
+                const rect = el.getBoundingClientRect();
+                return rect.width > 0 || rect.height > 0;
+            });
+        }
+
+        // Called via the event listener - handles Escape (close menu, restore focus) and
+        // Tab (trap focus within the open menu)
+        function handleKeydown(e) {
+            if (e.key === 'Escape') {
+                toggleDropdown();
+                // Set the focus back on the button when clicking escape, so the user can continue tabbing down
+                // the page in a natural flow
+                burgerButton.focus();
+                window.removeEventListener('keydown', handleKeydown);
+                return;
+            }
+
+            if (e.key === 'Tab') {
+                const focusable = getFocusableElements();
+                if (focusable.length === 0) return;
+
+                if (!e.shiftKey && document.activeElement === focusable[focusable.length - 1]) {
+                    // Tab past last item → burger button
+                    e.preventDefault();
+                    burgerButton.focus();
+                } else if (e.shiftKey && document.activeElement === burgerButton) {
+                    // Shift+Tab from burger button → last item
+                    e.preventDefault();
+                    focusable[focusable.length - 1].focus();
+                }
+            }
+        }
+
+        if(burgerButton) {
+            burgerButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                toggleDropdown();
+
+                // If the menu gets expanded, add the event listener that will close it on pressing Escape
+                // else, remove the event listener otherwise it will continue to listen for escape even if the menu is closed.
+                if(burgerButton.getAttribute('aria-expanded') === 'true') {
+                    window.addEventListener('keydown', handleKeydown);
+                } else {
+                    window.removeEventListener('keydown', handleKeydown);
+                }
+            })
+        }
+        if (dropdownCloseSection) {
+            dropdownCloseSection.addEventListener('click', function(e) {
+                e.preventDefault();
+                toggleDropdown();
+            });
+        }
+
+        document.querySelectorAll('.hamburger .hamburger-expander, .hamburger .hamburger-container, .stop-propagation').forEach(function (element) {
+            element.addEventListener('click', function (e) {
+                e.stopPropagation();
+            });
+        });
+    }());
+</script><div class="lang-switcher">
+    <ul>
+            <li>
+                <a class="lang-link" href="https:&#x2F;&#x2F;ru.thebarentsobserver.com" data-lang-code="ru">Русский</a>
+            </li>
+    </ul>
+</div>
+
+<script>
+(function() {
+    if (window.languageSwitcherScriptLoaded) return; // Check if the script has already been run
+    window.languageSwitcherScriptLoaded = true;
+
+    const hasTranslations = '';
+    const hasTranslation = '';
+
+    if (hasTranslations || hasTranslation) {
+        const lab_canonical_id = '';
+        const lab_canonical_extid = '';
+        const currentId = '100291';
+        const extId = '';
+        const seolanguage = '';
+        const siteDomain = '';
+        const front_api_url = 'https://api.thebarentsobserver.com';
+        const customer_front_url = 'https://www.thebarentsobserver.com';
+        const buttons = [...document.querySelectorAll('.lang-link')];
+
+        let url = '';
+        const query = [];
+        
+        const canonical_id_or_current = lab_canonical_id ? lab_canonical_id : currentId;
+        
+        if (canonical_id_or_current) {
+            query.push(`lab_canonical_id:${ canonical_id_or_current }`);
+            query.push(`id:${ canonical_id_or_current }`);
+        }
+        if (lab_canonical_extid) {
+            query.push(`lab_canonical_extid:${ lab_canonical_extid }`);
+        }
+        if (extId) {
+            query.push(`extid:${ extId }`);
+        }
+
+        if (query.length) {
+            let fieldMask = '&fields=id,extId,hasTranslations,hasTranslation,lab_canonical_*,seolanguage,lab_site_id,siteDomain,published_url';
+            url = `/article?query=${ query.join(' OR ') }${ fieldMask }`;
+        }
+        if (url) {
+            fetch(front_api_url + url).then((resp) => {
+                return resp.json();
+            }).then((data) => {
+                if (data && data.result && data.result.length) {
+                    data.result.forEach((article) => {
+                        const langCode = article.seolanguage;
+                        const publishedUrl = article.published_url;
+                        const langLinks = document.querySelectorAll(`.lang-link[data-lang-code="${langCode}"]`);
+                        if (langLinks && publishedUrl) {
+                            langLinks.forEach((langLink) => {
+                                langLink.href = publishedUrl;
+                            });
+                        }
+                    });
+                }
+            }).catch((error) => {
+                console.warn('error: ', error);
+            });
+        }
+    }
+})();
+</script>
+<nav class="navigation mainMenu">
+	<ul class="menu-list">
+			<li class="first-list-item dac-hidden-desktop-down">
+					<a href="/tag/video" target="_self">Video</a>
+			</li>
+			<li class="first-list-item dac-hidden-desktop-down">
+					<a href="/tag/podcast" target="_self">Podcast</a>
+			</li>
+			<li class="first-list-item dac-hidden-desktop-down">
+					<a href="/opinion" target="_self">Opinion</a>
+			</li>
+	</ul>
+</nav>
+
+
+
+	<script>
+		(function () {
+			const menuLinks = document.querySelectorAll(`nav.mainMenu ul li a`);
+			for (let i = 0; i < menuLinks.length; i++) {
+				const link = menuLinks[i].pathname;
+				if (link === window.location.pathname) {
+					menuLinks[i].parentElement.classList.add('lab-link-active');
+				} else {
+					menuLinks[i].parentElement.classList.remove('lab-link-active');
+				}
+			}
+		})();
+	</script>
+
+<div data-id="pageElements-15" class="search visible">
+
+    <form class="search-container" action="/cse" method="get" role="search">
+        <label for="search-input-15" class="visuallyhidden">Search</label>
+        <input type="text" id="search-input-15" name="q" placeholder="Search...">
+                <button type="submit" class="search-button" aria-label="Search">
+                        <i class="open fi-magnifying-glass"></i>
+                </button>
+    </form>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+    <script>
+        (function () {
+            if (!'IntersectionObserver' in window) { return; }
+
+            var scrollEvents = scrollEvents || [];
+
+            if (scrollEvents) {
+                const domInterface = {
+                    classList: {
+                        remove: () => {},
+                        add: () => {}
+                    },
+                    style: {
+                        cssText: ''
+                    }
+                };
+
+                scrollEvents.forEach(function(event) {
+                    if (!event.directional) {
+                        var callback = function(entries, observer) {
+                            if (!entries[0]) { return; }
+                            if (entries[0].isIntersecting) {
+                                event.styles.forEach(function(item) {
+                                    (document.querySelector(item.selector) || domInterface).style.cssText = "";
+                                });
+                                event.classes.forEach(function(item) {
+                                    item.class.forEach(function(classname) {
+                                        (document.querySelector(item.selector) || domInterface).classList.remove(classname);
+                                    });
+                                });
+                            } else {
+                                event.styles.forEach(function(item) {
+                                    (document.querySelector(item.selector) || domInterface).style.cssText = item.style;
+                                });
+                                event.classes.forEach(function(item) {
+                                    item.class.forEach(function(classname) {
+                                        (document.querySelector(item.selector) || domInterface).classList.add(classname);
+                                    });
+                                });
+                            }
+                        };
+
+                        var observer = new IntersectionObserver(callback, {
+                            rootMargin: event.offset,
+                            threshold: 1
+                        });
+                        var target = document.querySelector(event.target);
+                        if (target) {
+                            observer.observe(target);
+                        }
+                    }
+
+                    if (event.directional) {
+                        let previousTop = 0;
+                        window.addEventListener('scroll', function() {
+                            setTimeout(function() {
+                                const currentTop = window.pageYOffset || document.documentElement.scrollTop;
+                                if (currentTop > previousTop + 10) {
+                                    event.styles.forEach(function(item) {
+                                        (document.querySelector(item.selector) || domInterface).style.cssText = item.style;
+                                    });
+                                    event.classes.forEach(function(item) {
+                                        item.class.forEach(function(classname) {
+                                            (document.querySelector(item.selector) || domInterface).classList.add(classname);
+                                        });
+                                    });
+                                } else if (currentTop < previousTop - 10) {
+                                    event.styles.forEach(function(item) {
+                                        (document.querySelector(item.selector) || domInterface).style.cssText = "";
+                                    });
+                                    event.classes.forEach(function(item) {
+                                        item.class.forEach(function(classname) {
+                                            (document.querySelector(item.selector) || domInterface).classList.remove(classname);
+                                        });
+                                    });
+                                }
+                                previousTop = currentTop;
+                            }, 200);
+                        });
+                    }
+                });
+            }
+        }());
+
+        window.Dac.clientData.paywall.toggleAuthenticatedContent(); 
+    </script>
+</header>
+
+        
+
+        
+
+        <section class="main front" id="main">
+            <h1
+                
+                class="hidden-heading">
+                404 - thebarentsobserver
+            </h1>
+            
+            <div data-element-guid="3094def7-db0a-499e-8053-0a66dbd7f9e8" class="page-content"><div data-element-guid="dd18fce2-19a3-4610-9d30-dd2bca829f13" class="row small-12 large-12" style="">
+	<div data-element-guid="5ba558a2-703f-482c-bd8e-7b204b2b0634" class="column text_singleline small-12 large-12 small-abs-12 large-abs-12">
+    
+    <h2 
+        class="content singleline t44" 
+        style="">
+        404 - Sorry, we wouldn't find the page you're looking for.
+    </h2 >
+</div></div>
+<div data-element-guid="1a39510a-c1b9-492e-b181-577fc26d1963" class="row small-12 large-12" style="">
+	<div data-element-guid="96f6e414-71ae-44be-9b0d-f5898f1c46d1" class="column text_singleline small-12 large-12 small-abs-12 large-abs-12">
+    
+    <h3 
+        class="content singleline" 
+        style="">
+        The link either doesn't exist anymore or have been removed. Maybe you want to search our archives instead?
+    </h3 >
+</div></div>
+<div data-element-guid="d96bbc38-94e7-4bb0-84f5-35a225680751" class="row small-12 large-12" style="">
+	<div data-element-guid="a92e9e9d-be06-4aaf-ac4e-619f1b6f7abf" id="labradorSearch_100292" class="labradorSearch small-12 large-12 small-abs-12 large-abs-12">
+    
+    <div class="content ">
+        <form action="" class="row grid-justify-center nosites" role="search"><!-- grid-align-stretch -->
+                <div class="column large-12 small-12">
+                    <h2 class="t36">Search our archives</h2>
+                </div>
+            <div class="column large-12 small-12 grid">
+                <input type="text" name="query" placeholder="Type your search here ...">
+                <button type="submit" class="ellipsis main-btn bg-black " value="">Search</button>
+            </div>
+        
+        </form>
+
+        <div class="labclient-content row"></div>
+        <span class="dac-hidden" id="loading-spinner"><i class="lab-spinner"></i></span>
+
+        <nav class="dac-hidden">
+            <a class="nextBtn  bg-black " href="" data-nav="next" title="Display more hits">Display more</a>
+        </nav>
+    </div>
+
+    <script>
+        (function() {
+            const getParams = new URLSearchParams(window.location.search);
+            (document.querySelector('#labradorSearch_100292 input[name="query"]') || {}).value = getParams.get('query') || getParams.get('q') || '';
+            (document.querySelector('#labradorSearch_100292 input[name="tag"]') || {}).value = getParams.get('tag') || '';
+            (document.querySelector('#labradorSearch_100292 input[name="author"]') || {}).value = getParams.get('author') || '';
+            (document.querySelector('#labradorSearch_100292 input[name="fromDate"]') || {}).value = getParams.get('fromDate') || '';
+            (document.querySelector('#labradorSearch_100292 input[name="toDate"]') || {}).value = getParams.get('toDate') || '';
+
+            const id = '100292' || null;
+            if (id && window.dachserData) {
+                window.dachserData.push('labradorsearch', {
+                    fallbackImage: '',
+                    id,
+                    isEditor: (false),
+                    viewport: 'desktop',
+                    articleCount: '20',
+                    imageServer: 'https://image.thebarentsobserver.com',
+                    selector: '#labradorSearch_100292 .labclient-content',
+                    apiUrl: 'https://api.thebarentsobserver.com/article',
+                    bodytextLength: 190,
+                    nohitsLabel: 'No hits. Try modifying your search.',
+                    container: document.querySelector('#labradorSearch_100292'),
+                    spinner: document.querySelector('#loading-spinner'),
+                    nav: document.querySelector('#labradorSearch_100292 nav'),
+                    orderBy: 'published',
+                    advanced: {
+                        display: false,
+                        button: {
+                            element: document.querySelector('#labradorSearch_100292 .advanced-expander'),
+                            openText: 'Open filter',
+                            closeText: 'Close filter'
+                        },
+                        container: document.querySelector('#labradorSearch_100292 .advanced-options'),
+                        sites: {
+                            input: document.querySelector('#labradorSearch_100292 input[name="sites"]'),
+                            checkboxes: document.querySelectorAll('#labradorSearch_100292 input.site_whitelist'),
+                            toggleAll: document.querySelector('#labradorSearch_100292 input[name="site_whitelist_all"]'),
+                            allowed: '[{"alias":"thebarentsobserver","id":2,"displayName":"thebarentsobserver","selected":true}]'
+                        }
+                    },
+                    ConfigObject: {"viewConfig":{"config":{"customer":{"paywall":{"label":{}},"image":{"defaultAspectRatio":0.45}}}}},
+                    desktopWidth: '',
+                    hideSiteName: '',
+                    hidePublishedDate: '',
+                    hideSection: '',
+					hideSubtitle: '',
+					showAuthor: '',
+                });
+            }
+        }());
+    </script>
+</div>
+</div>
+<div data-element-guid="27711deb-2a11-4d23-8090-9139b5a4e2d7" class="row small-12 large-12" style="">
+	<div data-element-guid="fa5054b7-1be5-49f3-92d4-9667eeb8b0b5" class="column text_singleline small-12 large-12 small-abs-12 large-abs-12">
+    
+    <h3 
+        class="content singleline align-center mobile_text_align_align-center" 
+        style="">
+        On the front page now:
+    </h3 >
+</div></div>
+<div data-element-guid="0554477b-47a7-4741-9c19-55751f0f9271" class="row small-12 large-12" style="">
+	
+<!-- placeholder(#1) -->
+<div data-element-guid="ee6918d4-9b20-47cd-8c74-a5b7fccccf40" class="front_rows small-12 large-12 small-abs-12 large-abs-12">
+    
+    <div class="content fullwidthTarget" style="">
+            
+            <div data-element-guid="d16fd4fd-4673-4269-bfa9-1518ef586d8f" class="row small-12 large-12" style="">
+	<article data-element-guid="c4f73688-33b5-41f6-a286-62809085f6f4" class="column small-12 large-12 small-abs-12 large-abs-12 " data-site-alias="thebarentsobserver" data-section="news" data-tag="repparfjord,artem volynets,hammerfest,news,nussir" data-instance="462079" itemscope>
+    <style></style>
+    <div class="content" style="">
+        
+            <a itemprop="url" class="" href="/news/pressure-builds-on-wellconnected-russian-businessman-who-wants-to-buy-norwegian-arctic-copper-mine/462079" data-k5a-url="https://www.thebarentsobserver.com/a/462079" rel="">
+
+
+
+
+        <div class="media ">
+                
+                <figure data-element-guid="9390add7-3408-42bf-a5e2-db87777f2714" class="" >
+    <div class="img fullwidthTarget">
+        <picture>
+            <source srcset="https://image.thebarentsobserver.com/462111.webp?imageId=462111&x=12.22&y=12.17&cropw=77.00&croph=51.50&width=2116&height=954&format=webp" 
+                width="1058"
+                height="477"
+                media="(min-width: 768px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/462111.webp?imageId=462111&x=12.22&y=12.17&cropw=77.00&croph=51.50&width=2116&height=954&format=jpg" 
+                width="1058"
+                height="477"
+                media="(min-width: 768px)"
+                type="image/jpeg">    
+            <source srcset="https://image.thebarentsobserver.com/462111.webp?imageId=462111&x=12.22&y=12.17&cropw=77.00&croph=51.50&width=960&height=432&format=webp" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/462111.webp?imageId=462111&x=12.22&y=12.17&cropw=77.00&croph=51.50&width=960&height=432&format=jpg" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/jpeg">    
+            <img src="https://image.thebarentsobserver.com/462111.webp?imageId=462111&x=12.22&y=12.17&cropw=77.00&croph=51.50&width=960&height=432&format=jpg"
+                width="480"
+                height="216"
+                alt="" 
+                loading="lazy"
+                style=""    
+                >
+        </picture>        
+            </div>
+    
+</figure>
+
+                
+                
+                
+                
+                
+                
+                
+                
+
+            <div class="floatingText">
+
+                <div class="labels">
+                </div>
+            </div>
+            
+
+        </div>
+
+
+
+        
+                <div 
+style=""
+class="kicker below ">
+Security concern
+</div>
+                <h2 itemprop="headline" 
+    class="headline t38 tm22"
+    style=""
+    >Pressure builds on well-connected Russian businessman who wants to buy Norwegian Arctic copper mine
+</h2>
+
+
+        
+
+
+
+
+        </a>
+
+        <time itemprop="datePublished" datetime="2026-11-17T15:05:53+01:00"></time>
+    </div>
+</article>
+</div>
+<div data-element-guid="a4b0e1fe-1d7e-4517-a914-0c5f78ca8056" class="row small-12 large-12" style="">
+	<article data-element-guid="25aeeb11-4512-4a31-88e8-249bf61ffbc8" class="column small-12 large-12 small-abs-12 large-abs-12 " data-site-alias="thebarentsobserver" data-section="news" data-tag="journalism,agentura.ru,repression,andrei soldatov,freedom of the press,news" data-instance="462117" itemscope>
+    <style></style>
+    <div class="content" style="">
+        
+            <a itemprop="url" class="" href="/news/journalist-andrei-soldatov-sentenced-in-absentia-to-10-years-in-prison/462117" data-k5a-url="https://www.thebarentsobserver.com/a/462117" rel="">
+
+
+
+
+        <div class="media ">
+                
+                <figure data-element-guid="9a298d84-4bee-4188-86ab-3f56e681d496" class="" >
+    <div class="img fullwidthTarget">
+        <picture>
+            <source srcset="https://image.thebarentsobserver.com/462112.webp?imageId=462112&x=0.00&y=43.62&cropw=100.00&croph=45.03&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=2116&height=954&format=webp" 
+                width="1058"
+                height="477"
+                media="(min-width: 768px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/462112.webp?imageId=462112&x=0.00&y=43.62&cropw=100.00&croph=45.03&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=2116&height=954&format=jpg" 
+                width="1058"
+                height="477"
+                media="(min-width: 768px)"
+                type="image/jpeg">    
+            <source srcset="https://image.thebarentsobserver.com/462112.webp?imageId=462112&x=0.00&y=43.62&cropw=100.00&croph=45.03&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=webp" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/462112.webp?imageId=462112&x=0.00&y=43.62&cropw=100.00&croph=45.03&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=jpg" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/jpeg">    
+            <img src="https://image.thebarentsobserver.com/462112.webp?imageId=462112&x=0.00&y=43.62&cropw=100.00&croph=45.03&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=jpg"
+                width="480"
+                height="216"
+                alt="" 
+                loading="lazy"
+                style=""    
+                >
+        </picture>        
+            </div>
+    
+</figure>
+
+                
+                
+                
+                
+                
+                
+                
+                
+
+            <div class="floatingText">
+
+                <div class="labels">
+                </div>
+            </div>
+            
+
+        </div>
+
+
+
+        
+                <div 
+style=""
+class="kicker below ">
+Repression
+</div>
+                <h2 itemprop="headline" 
+    class="headline "
+    style=""
+    >Journalist Andrei Soldatov sentenced in absentia to 10 years in prison
+</h2>
+
+
+        
+
+
+
+
+        </a>
+
+        <time itemprop="datePublished" datetime="2026-11-17T16:24:58+01:00"></time>
+    </div>
+</article>
+</div>
+<div data-element-guid="a39f2aaa-df31-4d2b-9a12-9b28f9dd56da" class="row small-12 large-12" style="">
+	<article data-element-guid="383216d6-4142-42b8-9f9a-d7e5e8b8a4c1" class="column small-12 large-4 small-abs-12 large-abs-4 " data-site-alias="thebarentsobserver" data-section="news" data-tag="news" data-instance="461972" itemscope>
+    <style></style>
+    <div class="content" style="">
+        
+            <a itemprop="url" class="" href="/news/estonian-border-closure-could-increase-christmas-pressure-at-storskog/461972" data-k5a-url="https://www.thebarentsobserver.com/a/461972" rel="">
+
+
+
+
+        <div class="media ">
+                
+                <figure data-element-guid="474097bd-028c-4b95-b254-b422bd9cca11" class="" >
+    <div class="img fullwidthTarget">
+        <picture>
+            <source srcset="https://image.thebarentsobserver.com/461975.webp?imageId=461975&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=706&height=318&format=webp" 
+                width="353"
+                height="159"
+                media="(min-width: 768px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/461975.webp?imageId=461975&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=706&height=318&format=jpg" 
+                width="353"
+                height="159"
+                media="(min-width: 768px)"
+                type="image/jpeg">    
+            <source srcset="https://image.thebarentsobserver.com/461975.webp?imageId=461975&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=webp" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/461975.webp?imageId=461975&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=jpg" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/jpeg">    
+            <img src="https://image.thebarentsobserver.com/461975.webp?imageId=461975&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=jpg"
+                width="480"
+                height="216"
+                alt="" 
+                loading="lazy"
+                style=""    
+                >
+        </picture>        
+            </div>
+    
+</figure>
+
+                
+                
+                
+                
+                
+                
+                
+                
+
+            <div class="floatingText">
+
+                <div class="labels">
+                </div>
+            </div>
+            
+
+        </div>
+
+
+
+        
+                <div 
+style=""
+class="kicker below ">
+Fewer travel options
+</div>
+                <h2 itemprop="headline" 
+    class="headline t27"
+    style=""
+    >Estonian border closure could increase Christmas pressure at Storskog
+</h2>
+
+
+        
+
+
+
+
+        </a>
+
+        <time itemprop="datePublished" datetime="2026-11-15T18:09:00+01:00"></time>
+    </div>
+</article>
+<article data-element-guid="8dfabbfd-34ab-41c2-87bb-972daaf45bc6" class="column small-12 large-4 small-abs-12 large-abs-4 " data-site-alias="thebarentsobserver" data-section="news" data-tag="news,rosneft,sanctions,taymyr peninsula,novatek,andy burnham,uk,war in ukraine,vostok oil" data-instance="462042" itemscope>
+    <style></style>
+    <div class="content" style="">
+        
+            <a itemprop="url" class="" href="/news/we-must-continue-to-ramp-up-pressure-on-russia/462042" data-k5a-url="https://www.thebarentsobserver.com/a/462042" rel="">
+
+
+
+
+        <div class="media ">
+                
+                <figure data-element-guid="ae143ab1-a497-42c1-b519-f9e52f382585" class="" >
+    <div class="img fullwidthTarget">
+        <picture>
+            <source srcset="https://image.thebarentsobserver.com/457542.webp?imageId=457542&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=706&height=318&format=webp" 
+                width="353"
+                height="159"
+                media="(min-width: 768px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/457542.webp?imageId=457542&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=706&height=318&format=jpg" 
+                width="353"
+                height="159"
+                media="(min-width: 768px)"
+                type="image/jpeg">    
+            <source srcset="https://image.thebarentsobserver.com/457542.webp?imageId=457542&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=webp" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/457542.webp?imageId=457542&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=jpg" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/jpeg">    
+            <img src="https://image.thebarentsobserver.com/457542.webp?imageId=457542&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=jpg"
+                width="480"
+                height="216"
+                alt="" 
+                loading="lazy"
+                style=""    
+                >
+        </picture>        
+            </div>
+    
+</figure>
+
+                
+                
+                
+                
+                
+                
+                
+                
+
+            <div class="floatingText">
+
+                <div class="labels">
+                </div>
+            </div>
+            
+
+        </div>
+
+
+
+        
+                <div 
+style=""
+class="kicker below ">
+UK sanctions target Russian Arctic
+</div>
+                <h2 itemprop="headline" 
+    class="headline t33 tm26"
+    style=""
+    >"We must continue to ramp up pressure on Russia"
+</h2>
+
+
+        
+
+
+
+
+        </a>
+
+        <time itemprop="datePublished" datetime="2026-11-16T17:41:08+01:00"></time>
+    </div>
+</article>
+<article data-element-guid="90958e26-777f-4709-bcb5-dd16dcd9fa7b" class="column small-12 large-4 small-abs-12 large-abs-4 " data-site-alias="thebarentsobserver" data-section="security" data-tag="security,zaozersk,war in ukraine,polyarny,murmansk region,gadzhiyevo,artur li,aleksandrovsk" data-instance="461900" itemscope>
+    <style></style>
+    <div class="content" style="">
+        
+            <a itemprop="url" class="" href="/security/war-veterans-appointed-leaders-of-kola-navy-towns/461900" data-k5a-url="https://www.thebarentsobserver.com/a/461900" rel="">
+
+
+
+
+        <div class="media ">
+                
+                <figure data-element-guid="181e6b99-68c9-4d58-afef-fab332715532" class="" >
+    <div class="img fullwidthTarget">
+        <picture>
+            <source srcset="https://image.thebarentsobserver.com/461908.webp?imageId=461908&x=0.00&y=12.00&cropw=89.60&croph=53.68&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=678&height=306&format=webp" 
+                width="339"
+                height="153"
+                media="(min-width: 768px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/461908.webp?imageId=461908&x=0.00&y=12.00&cropw=89.60&croph=53.68&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=678&height=306&format=jpg" 
+                width="339"
+                height="153"
+                media="(min-width: 768px)"
+                type="image/jpeg">    
+            <source srcset="https://image.thebarentsobserver.com/461908.webp?imageId=461908&x=0.00&y=12.00&cropw=89.60&croph=53.68&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=webp" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/461908.webp?imageId=461908&x=0.00&y=12.00&cropw=89.60&croph=53.68&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=jpg" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/jpeg">    
+            <img src="https://image.thebarentsobserver.com/461908.webp?imageId=461908&x=0.00&y=12.00&cropw=89.60&croph=53.68&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=jpg"
+                width="480"
+                height="216"
+                alt="" 
+                loading="lazy"
+                style=""    
+                >
+        </picture>        
+            </div>
+    
+</figure>
+
+                
+                
+                
+                
+                
+                
+                
+                
+
+            <div class="floatingText">
+
+                <div class="labels">
+                </div>
+            </div>
+            
+
+        </div>
+
+
+
+        
+                <div 
+style=""
+class="kicker below t19">
+Northern Fleet bases
+</div>
+                <h2 itemprop="headline" 
+    class="headline t31"
+    style=""
+    >War veterans appointed leaders of Kola navy towns
+</h2>
+
+
+        
+
+
+
+
+        </a>
+
+        <time itemprop="datePublished" datetime="2026-11-12T14:16:43+01:00"></time>
+    </div>
+</article>
+</div>
+<div data-element-guid="1dede805-6420-4d4b-bc69-8d4e7ba0546f" class="row small-12 large-12" style="">
+	<article data-element-guid="395ece98-23ce-463f-9560-9395a8e7e731" class="column small-12 large-6 small-abs-12 large-abs-6 " data-site-alias="thebarentsobserver" data-section="security" data-tag="security" data-instance="461867" itemscope>
+    <style></style>
+    <div class="content" style="">
+        
+            <a itemprop="url" class="" href="/security/russian-aggression-strengthens-nordic-defence-ties/461867" data-k5a-url="https://www.thebarentsobserver.com/a/461867" rel="">
+
+
+
+
+        <div class="media ">
+                
+                <figure data-element-guid="8fb5e3c3-233b-4c3b-8fb0-c1e193546b74" class="" >
+    <div class="img fullwidthTarget">
+        <picture>
+            <source srcset="https://image.thebarentsobserver.com/224388.webp?imageId=224388&x=0.00&y=5.63&cropw=100.00&croph=60.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=1058&height=478&format=webp" 
+                width="529"
+                height="239"
+                media="(min-width: 768px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/224388.webp?imageId=224388&x=0.00&y=5.63&cropw=100.00&croph=60.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=1058&height=478&format=jpg" 
+                width="529"
+                height="239"
+                media="(min-width: 768px)"
+                type="image/jpeg">    
+            <source srcset="https://image.thebarentsobserver.com/224388.webp?imageId=224388&x=0.00&y=5.63&cropw=100.00&croph=60.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=webp" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/224388.webp?imageId=224388&x=0.00&y=5.63&cropw=100.00&croph=60.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=jpg" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/jpeg">    
+            <img src="https://image.thebarentsobserver.com/224388.webp?imageId=224388&x=0.00&y=5.63&cropw=100.00&croph=60.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=jpg"
+                width="480"
+                height="216"
+                alt="" 
+                loading="lazy"
+                style=""    
+                >
+        </picture>        
+            </div>
+    
+</figure>
+
+                
+                
+                
+                
+                
+                
+                
+                
+
+            <div class="floatingText">
+
+                <div class="labels">
+                </div>
+            </div>
+            
+
+        </div>
+
+
+
+        
+                <div 
+style=""
+class="kicker below ">
+NORDEFCO
+</div>
+                <h2 itemprop="headline" 
+    class="headline t34 tm23"
+    style=""
+    >Russian aggression strengthens Nordic defence ties
+</h2>
+
+
+        
+
+
+
+
+        </a>
+
+        <time itemprop="datePublished" datetime="2026-11-12T13:14:52+01:00"></time>
+    </div>
+</article>
+<article data-element-guid="eaea2e16-d219-4b4b-bf0c-53c175c0cd3b" class="column small-12 large-6 small-abs-12 large-abs-6 " data-site-alias="thebarentsobserver" data-section="news" data-tag="news" data-instance="461748" itemscope>
+    <style></style>
+    <div class="content" style="">
+        
+            <a itemprop="url" class="" href="/news/important-northrussian-railway-bridge-collapses/461748" data-k5a-url="https://www.thebarentsobserver.com/a/461748" rel="">
+
+
+
+
+        <div class="media ">
+                
+                <figure data-element-guid="07dddd03-c00d-4a21-bf22-5994e1b73832" class="" >
+    <div class="img fullwidthTarget">
+        <picture>
+            <source srcset="https://image.thebarentsobserver.com/461753.webp?imageId=461753&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=1058&height=478&format=webp" 
+                width="529"
+                height="239"
+                media="(min-width: 768px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/461753.webp?imageId=461753&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=1058&height=478&format=jpg" 
+                width="529"
+                height="239"
+                media="(min-width: 768px)"
+                type="image/jpeg">    
+            <source srcset="https://image.thebarentsobserver.com/461753.webp?imageId=461753&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=webp" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/461753.webp?imageId=461753&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=jpg" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/jpeg">    
+            <img src="https://image.thebarentsobserver.com/461753.webp?imageId=461753&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=jpg"
+                width="480"
+                height="216"
+                alt="" 
+                loading="lazy"
+                style=""    
+                >
+        </picture>        
+            </div>
+    
+</figure>
+
+                
+                
+                
+                
+                
+                
+                
+                
+
+            <div class="floatingText">
+
+                <div class="labels">
+                </div>
+            </div>
+            
+
+        </div>
+
+
+
+        
+                <div 
+style=""
+class="kicker below ">
+Near Kotlas
+</div>
+                <h2 itemprop="headline" 
+    class="headline t34"
+    style=""
+    >Important north-Russian railway bridge collapses
+</h2>
+
+
+        
+
+
+
+
+        </a>
+
+        <time itemprop="datePublished" datetime="2026-11-11T14:21:41+01:00"></time>
+    </div>
+</article>
+</div>
+<div data-element-guid="db98284e-0e61-42c1-a26e-0ca6db647546" class="row small-12 large-12" style="">
+	<article data-element-guid="baf169fa-f490-4b3e-9369-f9b767f966ba" class="column small-12 large-6 small-abs-12 large-abs-6 " data-site-alias="thebarentsobserver" data-section="news" data-tag="grain,murmansk seaport,news,morocco" data-instance="461772" itemscope>
+    <style></style>
+    <div class="content" style="">
+        
+            <a itemprop="url" class="" href="/news/first-grain-carrier-sets-out-from-murmansk/461772" data-k5a-url="https://www.thebarentsobserver.com/a/461772" rel="">
+
+
+
+
+        <div class="media ">
+                
+                <figure data-element-guid="77913283-c220-4ea1-8379-fc49ae82b123" class="" >
+    <div class="img fullwidthTarget">
+        <picture>
+            <source srcset="https://image.thebarentsobserver.com/461794.webp?imageId=461794&x=27.03&y=40.74&cropw=69.92&croph=59.26&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=1058&height=478&format=webp" 
+                width="529"
+                height="239"
+                media="(min-width: 768px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/461794.webp?imageId=461794&x=27.03&y=40.74&cropw=69.92&croph=59.26&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=1058&height=478&format=jpg" 
+                width="529"
+                height="239"
+                media="(min-width: 768px)"
+                type="image/jpeg">    
+            <source srcset="https://image.thebarentsobserver.com/461794.webp?imageId=461794&x=27.03&y=40.74&cropw=69.92&croph=59.26&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=webp" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/461794.webp?imageId=461794&x=27.03&y=40.74&cropw=69.92&croph=59.26&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=jpg" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/jpeg">    
+            <img src="https://image.thebarentsobserver.com/461794.webp?imageId=461794&x=27.03&y=40.74&cropw=69.92&croph=59.26&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=jpg"
+                width="480"
+                height="216"
+                alt="" 
+                loading="lazy"
+                style=""    
+                >
+        </picture>        
+            </div>
+    
+</figure>
+
+                
+                
+                
+                
+                
+                
+                
+                
+
+            <div class="floatingText">
+
+                <div class="labels">
+                </div>
+            </div>
+            
+
+        </div>
+
+
+
+        
+                <div 
+style=""
+class="kicker below ">
+"Alternative route"
+</div>
+                <h2 itemprop="headline" 
+    class="headline "
+    style=""
+    >First grain carrier sets out from Murmansk
+</h2>
+
+
+        
+
+
+
+
+        </a>
+
+        <time itemprop="datePublished" datetime="2026-11-11T15:03:49+01:00"></time>
+    </div>
+</article>
+<article data-element-guid="4529281a-05c4-4b7c-bca6-5739977377d8" class="column small-12 large-6 small-abs-12 large-abs-6 " data-site-alias="thebarentsobserver" data-section="news" data-tag="news,container shipping,northern sea route,south korea" data-instance="461691" itemscope>
+    <style></style>
+    <div class="content" style="">
+        
+            <a itemprop="url" class="" href="/news/koreas-historical-arctic-voyage-did-not-go-all-smoothly/461691" data-k5a-url="https://www.thebarentsobserver.com/a/461691" rel="">
+
+
+
+
+        <div class="media ">
+                
+                <figure data-element-guid="4f6b0210-7f1c-47a8-81cd-84d565c7ea45" class="" >
+    <div class="img fullwidthTarget">
+        <picture>
+            <source srcset="https://image.thebarentsobserver.com/461697.webp?imageId=461697&x=10.17&y=24.15&cropw=70.20&croph=55.88&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=1058&height=478&format=webp" 
+                width="529"
+                height="239"
+                media="(min-width: 768px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/461697.webp?imageId=461697&x=10.17&y=24.15&cropw=70.20&croph=55.88&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=1058&height=478&format=jpg" 
+                width="529"
+                height="239"
+                media="(min-width: 768px)"
+                type="image/jpeg">    
+            <source srcset="https://image.thebarentsobserver.com/461697.webp?imageId=461697&x=10.17&y=24.15&cropw=70.20&croph=55.88&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=webp" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/461697.webp?imageId=461697&x=10.17&y=24.15&cropw=70.20&croph=55.88&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=jpg" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/jpeg">    
+            <img src="https://image.thebarentsobserver.com/461697.webp?imageId=461697&x=10.17&y=24.15&cropw=70.20&croph=55.88&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=jpg"
+                width="480"
+                height="216"
+                alt="" 
+                loading="lazy"
+                style=""    
+                >
+        </picture>        
+            </div>
+    
+</figure>
+
+                
+                
+                
+                
+                
+                
+                
+                
+
+            <div class="floatingText">
+
+                <div class="labels">
+                </div>
+            </div>
+            
+
+        </div>
+
+
+
+        
+                <div 
+style=""
+class="kicker below ">
+Northern Sea Route
+</div>
+                <h2 itemprop="headline" 
+    class="headline t32 tm23"
+    style=""
+    >Korea’s historic Arctic voyage did not go smoothly
+</h2>
+
+
+        
+
+
+
+
+        </a>
+
+        <time itemprop="datePublished" datetime="2026-11-10T17:00:51+01:00"></time>
+    </div>
+</article>
+</div>
+<div data-element-guid="c044a68d-269d-4d8a-ab97-101733ae3b98" class="row small-12 large-12" style="">
+	<article data-element-guid="d4d072d0-ab11-46ed-a82c-35d19c481204" class="column small-12 large-4 small-abs-12 large-abs-4 " data-site-alias="thebarentsobserver" data-section="news" data-tag="news" data-instance="461580" itemscope>
+    <style></style>
+    <div class="content" style="">
+        
+            <a itemprop="url" class="" href="/news/smuggling-of-foreign-cash-continues-despite-sanctions/461580" data-k5a-url="https://www.thebarentsobserver.com/a/461580" rel="">
+
+
+
+
+        <div class="media ">
+                
+                <figure data-element-guid="86550649-6491-4724-9f2c-cd5a6c6f0411" class="" >
+    <div class="img fullwidthTarget">
+        <picture>
+            <source srcset="https://image.thebarentsobserver.com/461583.webp?imageId=461583&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=706&height=318&format=webp" 
+                width="353"
+                height="159"
+                media="(min-width: 768px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/461583.webp?imageId=461583&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=706&height=318&format=jpg" 
+                width="353"
+                height="159"
+                media="(min-width: 768px)"
+                type="image/jpeg">    
+            <source srcset="https://image.thebarentsobserver.com/461583.webp?imageId=461583&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=webp" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/461583.webp?imageId=461583&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=jpg" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/jpeg">    
+            <img src="https://image.thebarentsobserver.com/461583.webp?imageId=461583&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=jpg"
+                width="480"
+                height="216"
+                alt="" 
+                loading="lazy"
+                style=""    
+                >
+        </picture>        
+            </div>
+    
+</figure>
+
+                
+                
+                
+                
+                
+                
+                
+                
+
+            <div class="floatingText">
+
+                <div class="labels">
+                </div>
+            </div>
+            
+
+        </div>
+
+
+
+        
+                <div 
+style=""
+class="kicker below ">
+Norway-Russia border
+</div>
+                <h2 itemprop="headline" 
+    class="headline tm23"
+    style=""
+    >Smuggling of foreign cash continues despite sanctions
+</h2>
+
+
+        
+
+
+
+
+        </a>
+
+        <time itemprop="datePublished" datetime="2026-11-09T15:11:36+01:00"></time>
+    </div>
+</article>
+<article data-element-guid="c7f5c944-9389-4db0-9eb9-a16bf5f031e3" class="column small-12 large-4 small-abs-12 large-abs-4 " data-site-alias="thebarentsobserver" data-section="news" data-tag="arctic lng,norwegian coastal administration,news,andøya,arve dimmen,china" data-instance="461490" itemscope>
+    <style></style>
+    <div class="content" style="">
+        
+            <a itemprop="url" class="" href="/news/after-crossing-arctic-route-from-china-two-heavy-lift-carriers-get-stuck-near-norwegian-air-base/461490" data-k5a-url="https://www.thebarentsobserver.com/a/461490" rel="">
+
+
+
+
+        <div class="media ">
+                
+                <figure data-element-guid="0246e4b6-e078-40bc-8b44-0a7a90f158a5" class="" >
+    <div class="img fullwidthTarget">
+        <picture>
+            <source srcset="https://image.thebarentsobserver.com/454301.webp?imageId=454301&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=706&height=318&format=webp" 
+                width="353"
+                height="159"
+                media="(min-width: 768px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/454301.webp?imageId=454301&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=706&height=318&format=jpg" 
+                width="353"
+                height="159"
+                media="(min-width: 768px)"
+                type="image/jpeg">    
+            <source srcset="https://image.thebarentsobserver.com/454301.webp?imageId=454301&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=webp" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/454301.webp?imageId=454301&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=jpg" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/jpeg">    
+            <img src="https://image.thebarentsobserver.com/454301.webp?imageId=454301&x=0.00&y=0.00&cropw=100.00&croph=100.00&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=jpg"
+                width="480"
+                height="216"
+                alt="" 
+                loading="lazy"
+                style=""    
+                >
+        </picture>        
+            </div>
+    
+</figure>
+
+                
+                
+                
+                
+                
+                
+                
+                
+
+            <div class="floatingText">
+
+                <div class="labels">
+                </div>
+            </div>
+            
+
+        </div>
+
+
+
+        
+                <div 
+style=""
+class="kicker below ">
+Stormy weather
+</div>
+                <h2 itemprop="headline" 
+    class="headline tm22"
+    style=""
+    >After crossing Arctic route from China, two heavy lift carriers get stuck near Norwegian air base
+</h2>
+
+
+        
+
+
+
+
+        </a>
+
+        <time itemprop="datePublished" datetime="2026-11-06T17:32:04+01:00"></time>
+    </div>
+</article>
+<article data-element-guid="35b7f60c-7146-4ac4-bcb4-ac04feeadc51" class="column small-12 large-4 small-abs-12 large-abs-4 " data-site-alias="thebarentsobserver" data-section="news" data-tag="shadow fleet,iran,barents sea,sanctions,north korea,news" data-instance="461333" itemscope>
+    <style></style>
+    <div class="content" style="">
+        
+            <a itemprop="url" class="" href="/news/30yearold-tanker-linked-with-iran-drifting-along-norways-arctic-coast/461333" data-k5a-url="https://www.thebarentsobserver.com/a/461333" rel="">
+
+
+
+
+        <div class="media ">
+                
+                <figure data-element-guid="6075548d-f680-4ab1-95b6-98cdc7d24f1f" class="" >
+    <div class="img fullwidthTarget">
+        <picture>
+            <source srcset="https://image.thebarentsobserver.com/461339.webp?imageId=461339&x=0.00&y=0.00&cropw=100.00&croph=89.55&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=706&height=318&format=webp" 
+                width="353"
+                height="159"
+                media="(min-width: 768px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/461339.webp?imageId=461339&x=0.00&y=0.00&cropw=100.00&croph=89.55&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=706&height=318&format=jpg" 
+                width="353"
+                height="159"
+                media="(min-width: 768px)"
+                type="image/jpeg">    
+            <source srcset="https://image.thebarentsobserver.com/461339.webp?imageId=461339&x=0.00&y=0.00&cropw=100.00&croph=89.55&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=webp" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/webp">    
+            <source srcset="https://image.thebarentsobserver.com/461339.webp?imageId=461339&x=0.00&y=0.00&cropw=100.00&croph=89.55&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=jpg" 
+                width="480"
+                height="216"
+                media="(max-width: 767px)"
+                type="image/jpeg">    
+            <img src="https://image.thebarentsobserver.com/461339.webp?imageId=461339&x=0.00&y=0.00&cropw=100.00&croph=89.55&heightx=0.00&heighty=0.00&heightw=100.00&heighth=100.00&width=960&height=432&format=jpg"
+                width="480"
+                height="216"
+                alt="" 
+                loading="lazy"
+                style=""    
+                >
+        </picture>        
+            </div>
+    
+</figure>
+
+                
+                
+                
+                
+                
+                
+                
+                
+
+            <div class="floatingText">
+
+                <div class="labels">
+                </div>
+            </div>
+            
+
+        </div>
+
+
+
+        
+                <div 
+style=""
+class="kicker below ">
+Suspicious
+</div>
+                <h2 itemprop="headline" 
+    class="headline tm21"
+    style=""
+    >30-year-old tanker linked with Iran drifting along Norway’s Arctic coast
+</h2>
+
+
+        
+
+
+
+
+        </a>
+
+        <time itemprop="datePublished" datetime="2026-11-04T17:06:38+01:00"></time>
+    </div>
+</article>
+</div>
+
+    </div>
+</div>
+
+</div>
+</div>
+
+            
+            
+        </section>
+        
+
+<footer class="page">
+    <div data-element-guid="c6774310-bbcb-488e-8b42-4a5862b1f4b5" class="row-section desktop-space-outsideBottom-none mobile-space-outsideBottom-none bg-black color_mobile_bg-black hasContentPadding mobile-hasContentPadding" style="">
+<div class="row small-12 large-12 desktop-space-outsideBottom-none mobile-space-outsideBottom-none bg-black color_mobile_bg-black hasContentPadding mobile-hasContentPadding" style="">
+	<div data-element-guid="3febfacc-6d3f-4ff4-9f1c-da4dbb0ddff9" class="column text_singleline small-12 large-4 small-abs-12 large-abs-4">
+    <style></style>
+    <h3 
+        class="content singleline t14 font-weight-bold m-font-weight-bold" 
+        style="">
+        ABOUT
+    </h3 >
+</div><div data-element-guid="b98ab302-752d-436c-a096-620ca900de96" class="column text_singleline small-12 large-4 small-abs-12 large-abs-4">
+    <style></style>
+    <h3 
+        class="content singleline t14 font-weight-bold m-font-weight-bold" 
+        style="">
+        CONTACTS
+    </h3 >
+</div><div data-element-guid="19e0466a-40f1-465a-a6f3-b68d6b8af103" class="column text_singleline small-12 large-4 small-abs-12 large-abs-4">
+    <style></style>
+    <h3 
+        class="content singleline t14 font-weight-bold m-font-weight-bold" 
+        style="">
+        SUBSCRIBE FREE NEWSLETTER
+    </h3 >
+</div></div>
+</div>
+<div data-element-guid="fa10657a-f503-4ad1-8edd-4bb45cd8c6b3" class="row-section bg-black color_mobile_bg-black hasContentPadding mobile-hasContentPadding" style="">
+<div class="row small-12 large-12 bg-black color_mobile_bg-black hasContentPadding mobile-hasContentPadding" style="">
+	<div data-element-guid="79490945-d7da-440f-a509-7a3d3d122c67" class="columns small-12 large-4 small-abs-12 large-abs-4"><div data-element-guid="9a3860db-a37c-4b89-bede-af370807e9d7" class="row small-12 large-12" style="">
+	<div data-element-guid="eb54bb7f-d3f5-44fc-b282-47ad69178ded" class="column text_multiline small-12 large-12 small-abs-12 large-abs-4">
+    <style></style>
+    <div class="content multiline bodytext"
+        style="">
+        <p>© 2002 - 2026</p><p>Published by: The Independent Barents Observer AS </p><p><a href="https://www.thebarentsobserver.com/about-us">About us</a></p><p>The Barents Observer follows the <a href="http://presse.no/pfu/etiske-regler/vaer-varsom-plakaten/vvpl-engelsk/"><span class="white color_mobile_white" data-lab-text_color="white">Code of Ethics of the Norwegian Press</span></a> and the document <a href="https://www.redaktor.no/ressurser/etiske-og-juridiske-rammeverk/redaktorplakaten" target="_blank">Right and Duties of the Editor</a>. We report under full editorial independence and have no external interference. </p><p>Freedom to write - freedom to publish.</p><p class="secondary color_mobile_secondary"><span class="white color_mobile_white" data-lab-text_color="white"><a href="https://thebarentsobserver.com/support-us"><span class="white color_mobile_white" data-lab-text_color="white">Donate</span></a> to our independent journalism. That’s how we get better. </span></p><p>Støtt oss via Vipps: 105 792 - Det betyr mye!</p>
+    </div>
+</div><div data-element-guid="2a2242e2-47c8-4a40-b591-78fdcab7e219" id="markup_419385" class="markupbox column small-12 large-12 small-abs-12 large-abs-4">
+    <style></style>
+    <div class="content fullwidthTarget" style="">
+
+        
+
+        
+
+            <a href="https://www.redaktor.no/ressurser/etiske-og-juridiske-rammeverk/redaktorplakaten"><img src="https://www.thebarentsobserver.com/files/2024/10/22/NR%20logo%20hvit.png" width="50px" /></a>
+
+        
+        
+    </div>
+</div>
+</div>
+</div><div data-element-guid="943526b3-267b-43a5-a415-e65371d5d01d" class="column text_multiline small-12 large-4 small-abs-12 large-abs-4">
+    <style></style>
+    <div class="content multiline bodytext"
+        style="">
+        <p><a href="mailto:newstips@thebarentsobserver.com"><span class="white color_mobile_white" data-lab-text_color="white">newstips@thebarentsobserver.com</span></a></p><p><span data-lab-font_weight="font-weight-bold" class="font-weight-bold m-font-weight-bold">Publisher</span> Atle Staalesen</p><p><a href="mailto:atle@thebarentsobserver.com"><span class="white color_mobile_white" data-lab-text_color="white">atle@thebarentsobserver.com</span></a></p><p><span data-lab-font_weight="font-weight-bold" class="font-weight-bold m-font-weight-bold">Editor</span> Thomas Nilsen</p><p><a href="mailto:thomas@thebarentsobserver.com"><span class="white color_mobile_white" data-lab-text_color="white">thomas@thebarentsobserver.com</span></a><br>☏ +47-905 73 143</p><p>News editor Farida Kurbangaleeva </p><p>farida@thebarentsobserver.com</p><p>Opinion editor Laura A. Janda</p><p>janda.laura@gmail.com </p><p>Journalist Denis Zagore</p><p><a href="mailto:denis@thebarentsobserver.com"><span class="white color_mobile_white" data-lab-text_color="white">denis@thebarentsobserver.com</span></a></p><p>Journalist Georgii Chentemirov</p><p><a href="mailto:georgii@thebarentsobserver.com"><span class="white color_mobile_white" data-lab-text_color="white">georgii@thebarentsobserver.com</span></a></p><p>Journalist Olesia Krivtsova</p><p><a href="mailto:olesia@thebarentsobserver.com"><span class="white color_mobile_white" data-lab-text_color="white">olesia@thebarentsobserver.com</span></a></p><p>Visiting address:</p><p>Storgata 5, Kirkenes, Norway</p>
+    </div>
+</div><div data-element-guid="299bc934-d3cc-442c-977e-65759832de85" class="columns small-12 large-4 small-abs-12 large-abs-4"><div data-element-guid="e305e8dd-44e3-480e-a079-6c805d090a83" class="row small-12 large-12" style="">
+	<div data-element-guid="51b5b10d-4ebd-470b-b739-6668754d9ca8" class="column newsletter_submit small-12 large-12 small-abs-12 large-abs-4">
+    <style></style>
+    <form method="POST" action="https://thebarentsobserver.mailmojo.no/forms/45691/" class="content grid " style="">
+        <div class="text description grid-vas-center large-12 small-12">
+            <h4 class="">Sign up for the newsletter</h4>
+            <p class="description "></p>
+        </div>
+        <fieldset class="text grid-vas-center large-12 small-12">
+            <input type="hidden" name="tagsadditional" placeholder="" class="" value="Signup from website">
+            <input type="email" name="email" placeholder="Type your e-mail" class="" value="">
+            <input type="submit" name="submit" placeholder="" class="bg-secondary" value="Subscribe">
+        </fieldset>
+        <div class="text lab-newsletter-footer lab-hide-newsletter-footer grid-vas-center large-12 small-12">
+            <p class="lab-newsletter-footer-text "></p>
+        </div>
+    </form>
+</div>
+<div data-element-guid="79a35c31-bad0-4391-996d-5df67caaff76" class="column text_multiline small-12 large-12 small-abs-12 large-abs-4">
+    <style></style>
+    <div class="content multiline bodytext"
+        style="">
+        <p><a href="https://beta.thebarentsobserver.com/privacy-policy"><span class="white color_mobile_white" data-lab-text_color="white">Privacy policy</span></a></p><p class="font-weight-bold m-font-weight-bold" data-lab-font_weight="font-weight-bold">Follow us</p><ul><li><p><a href="https://bsky.app/profile/thebarentsobserver.com" target="_blank">Bluesky</a></p></li><li><p><a href="https://www.thebarentsobserver.com/news/the-barents-observer-departs-x/423356">We left X</a></p></li><li><p><a href="https://www.facebook.com/BarentsObserver">Facebook</a></p></li><li><p><a href="https://www.instagram.com/_u/barentsobserver">Instagram</a></p></li><li><p><a href="https://t.me/BarentsObserver">Telegram</a></p></li><li><p><a href="https://www.linkedin.com/company/16180038">LinkedIn</a></p></li><li><p><a href="https://www.youtube.com/@thebarentsobserver">YouTube</a></p></li></ul>
+    </div>
+</div></div>
+</div></div>
+</div>
+
+</footer>
+
+
+<script src="/view-resources/baseview/public/common/build/baseview_dependencies_dom.js?v=1793778822-L4" data-cookieconsent="ignore"></script>
+<script src="/view-resources/baseview/public/common/adLabel.js?v=1793778822-L4"></script>
+
+        <script>
+            window.dachserData.handlers = {
+                parallax: function(item) {
+                    if (window.Dac && window.Dac.Parallax) {
+                        new Dac.Parallax(item);
+                    } else {
+                        console.warn('parallax: Missing required class Dac.Parallax. Content will not animate.');
+                    }
+                },
+                swipehelper: function(item) {
+                    if (window.Dac && window.Dac.SwipeHelper) {
+                        var element = document.querySelector(item.selector);
+                        if (!element) {
+                            console.warn('SwipeHelper: Missing element for selector: "' + item.selector + '".');
+                            return null;
+                        }
+                        return new Dac.SwipeHelper(element, item);
+                    } else {
+                        console.warn('SwipeHelper: Missing required function Dac.SwipeHelper.');
+                        return null;
+                    } 
+                },
+                readprogress: function(item) {
+                    if (window.Dac && window.Dac.ReadProgress) {
+                        var element = document.querySelector(item.selector);
+                        if (!element) {
+                            console.warn('ReadProgress: Missing element for selector: "' + item.selector + '".');
+                            return;
+                        }
+                        new Dac.ReadProgress(element, item);
+                    } else {
+                        console.warn('ReadProgress: Missing required function Dac.ReadProgress.');
+                    } 
+                },
+                tabnavigation: function(item) {
+                    if (window.Dac && window.Dac.TabNavigation) {
+                        new Dac.TabNavigation(item);
+                    } else {
+                        console.warn('TabNavigation: Missing required function Dac.Tabnavigation.');
+                    } 
+                },
+                elementattributetoggler: function(item) {
+                    if (window.Dac && window.Dac.ElementAttributeToggler) {
+                        new Dac.ElementAttributeToggler(item);
+                    } else {
+                        console.warn('ElementAttributeToggler: Missing required class Dac.ElementAttributeToggler.');
+                    } 
+                },
+                articlelists: (item) => {
+                    if (window.Dac && window.Dac.ArticleLists) {
+                        new Dac.ArticleLists(item);
+                    } else {
+                        console.warn('ElementAttributeToggler: Missing required class Dac.ArticleLists.');
+                    }
+                }
+            };
+
+            window.dachserData.execute = () => {
+            
+                // Parallax
+                // Register each element requiering js-animations
+                const parallaxQueue = window.dachserData.get('parallax') || [];
+                parallaxQueue.forEach(item => {
+                    window.dachserData.handlers.parallax(item);
+                });
+            
+                // SwipeHelper, used by several components like ArticleScroller etc.
+                // Register each element using SwipeHelper:
+                const swipehelperQueue = window.dachserData.get('swipehelper') || [];
+                swipehelperQueue.forEach(item => {
+                    window.dachserData.setInstance(
+                        'swipehelper',
+                        item.selector,
+                        window.dachserData.handlers.swipehelper(item)
+                    );
+                });
+
+                // ReadProgress
+                const readprogressQueue = window.dachserData.get('readprogress') || [];
+                readprogressQueue.forEach(item => {
+                    window.dachserData.handlers.readprogress(item);
+                });
+            
+                // Tab-navigation
+                const tabnavigationQueue = window.dachserData.get('tabnavigation') || [];
+                tabnavigationQueue.forEach(item => {
+                    window.dachserData.handlers.tabnavigation(item);
+                });
+
+                // ElementAttributeToggler
+                const elementAttributeTogglerQueue = window.dachserData.get('elementattributetoggler') || [];
+                elementAttributeTogglerQueue.forEach(item => {
+                    window.dachserData.handlers.elementattributetoggler(item);
+                });
+
+                const articlelistsQueue = window.dachserData.get('articlelists') || [];
+                articlelistsQueue.forEach(item => {
+                    window.dachserData.handlers.articlelists(item);
+                });
+            };
+
+            (function () {
+
+                window.dachserData.execute();
+            
+            }());
+        </script>
+
+            <div class="powered-by "><a href="https:&#x2F;&#x2F;labradorcms.com&#x2F;" target="_blank">Powered by Labrador CMS</a></div>
+
+
+
+        
+            </body>
+</html>
