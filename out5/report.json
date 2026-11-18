@@ -1,0 +1,40 @@
+{
+ "nat_03": [
+  200,
+  4719
+ ],
+ "nat_01": [
+  200,
+  2954
+ ],
+ "list_all": [
+  200,
+  24224,
+  "text/html;charset=utf-8"
+ ],
+ "list_ru": [
+  200,
+  24264,
+  "text/html;charset=utf-8"
+ ],
+ "list_ru_noregn": [
+  200,
+  24264,
+  "text/html;charset=utf-8"
+ ],
+ "list_kz": [
+  200,
+  23831,
+  "text/html;charset=utf-8"
+ ],
+ "list_uz": [
+  200,
+  23259,
+  "text/html;charset=utf-8"
+ ],
+ "list_az": [
+  200,
+  23326,
+  "text/html;charset=utf-8"
+ ]
+}
