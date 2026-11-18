@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% import "_article.html" as art %}
+{% block title %}주간 리뷰 {{ week.label }} · {{ site.title }}{% endblock %}
+{% block content %}
+{% set r = week.review %}
+<section class="brief-head">
+  <div class="dateline">
+    <span class="date">주간 리뷰 · {{ week.label }}</span>
+    <span class="muted">{{ week.start }} ~ {{ week.end }} · {{ week.article_count }}건</span>
+  </div>
+  <h1 class="headline">{{ r.headline }}</h1>
+  <p class="overview">{{ r.overview }}</p>
+  {% if r.offline %}<p class="notice">⚠ API 키 없이 생성된 리뷰입니다.</p>{% endif %}
+</section>
+
+{% if r.themes %}
+<section>
+  <h2 class="sec-title">이번 주 흐름</h2>
+  <div class="themes">
+    {% for t in r.themes %}
+    <div class="theme">
+      <h3>{{ t.title }}</h3>
+      <p>{{ t.body }}</p>
+      {% if t.article_ids %}<div class="theme-links">
+        {% for id in t.article_ids %}{% set a = week.by_id.get(id) %}{% if a %}<a href="{{ a.url }}" target="_blank" rel="noopener">{{ a.title }}</a>{% endif %}{% endfor %}
+      </div>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if week.top %}
+<section class="top">
+  <h2 class="sec-title">이번 주 꼭 기억할 {{ week.top|length }}건</h2>
+  <ol class="top-list">{% for a in week.top %}{{ art.top_item(a, loop.index, root) }}{% endfor %}</ol>
+</section>
+{% endif %}
+
+{% if r.questions %}
+<section class="watch">
+  <h2 class="sec-title">생각해볼 질문 <span class="muted">면접·자소서용</span></h2>
+  <ul>{% for q in r.questions %}<li>{{ q }}</li>{% endfor %}</ul>
+</section>
+{% endif %}
+
+{% if week.tag_counts %}
+<section>
+  <h2 class="sec-title">이번 주 태그</h2>
+  <div class="tag-cloud small">
+    {% for name, n in week.tag_counts %}<a class="tag-big" href="{{ root }}tag/{{ name|tagslug }}.html">{{ name }} <b>{{ n }}</b></a>{% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<nav class="pager">
+  {% if prev %}<a href="{{ root }}week/{{ prev }}.html">← {{ prev }}</a>{% else %}<span></span>{% endif %}
+  <span class="muted">매주 월요일 생성</span>
+  {% if next %}<a href="{{ root }}week/{{ next }}.html">{{ next }} →</a>{% else %}<span></span>{% endif %}
+</nav>
+{% endblock %}

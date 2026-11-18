@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% import "_article.html" as art %}
+{% block title %}{{ day.date_label }} · {{ site.title }}{% endblock %}
+{% block msub %}{{ day.date_label }}{% endblock %}
+{% block content %}
+{% set b = day.brief %}
+<section class="brief-head">
+  <div class="dateline">
+    <span class="date">{{ day.date_label }}</span>
+    <span class="meta">
+      {% for name, n in day.sources.items() %}<span class="src-pill">{{ name }} {{ n }}</span>{% endfor %}
+      <span class="muted">총 {{ day.articles|length }}건 · 약 {{ (3 + day.articles|length * 0.25)|round|int }}분</span>
+      {% if day.coverage %}<span class="muted coverage">{{ day.coverage }}</span>{% endif %}
+    </span>
+  </div>
+  {% if b.headline %}<h1 class="headline">{{ b.headline }}</h1>{% endif %}
+  {% if b.overview %}<p class="overview">{{ b.overview }}</p>{% endif %}
+  {% if day.top %}
+  <ol class="m-top3 m-only" aria-label="오늘 꼭 읽을 기사">
+    {% for a in day.top %}<li><a href="#a-{{ loop.index }}"><span class="n">{{ loop.index }}</span>{{ a.title }}</a></li>{% endfor %}
+  </ol>
+  {% endif %}
+  {% if b.offline %}<p class="notice">⚠ API 키 없이 생성된 브리핑입니다 (AI 요약 없음).</p>{% endif %}
+
+  {% if day.kw_counts %}
+  <div class="kw-row">
+    <span class="muted">관심 키워드</span>
+    {% for kw, n in day.kw_counts %}<a class="kw-chip" href="{{ root }}tag/{{ kw|tagslug }}.html">{{ kw }} <b>{{ n }}</b></a>{% endfor %}
+  </div>
+  {% endif %}
+</section>
+
+<div class="toolbar">
+  <div id="progress" class="progress" role="progressbar" aria-label="오늘 읽은 기사">
+    <div class="progress-track"><div class="progress-fill"></div></div>
+    <span class="progress-text">0 / {{ day.articles|length }} 읽음</span>
+  </div>
+  <div class="filters">
+    <button class="chip" data-filter-source="all" aria-pressed="true">전체</button>
+    {% for key, name in day.source_keys %}<button class="chip" data-filter-source="{{ key }}">{{ name }}</button>{% endfor %}
+    <span class="sep"></span>
+    <button class="chip" id="toggle-hide-read">읽은 것 숨기기</button>
+    <button class="chip ghost" id="mark-all-read">모두 읽음</button>
+  </div>
+</div>
+
+{% if day.top %}
+<section class="top">
+  <h2 class="sec-title">오늘 꼭 읽을 {{ day.top|length }}건</h2>
+  <ol class="top-list">
+    {% for a in day.top %}{{ art.top_item(a, loop.index, root) }}{% endfor %}
+  </ol>
+</section>
+{% endif %}
+
+{% if b.watch %}
+<section class="watch">
+  <h2 class="sec-title">지켜볼 포인트</h2>
+  <ul>{% for w in b.watch %}<li>{{ w }}</li>{% endfor %}</ul>
+</section>
+{% endif %}
+
+{% if day.glossary %}
+<section class="glossary">
+  <h2 class="sec-title">오늘의 용어 <span class="muted">{{ day.glossary|length }}개</span></h2>
+  <dl class="terms big">
+    {% for t in day.glossary %}<div><dt>{{ t.term }}</dt><dd>{{ t.explanation }} <a class="term-src" href="{{ t.url }}" target="_blank" rel="noopener" title="{{ t.title }}">↗</a></dd></div>{% endfor %}
+  </dl>
+</section>
+{% endif %}
+
+{% if day.rest %}
+<section class="rest">
+  <h2 class="sec-title">나머지 기사 <span class="muted">관련도순</span></h2>
+  <div class="cards">
+    {% for a in day.rest %}{{ art.card(a, root) }}{% endfor %}
+  </div>
+  <button class="chip wide" id="toggle-low">낮은 관련도 더 보기</button>
+</section>
+{% endif %}
+
+<nav class="pager">
+  {% if prev %}<a href="{{ root }}day/{{ prev }}.html">← {{ prev }}</a>{% else %}<span></span>{% endif %}
+  <a href="{{ root }}archive.html">전체 목록</a>
+  {% if next %}<a href="{{ root }}day/{{ next }}.html">{{ next }} →</a>{% else %}<span></span>{% endif %}
+</nav>
+{% endblock %}

@@ -1,0 +1,254 @@
+{% extends "base.html" %}
+{% block title %}국제정세 · {{ site.title }}{% endblock %}
+{% macro both(p7, p30) -%}<span class="p7">{{ p7 }}</span><span class="p30">{{ p30 }}</span>{%- endmacro %}
+{% block content %}
+{% set P7 = g.periods[7] %}{% set P30 = g.periods[30] %}{% set T = g.tiles %}
+<div class="geo" id="geo-root" data-period="30">
+
+<section class="brief-head geo-head">
+  <div class="dateline"><span class="date">국제정세 대시보드</span>
+    <span class="muted">{{ g.today }} 기준 · 분석 기사 {{ g.analyzed }}건 중 정세 관련 {{ g.geo_count }}건</span></div>
+  <h1 class="headline">기사로 보는 국제정세</h1>
+  {% if g.line %}<p class="overview">{{ g.line.text }} <span class="muted small-inline">— {{ g.line.source }}</span></p>
+  {% else %}<p class="overview muted">아직 국제정세로 태깅된 기사가 없습니다. 기사가 쌓이면 이곳에 이번 주 흐름이 한 줄로 정리됩니다.</p>{% endif %}
+  {% if g.pending %}<p class="notice">아직 국제정세 태깅이 안 된 기사 {{ g.pending }}건이 있습니다. 다음 실행부터 새 기사는 자동으로 태깅되고, 과거 기사는 Actions에서 <b>backfill_geo</b>로 한 번 채울 수 있어요.</p>{% endif %}
+</section>
+
+{# ── 1. 요약 타일 (최근 7일) ── #}
+<section aria-labelledby="tiles-h">
+  <h2 class="sec-title" id="tiles-h">이번 주 한눈에 <span class="muted">최근 7일 · 직전 7일과 비교</span></h2>
+  <div class="geo-tiles">
+    <a class="gtile" {% if T.chokepoint %}href="#cp-{{ T.chokepoint.slug }}"{% endif %}>
+      <span class="gt-label">가장 많이 언급된 요충지</span>
+      {% if T.chokepoint %}
+        <b class="gt-value">{{ T.chokepoint.name }}</b>
+        <span class="gt-meta">{{ T.chokepoint.count }}건 <span class="arrow" title="{{ T.chokepoint.arrow_label }}">{{ T.chokepoint.arrow }}</span> · 평균 영향 <span class="imp-chip {{ T.chokepoint.cls }}">{{ T.chokepoint.avg_label }}</span></span>
+      {% else %}<b class="gt-value muted">없음</b><span class="gt-meta">최근 7일 요충지 언급 없음</span>{% endif %}
+    </a>
+    <a class="gtile" {% if T.region %}href="#region-{{ T.region.slug }}"{% endif %}>
+      <span class="gt-label">가장 악화된 지역</span>
+      {% if T.region %}
+        <b class="gt-value">{{ T.region.name }}</b>
+        <span class="gt-meta">평균 영향 <span class="imp-chip {{ T.region.cls }}">{{ T.region.avg_label }}</span> · {{ T.region.count }}건</span>
+      {% else %}<b class="gt-value muted">–</b><span class="gt-meta">2건 이상 언급된 지역이 아직 없음</span>{% endif %}
+    </a>
+    <a class="gtile" {% if T.driver %}href="#drivers"{% endif %}>
+      <span class="gt-label">가장 많이 등장한 동인</span>
+      {% if T.driver %}
+        <b class="gt-value">{{ T.driver.name }}</b>
+        <span class="gt-meta">{{ T.driver.count }}건 <span class="arrow" title="{{ T.driver.arrow_label }}">{{ T.driver.arrow }}</span> {{ T.driver.arrow_label }}</span>
+      {% else %}<b class="gt-value muted">–</b><span class="gt-meta">최근 7일 동인 태깅 없음</span>{% endif %}
+    </a>
+    <div class="gtile">
+      <span class="gt-label">정세 관련 기사</span>
+      <b class="gt-value num">{{ T.articles.count }}<small>건</small></b>
+      <span class="gt-meta"><span class="arrow">{{ T.articles.arrow[0] }}</span> {{ T.articles.arrow[1] }} · 분석 {{ T.articles.analyzed }}건 중</span>
+    </div>
+  </div>
+  {% if P7.low_sample and P7.count %}<p class="warn">최근 7일 정세 관련 기사 {{ P7.count }}건 — 표본이 적어 추세로 읽기 어렵습니다.</p>{% endif %}
+</section>
+
+{# ── 기간 토글: 요충지 보드 · 항로 도식 · 국가 막대에 적용 ── #}
+<div class="period-bar" role="group" aria-label="기간">
+  <span class="muted">기간</span>
+  <button class="chip" data-geo-period="7" aria-pressed="false">최근 7일</button>
+  <button class="chip" data-geo-period="30" aria-pressed="true">최근 30일</button>
+  <span class="muted small-inline">요충지 · 국가에 적용</span>
+</div>
+
+{# ── 2. 요충지 위험 보드 ── #}
+<section aria-labelledby="board-h">
+  <h2 class="sec-title" id="board-h">해상 요충지 <span class="muted">카드를 누르면 근거 기사</span></h2>
+  <div class="cp-board">
+    {% for c30 in P30.chokepoints %}{% set c7 = P7.chokepoints[loop.index0] %}
+    <details class="cp-card" id="cp-{{ c30.slug }}">
+      <summary>
+        <span class="cp-name">{{ c30.name }}</span>
+        <span class="cp-stat p30 {{ 'is-zero' if not c30.count }}">
+          <span class="imp-chip {{ c30.cls }}">{{ c30.avg_label }}</span>
+          <span class="cp-count">{{ c30.count }}건</span><span class="arrow" title="{{ c30.arrow_label }}">{{ c30.arrow }}</span>
+        </span>
+        <span class="cp-stat p7 {{ 'is-zero' if not c7.count }}">
+          <span class="imp-chip {{ c7.cls }}">{{ c7.avg_label }}</span>
+          <span class="cp-count">{{ c7.count }}건</span><span class="arrow" title="{{ c7.arrow_label }}">{{ c7.arrow }}</span>
+        </span>
+      </summary>
+      {% for period, c in [('30', c30), ('7', c7)] %}
+      <div class="cp-body p{{ period }}">
+        {% if c.articles %}
+          {% if c.count < 3 %}<p class="warn small">{{ c.count }}건뿐 — 단일 기사 시각일 수 있음</p>{% endif %}
+          <ul class="cp-articles">
+          {% for a in c.articles[:5] %}
+            <li><span class="imp-chip {{ a.impact|impcls }}" title="영향 {{ a.impact }}">{{ a.impact|impfmt }}</span>
+              <a href="{{ a.url }}" target="_blank" rel="noopener">{{ a.title }}</a>
+              <span class="muted">{{ a.source }} · {{ a.date[5:] }}</span>
+              {% if a.note %}<p class="cp-note">{{ a.note }}</p>{% endif %}</li>
+          {% endfor %}
+          </ul>
+        {% else %}<p class="muted small">이 기간에 언급된 기사가 없습니다.</p>{% endif %}
+      </div>
+      {% endfor %}
+    </details>
+    {% endfor %}
+  </div>
+  <p class="howto-line"><b>어떻게 읽나</b> 숫자는 기사들이 해운 흐름에 준 영향의 평균입니다 (−2 큰 차질 ~ +2 큰 개선). 화살표는 직전 같은 기간 대비 언급 건수 변화예요. 언급이 많고 음수일수록 지금 압박받는 곳입니다.</p>
+</section>
+
+{# ── 3. 오늘의 세계 지도 ── #}
+{% set M = g.map %}
+<section aria-labelledby="map-h" class="map-section">
+  <h2 class="sec-title" id="map-h">오늘의 세계 지도 {% if M.date %}<span class="muted">{{ M.date_short }} 브리핑 기준</span>{% endif %}</h2>
+  <div class="world-wrap">
+    {{ map_svg|safe }}
+    {% for r in M.regions if r.count %}
+    <button type="button" class="map-dot {{ r.cls }}" data-map-region="{{ r.slug }}"
+            aria-controls="map-{{ r.slug }}" aria-pressed="{{ 'true' if r.slug == M.selected else 'false' }}"
+            style="left:{{ r.px }}%; top:{{ r.py }}%; --d:{{ r.d }}px"
+            title="{{ r.name }}: {{ r.count }}건, 평균 영향 {{ r.avg_label }}">
+      <span class="md-circle" aria-hidden="true">{{ r.count }}</span>
+      <span class="md-label">{{ r.name }} <span class="sr-only">{{ r.count }}건, 평균 영향 {{ r.avg_label }}</span></span>
+    </button>
+    {% endfor %}
+    {% if not M.mapped %}
+    <p class="map-empty">이 날 브리핑에는 지역이 특정된 기사가 없습니다.</p>
+    {% endif %}
+  </div>
+  {% if M.mapped %}
+  <div class="map-chips" role="group" aria-label="지역 선택">
+    {% for r in M.regions|selectattr('count')|sort(attribute='count', reverse=True) %}
+    <button type="button" class="chip {{ r.cls }}" data-map-region="{{ r.slug }}" aria-controls="map-{{ r.slug }}"
+            aria-pressed="{{ 'true' if r.slug == M.selected else 'false' }}"><i aria-hidden="true"></i>{{ r.name }} {{ r.count }}</button>
+    {% endfor %}
+  </div>
+  {% endif %}
+  <div class="legend">
+    <span>점 크기 = 기사 수</span>
+    <span>색 = 평균 영향</span>
+    <span><i class="lg imp-n2"></i>큰 차질</span><span><i class="lg imp-n1"></i>차질</span>
+    <span><i class="lg imp-0"></i>중립</span><span><i class="lg imp-p1"></i>개선</span>
+    {% if M.unmapped %}<span class="muted">지도에 없는 기사 {{ M.unmapped }}건 (지역 정보 없음)</span>{% endif %}
+  </div>
+
+{% macro item(a) %}
+  <li>
+    <span class="imp-chip {{ a.impact|impcls }}" title="해운 흐름에 대한 영향 (−2~+2)">{{ a.impact|impfmt }}</span>
+    <div class="mp-body">
+      <a class="mp-title" href="{{ a.url }}" target="_blank" rel="noopener">{{ a.title }}</a>
+      <div class="mp-meta">
+        <span class="muted">{{ a.source }} · {{ a.time }}</span>
+        {% for c in a.countries %}<span class="gc">{{ country_ko.get(c, c) }}</span>{% endfor %}
+        <a class="mp-brief" href="{{ root }}day/{{ M.date }}.html#{{ a.anchor }}">브리핑에서 보기 →</a>
+      </div>
+      {% if a.note %}<p class="mp-note">{{ a.note }}</p>{% endif %}
+    </div>
+  </li>
+{% endmacro %}
+  {% if M.mapped %}
+  <div class="map-panels" id="map-panels">
+    {% for r in M.regions if r.count %}
+    <section class="map-panel{{ ' is-active' if r.slug == M.selected }}" id="map-{{ r.slug }}" data-panel="{{ r.slug }}"
+             aria-labelledby="mp-{{ r.slug }}">
+      <h3 id="mp-{{ r.slug }}" class="mp-head">
+        <span class="mp-name">{{ r.name }}</span>
+        <span class="muted">· {{ M.date_short }} · {{ r.count }}건 ·</span>
+        <span class="mp-imp"><span class="muted">평균 영향</span> <span class="imp-chip {{ r.cls }}">{{ r.avg_label }}</span></span>
+      </h3>
+      <ul class="mp-list">
+        {% for a in r.articles[:(6 if r.count >= 10 else r.count)] %}{{ item(a) }}{% endfor %}
+      </ul>
+      {% if r.count >= 10 %}
+      <details class="mp-more">
+        <summary>더 보기 ({{ r.count - 6 }}건)</summary>
+        <ul class="mp-list">{% for a in r.articles[6:] %}{{ item(a) }}{% endfor %}</ul>
+      </details>
+      {% endif %}
+    </section>
+    {% endfor %}
+  </div>
+  {% endif %}
+  <p class="howto-line"><b>어떻게 읽나</b> 가장 최근 브리핑 하루치 기사를 대표 지역별로 모았습니다. 점이 클수록 그 지역 기사가 많고, 색은 그 기사들이 해운 흐름에 준 영향의 평균이에요(빨강 차질 · 남색 개선). 점을 누르면 아래에 그 지역 기사가 나옵니다. 여러 지역에 걸친 기사는 각 지역에 모두 들어갑니다.</p>
+</section>
+
+{# ── 4. 지역 × 주 히트맵 ── #}
+<section aria-labelledby="heat-h">
+  <h2 class="sec-title" id="heat-h">지역별 주간 흐름 <span class="muted">최근 8주 · 칸 숫자는 기사 수</span></h2>
+  {% if g.heat.max %}
+  <div class="table-scroll">
+    <table class="heat">
+      <caption class="sr-only">지역별 주간 국제정세 기사 수와 평균 영향</caption>
+      <thead><tr><th scope="col">지역</th>{% for w in g.heat.weeks %}<th scope="col" title="{{ w.key }}">{{ w.label }}~</th>{% endfor %}<th scope="col" class="num">합계</th></tr></thead>
+      <tbody>
+      {% for r in g.heat.rows %}
+        <tr id="region-{{ r.slug }}" class="{{ 'is-empty' if not r.total }}">
+          <th scope="row">{{ r.name }}</th>
+          {% for c in r.cells %}
+          <td class="hc {{ c.cls }}" style="--o:{{ (0.25 + 0.75 * c.count / g.heat.max)|round(2) if c.count else 0 }}"
+              title="{{ r.name }} {{ g.heat.weeks[loop.index0].key }}: {{ c.count }}건, 평균 영향 {{ c.avg_label }}">
+            {% if c.count %}<span>{{ c.count }}</span>{% else %}<span class="dot">·</span>{% endif %}</td>
+          {% endfor %}
+          <td class="num">{{ r.total }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p class="howto-line"><b>어떻게 읽나</b> 칸이 진할수록 그 주에 기사가 많았고, 색은 평균 영향(빨강 차질 · 남색 개선)입니다. 같은 행에서 색이 바뀌는 주가 흐름이 꺾인 시점이에요. 칸에 마우스를 올리면 평균 영향 수치가 보입니다.</p>
+  {% else %}
+  <p class="empty">지역 태깅이 된 기사가 아직 없습니다. 기사가 쌓이면 지역 × 주 표가 채워집니다.</p>
+  {% endif %}
+</section>
+
+{# ── 5. 동인별 추이 ── #}
+<section aria-labelledby="drv-h" id="drivers">
+  <h2 class="sec-title" id="drv-h">무엇이 흔드나 <span class="muted">동인별 기사 수</span></h2>
+  {% if trend_svg and g.trend.days_of_data >= 7 %}
+    <div class="chart-wrap">{{ trend_svg|safe }}</div>
+    <p class="howto-line"><b>어떻게 읽나</b> 7일 이동평균 기사 수입니다(최근 60일, 상위 5개 동인). 선이 함께 올라가는 시기는 이슈가 겹친 때예요. 하루치 숫자보다 기울기를 보세요.</p>
+  {% elif g.geo_count %}
+    <p class="warn">데이터가 {{ g.trend.days_of_data }}일치뿐이라 추이 선은 7일 이상 쌓이면 그립니다. 지금은 최근 30일 합계를 보여드려요.</p>
+  {% endif %}
+  {% set drv = P30.drivers|selectattr('count')|sort(attribute='count', reverse=True)|list %}
+  {% if drv %}
+  {% set dmax = drv[0].count %}
+  <ul class="hbars">
+    {% for d in drv %}
+    <li><span class="hb-label">{{ d.name }}</span>
+      <span class="hb-track"><span class="hb-fill" style="--w:{{ (d.count / dmax)|round(3) }}"></span></span>
+      <span class="hb-num">{{ d.count }}</span>
+      <span class="imp-chip {{ d.cls }}" title="평균 영향">{{ d.avg_label }}</span></li>
+    {% endfor %}
+  </ul>
+  <p class="muted small">최근 30일 · 기사 수 · 오른쪽은 평균 영향</p>
+  {% elif not trend_svg %}
+  <p class="empty">동인 태깅이 된 기사가 아직 없습니다.</p>
+  {% endif %}
+</section>
+
+{# ── 6. 국가 상위 10 ── #}
+<section aria-labelledby="cty-h">
+  <h2 class="sec-title" id="cty-h">자주 등장한 나라 <span class="muted">상위 10</span></h2>
+  {% for period, P in [('30', P30), ('7', P7)] %}
+  <div class="p{{ period }}">
+    {% if P.countries %}
+    <ul class="hbars">
+      {% for c in P.countries %}
+      <li id="{{ 'country-' ~ c.name if period == '30' }}"><span class="hb-label">{{ c.label }} <small class="muted">{{ c.name }}</small></span>
+        <span class="hb-track"><span class="hb-fill" style="--w:{{ c.bar }}"></span></span>
+        <span class="hb-num">{{ c.count }}</span>
+        <span class="imp-chip {{ c.cls }}" title="평균 영향">{{ c.avg_label }}</span></li>
+      {% endfor %}
+    </ul>
+    {% if P.low_sample %}<p class="warn small">이 기간 기사 {{ P.count }}건 — 순위가 쉽게 바뀝니다.</p>{% endif %}
+    {% else %}<p class="empty">이 기간에 나라가 태깅된 기사가 없습니다.</p>{% endif %}
+  </div>
+  {% endfor %}
+  <p class="howto-line"><b>어떻게 읽나</b> 막대는 언급 건수, 오른쪽 숫자는 그 나라 관련 기사들의 평균 영향입니다. 자주 나오면서 음수인 나라가 지금 해운 리스크의 진원지일 가능성이 높아요.</p>
+</section>
+
+<section class="geo-interview">
+  <h2 class="sec-title">면접에서 이렇게 써보기</h2>
+  <p>"요즘 해운 시장에 영향을 주는 국제 이슈는?" → 위 보드에서 <b>가장 많이 언급되고 음수인 요충지 1곳</b> + 그 원인 <b>동인 1개</b> + 근거 기사 1건의 수치를 묶어 답해 보세요. 예: "최근 30일 기사에서 ○○가 가장 많이 언급됐고 평균 영향이 −1.5로, 주된 원인은 ○○입니다. 실제로 ○월 ○일 기사에서…"</p>
+</section>
+
+</div>
+{% endblock %}

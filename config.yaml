@@ -1,0 +1,159 @@
+# ─────────────────────────────────────────────
+#  해운물류 데일리 브리핑 설정
+# ─────────────────────────────────────────────
+
+site:
+  title: "해운물류 데일리"
+  tagline: "코리아쉬핑가제트 · 카고뉴스 매일 10분 브리핑"
+  timezone: "Asia/Seoul"
+  # GitHub Pages 주소 (레포 이름에 맞게 수정) — 상대 경로만 쓰므로 비워 둬도 됩니다
+  base_url: "https://pkm01030411-cyber.github.io/shipping-brief/"
+  short_name: "해운데일리"
+  # 관심 키워드 — 등장한 기사에 배지가 붙고, 상단에 "오늘 HMM 2건" 칩이 뜹니다. 자유롭게 수정.
+  highlight_keywords:
+    - "HMM"
+    - "ONE"
+    - "머스크"
+    - "MSC"
+    - "CMA CGM"
+    - "SCFI"
+    - "KCCI"
+    - "BDI"
+    - "북미항로"
+    - "유럽항로"
+    - "관세"
+    - "파업"
+    - "얼라이언스"
+    - "포워더"
+    - "북극항로"
+    - "러시아"
+
+collect:
+  # 이 시간(시간 단위) 이내에 올라온 기사만 수집
+  window_hours: 30
+  # 소스별 최대 기사 수 (비용 상한)
+  max_per_source: 25
+  # 요청 간 대기 (초) — 사이트에 부담 주지 않기
+  delay_seconds: 0.7
+  user_agent: "Mozilla/5.0 (compatible; ShippingBriefBot/1.0; personal daily-reading bot)"
+
+sources:
+  ksg:
+    enabled: true
+    name: "코리아쉬핑가제트"
+    # 수집할 카테고리 (코드: 이름). 라이프/연재소설/인사 등은 제외
+    categories:
+      LPG: "해운"
+      XHJ: "물류"
+      RKC: "항만"
+      ZFX: "무역"
+      WMS: "항공"
+      WVE: "조선"
+    pages_per_category: 2
+  cargonews:
+    enabled: true
+    name: "카고뉴스"
+    rss: "https://www.cargonews.co.kr/rss/allArticle.xml"
+    # 제외할 섹션 (동정/인사/행사 등). 기사 제목·링크로 판단이 어려워 키워드로 거릅니다
+    skip_title_keywords: ["부고", "인사]", "[인사", "동정"]
+
+summarize:
+  model: "claude-sonnet-5-5"
+  max_tokens: 8000
+  # 한 번의 API 호출에 넣을 기사 수
+  batch_size: 12
+  # 기사 본문을 이 글자 수까지만 모델에 전달 (비용 관리)
+  body_chars: 2500
+  # 관심사 — 관련도 점수와 Top 3 선정에 반영됩니다. 자유롭게 수정하세요.
+  interests:
+    - "컨테이너 정기선사 (ONE, HMM, 머스크, MSC, CMA CGM, 코스코 등)와 얼라이언스 동향"
+    - "해상 운임 지수 (SCFI, KCCI, BDI 등)와 운임 전망"
+    - "포워더·국제물류주선업, 복합운송"
+    - "선복·스케줄·항로 개편, 북미·유럽·아시아역내 항로"
+    - "항만 운영, 파업, 공급망 차질"
+    - "관세·무역정책이 물동량에 미치는 영향"
+    - "러시아·중앙아시아·북극항로 등 유라시아 물류"
+  # 요약 후 기사 본문을 data/*.json에 남길지 (false 권장: 저작권·저장소 용량)
+  keep_body: false
+  # 관심사에서 멀어도 '꼭 알아야 할 큰 뉴스'는 모델이 알아서 올립니다
+  top_n: 3
+
+# ─────────────────────────────────────────────
+#  러시아·유라시아 정세 (별도 섹션: eurasia.html)
+#  흐름: 소스별 새 기사 후보 → 제목·리드로 관련도 선별(1회 호출) → 상위 10~15건만 본문 수집
+#        → 한국어 번역 요약 → 오늘의 브리핑. KOTRA 무역관 뉴스는 월요일 주간 리뷰에 사용.
+# ─────────────────────────────────────────────
+eurasia:
+  enabled: true
+  title: "러시아·유라시아"
+  # 이 시간 안에 올라온 기사만 후보 (날짜만 주는 피드가 있어 조금 넉넉하게. 중복은 URL로 제거)
+  window_hours: 40
+  # 하루 게재 건수: 관련도 3 이상 상위 max_daily건, 부족하면 2점짜리로 min_daily까지 채움
+  min_daily: 10
+  max_daily: 15
+  top_n: 3
+  batch_size: 8
+  body_chars: 3000
+  max_tokens: 9000
+  interests:
+    - "러시아 대외정책·제재·우크라이나 전쟁의 전개와 협상"
+    - "러시아 경제(루블·유가·재정·수출입)와 대외무역 구조 변화"
+    - "북극항로(NSR)·북극 LNG·러시아 항만(블라디보스토크·상트페테르부르크·무르만스크)·시베리아횡단철도(TSR)"
+    - "중앙아시아·코카서스 정세와 중간회랑(TITR)·카스피해 물류"
+    - "중국·인도·튀르키예·한국과 러시아·유라시아의 관계"
+    - "그림자 선단·유조선·해상 제재 집행, 해운·조선 산업"
+  # stance: 카드에 표시되는 '출처 시각' 라벨 — 편향을 의식하며 읽도록
+  sources:
+    moscowtimes:
+      enabled: true
+      name: "The Moscow Times"
+      stance: "독립 언론 · 암스테르담"
+      kind: rss
+      url: "https://www.themoscowtimes.com/rss/news"
+      body_selectors: [".article__block--html"]
+      max_candidates: 35
+    meduza:
+      enabled: true
+      name: "Meduza"
+      stance: "독립 언론 · 리가"
+      kind: rss
+      url: "https://meduza.io/rss/en/all"
+      max_candidates: 35
+    eurasianet:
+      enabled: true
+      name: "Eurasianet"
+      stance: "중앙아·코카서스 전문지 · 미국"
+      kind: rss
+      url: "https://eurasianet.org/rss"
+      max_candidates: 15
+    timesca:
+      enabled: true
+      name: "The Times of Central Asia"
+      stance: "중앙아 지역 매체"
+      kind: rss
+      url: "https://timesca.com/feed/"
+      body_selectors: [".entry-content"]
+      max_candidates: 20
+    barents:
+      enabled: true
+      name: "The Barents Observer"
+      stance: "북극 독립 언론 · 노르웨이"
+      kind: barents
+      url: "https://www.thebarentsobserver.com/"
+      max_candidates: 15
+    portnews:
+      enabled: true
+      name: "PortNews"
+      stance: "러시아 해운 업계지 · 상트페테르부르크"
+      kind: portnews
+      url: "https://portnews.ru/news/"
+      max_candidates: 40
+  # KOTRA 해외시장뉴스 (러시아·CIS 무역관) — 주간 리뷰 전용
+  kotra:
+    enabled: true
+    name: "KOTRA 해외시장뉴스"
+    stance: "한국 정부기관 · 무역관"
+    # UN 국가 코드: 러시아, 카자흐스탄, 우즈베키스탄, 아제르바이잔, 벨라루스, 키르기스스탄, 조지아, 우크라이나
+    countries: {"643": "러시아", "398": "카자흐스탄", "860": "우즈베키스탄", "31": "아제르바이잔",
+                "112": "벨라루스", "417": "키르기스스탄", "268": "조지아", "804": "우크라이나"}
+    max_items: 15
