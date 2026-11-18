@@ -13,10 +13,12 @@ data-tags="{{ a.tags|join('|') }}" data-low="{{ '1' if (a.relevance or 0) <= 2 e
 </div>
 {%- endmacro %}
 
-{% macro actions() -%}
+{% macro actions(a) -%}
 <div class="actions">
-  <button class="btn-read" aria-pressed="false" title="읽음으로 표시"><span class="chk"></span></button>
+  <button class="btn-read" aria-pressed="false" title="읽음으로 표시"><span class="chk"></span><span class="m-lbl m-only">읽음</span></button>
   <button class="btn-star" aria-pressed="false" title="스크랩">☆</button>
+  <button type="button" class="btn-share m-only" title="공유"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg><span class="m-lbl">공유</span></button>
+  <a class="btn-origin origin-link m-only" href="{{ a.url }}" target="_blank" rel="noopener" title="원문 열기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span class="m-lbl">원문</span></a>
 </div>
 {%- endmacro %}
 
@@ -36,6 +38,10 @@ data-tags="{{ a.tags|join('|') }}" data-low="{{ '1' if (a.relevance or 0) <= 2 e
 {% endif %}
 {%- endmacro %}
 
+{% macro more_btn(a) -%}
+<button type="button" class="m-more-btn m-only" aria-expanded="false">해설 보기</button>
+{%- endmacro %}
+
 {% macro extras(a) -%}
 {% if a.insight %}<p class="insight"><b>인사이트</b> {{ a.insight }}</p>{% endif %}
 {% if a.terms %}<dl class="terms">{% for t in a.terms %}<div><dt>{{ t.term }}</dt><dd>{{ t.explanation }}</dd></div>{% endfor %}</dl>{% endif %}
@@ -52,10 +58,13 @@ data-tags="{{ a.tags|join('|') }}" data-low="{{ '1' if (a.relevance or 0) <= 2 e
     <h3><a class="origin-link" href="{{ a.url }}" target="_blank" rel="noopener">{{ a.title }}</a></h3>
     {% if a.subtitle %}<p class="subtitle">{{ a.subtitle }}</p>{% endif %}
     <p class="summary">{{ a.summary }}</p>
+    {{ more_btn(a) }}
+    <div class="m-extras">
     {% if a.reason %}<p class="reason"><b>왜 지금</b> {{ a.reason }}</p>{% elif a.why %}<p class="reason"><b>의미</b> {{ a.why }}</p>{% endif %}
     {{ extras(a) }}
+    </div>
     {{ geochips(a, root) }}
-    <div class="card-foot">{{ tags(a, root) }}{{ actions() }}</div>
+    <div class="card-foot">{{ tags(a, root) }}{{ actions(a) }}</div>
   </div>
 </li>
 {%- endmacro %}
@@ -66,9 +75,12 @@ data-tags="{{ a.tags|join('|') }}" data-low="{{ '1' if (a.relevance or 0) <= 2 e
   {{ kicker(a, root) }}
   <h3><a class="origin-link" href="{{ a.url }}" target="_blank" rel="noopener">{{ a.title }}</a></h3>
   <p class="summary">{{ a.summary }}</p>
+  {{ more_btn(a) }}
+  <div class="m-extras">
   {% if a.why %}<p class="why">{{ a.why }}</p>{% endif %}
   {{ extras(a) }}
+  </div>
   {{ geochips(a, root) }}
-  <div class="card-foot">{{ tags(a, root) }}{{ actions() }}</div>
+  <div class="card-foot">{{ tags(a, root) }}{{ actions(a) }}</div>
 </article>
 {%- endmacro %}

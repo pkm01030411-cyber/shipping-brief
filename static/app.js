@@ -35,7 +35,7 @@
   // ── 스크랩 ──────────────────────────────────────────────
   function articleData(el) {
     var d = el.dataset;
-    return { id: d.article, title: d.title, url: d.url, source: d.source, date: d.date,
+    return { id: d.article, title: d.title, url: d.url, source: d.sourceName || d.source, date: d.date,
              summary: d.summary || "", tags: (d.tags || "").split("|").filter(Boolean), savedAt: Date.now() };
   }
   function toggleStar(el) {
@@ -96,6 +96,7 @@
     }
     var sc = document.getElementById("star-count"); if (sc) sc.textContent = Object.keys(star).length || "";
     window.__visible = visibleEls;
+    try { document.dispatchEvent(new CustomEvent("sb:render", { detail: { total: total, done: done } })); } catch (e) {}
   }
 
   // ── 이벤트 ─────────────────────────────────────────────
@@ -140,6 +141,8 @@
   });
 
   // ── 스크랩 페이지 ────────────────────────────────────────
+  var SOURCE_NAMES = { ksg: "코리아쉬핑가제트", cargonews: "카고뉴스" };
+  Object.keys(star).forEach(function (k) { var a = star[k]; if (a && SOURCE_NAMES[a.source]) a.source = SOURCE_NAMES[a.source]; });
   var scrapRoot = document.getElementById("scrap-list");
   if (scrapRoot) {
     var list = Object.keys(star).map(function (k) { return star[k]; }).sort(function (a, b) { return b.savedAt - a.savedAt; });
@@ -218,10 +221,19 @@
   }
 
   // ── PWA 서비스워커 ──────────────────────────────────────
-  if ("serviceWorker" in navigator && location.protocol === "https:") {
+  if ("serviceWorker" in navigator && (location.protocol === "https:" || /^(localhost|127\.0\.0\.1)$/.test(location.hostname))) {
     var root = document.documentElement.dataset.root || "";
     navigator.serviceWorker.register(root + "sw.js").catch(function () {});
   }
+
+  // 모바일 레이어(mobile.js)가 같은 상태와 저장소를 쓰도록 공개
+  window.SB = {
+    load: load, save: save, isRead: isRead, setRead: setRead, toggleRead: toggleRead, toggleStar: toggleStar,
+    isStarred: function (id) { return !!star[id]; }, stars: function () { return star; },
+    unstar: function (id) { var v = star[id]; delete star[id]; save(KEY_STAR, star); render(); return v; },
+    restar: function (id, v) { star[id] = v; save(KEY_STAR, star); render(); },
+    streak: streak, render: render
+  };
 
   render();
 })();

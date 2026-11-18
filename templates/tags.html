@@ -5,6 +5,7 @@
   <h1 class="headline">태그</h1>
   <p class="overview muted">{{ tags|length }}개 · 자주 등장한 순</p>
 </section>
+<div class="m-search m-only" role="search"><input type="search" placeholder="태그 검색" aria-label="태그 검색" data-target=".tag-cloud .tag-big" enterkeyhint="search"></div>
 <div class="tag-cloud">
   {% for t in tags %}
   <a class="tag-big" href="{{ root }}tag/{{ t.name|tagslug }}.html" style="--w:{{ t.weight }}">{{ t.name }} <b>{{ t.count }}</b></a>

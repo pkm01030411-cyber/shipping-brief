@@ -1,5 +1,6 @@
 {% extends "base.html" %}
-{% block title %}{{ site.title }} — {{ site.tagline }}{% endblock %}
+{% block title %}{{ site.title }} — {{ site.tagline }}<a class="m-cta m-only" href="{{ root }}today.html"><span>오늘 브리핑 읽기</span><small></small></a>
+{% endblock %}
 {% block content %}
 <section class="hero">
   <p class="hero-kicker">{{ site.tagline }}</p>
@@ -21,7 +22,7 @@
     </div>
   </div>
   <p class="overview">{{ latest.brief.overview }}</p>
-  <div id="progress" class="progress home-progress" role="progressbar">
+  <div id="progress" class="progress home-progress" role="progressbar" aria-label="오늘 읽은 기사">
     <div class="progress-track"><div class="progress-fill"></div></div>
     <span class="progress-text">0 / {{ latest.articles|length }} 읽음</span>
   </div>
@@ -106,4 +107,5 @@
     <div><b>4</b> 모르는 용어는 카드 안 <em>▸ 용어</em>와 "오늘의 용어"에서. 월요일엔 주간 리뷰로 한 주를 복기.</div>
   </div>
 </section>
+<a class="m-cta m-only" href="{{ root }}today.html"><span>오늘 브리핑 읽기</span><small></small></a>
 {% endblock %}

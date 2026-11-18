@@ -1,6 +1,6 @@
 /* 서비스워커 — 네트워크 우선, 실패 시 캐시 (오프라인에서도 마지막 브리핑 열람 가능) */
 const CACHE = "sb-__BUILD__";
-const PRECACHE = ["./", "./index.html", "./static/style.css", "./static/app.js"];
+const PRECACHE = "__PRECACHE__";  // 빌드 때 핵심 페이지 + 최근 7일 브리핑 목록으로 바뀜
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(PRECACHE)).then(() => self.skipWaiting()));

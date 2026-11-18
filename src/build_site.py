@@ -161,6 +161,11 @@ def build() -> None:
         archive.append({"date": d, "label": p["date_label"], "count": len(day["articles"]),
                         "headline": p["brief"].get("headline", "")})
     days = [d for d in days if d in prepared]
+    # 모든 페이지 공통: 최신 브리핑(하단 내비 '오늘' 배지용), 모바일 앱 바 제목
+    env.globals["latest_date"] = days[0] if days else ""
+    env.globals["latest_ids"] = "|".join(a["id"] for a in prepared[days[0]]["articles"]) if days else ""
+    env.globals["mtitles"] = {"home": site["title"], "today": "브리핑", "geo": "국제정세", "weekly": "주간 리뷰",
+                              "tags": "태그", "scrap": "스크랩", "archive": "지난 브리핑"}
 
     day_tpl = env.get_template("day.html")
     for i, d in enumerate(days):
@@ -289,12 +294,30 @@ def build() -> None:
     manifest = {
         "name": site["title"], "short_name": site.get("short_name", site["title"]),
         "description": site["tagline"], "start_url": "./index.html", "scope": "./",
-        "display": "standalone", "background_color": "#fbfaf7", "theme_color": "#0f3d5e", "lang": "ko",
-        "icons": [{"src": "static/icon-192.png", "sizes": "192x192", "type": "image/png"},
-                  {"src": "static/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}],
+        "display": "standalone", "background_color": "#fbfaf7", "theme_color": "#ffffff", "lang": "ko",
+        "orientation": "portrait",
+        "icons": [{"src": "static/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+                  {"src": "static/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+                  {"src": "static/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable"},
+                  {"src": "static/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}],
+        # 안드로이드: 앱 아이콘 길게 누르면 나오는 바로가기
+        "shortcuts": [
+            {"name": "오늘 브리핑", "short_name": "오늘", "url": "./today.html",
+             "icons": [{"src": "static/sc-today.png", "sizes": "96x96", "type": "image/png"}]},
+            {"name": "국제정세", "short_name": "정세", "url": "./geo.html",
+             "icons": [{"src": "static/sc-geo.png", "sizes": "96x96", "type": "image/png"}]},
+            {"name": "스크랩", "short_name": "스크랩", "url": "./scrap.html",
+             "icons": [{"src": "static/sc-scrap.png", "sizes": "96x96", "type": "image/png"}]},
+        ],
     }
     (SITE_DIR / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
-    sw = (STATIC_DIR / "sw.js").read_text(encoding="utf-8").replace("__BUILD__", site["built_at"])
+    # 오프라인용 미리 캐시: 핵심 페이지 + 최근 7일 브리핑 + 정적 파일
+    precache = ["./", "./index.html", "./today.html", "./geo.html", "./scrap.html", "./weekly.html", "./archive.html",
+                "./manifest.json", "./static/style.css", "./static/mobile.css", "./static/app.js", "./static/mobile.js",
+                "./static/icon-192.png", "./static/icon-maskable-192.png"]
+    precache += [f"./day/{d}.html" for d in days[:7]]
+    sw = (STATIC_DIR / "sw.js").read_text(encoding="utf-8").replace("__BUILD__", site["built_at"]) \
+        .replace('"__PRECACHE__"', json.dumps(precache, ensure_ascii=False))
     (SITE_DIR / "sw.js").write_text(sw, encoding="utf-8")
 
     # RSS

@@ -5,6 +5,7 @@
   <h1 class="headline">지난 브리핑</h1>
   <p class="overview muted">{{ archive|length }}일치</p>
 </section>
+<div class="m-search m-only" role="search"><input type="search" placeholder="날짜·헤드라인 검색" aria-label="지난 브리핑 검색" data-target=".archive li" enterkeyhint="search"></div>
 <ul class="archive">
   {% for d in archive %}
   <li>
