@@ -198,3 +198,13 @@ RSS가 있는 매체는 `cargonews.py`를, 없는 매체는 `ksg.py`를 복사�
 
 ---
 지도: Natural Earth (public domain), world-atlas (ISC). 재생성: `scripts/build_world_path.py`
+
+---
+
+## 디자인 (2026-11 리뉴얼)
+
+- **해도+야경 톤**: 시작(`index.html`)·오늘·정세·태그 페이지. 설정에서 '크림 해도'(라이트)로 바꿀 수 있습니다.
+- **경제지 에디토리얼 톤**: 기사 페이지(`a/<id>.html`)와 소개(`about.html`). 본문의 점선 밑줄 용어를 누르면 해설이 뜹니다.
+- 일러스트는 `static/img/*.webp`(800px·원본 두 크기), 출처 기록은 `static/img/credits.json`.
+  기사 → 일러스트 매칭 규칙은 `src/visual.py`의 `_RULES`에서 바꿀 수 있습니다.
+- 지도는 Natural Earth(퍼블릭 도메인) 해안선을 빌드 때 `static/world-night.svg`·`world-cream.svg`로 만듭니다.

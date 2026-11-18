@@ -2,7 +2,7 @@
 {% macro attrs(a) -%}
 data-article="{{ a.id }}" data-title="{{ a.title }}" data-url="{{ a.url }}" data-source="{{ a.source }}"
 data-source-name="{{ a.source_name }}" data-date="{{ a.published[:10] }}" data-summary="{{ a.summary }}"
-data-tags="{{ a.tags|join('|') }}" data-low="{{ '1' if (a.relevance or 0) <= 2 else '0' }}"
+data-tags="{{ a.tags|join('|') }}" data-low="{{ '1' if (a.relevance or 0) <= 2 else '0' }}" data-regions="{{ a.regions }}"
 {%- endmacro %}
 
 {% macro kicker(a, root, show_rel=True) -%}
@@ -18,8 +18,18 @@ data-tags="{{ a.tags|join('|') }}" data-low="{{ '1' if (a.relevance or 0) <= 2 e
   <button class="btn-read" aria-pressed="false" title="읽음으로 표시"><span class="chk"></span><span class="m-lbl m-only">읽음</span></button>
   <button class="btn-star" aria-pressed="false" title="스크랩">☆</button>
   <button type="button" class="btn-share m-only" title="공유"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg><span class="m-lbl">공유</span></button>
-  <a class="btn-origin origin-link m-only" href="{{ a.url }}" target="_blank" rel="noopener" title="원문 열기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span class="m-lbl">원문</span></a>
+  <a class="btn-origin origin-link" href="{{ a.url }}" target="_blank" rel="noopener" title="원문 열기 ({{ a.source_name }})"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span class="m-lbl">원문</span></a>
 </div>
+{%- endmacro %}
+
+{% macro ill(a, root, size="800", eager=False) -%}
+{% if a.ill %}{% set i = a.ill %}
+<figure class="ill ill-{{ i.name }}">
+  <img src="{{ root }}static/img/{{ i.name }}-800.webp" srcset="{{ root }}static/img/{{ i.name }}-800.webp 800w, {{ root }}static/img/{{ i.name }}.webp {{ i.w }}w"
+       sizes="(max-width: 760px) 100vw, 720px" width="{{ i.w }}" height="{{ i.h }}" alt="{{ i.alt }}"
+       style="object-position: {{ i.pos }}" {% if not eager %}loading="lazy" {% endif %}decoding="async">
+</figure>
+{% endif %}
 {%- endmacro %}
 
 {% macro tags(a, root) -%}
@@ -52,10 +62,11 @@ data-tags="{{ a.tags|join('|') }}" data-low="{{ '1' if (a.relevance or 0) <= 2 e
 {% macro top_item(a, n, root) -%}
 <li class="top-item" id="a-{{ n }}" {{ attrs(a) }}>
   {{ anchor(a) }}
-  <div class="top-num">{{ n }}</div>
+  {% if a.ill_band %}{{ ill(a, root, eager=(n == 1)) }}{% endif %}
+  <div class="top-num">{{ "%02d"|format(n) }}</div>
   <div class="top-body">
     {{ kicker(a, root, show_rel=False) }}
-    <h3><a class="origin-link" href="{{ a.url }}" target="_blank" rel="noopener">{{ a.title }}</a></h3>
+    <h3><a class="art-link" href="{{ root }}a/{{ a.slug }}.html">{{ a.title }}</a></h3>
     {% if a.subtitle %}<p class="subtitle">{{ a.subtitle }}</p>{% endif %}
     <p class="summary">{{ a.summary }}</p>
     {{ more_btn(a) }}
@@ -72,8 +83,10 @@ data-tags="{{ a.tags|join('|') }}" data-low="{{ '1' if (a.relevance or 0) <= 2 e
 {% macro card(a, root, show_date=False) -%}
 <article class="card rel-{{ a.relevance or 0 }}" {{ attrs(a) }}>
   {{ anchor(a) }}
+  {{ ill(a, root) }}
+  <div class="card-body">
   {{ kicker(a, root) }}
-  <h3><a class="origin-link" href="{{ a.url }}" target="_blank" rel="noopener">{{ a.title }}</a></h3>
+  <h3><a class="art-link" href="{{ root }}a/{{ a.slug }}.html">{{ a.title }}</a></h3>
   <p class="summary">{{ a.summary }}</p>
   {{ more_btn(a) }}
   <div class="m-extras">
@@ -82,5 +95,6 @@ data-tags="{{ a.tags|join('|') }}" data-low="{{ '1' if (a.relevance or 0) <= 2 e
   </div>
   {{ geochips(a, root) }}
   <div class="card-foot">{{ tags(a, root) }}{{ actions(a) }}</div>
+  </div>
 </article>
 {%- endmacro %}

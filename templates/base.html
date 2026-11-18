@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{% block title %}{{ site.title }}{% endblock %}</title>
 <meta name="description" content="{{ site.tagline }}">
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#182230" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#0c1925">
 <script>/* 첫 그리기 전에 테마·글자 크기 적용 (깜빡임 방지) */(function(){try{var s=JSON.parse(localStorage.getItem("sb:settings")||"{}"),h=document.documentElement;if(s.theme==="light"||s.theme==="dark")h.setAttribute("data-theme",s.theme);if(matchMedia("(max-width: 640px) and (pointer: coarse)").matches){h.classList.add("is-mobile");var f={sm:"93.75%",lg:"112.5%"}[s.font];if(f)h.style.fontSize=f;}if(matchMedia("(display-mode: standalone)").matches)h.classList.add("is-standalone");}catch(e){}})();</script>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
@@ -16,17 +15,20 @@
 <link rel="icon" href="{{ root }}static/icon-192.png" type="image/png">
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ root }}feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css">
 <link rel="stylesheet" href="{{ root }}static/style.css">
+<link rel="stylesheet" href="{{ root }}static/chart.css">{% block head %}{% endblock %}
 <link rel="stylesheet" href="{{ root }}static/mobile.css" media="(max-width: 640px) and (pointer: coarse)">
 </head>
-<body>
-<header class="masthead">
+<body class="{% block body_class %}chart{% endblock %}">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="masthead night">
   <div class="wrap">
     <a class="brand" href="{{ root }}index.html" title="홈">
-      <span class="brand-mark">⚓</span>
-      <span class="brand-name">{{ site.title }}</span>
+      <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M12 2.8v18.4M2.8 12h18.4M12 5.5l1.6 6.5L12 18.5l-1.6-6.5z"/></svg>
+      <span class="brand-name"><span class="brand-en">SHIPPING<i>·</i>BRIEF</span><span class="brand-ko">{{ site.title }}</span></span>
     </a>
     <div class="m-title m-only" aria-hidden="false">
       <b>{% block mtitle %}{{ mtitles.get(nav, site.title) }}{% endblock %}</b>
@@ -44,12 +46,15 @@
   <div class="m-progress m-only" aria-hidden="true"><i></i></div>
 </header>
 <div class="m-offline m-only" role="status" hidden>오프라인 · 마지막 업데이트 {{ site.built_at[5:].replace('-', '/') }}</div>
-<main class="wrap">
+{% block before_main %}{% endblock %}
+<main class="wrap" id="main">
 {% block content %}{% endblock %}
 </main>
-<footer class="wrap foot">
+<footer class="foot">
+  <div class="wrap">
   <p>{{ site.tagline }} · 요약은 AI가 생성했으며 원문 확인을 권장합니다. 각 기사의 저작권은 해당 매체에 있습니다.</p>
-  <p class="muted">빌드 {{ site.built_at }}<span class="kbd-hint"> · 단축키 <kbd>?</kbd></span></p>
+  <p class="muted"><a href="{{ root }}about.html">소개 · 크레딧</a> · 빌드 {{ site.built_at }}<span class="kbd-hint"> · 단축키 <kbd>?</kbd></span></p>
+  </div>
 </footer>
 <div id="kbd-help" class="kbd-help">
   <b>단축키</b>
@@ -60,7 +65,7 @@
   <span><kbd>?</kbd> 닫기</span>
 </div>
 {# ── 모바일 전용 (mobile.css가 없으면 보이지 않음) ── #}
-<nav class="m-nav m-only" aria-label="주요 메뉴">
+<nav class="m-nav m-only night" aria-label="주요 메뉴">
   {% set more_on = nav in ('weekly', 'tags', 'archive') %}
   <a href="{{ root }}index.html" class="m-nav-item" {% if nav == 'home' %}aria-current="page"{% endif %}>
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6h-4v6H5a1 1 0 0 1-1-1z"/></svg><span>홈</span></a>
@@ -80,6 +85,7 @@
     <li><a href="{{ root }}weekly.html"><b>주간 리뷰</b><span>지난 7일 흐름과 면접용 질문</span></a></li>
     <li><a href="{{ root }}tags.html"><b>태그</b><span>이슈별로 모아보기</span></a></li>
     <li><a href="{{ root }}archive.html"><b>지난 브리핑</b><span>날짜별 목록</span></a></li>
+    <li><a href="{{ root }}about.html"><b>소개 · 크레딧</b><span>만든 방식과 출처</span></a></li>
     <li><button type="button" data-open-settings><b>설정</b><span>글자 크기 · 테마 · 햅틱 · 카드 펼침</span></button></li>
   </ul>
 </template>
@@ -90,9 +96,9 @@
       <label><input type="radio" name="font" value="md"> 보통</label>
       <label><input type="radio" name="font" value="lg"> 크게</label></fieldset>
     <fieldset><legend>테마</legend>
-      <label><input type="radio" name="theme" value="system"> 시스템</label>
-      <label><input type="radio" name="theme" value="light"> 라이트</label>
-      <label><input type="radio" name="theme" value="dark"> 다크</label></fieldset>
+      <label><input type="radio" name="theme" value="system"> 기본(야경)</label>
+      <label><input type="radio" name="theme" value="light"> 크림 해도</label>
+      <label><input type="radio" name="theme" value="dark"> 야경</label></fieldset>
     <fieldset><legend>기사 카드</legend>
       <label><input type="radio" name="expand" value="summary"> 요약만</label>
       <label><input type="radio" name="expand" value="full"> 해설까지</label></fieldset>
@@ -104,6 +110,7 @@
 </template>
 <div class="m-snackbar m-only" role="status" aria-live="polite"></div>
 <script src="{{ root }}static/app.js" defer></script>
+<script src="{{ root }}static/chart.js" defer></script>
 <script src="{{ root }}static/mobile.js" defer></script>
 </body>
 </html>

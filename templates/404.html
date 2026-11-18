@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}항로를 잃었어요 · {{ site.title }}{% endblock %}
+{% block body_class %}chart is-404{% endblock %}
+{% block content %}
+<section class="lost">
+  {% if 'lost-ship' in have_ill %}
+  <img src="{{ root }}static/img/lost-ship-800.webp" srcset="{{ root }}static/img/lost-ship-800.webp 800w, {{ root }}static/img/lost-ship.webp 1040w" sizes="(max-width: 760px) 100vw, 720px"
+       width="1040" height="600" alt="별이 뜬 밤바다에 홀로 떠 있는 컨테이너선">
+  {% endif %}
+  <p class="coord">404 · POSITION UNKNOWN</p>
+  <h1 class="headline">이 페이지는 해도에 없는 항로예요.</h1>
+  <p class="overview">주소가 바뀌었거나 오래된 브리핑일 수 있어요. 오늘의 항해일지에서 다시 출발해 보세요.</p>
+  <div class="cta-row">
+    <a class="cta" href="{{ root }}today.html">오늘의 항해일지 →</a>
+    <a class="cta ghost" href="{{ root }}archive.html">지난 브리핑</a>
+  </div>
+</section>
+{% endblock %}

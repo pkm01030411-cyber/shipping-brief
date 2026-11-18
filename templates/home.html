@@ -1,25 +1,57 @@
 {% extends "base.html" %}
-{% block title %}{{ site.title }} — {{ site.tagline }}<a class="m-cta m-only" href="{{ root }}today.html"><span>오늘 브리핑 읽기</span><small></small></a>
+{% block title %}{{ site.title }} — {{ site.tagline }}{% endblock %}
+{% block head %}
+{% if 'container-ship' in have_ill %}<link rel="preload" as="image" href="{{ root }}static/img/container-ship-800.webp" imagesrcset="{{ root }}static/img/container-ship-800.webp 800w, {{ root }}static/img/container-ship.webp 1600w" imagesizes="(max-width: 760px) 100vw, 900px">{% endif %}
 {% endblock %}
-{% block content %}
-<section class="hero">
-  <p class="hero-kicker">{{ site.tagline }}</p>
-  <h1 class="hero-title">매일 저녁 18:30,<br>해운·물류 하루를 10분에.</h1>
-  <div class="hero-stats">
-    <div class="stat"><b id="streak">–</b><span>연속 읽은 날</span></div>
-    <div class="stat"><b>{{ days|length }}</b><span>쌓인 브리핑</span></div>
-    <div class="stat"><b>{{ total_articles }}</b><span>누적 기사</span></div>
-    <div class="stat"><b id="home-star">–</b><span>스크랩</span></div>
-  </div>
-</section>
+{% block body_class %}chart is-home{% endblock %}
 
+{% block before_main %}
+{# ── 시작 화면: 해도 + 야경 ── #}
+<section class="harbor night" aria-labelledby="harbor-title">
+  <div class="harbor-map" aria-hidden="true">
+    <svg class="routes" viewBox="0 0 {{ chart.w }} {{ chart.h }}" preserveAspectRatio="xMidYMid slice">
+      <image href="{{ root }}static/world-night.svg" x="0" y="0" width="{{ chart.w }}" height="{{ chart.h }}"/>
+      {% for r in chart.routes %}<path class="route route-{{ r.id }}" d="{{ r.d }}" pathLength="1"/>{% endfor %}
+      {% for p in chart.ports %}
+      <g class="port{% if loop.first %} is-home{% endif %}" transform="translate({{ p.x }} {{ p.y }})">
+        {% if loop.first %}<circle class="ping" r="4"/>{% endif %}<circle r="2.6"/>
+        <text x="6" y="-5">{{ p.en }}</text>
+      </g>
+      {% endfor %}
+    </svg>
+  </div>
+  <div class="harbor-inner wrap">
+    <p class="coord">DAILY CHART · <span id="harbor-date">{{ latest.date if latest else '' }}</span> · 18:30 KST · 35°06′N 129°02′E</p>
+    <h1 class="harbor-title" id="harbor-title">오늘의 바다를<br>한 장의 해도로.</h1>
+    <p class="harbor-sub">{{ site.tagline }}. 하루치 기사를 요약하고, 업계 용어 해설과 인사이트를 붙여 매일 저녁 펼쳐 드려요.</p>
+    <div class="harbor-cta">
+      <a class="cta" href="{{ root }}today.html">오늘의 항해일지 펼치기 <span aria-hidden="true">→</span></a>
+      <a class="cta ghost" href="{{ root }}archive.html">지난 항해일지</a>
+    </div>
+    <dl class="harbor-stats">
+      <div><dt>연속 읽은 날</dt><dd id="streak">–</dd></div>
+      <div><dt>쌓인 브리핑</dt><dd>{{ days|length }}</dd></div>
+      <div><dt>누적 기사</dt><dd>{{ total_articles }}</dd></div>
+      <div><dt>스크랩</dt><dd id="home-star">–</dd></div>
+    </dl>
+  </div>
+  {% if 'container-ship' in have_ill %}
+  <div class="harbor-ship" data-sail>
+    <img src="{{ root }}static/img/container-ship-800.webp" srcset="{{ root }}static/img/container-ship-800.webp 800w, {{ root }}static/img/container-ship.webp 1600w"
+         sizes="(max-width: 760px) 100vw, 900px" width="1600" height="238" alt="해도 위를 지나는 초대형 컨테이너선" fetchpriority="high">
+  </div>
+  {% endif %}
+  <p class="harbor-legend wrap" aria-hidden="true"><span class="lg-main">━</span> 아시아–유럽 수에즈 항로 <span class="lg-detour">┅</span> 희망봉 우회 <span class="scroll-hint">SCROLL ↓</span></p>
+</section>
+{% endblock %}
+
+{% block content %}
 {% if latest %}
 <section class="today-card" data-today-ids="{{ latest.articles|map(attribute='id')|join('|') }}">
   <div class="today-head">
-    <div>
-      <div class="dateline"><span class="date">{{ latest.date_label }}</span><span class="muted">{{ latest.articles|length }}건 · 약 {{ (3 + latest.articles|length * 0.25)|round|int }}분 · {{ latest.coverage }}</span></div>
-      <h2 class="headline">{{ latest.brief.headline }}</h2>
-    </div>
+    <p class="coord">LOGBOOK · {{ latest.date_label }}</p>
+    <h2 class="headline">{{ latest.brief.headline }}</h2>
+    <p class="muted small">{{ latest.articles|length }}건 · 약 {{ (3 + latest.articles|length * 0.25)|round|int }}분 · {{ latest.coverage }}</p>
   </div>
   <p class="overview">{{ latest.brief.overview }}</p>
   <div id="progress" class="progress home-progress" role="progressbar" aria-label="오늘 읽은 기사">
@@ -29,7 +61,7 @@
   {% if latest.top %}
   <ol class="mini-top">
     {% for a in latest.top %}
-    <li><span class="n">{{ loop.index }}</span><a href="{{ root }}today.html#a-{{ loop.index }}">{{ a.title }}</a><span class="muted">{{ a.source_name }}</span></li>
+    <li><span class="n">{{ "%02d"|format(loop.index) }}</span><a href="{{ root }}a/{{ a.slug }}.html">{{ a.title }}</a><span class="muted">{{ a.source_name }}</span></li>
     {% endfor %}
   </ol>
   {% endif %}
@@ -39,7 +71,10 @@
   </div>
 </section>
 {% else %}
-<section class="today-card"><p class="muted">아직 브리핑이 없습니다. 첫 실행 후 이 자리에 오늘의 브리핑이 나타납니다.</p></section>
+<section class="today-card empty-sea">
+  {% if 'lost-ship' in have_ill %}<img src="{{ root }}static/img/lost-ship-800.webp" width="1040" height="600" alt="" loading="lazy">{% endif %}
+  <p><b>오늘은 조용한 바다예요.</b> 첫 실행 후 이 자리에 오늘의 브리핑이 나타납니다.</p>
+</section>
 {% endif %}
 
 <div class="home-grid">
@@ -57,7 +92,7 @@
     {% else %}
     <p class="muted small">아직 요충지가 언급된 기사가 없습니다. 기사가 쌓이면 홍해·수에즈·파나마 같은 해상 요충지의 흐름이 여기에 나타납니다.</p>
     {% endif %}
-    <a class="more" href="{{ root }}geo.html">정세 대시보드 →</a>
+    <a class="more" href="{{ root }}geo.html">국제정세 레이더 →</a>
   </section>
 
   <section class="panel">
@@ -98,13 +133,18 @@
   </section>
 </div>
 
+{% if 'sts-crane' in have_ill %}
+<figure class="plate">
+  <img src="{{ root }}static/img/sts-crane-800.webp" width="856" height="665" alt="야간 컨테이너 터미널의 안벽 갠트리크레인" loading="lazy" decoding="async">
+</figure>
+{% endif %}
 <section class="howto">
   <h2 class="sec-title">이 사이트 쓰는 법</h2>
   <div class="howto-grid">
-    <div><b>1</b> 저녁 18:30 이후 "오늘"에서 <em>꼭 읽을 3건</em>부터. 접힌 기사는 여유 있을 때.</div>
+    <div><b>1</b> 저녁 18:30 이후 "오늘"에서 <em>꼭 읽을 3건</em>부터. 제목을 누르면 기사 해설 화면이 열려요.</div>
     <div><b>2</b> 카드의 ☐ 로 읽음 표시 — 진행 바가 차고, 연속 읽은 날이 쌓입니다.</div>
     <div><b>3</b> 자소서·면접에 쓸 기사는 ☆ 스크랩 → Markdown으로 내보내기.</div>
-    <div><b>4</b> 모르는 용어는 카드 안 <em>▸ 용어</em>와 "오늘의 용어"에서. 월요일엔 주간 리뷰로 한 주를 복기.</div>
+    <div><b>4</b> 본문의 <em>점선 밑줄 용어</em>를 누르면 해설이 떠요. 월요일엔 주간 리뷰로 한 주를 복기.</div>
   </div>
 </section>
 <a class="m-cta m-only" href="{{ root }}today.html"><span>오늘 브리핑 읽기</span><small></small></a>

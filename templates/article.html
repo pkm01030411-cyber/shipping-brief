@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% import "_article.html" as art %}
+{% block title %}{{ a.title }} · {{ site.title }}{% endblock %}
+{% block msub %}{{ a.source_name }}{% endblock %}
+{% block body_class %}editorial{% endblock %}
+{% block head %}
+<meta name="description" content="{{ a.summary[:140] }}">
+<meta property="og:title" content="{{ a.title }}">
+<meta property="og:description" content="{{ a.summary[:140] }}">
+{% if a.ill %}<meta property="og:image" content="{{ site.base_url }}static/img/{{ a.ill.name }}.webp">{% endif %}
+{% endblock %}
+
+{% block before_main %}
+<div class="read-progress" aria-hidden="true"><i></i></div>
+{% endblock %}
+
+{% block content %}
+<article class="ed" data-solo {{ art.attrs(a) }}>
+  <header class="ed-head">
+    <p class="ed-kicker">
+      <span class="ed-cat">{{ a.category or a.source_name }}{% if top_rank %} · 오늘 꼭 읽을 {{ top_rank }}번{% endif %}</span>
+      <span>{{ a.published|ftime }} · {{ a.source_name }}</span>
+      <span>읽는 데 약 {{ read_min }}분</span>
+    </p>
+    <h1 class="ed-title">{{ a.title }}</h1>
+    {% if a.subtitle %}<p class="ed-dek">{{ a.subtitle }}</p>{% endif %}
+    {% if a.kw %}<p class="ed-kw">{% for kw in a.kw %}<a class="kw" href="{{ root }}tag/{{ kw|tagslug }}.html">{{ kw }}</a>{% endfor %}</p>{% endif %}
+  </header>
+
+  {% if a.ill %}
+  <figure class="ed-plate">
+    <img src="{{ root }}static/img/{{ a.ill.name }}-800.webp" srcset="{{ root }}static/img/{{ a.ill.name }}-800.webp 800w, {{ root }}static/img/{{ a.ill.name }}.webp {{ a.ill.w }}w"
+         sizes="(max-width: 760px) 100vw, 1040px" width="{{ a.ill.w }}" height="{{ a.ill.h }}" alt="{{ a.ill.alt }}" decoding="async">
+  </figure>
+  {% endif %}
+
+  <div class="ed-grid">
+    <div class="ed-body">
+      <section aria-labelledby="sum-h">
+        <h2 class="ed-label" id="sum-h">요약</h2>
+        <p class="ed-lead">{{ summary_html }}</p>
+      </section>
+
+      {% if reason %}
+      <blockquote class="ed-pull"><span class="ed-label">왜 지금 읽어야 하나</span>{{ reason }}</blockquote>
+      {% endif %}
+
+      {% if a.why %}
+      <section aria-labelledby="why-h">
+        <h2 class="ed-label" id="why-h">이 기사의 의미</h2>
+        <p>{{ why_html }}</p>
+      </section>
+      {% endif %}
+
+      {% if a.insight %}
+      <section class="ed-insight night" aria-labelledby="ins-h">
+        <h2 class="coord" id="ins-h">INSIGHT · 관전 포인트</h2>
+        <p>{{ insight_html }}</p>
+      </section>
+      {% endif %}
+
+      {% if a.geo and a.geo.note %}
+      <p class="ed-geo"><span class="ed-label">정세 메모</span>{{ a.geo.note }}
+        {% if a.geo.impact %}<span class="imp-chip {{ a.geo.impact|impcls }}" title="해운 흐름에 대한 영향 (−2~+2)">{{ a.geo.impact|impfmt }}</span>{% endif %}</p>
+      {% endif %}
+
+      {{ art.tags(a, root) }}
+
+      <div class="ed-actions">
+        <a class="cta origin-link" href="{{ a.url }}" target="_blank" rel="noopener">{{ a.source_name }} 원문 읽기 <span aria-hidden="true">↗</span></a>
+        <button type="button" class="btn-star chip-btn" aria-pressed="false">☆</button>
+        <button type="button" class="btn-read chip-btn" aria-pressed="false"><span class="chk"></span><span class="lbl">읽음</span></button>
+      </div>
+      <p class="ed-note">요약·해설은 AI가 원문을 바탕으로 만들었어요. 수치와 인용은 원문에서 확인하세요.</p>
+    </div>
+
+    <aside class="ed-side" aria-label="용어 해설과 위치">
+      {% if pins %}
+      <div class="locator night">
+        <p class="coord">LOCATOR · {{ pins|map(attribute='name')|join(' · ') }}</p>
+        <div class="chartmap mini">
+          {% for p in pins %}<span class="pin pin-{{ p.kind }}" style="left: {{ p.px }}%; top: {{ p.py }}%"><span>{{ p.name }}</span></span>{% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      {% if terms %}
+      <section class="ed-terms" aria-labelledby="terms-h">
+        <h2 class="ed-label" id="terms-h">용어 해설</h2>
+        <dl>
+          {% for t in terms %}
+          <div id="term-{{ loop.index0 }}" data-term-def="{{ loop.index0 }}">
+            <dt>{{ t.term }}</dt>
+            <dd>{{ t.explanation }}</dd>
+            {% if t.diagram %}
+            <dd class="ed-diagram"><img src="{{ root }}static/img/{{ t.diagram }}-800.webp" width="800" height="{{ 441 if t.diagram == 'teu' else 585 }}" alt="{{ 'TEU 기준이 되는 20피트 컨테이너와 40피트 컨테이너 비교 도해' if t.diagram == 'teu' else '컨테이너선 단면 도해: 선창 안과 갑판 위 적재' }}" loading="lazy" decoding="async"></dd>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </dl>
+      </section>
+      {% endif %}
+    </aside>
+  </div>
+
+  {% if related %}
+  <section class="ed-related" aria-labelledby="rel-h">
+    <h2 class="ed-label" id="rel-h">같은 흐름의 기사</h2>
+    <ol class="timeline">
+      {% for r in related %}
+      <li><time datetime="{{ r.a.published[:10] }}">{{ r.a.published[5:10]|replace('-', '.') }}</time>
+        <a href="{{ root }}a/{{ r.a.slug }}.html">{{ r.a.title }}</a>
+        <span class="muted">#{{ r.tag }}</span></li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% endif %}
+
+  <nav class="ed-pager" aria-label="같은 날 기사">
+    {% if prev_a %}<a href="{{ root }}a/{{ prev_a.slug }}.html"><span>← 이전 기사</span>{{ prev_a.title }}</a>{% else %}<span></span>{% endif %}
+    <a class="ed-back" href="{{ root }}day/{{ date }}.html#art-{{ a.slug }}">{{ day.date_label }} 브리핑으로</a>
+    {% if next_a %}<a href="{{ root }}a/{{ next_a.slug }}.html"><span>다음 기사 →</span>{{ next_a.title }}</a>{% else %}<span></span>{% endif %}
+  </nav>
+</article>
+
+<div class="term-pop" id="term-pop" role="dialog" aria-modal="false" aria-labelledby="term-pop-t" hidden>
+  <button type="button" class="term-pop-x" aria-label="닫기">×</button>
+  <b id="term-pop-t"></b>
+  <p></p>
+  <img alt="" hidden>
+</div>
+{% endblock %}

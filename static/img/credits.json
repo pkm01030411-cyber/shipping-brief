@@ -1,0 +1,18 @@
+{
+  "_note": "사이트 일러스트·지도 출처 기록. illustrations[].tool/prompt 는 내부 기록용이며 크레딧 페이지에 표시하지 않는다.",
+  "illustrations": [
+    {"file": "container-ship.webp", "subject": "초대형 컨테이너선", "tone": "night", "tool": "AI 이미지 생성", "prompt": "PRD 10.2 #1"},
+    {"file": "sts-crane.webp", "subject": "안벽 갠트리크레인(STS)", "tone": "night", "tool": "AI 이미지 생성", "prompt": "PRD 10.2 #2"},
+    {"file": "yard.webp", "subject": "컨테이너 야적장과 RTG", "tone": "night", "tool": "AI 이미지 생성", "prompt": "PRD 10.2 #3"},
+    {"file": "bulk-carrier.webp", "subject": "벌크선", "tone": "night", "tool": "AI 이미지 생성", "prompt": "PRD 10.2 #4"},
+    {"file": "tanker.webp", "subject": "원유 탱커", "tone": "night", "tool": "AI 이미지 생성", "prompt": "PRD 10.2 #5"},
+    {"file": "lng-carrier.webp", "subject": "LNG 운반선", "tone": "night", "tool": "AI 이미지 생성", "prompt": "PRD 10.2 #6"},
+    {"file": "tugboat.webp", "subject": "예선(터그보트)", "tone": "night", "tool": "AI 이미지 생성", "prompt": "PRD 10.2 #7"},
+    {"file": "lost-ship.webp", "subject": "항로를 잃은 배 (404)", "tone": "night", "tool": "AI 이미지 생성", "prompt": "PRD 10.2 #8"},
+    {"file": "teu.webp", "subject": "20피트·40피트 컨테이너 비교", "tone": "paper", "tool": "AI 이미지 생성", "prompt": "PRD 10.2 #9"},
+    {"file": "cross-section.webp", "subject": "컨테이너선 단면과 선적", "tone": "paper", "tool": "AI 이미지 생성", "prompt": "PRD 10.2 #10"}
+  ],
+  "data": [
+    {"name": "세계 지도", "source": "Natural Earth (public domain) via world-atlas", "url": "https://www.naturalearthdata.com/", "credit": "Made with Natural Earth"}
+  ]
+}

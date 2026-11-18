@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}소개 · 크레딧 · {{ site.title }}{% endblock %}
+{% block body_class %}editorial{% endblock %}
+{% block content %}
+<article class="ed about">
+  <header class="ed-head">
+    <p class="ed-kicker"><span class="ed-cat">ABOUT</span><span>{{ site.title }}</span></p>
+    <h1 class="ed-title">매일 저녁, 해운·물류 하루를<br>한 장의 해도로 정리합니다</h1>
+    <p class="ed-dek">국제물류·해운 업계를 준비하며 매일 10분씩 업계 뉴스를 읽기 위해 만든 개인 브리핑 사이트입니다.</p>
+  </header>
+
+  {% if 'container-ship' in have_ill %}
+  <figure class="ed-plate">
+    <img src="{{ root }}static/img/container-ship-800.webp" srcset="{{ root }}static/img/container-ship-800.webp 800w, {{ root }}static/img/container-ship.webp 1600w"
+         sizes="(max-width: 760px) 100vw, 1040px" width="1600" height="238" alt="밤바다를 지나는 초대형 컨테이너선" decoding="async">
+  </figure>
+  {% endif %}
+
+  <div class="ed-body about-body">
+    <section>
+      <h2 class="ed-label">한눈에</h2>
+      <dl class="about-stats">
+        <div><dt>운영 시작</dt><dd>{{ first_day or '–' }}</dd></div>
+        <div><dt>쌓인 브리핑</dt><dd>{{ days|length }}일</dd></div>
+        <div><dt>누적 기사</dt><dd>{{ total_articles }}건</dd></div>
+        <div><dt>업데이트</dt><dd>매일 18:30</dd></div>
+      </dl>
+    </section>
+
+    <section>
+      <h2 class="ed-label">매일 돌아가는 방식</h2>
+      <ol class="about-flow">
+        <li><b>수집</b> 코리아쉬핑가제트 카테고리 페이지와 카고뉴스 RSS에서 하루치 기사를 모읍니다 (Python).</li>
+        <li><b>요약</b> Claude가 기사마다 요약·의미·인사이트·용어 해설·관련도를 만들고, 오늘 꼭 읽을 3건을 고릅니다.</li>
+        <li><b>정세 태깅</b> 기사에 나온 국가·해상 요충지·동인을 태깅해 국제정세 레이더에 모읍니다.</li>
+        <li><b>빌드·배포</b> Jinja2로 정적 페이지를 만들어 GitHub Actions가 GitHub Pages에 올립니다. 서버는 없습니다.</li>
+      </ol>
+      <p>읽음 표시·스크랩·연속 읽은 날은 모두 이 브라우저에만 저장됩니다.</p>
+    </section>
+
+    <section>
+      <h2 class="ed-label">크레딧</h2>
+      <ul class="about-credits">
+        <li><b>기사 원문</b> 코리아쉬핑가제트, 카고뉴스. 각 기사의 저작권은 해당 매체에 있으며, 이 사이트는 요약과 원문 링크만 제공합니다.</li>
+        {% for d in credits.data %}<li><b>{{ d.name }}</b> <a href="{{ d.url }}" target="_blank" rel="noopener">{{ d.source }}</a> — {{ d.credit }}</li>{% endfor %}
+        <li><b>일러스트</b> {{ site.title }} 제작 ({{ credits.illustrations|length }}종: {{ credits.illustrations|map(attribute='subject')|join(', ') }})</li>
+        <li><b>글꼴</b> Pretendard, Noto Serif KR, IBM Plex Mono (SIL Open Font License)</li>
+      </ul>
+    </section>
+  </div>
+</article>
+{% endblock %}

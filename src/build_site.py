@@ -15,6 +15,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from .common import (SITE_DIR, STATIC_DIR, TEMPLATE_DIR, all_days, load_config,
                      load_day, now_local)
 from . import geo as geo_mod
+from . import visual
 from .weekly import all_weeks, load_week
 
 log = logging.getLogger("brief.build")
@@ -61,8 +62,16 @@ def match_keywords(a: dict, keywords: list[str]) -> list[str]:
     return out
 
 
+def art_slug(i) -> str:
+    return re.sub(r"[^0-9a-z가-힣]+", "-", str(i).lower()).strip("-")
+
+
+_HAVE_ILL: set[str] = set()
+
+
 def annotate(a: dict, keywords: list[str]) -> dict:
-    return {**a, "kw": match_keywords(a, keywords)}
+    return {**a, "kw": match_keywords(a, keywords), "slug": art_slug(a["id"]),
+            "ill": visual.pick_illustration(a, _HAVE_ILL), "regions": visual.region_slugs(a)}
 
 
 # ── 하루치 가공 ──────────────────────────────────────────────────
@@ -76,6 +85,12 @@ def prepare_day(day: dict, cfg: dict) -> dict:
         a = by_id.get(t["id"])
         if a:
             top.append({**a, "reason": t.get("reason", "")})
+    prev_ill = None
+    for t in top:  # 상단 3건: 바로 앞과 같은 그림이면 띠를 생략해 반복을 줄인다
+        name = (t.get("ill") or {}).get("name")
+        t["ill_band"] = name is not None and name != prev_ill
+        if t["ill_band"]:
+            prev_ill = name
     top_ids = {t["id"] for t in top}
     rest = [a for a in arts if a["id"] not in top_ids]
     rest.sort(key=lambda a: a["published"], reverse=True)
@@ -126,6 +141,53 @@ def build_feed(site: dict, days: list[dict]) -> str:
 </channel></rss>"""
 
 
+# ── 기사 페이지 ──────────────────────────────────────────────────
+def build_articles(env, site: dict, days: list[str], prepared: dict[str, dict]) -> int:
+    """기사 하나당 site/a/<slug>.html — 경제지 에디토리얼 톤의 읽기 화면."""
+    tpl = env.get_template("article.html")
+    # 같은 기사가 여러 날에 걸쳐 수집됐으면 가장 최근 날짜 것만
+    order: list[tuple[str, dict]] = []
+    seen: set[str] = set()
+    for d in days:
+        day = prepared[d]
+        for a in [*day["top"], *day["rest"]]:
+            if a["id"] not in seen:
+                seen.add(a["id"])
+                order.append((d, a))
+    by_tag: dict[str, list[tuple[str, dict]]] = defaultdict(list)
+    for d, a in order:
+        for t in a.get("tags", []) or []:
+            by_tag[t].append((d, a))
+    have = _HAVE_ILL
+    n = 0
+    for d, a in order:
+        day = prepared[d]
+        seq = [*day["top"], *day["rest"]]
+        idx = next(i for i, x in enumerate(seq) if x["id"] == a["id"])
+        prev_a = seq[idx - 1] if idx > 0 else None
+        next_a = seq[idx + 1] if idx + 1 < len(seq) else None
+        top_rank = next((i + 1 for i, x in enumerate(day["top"]) if x["id"] == a["id"]), None)
+        related, rseen = [], {a["id"]}
+        for t in a.get("tags", []) or []:
+            for rd, ra in by_tag[t]:
+                if ra["id"] not in rseen:
+                    rseen.add(ra["id"])
+                    related.append({"date": rd, "a": ra, "tag": t})
+        related.sort(key=lambda r: r["a"]["published"], reverse=True)
+        terms = [{**t, "key": visual.term_key(t["term"]), "diagram": visual.term_diagram(t["term"], have)}
+                 for t in (a.get("terms") or [])]
+        html = tpl.render(site=site, root="../", nav="article", a=a, day=day, date=d,
+                          reason=a.get("reason") or next((t.get("reason", "") for t in (day["brief"].get("top") or [])
+                                                          if t.get("id") == a["id"]), ""),
+                          top_rank=top_rank, prev_a=prev_a, next_a=next_a, related=related[:6],
+                          terms=terms, pins=visual.locator_pins(a), **visual.termify(a),
+                          read_min=max(1, round(len((a.get("summary") or "") + (a.get("why") or "")
+                                                    + (a.get("insight") or "")) / 500)))
+        (SITE_DIR / "a" / f"{a['slug']}.html").write_text(html, encoding="utf-8")
+        n += 1
+    return n
+
+
 # ── 빌드 ────────────────────────────────────────────────────────
 def build() -> None:
     cfg = load_config()
@@ -136,14 +198,23 @@ def build() -> None:
     env.filters["impcls"] = geo_mod.impact_class
     env.filters["impfmt"] = geo_mod.fmt_impact
     env.filters["geoslug"] = geo_mod.slug
-    env.filters["artslug"] = lambda i: re.sub(r"[^0-9a-z가-힣]+", "-", str(i).lower()).strip("-")
+    env.filters["artslug"] = art_slug
+    _HAVE_ILL.clear(); _HAVE_ILL.update(visual.available())
+    env.globals["have_ill"] = _HAVE_ILL
     env.globals["country_ko"] = geo_mod.COUNTRY_KO
 
     if SITE_DIR.exists():
         shutil.rmtree(SITE_DIR)
-    for sub in ("day", "tag", "week"):
+    for sub in ("day", "tag", "week", "a"):
         (SITE_DIR / sub).mkdir(parents=True)
     shutil.copytree(STATIC_DIR, SITE_DIR / "static")
+
+    land_path = (STATIC_DIR / "world-land.path.txt").read_text(encoding="utf-8")
+    (SITE_DIR / "static" / "world-night.svg").write_text(
+        visual.world_svg(land_path, "#18304b", "#2a4867", "rgba(156,194,218,.10)"), encoding="utf-8")
+    (SITE_DIR / "static" / "world-cream.svg").write_text(
+        visual.world_svg(land_path, "#e3d9bf", "#cbbd9a", "rgba(27,58,92,.10)"), encoding="utf-8")
+    (SITE_DIR / "static" / "world-land.path.txt").unlink(missing_ok=True)
 
     site = {**cfg["site"], "built_at": now_local(cfg).strftime("%Y-%m-%d %H:%M")}
     site["base_url"] = (site.get("base_url") or "").rstrip("/") + "/" if site.get("base_url") else ""
@@ -157,6 +228,7 @@ def build() -> None:
         if not day or not day.get("articles"):
             continue
         p = prepare_day(day, cfg)
+        p["map"] = geo_mod.map_regions(d, p["articles"])
         prepared[d] = p
         archive.append({"date": d, "label": p["date_label"], "count": len(day["articles"]),
                         "headline": p["brief"].get("headline", "")})
@@ -165,7 +237,8 @@ def build() -> None:
     env.globals["latest_date"] = days[0] if days else ""
     env.globals["latest_ids"] = "|".join(a["id"] for a in prepared[days[0]]["articles"]) if days else ""
     env.globals["mtitles"] = {"home": site["title"], "today": "브리핑", "geo": "국제정세", "weekly": "주간 리뷰",
-                              "tags": "태그", "scrap": "스크랩", "archive": "지난 브리핑"}
+                              "tags": "태그", "scrap": "스크랩", "archive": "지난 브리핑",
+                              "article": "기사", "about": "소개"}
 
     day_tpl = env.get_template("day.html")
     for i, d in enumerate(days):
@@ -184,6 +257,9 @@ def build() -> None:
 
     (SITE_DIR / "archive.html").write_text(
         env.get_template("archive.html").render(site=site, archive=archive, root="", nav="archive"), encoding="utf-8")
+
+    # 기사 페이지 (에디토리얼)
+    build_articles(env, site, days, prepared)
 
     # 태그 페이지
     by_tag: dict[str, list[dict]] = defaultdict(list)
@@ -261,7 +337,6 @@ def build() -> None:
         g["map"]["date_short"] = f"{_d.month}월 {_d.day}일({WEEKDAYS[_d.weekday()]})"
     else:
         g["map"]["date_short"] = ""
-    land_path = (STATIC_DIR / "world-land.path.txt").read_text(encoding="utf-8")
     (SITE_DIR / "geo.html").write_text(env.get_template("geo.html").render(
         site=site, root="", nav="geo", g=g,
         map_svg=geo_mod.world_map_svg(g["map"], land_path),
@@ -287,14 +362,23 @@ def build() -> None:
         week=latest_week, kw_trend=kw_trend, archive=archive, top_tags=tag_index[:14],
         geo_top=sorted([c for c in g["periods"][30]["chokepoints"] if c["count"]],
                        key=lambda c: (-c["count"], c["avg"] or 0))[:3],
-        geo_line=g["line"], geo_tiles=g["tiles"])
+        geo_line=g["line"], geo_tiles=g["tiles"], chart=visual.chart_routes())
     (SITE_DIR / "index.html").write_text(home, encoding="utf-8")
+
+    # 소개·크레딧, 404
+    credits = json.loads((STATIC_DIR / "img" / "credits.json").read_text(encoding="utf-8"))
+    (SITE_DIR / "about.html").write_text(env.get_template("about.html").render(
+        site=site, root="", nav="about", credits=credits, days=days,
+        total_articles=sum(len(prepared[d]["articles"]) for d in days),
+        first_day=days[-1] if days else ""), encoding="utf-8")
+    (SITE_DIR / "404.html").write_text(env.get_template("404.html").render(
+        site=site, root=site["base_url"] or "/", nav="404"), encoding="utf-8")
 
     # PWA
     manifest = {
         "name": site["title"], "short_name": site.get("short_name", site["title"]),
         "description": site["tagline"], "start_url": "./index.html", "scope": "./",
-        "display": "standalone", "background_color": "#fbfaf7", "theme_color": "#ffffff", "lang": "ko",
+        "display": "standalone", "background_color": "#0c1925", "theme_color": "#0c1925", "lang": "ko",
         "orientation": "portrait",
         "icons": [{"src": "static/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
                   {"src": "static/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
@@ -313,9 +397,13 @@ def build() -> None:
     (SITE_DIR / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
     # 오프라인용 미리 캐시: 핵심 페이지 + 최근 7일 브리핑 + 정적 파일
     precache = ["./", "./index.html", "./today.html", "./geo.html", "./scrap.html", "./weekly.html", "./archive.html",
-                "./manifest.json", "./static/style.css", "./static/mobile.css", "./static/app.js", "./static/mobile.js",
+                "./manifest.json", "./about.html", "./static/style.css", "./static/chart.css", "./static/mobile.css",
+                "./static/app.js", "./static/chart.js", "./static/mobile.js", "./static/world-night.svg",
+                "./static/world-cream.svg", "./static/img/container-ship-800.webp",
                 "./static/icon-192.png", "./static/icon-maskable-192.png"]
     precache += [f"./day/{d}.html" for d in days[:7]]
+    # 최근 7일치 기사 페이지만 오프라인 캐시 (사진·일러스트는 sw.js가 쓰면서 채운다)
+    precache += [f"./a/{a['slug']}.html" for d in days[:7] for a in prepared[d]["articles"]]
     sw = (STATIC_DIR / "sw.js").read_text(encoding="utf-8").replace("__BUILD__", site["built_at"]) \
         .replace('"__PRECACHE__"', json.dumps(precache, ensure_ascii=False))
     (SITE_DIR / "sw.js").write_text(sw, encoding="utf-8")

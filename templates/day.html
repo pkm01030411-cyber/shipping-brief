@@ -2,9 +2,11 @@
 {% import "_article.html" as art %}
 {% block title %}{{ day.date_label }} · {{ site.title }}{% endblock %}
 {% block msub %}{{ day.date_label }}{% endblock %}
+{% block body_class %}chart is-day{% endblock %}
 {% block content %}
 {% set b = day.brief %}
 <section class="brief-head">
+  <p class="coord">LOGBOOK · {{ day.date }} · 18:30 KST</p>
   <div class="dateline">
     <span class="date">{{ day.date_label }}</span>
     <span class="meta">
@@ -29,6 +31,19 @@
   </div>
   {% endif %}
 </section>
+
+{% set m = day.map %}
+{% if m and m.mapped %}
+<section class="daychart" aria-labelledby="dc-h">
+  <h2 class="sec-title" id="dc-h">오늘의 해도 <span class="muted">해역이 특정된 기사 {{ m.mapped }}/{{ day.articles|length }}건 · 점을 누르면 기사로</span></h2>
+  <div class="chartmap">
+    {% for r in m.regions if r.count %}
+    <a class="pin" href="#{{ r.articles[0].anchor }}" data-region="{{ r.slug }}" style="left: {{ r.px }}%; top: {{ r.py }}%; --d: {{ r.d }}px"
+       aria-label="{{ r.name }} 기사 {{ r.count }}건"><b>{{ r.count }}</b><span>{{ r.name }}</span></a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
 
 <div class="toolbar">
   <div id="progress" class="progress" role="progressbar" aria-label="오늘 읽은 기사">

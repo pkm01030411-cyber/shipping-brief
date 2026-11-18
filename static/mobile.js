@@ -23,11 +23,8 @@
     else html.removeAttribute("data-theme");
     html.classList.toggle("m-expand-all", S.expand === "full");
     // 상태 표시줄 색 = 앱 바 색
-    var dark = S.theme === "dark" || (S.theme === "system" && matchMedia("(prefers-color-scheme: dark)").matches);
-    $$('meta[name="theme-color"]').forEach(function (m) {
-      if (S.theme === "system") m.setAttribute("content", /dark/.test(m.media) ? "#182230" : "#ffffff");
-      else m.setAttribute("content", dark ? "#182230" : "#ffffff");
-    });
+    // 앱 바는 테마와 상관없이 늘 야경색
+    $$('meta[name="theme-color"]').forEach(function (m) { m.setAttribute("content", "#0c1925"); });
   }
   applySettings();
   function haptic() { if (S.haptic !== "off" && navigator.vibrate) { try { navigator.vibrate(8); } catch (e) {} } }

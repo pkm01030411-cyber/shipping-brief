@@ -68,9 +68,9 @@
       var sb = el.querySelector(".btn-star"); if (sb) { sb.setAttribute("aria-pressed", s); sb.textContent = s ? "★" : "☆"; sb.title = s ? "스크랩 해제" : "스크랩"; }
 
       var low = el.dataset.low === "1";
-      var hidden = (filter.source !== "all" && el.dataset.source !== filter.source)
-                || (low && !filter.showLow)
-                || (filter.hideRead && r);
+      var hidden = !el.hasAttribute("data-solo") && (filter.source !== "all" && el.dataset.source !== filter.source)
+                || (!el.hasAttribute("data-solo") && low && !filter.showLow)
+                || (!el.hasAttribute("data-solo") && filter.hideRead && r);
       el.classList.toggle("is-hidden", hidden);
       total++; if (r) done++;
       if (!hidden) visibleEls.push(el);
