@@ -1,20 +1,16 @@
 import os, json, requests
-UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36 shipping-brief"}
-os.makedirs("out3", exist_ok=True)
-B="https://dream.kotra.or.kr/kotranews/cms"
-U={
- "nat_ru.html": B+"/nation/actionNatIemList.do?pageNo=&pagePerCnt=10&SITE_NO=3&MENU_ID=220&CONTENTS_NO=1&pRegnCd=03&pNatCd=643",
- "list70.html": B+"/com/index.do?MENU_ID=70",
- "boardlist_ru.html": B+"/news/actionKotraBoardList.do?SITE_NO=3&MENU_ID=70&CONTENTS_NO=1&pNatCd=643&pageNo=1&pagePerCnt=20",
- "boardlist_ru2.html": B+"/news/actionKotraBoardList.do?SITE_NO=3&MENU_ID=70&CONTENTS_NO=1&pNatCd=643",
- "detail.html": B+"/news/actionKotraBoardDetail.do?SITE_NO=3&MENU_ID=180&CONTENTS_NO=1&pNttSn=244954",
- "ukr1590.html": B+"/com/index.do?MENU_ID=1590",
- "search_ru.html": "https://dream.kotra.or.kr/kotranews/search.do?query=%EB%9F%AC%EC%8B%9C%EC%95%84",
-}
+UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36 shipping-brief",
+      "X-Requested-With":"XMLHttpRequest","Referer":"https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=70"}
+os.makedirs("out4", exist_ok=True)
+s=requests.Session(); s.headers.update(UA)
+s.get("https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=70",timeout=25)
 rep={}
-for k,u in U.items():
-    try:
-        r=requests.get(u,headers=UA,timeout=25); open("out3/"+k,"wb").write(r.content[:900000])
-        rep[k]={"status":r.status_code,"final":r.url,"bytes":len(r.content)}
-    except Exception as e: rep[k]={"err":repr(e)[:200]}
-json.dump(rep,open("out3/report.json","w"),indent=1); print(json.dumps(rep,indent=1))
+for cd in ["03","01"]:
+    r=s.post("https://dream.kotra.or.kr/ajaxf/frNews/getInNewsNationList.do",data={"cd":cd,"bbsSn":"242,244,322,245,246,444,464,518,505,484,519"},timeout=25)
+    open(f"out4/nat_{cd}.json","wb").write(r.content); rep[f"nat_{cd}"]=[r.status_code,len(r.content)]
+base={"pageNo":"1","pagePerCnt":"20","SITE_NO":"3","MENU_ID":"70","CONTENTS_NO":"1","bbsGbn":"00","bbsSn":"242,244,322,245,246,444,464,518,505,484,519","pNttSn":"","recordCountPerPage":"20","viewType":"","pNewsGbn":"","pStartDt":"","pEndDt":"","sSearchVal":""}
+for name,extra in {"ru":[("pRegnCd","03"),("pNatCd","643")],"cis":[("pNatCd","643"),("pNatCd","398"),("pNatCd","860"),("pNatCd","031"),("pNatCd","112"),("pNatCd","417")],"all":[]}.items():
+    data=list(base.items())+extra
+    r=s.post("https://dream.kotra.or.kr/ajaxf/frNews/getKotraBoardList.do",data=data,timeout=25)
+    open(f"out4/list_{name}.json","wb").write(r.content); rep["list_"+name]=[r.status_code,len(r.content),r.headers.get("content-type")]
+json.dump(rep,open("out4/report.json","w"),indent=1); print(rep)
