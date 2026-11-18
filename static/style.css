@@ -352,7 +352,7 @@ a.gtile[href]:hover { border-color: var(--navy); text-decoration: none; }
 .mp-more { margin-top: 10px; }
 .mp-more summary { cursor: pointer; font-size: 13px; color: var(--navy); }
 .mp-more .mp-list { margin-top: 10px; }
-.art-anchor { display: block; height: 0; scroll-margin-top: 120px; }
+.art-anchor { position: absolute; display: block; height: 0; scroll-margin-top: 120px; }  /* 그리드 칸을 차지하지 않게 */
 .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12.5px; color: var(--ink-2); margin-top: 8px; }
 .legend span { display: inline-flex; align-items: center; gap: 6px; }
 .lg { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
