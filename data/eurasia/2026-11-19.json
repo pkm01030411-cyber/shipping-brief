@@ -277,9 +277,119 @@
       "description": "",
       "category": "нефтегазовый рынок",
       "published": "2026-11-19T00:12:00+09:00"
+    },
+    {
+      "id": "meduza:31662dc3d1",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/19/russian-state-duma-approves-2027-2029-federal-budget-in-second-reading",
+      "title": "Russian State Duma approves 2027–2029 federal budget in second reading",
+      "description": "Russia’s State Duma approved the draft federal budget for 2027 and the 2028–2029 planning period in its second reading.",
+      "category": "",
+      "published": "2026-11-19T21:46:36+09:00"
+    },
+    {
+      "id": "meduza:d2ef379cbb",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/19/putin-russia-refuses-to-negotiate-ceasefire-with-ukraine-after-strikes-on-crimean-bridge",
+      "title": "Putin: Russia refuses to negotiate ceasefire with Ukraine after strikes on Crimean Bridge",
+      "description": "Russian President Vladimir Putin said he discussed a possible ceasefire with Ukraine in several areas with Russia’s Security Council, a body that advises the president on national security, but abandoned the idea after Ukrainian armed forces attacked the Crimean Bridge in recent days.",
+      "category": "",
+      "published": "2026-11-19T21:29:54+09:00"
+    },
+    {
+      "id": "meduza:be31f5db15",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/feature/2026/11/19/putin-trump-and-xi-warn-international-criminal-court-against-abusing-its-jurisdiction-putin-has-faced-an-icc-arrest-warrant-since-2023",
+      "title": "Putin, Trump, and Xi warn International Criminal Court against ‘abusing its jurisdiction.’ Putin has faced an ICC arrest warrant since 2023.",
+      "description": "A trilateral meeting of the leaders of China, the United States, and Russia — Xi Jinping, Donald Trump, and Vladimir Putin — has concluded in Shenzhen. A joint declaration was published following the talks. Here is a brief summary of its points.",
+      "category": "",
+      "published": "2026-11-19T21:09:32+09:00"
+    },
+    {
+      "id": "meduza:c7e68976fb",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/19/xi-jinping-calls-for-total-elimination-of-nuclear-weapons-at-meeting-with-trump-and-putin",
+      "title": "Xi Jinping calls for total elimination of nuclear weapons at meeting with Trump and Putin",
+      "description": "Chinese President Xi Jinping called for nuclear weapons to be banned and destroyed entirely, speaking at a meeting with U.S. President Donald Trump and Russian President Vladimir Putin.",
+      "category": "",
+      "published": "2026-11-19T20:20:43+09:00"
+    },
+    {
+      "id": "meduza:fb117a9b15",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/19/ukrainian-drone-attack-on-russia-s-kursk-injures-11-people",
+      "title": "Ukrainian drone attack on Russia’s Kursk injures 11 people",
+      "description": "Ukrainian drones attacked Kursk on the morning of November 19, injuring 11 people, Kursk Governor Alexander Khinshtein said.",
+      "category": "",
+      "published": "2026-11-19T19:25:58+09:00"
+    },
+    {
+      "id": "meduza:0af18baa8b",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/19/eu-bars-people-living-in-russia-from-taking-part-in-erasmus-student-and-teacher-exchange-program",
+      "title": "EU bars people living in Russia from taking part in Erasmus+ student and teacher exchange program",
+      "description": "Russian residents and organizations can no longer take part in Erasmus+, the European Union’s exchange program for students and teachers.",
+      "category": "",
+      "published": "2026-11-19T18:41:12+09:00"
+    },
+    {
+      "id": "meduza:2a12324063",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/19/ukrainian-drones-attack-oil-storage-tanks-in-russia-s-tatarstan",
+      "title": "Ukrainian drones attack oil storage tanks in Russia’s Tatarstan",
+      "description": "Ukrainian drones struck oil storage tanks near Almetyevsk overnight on November 19, according to the press service of Tatarstan’s head.",
+      "category": "",
+      "published": "2026-11-19T18:03:32+09:00"
+    },
+    {
+      "id": "meduza:93d7b1c511",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/19/who-s-that-he-s-my-friend-trump-greets-putin-at-summit-in-china-as-the-two-hold-40-minute-meeting",
+      "title": "‘Who’s that? He’s my friend’: Trump greets Putin at summit in China as the two hold 40-minute meeting",
+      "description": "U.S. President Donald Trump and Russian President Vladimir Putin met on the sidelines of the APEC summit in Shenzhen, China, for about 40 minutes.",
+      "category": "",
+      "published": "2026-11-19T17:33:02+09:00"
+    },
+    {
+      "id": "meduza:6d8ee6641e",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/19/ukraine-strikes-crimean-bridge-again-halting-train-traffic",
+      "title": "Train traffic across Crimean Bridge suspended after another Ukrainian strike",
+      "description": "Ukrainian forces again struck the Crimean Bridge, which connects occupied Crimea to Russia’s Krasnodar Krai. Train traffic across the bridge has been halted, Russia’s Transport Ministry said.",
+      "category": "",
+      "published": "2026-11-19T17:06:04+09:00"
+    },
+    {
+      "id": "meduza:623725cdc2",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/19/ukraine-attacks-crimean-bridge-overnight-ahead-of-meeting-between-trump-putin-and-xi",
+      "title": "Ukraine attacks Crimean Bridge overnight ahead of meeting between Trump, Putin, and Xi — the third attack in a week",
+      "description": "Overnight into November 19, Ukraine attacked the Crimean Bridge again, targeting its railway section, which had survived earlier attacks. The bridge is closed to traffic, said Sergei Aksyonov, the head of annexed Crimea.",
+      "category": "",
+      "published": "2026-11-19T10:22:59+09:00"
     }
   ],
   "brief": {},
   "published_at": null,
-  "collected_at": "2026-11-19T07:35:53+09:00"
+  "collected_at": "2026-11-19T21:53:11+09:00"
 }
