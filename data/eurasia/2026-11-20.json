@@ -365,9 +365,64 @@
       "description": "",
       "category": "",
       "published": "2026-11-20T00:16:00+09:00"
+    },
+    {
+      "id": "meduza:ee85f7de3a",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/20/russian-diesel-tankers-sent-to-the-u-s-under-trump-putin-deal-arrive-in-brazil",
+      "title": "Tankers carrying Russian diesel sent to the U.S. under Trump-Putin deal arrive in Brazil",
+      "description": "Tankers carrying Russian fuel that were sent to the United States under a diesel deal have arrived in Brazil instead, The Maritime Executive reported. None of the tankers stopped at a U.S. port on those voyages, the publication said.",
+      "category": "",
+      "published": "2026-11-20T16:36:57+09:00"
+    },
+    {
+      "id": "meduza:626b41e64f",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/cards/russia-wants-people-in-bankruptcy-to-sign-up-to-fight-in-ukraine-under-a-new-bill-recruits-could-keep-their-property-and-creditors-would-take-the-loss",
+      "title": "Russia wants people in bankruptcy to sign up to fight in Ukraine. Under a new bill, recruits could keep their property and creditors would take the loss.",
+      "description": "The Russian government has submitted a bill to the State Duma that would let new recruits who sign military contracts and go to fight against Ukraine keep assets worth up to 10 million rubles in total during bankruptcy.",
+      "category": "",
+      "published": "2026-11-20T16:35:43+09:00"
+    },
+    {
+      "id": "meduza:3108ce6aee",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/20/russian-missile-and-drone-attack-on-kyiv-kills-three-and-damages-three-dnipro-bridges-mayor-says",
+      "title": "Russian missile and drone attack on Kyiv kills three and damages three Dnipro bridges, mayor says",
+      "description": "Russian forces attacked Kyiv with missiles and drones overnight into November 20, targeting critical infrastructure and bridges across the Dnipro River, Mayor Vitali Klitschko said.",
+      "category": "",
+      "published": "2026-11-20T16:02:22+09:00"
+    },
+    {
+      "id": "meduza:5ba39588aa",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/20/ukrainian-drones-hit-russian-fertilizer-plant-that-also-makes-components-for-explosives",
+      "title": "Ukrainian drones hit Russian fertilizer plant that also makes components for explosives",
+      "description": "Ukrainian drones struck a chemical plant in the town of Dorogobuzh, in Russia’s Smolensk region, overnight into November 20.",
+      "category": "",
+      "published": "2026-11-20T15:56:24+09:00"
+    },
+    {
+      "id": "meduza:498345ea61",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/feature/2026/11/20/as-russian-orthodox-patriarch-kirill-turns-80-meduza-retraces-how-he-went-from-backing-ukrainian-self-determination-to-defending-moscow-s-full-scale-invasion",
+      "title": "As Russian Orthodox Patriarch Kirill turns 80, Meduza retraces how he went from backing Ukrainian self-determination to defending Moscow’s full-scale invasion",
+      "description": "Patriarch Kirill (born Vladimir Gundyaev) turned 80 on November 20. Since 2009, he has led the Russian Orthodox Church while binding it ever more closely to the state. The Kremlin bolsters the church’s standing, and church leaders back the government’s agenda across the board. But Kirill wasn’t always such an open ally of Russian President Vladimir Putin and accomplice to his regime. Kirill’s own ",
+      "category": "",
+      "published": "2026-11-20T15:46:18+09:00"
     }
   ],
   "brief": {},
   "published_at": null,
-  "collected_at": "2026-11-20T11:36:34+09:00"
+  "collected_at": "2026-11-20T19:26:49+09:00"
 }
