@@ -1,395 +1,1265 @@
 {
   "date": "2026-11-19",
-  "articles": [],
-  "screened": [],
-  "pending": [
+  "articles": [
     {
-      "id": "moscowtimes:c21391b24b",
-      "source": "moscowtimes",
-      "source_name": "The Moscow Times",
-      "stance": "독립 언론 · 암스테르담",
-      "url": "https://www.themoscowtimes.com/2026/11/18/the-researchers-counting-russias-war-dead-one-name-at-a-time-a94302",
-      "title": "The Researchers Counting Russia’s War Dead, One Name at a Time",
-      "description": "Volunteers and journalists have identified more than 285,000 fallen Russian soldiers, documenting a toll the Kremlin would rather keep hidden.",
+      "id": "meduza:a83162619a",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "title": "푸틴, 트럼프·시진핑 회동 뒤 \"영토 양보 없다\"…크림대교 공격엔 보복 예고, 유럽은 모스크바로 초청",
+      "url": "https://meduza.io/en/feature/2026/11/19/no-territorial-concessions-retaliation-for-crimean-bridge-strikes-and-europeans-are-invited-to-moscow-putin-s-remarks-on-the-war-after-meeting-trump-and-xi",
+      "published": "2026-11-19T23:07:25+09:00",
       "category": "",
-      "published": "2026-11-19T00:49:00+09:00"
+      "subtitle": "The United States proposed compromises back in Anchorage, and now the question is whether Ukraine and its European backers are willing to accept them. Apparently, they aren’t, at least not yet. We’ll see; everything changes. Kyiv doesn’t want the war to end because that would immediately force it to",
+      "author": "",
+      "body": "",
+      "summary": "푸틴은 중국·미국 정상과 만난 뒤 기자회견에서 우크라이나 전쟁에 관해 발언했다. 미국이 앵커리지에서 타협안을 냈고 이제 우크라이나와 유럽이 받아들일지가 관건이라고 했다. 영토 문제로 러시아를 압박하는 것은 무의미하며, 크림대교 공격 이후에는 부분 휴전을 논의하지 않겠다고 밝혔다. 크림대교는 순수 민간 시설이고 보복은 훨씬 고통스러울 것이며 다리는 복구된다고 말했다. 또 유럽 측을 모스크바로 초청해 입장을 확인한 뒤 대화 방식을 정하겠다고 했다. 이상은 매체가 정리한 푸틴의 발언이다.",
+      "why": "러시아가 영토 양보 거부와 유럽 참여 조건부 수용이라는 협상 입장을 재확인하면서, 크림대교 타격 이후 군사적 확전 가능성도 함께 내비쳤다.",
+      "insight": "\"키이우는 선거 때문에 종전을 원치 않는다\"는 주장은 푸틴 측의 프레이밍이므로 사실로 읽으면 안 된다. 유럽을 모스크바로 부르는 제안은 미국이 요구한 유럽 참여를 받아들이는 모양새를 취하면서 협상 주도권과 형식을 러시아가 쥐려는 시도일 가능성이 있다.",
+      "terms": [
+        {
+          "term": "앵커리지 회담",
+          "explanation": "푸틴과 트럼프가 알래스카 앵커리지에서 가진 정상회담으로, 푸틴은 여기서 미국이 타협안을 제시했다고 주장한다."
+        }
+      ],
+      "tags": [
+        "우크라이나전쟁",
+        "러시아",
+        "협상",
+        "크림대교"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "No territorial concessions, retaliation for Crimean Bridge strikes, and Europeans are invited to Moscow. Putin’s remarks on the war after meeting Trump and Xi.",
+      "lang": "en",
+      "logistics": "크림대교가 다시 공격 대상이 되면 크림반도 육상 보급과 흑해·아조프해 인근 물류 리스크가 커지고, 보복 확전 시 흑해 항만과 해상 운송 보험료에 부담이 될 수 있다.",
+      "stance": "독립 언론 · 리가",
+      "score": 5
     },
     {
-      "id": "moscowtimes:eef43ceccc",
+      "id": "portnews:b715a06598",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "title": "유럽연합 집행위, 제재 이행 감독 통합 부서 신설…2027년 1월 출범",
+      "url": "https://portnews.ru/news/399858/",
+      "published": "2026-11-19T22:29:00+09:00",
+      "category": "регулирование",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "유럽연합 집행위는 11월 18일 제재 수립·적용·준수 감독과 우회 차단을 조율할 단일 제재 부서를 신설한다고 발표했다. 2027년 1월 16일 브뤼셀에서 출범해 직원 50~60명 규모이며, 현재 여러 부서에 흩어진 약 45명을 통합한다. 스웨덴 외교관 라르스 다니엘손이 2027년 2월 6일 EU 제재 이행 특별대표로 취임해 데이비드 오설리번의 후임이 되고, 제3국과 대체 무역로·금융·조달망을 통한 우회를 막는 역할을 맡는다. 관할은 러시아·벨라루스·이란·북한·시리아 등 모든 제재이며, 2022년 이후 대러 제재는 21차 패키지까지 채택되었다.",
+      "why": "EU가 제재 집행의 회원국 간 편차를 줄이려는 제도 정비에 나선 것으로, 대러 제재 압박의 지속성을 보여 준다.",
+      "insight": "EU 회계감사원이 회원국 간 집행 차이를 지적한 것이 계기라고 한다. 제재 자체보다 집행 역량이 관건이라는 인식이 반영된 조치로 보인다.",
+      "terms": [
+        {
+          "term": "제재 우회",
+          "explanation": "제3국 기업·무역로·금융 채널을 통해 제재 대상 상품이나 거래를 이어 가는 행위."
+        }
+      ],
+      "tags": [
+        "제재",
+        "EU",
+        "제재우회",
+        "러시아"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "Еврокомиссия создала единое управление по контролю за исполнением санкций",
+      "lang": "ru",
+      "logistics": "제3국 경유 우회 무역과 그림자 선단 관련 집행이 강화될 수 있어, 중앙아시아·코카서스·튀르키예 경유 물류와 포워더의 컴플라이언스 부담이 커질 수 있다.",
+      "stance": "러시아 해운 업계지 · 상트페테르부르크",
+      "score": 4
+    },
+    {
+      "id": "portnews:a8e89b33c2",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "title": "러시아산 세 번째 Arc7 LNG 운반선 '표트르 스톨리핀', 2026년 말 인도",
+      "url": "https://portnews.ru/news/399856/",
+      "published": "2026-11-19T22:06:00+09:00",
+      "category": "судостроение",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "올레그 코제먀코 부총리 겸 극동연방관구 대통령 전권대표는 운송주간에서 즈베즈다 조선소가 건조 중인 세 번째 Arc7 가스운반선이 올해 말 인도된다고 밝혔다. 선박은 '표트르 스톨리핀'으로 NSR에서 연중 운항용이다. 아크틱 LNG-2 프로젝트용으로 러시아에서 처음 건조되는 5척 시리즈 중 하나로, 적재량 172,600㎥, 길이 300m, 추진 출력 45MW다. 그는 자원 개발업체가 북극용 선박을 전문 조선소에 직접 발주하길 기대한다고 말했다.",
+      "why": "제재 속에서 러시아가 자체 쇄빙 LNG선 건조 능력으로 북극 LNG 수출망을 만들고 있다는 신호다.",
+      "insight": "5척 중 3번째가 인도된다는 점은 진전이지만 계획보다 지연됐다는 평가가 있다. 실제 수출 확대는 제재 대상 프로젝트의 구매자와 환적 방식에 달려 있다.",
+      "terms": [
+        {
+          "term": "Arc7",
+          "explanation": "두꺼운 다년빙 해역에서 독자 항행이 가능한 가장 높은 수준 중 하나의 쇄빙 등급으로, 연중 NSR 운항용 선박에 쓰인다."
+        }
+      ],
+      "tags": [
+        "북극LNG",
+        "조선",
+        "북극항로",
+        "즈베즈다"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "Третий российский газовоз класса Arc7 будет сдан в конце 2026 года",
+      "lang": "ru",
+      "logistics": "Arc7 선대 확충은 아크틱 LNG-2의 NSR 연중 수송 능력과 대아시아 LNG 운송에 직접 영향을 주며, 한국 조선업이 빠진 자리를 러시아 조선소가 메우는 구도와도 관련된다.",
+      "stance": "러시아 해운 업계지 · 상트페테르부르크",
+      "score": 4
+    },
+    {
+      "id": "portnews:b59f902db9",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "title": "북극항로 화물 운송량, 사상 처음 4,000만 톤 돌파…2030년 목표 7,000만 톤",
+      "url": "https://portnews.ru/news/399855/",
+      "published": "2026-11-19T21:49:00+09:00",
+      "category": "Северный морской путь",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "안드레이 니키틴 러시아 부총리는 운송주간 토론에서 북극항로(NSR) 화물량이 11월 중순 연간 계획을 넘어 사상 처음 4,000만 톤에 이르렀다고 밝혔다. 2030년 목표는 7,000만 톤이며, 다음 단계는 동방으로 가는 정기 연중 운항이라고 했다. 선주는 1년 단위로 물류를 계획할 수 있게 되고 NSR은 상트페테르부르크·무르만스크에서 블라디보스토크와 아시아 시장으로 이어지는 '트랜스북극 운송회랑'의 중심이 된다고 설명했다. 2025년 운송량은 3,700만 톤 이상이었다.",
+      "why": "러시아가 제재 속에서 북극을 대아시아 수출의 핵심 축으로 키우려는 계획이 수치로 드러났다.",
+      "insight": "4,000만 톤은 대부분 자원 수출이 차지하는 것으로 알려져 있어 컨테이너 환적 항로로서의 상업성과는 구분해서 봐야 한다. 정부 발표 수치이고 목표 7,000만 톤은 선박·쇄빙선 확보에 달려 있다.",
+      "terms": [
+        {
+          "term": "트랜스북극 운송회랑(ТТК)",
+          "explanation": "NSR을 중심으로 상트페테르부르크·무르만스크에서 블라디보스토크와 아시아로 이어지는 러시아의 연중 운송 구상."
+        }
+      ],
+      "tags": [
+        "북극항로",
+        "러시아",
+        "무르만스크",
+        "LNG"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "Грузоперевозки по СМП впервые в истории превысили 40 млн тонн",
+      "lang": "ru",
+      "logistics": "운송량 증가는 북극 LNG·에너지 화물 중심이며, 연중 운항 체제로 가면 쇄빙선·내빙 선박 수요와 무르만스크·캄차카 환적 거점의 중요성이 커진다.",
+      "stance": "러시아 해운 업계지 · 상트페테르부르크",
+      "score": 5
+    },
+    {
+      "id": "timesca:19509d7219",
+      "source": "timesca",
+      "source_name": "The Times of Central Asia",
+      "title": "카자흐스탄 북부 페트로파블에 오존·알리바바 상품용 물류허브 추진",
+      "url": "https://timesca.com/petropavl-logistics-hub-ozon-alibaba/",
+      "published": "2026-11-19T21:47:24+09:00",
+      "category": "Business & Economy",
+      "subtitle": "A 102,000-square-meter logistics hub is planned for Petropavl in northern Kazakhstan. The regional administration says the proposed KYZYLZHAR HUB would",
+      "author": "",
+      "body": "",
+      "summary": "카자흐스탄 북부 페트로파블에 10만 2,000㎡ 규모 'KYZYLZHAR HUB'가 계획되어 있으며, 건설 투자는 290억 텐게(약 6,530만 달러) 이상이다. UAE 투자사 로열 인베스트먼트 인터내셔널이 11월 18일 주지사에게 제안했고, 오존·알리바바 판매 상품 등을 보관·배송한다. 자금 조달 방식과 착공 시기, 오존·알리바바와의 계약 여부는 밝혀지지 않았다. 카자흐 온라인 소매는 2025년 19.4% 성장했고, 중앙아 창고 개발업체의 62%는 임차 수요 부족을 최대 장애로 꼽았다.",
+      "why": "러시아·중국 전자상거래가 카자흐스탄을 거점으로 중앙아시아 시장을 겨냥하는 흐름을 보여 준다.",
+      "insight": "공식 발표에 자금·일정이 빠져 있고 창고 수요 부진 조사도 있어 실제 착공은 불투명하다. 그래도 카자흐스탄이 러시아-중앙아 이커머스 허브 경쟁지로 떠오르는 흐름의 일부로 읽을 수 있다.",
+      "terms": [],
+      "tags": [
+        "카자흐스탄",
+        "물류허브",
+        "이커머스",
+        "중앙아시아"
+      ],
+      "relevance": 3,
+      "geo": {},
+      "orig_title": "Kazakhstan Logistics Hub Planned for Ozon and Alibaba Goods",
+      "lang": "en",
+      "logistics": "러시아와 중앙아를 잇는 도로·철도 요충지에 창고 거점이 생기면 이커머스 화물의 경유·재분배 구조가 바뀔 수 있으나, 계획 단계이며 실현 여부는 불확실하다.",
+      "stance": "중앙아 지역 매체",
+      "score": 4
+    },
+    {
+      "id": "meduza:31662dc3d1",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "title": "러시아 하원, 2027~2029년 연방예산안 2차 심의 통과…적자 연 5조 루블대",
+      "url": "https://meduza.io/en/news/2026/11/19/russian-state-duma-approves-2027-2029-federal-budget-in-second-reading",
+      "published": "2026-11-19T21:46:36+09:00",
+      "category": "",
+      "subtitle": "Russia’s State Duma approved the draft federal budget for 2027 and the 2028–2029 planning period in its second reading.",
+      "author": "",
+      "body": "",
+      "summary": "러시아 하원이 2027년 및 2028~2029년 연방예산안을 2차 심의에서 통과시켰다. 2차 심의 전 총 8.7조 루블 규모의 수정이 있었고, 국방·안보와 국가 프로젝트, 지역 지원이 포함됐다. 타스에 따르면 '조국 수호자' 기금은 70억 루블 증액된 700억 루블이 되고, 우크라이나 점령지에는 170억 루블이 추가된다. 적자는 2027년 5.4조, 2028년 5.1조, 2029년 5.3조 루블로 전망되며 3차 심의는 11월 24일 예정이다.",
+      "why": "전쟁 장기화 속에서 러시아 재정이 3년 연속 대규모 적자를 전제로 짜이고 있다는 점을 보여 준다.",
+      "insight": "적자 규모가 연 5조 루블대로 고착되면 재원 조달을 위한 증세, 국채 발행, 에너지 수입 의존이 쟁점이 될 가능성이 있다. 정유 타격 기사와 함께 보면 재정 압박 요인이 겹친다.",
+      "terms": [],
+      "tags": [
+        "러시아경제",
+        "재정",
+        "예산",
+        "우크라이나전쟁"
+      ],
+      "relevance": 4,
+      "geo": {},
+      "orig_title": "Russian State Duma approves 2027–2029 federal budget in second reading",
+      "lang": "en",
+      "logistics": "",
+      "stance": "독립 언론 · 리가",
+      "score": 4
+    },
+    {
+      "id": "timesca:c9f1afd2a1",
+      "source": "timesca",
+      "source_name": "The Times of Central Asia",
+      "title": "러시아, 우크라이나 협상서 나토의 중앙아시아 군사활동 중단 요구…당사국 5개국은 배제",
+      "url": "https://timesca.com/russia-demands-nato-stay-out-of-central-asia-without-consulting-regional-governments/",
+      "published": "2026-11-19T20:17:45+09:00",
+      "category": "Home",
+      "subtitle": "Donald Trump, Vladimir Putin, and Xi Jinping met in Shenzhen on November 19. Meanwhile, U.S. envoys headed to Berlin to",
+      "author": "",
+      "body": "",
+      "summary": "러시아가 11월 10일자 문서를 아부다비 미국 중재 협상에 돌렸다고 뉴욕타임스가 보도했다. 문서는 나토 확대 금지와 우크라이나·동유럽·남캅카스·중앙아시아에서의 '모든 군사활동' 배제, 나토 병력·기지를 1997년 수준으로 되돌리라는 내용을 담았다. 2021년 12월 초안과 표현이 거의 같으며, 영향을 받을 중앙아 5개국은 협상에 참여하지 않았다.",
+      "why": "중앙아시아가 당사국 없이 강대국 간 안보 흥정의 대상이 되고 있음을 보여 준다.",
+      "insight": "2021년 말 요구안의 재탕이어서 협상용 최대 요구일 가능성이 높다. 카자흐스탄 등은 나토와 평화유지·교육 협력을 선택적으로 유지해 온 만큼 다방면 외교 균형에 부담이 될 수 있다.",
+      "terms": [
+        {
+          "term": "평화를 위한 동반자(PfP)",
+          "explanation": "나토가 비회원국과 군사 교육·훈련·개혁을 협력하도록 만든 프로그램으로, 중앙아 5개국이 모두 참여한다."
+        }
+      ],
+      "tags": [
+        "러시아",
+        "나토",
+        "중앙아시아",
+        "우크라이나전쟁"
+      ],
+      "relevance": 4,
+      "geo": {},
+      "orig_title": "Russia Demands NATO Stay Out of Central Asia, With Regional Governments Absent From Talks",
+      "lang": "en",
+      "logistics": "직접 영향은 제한적이나, 중앙아의 서방 협력 프로그램이 위축되면 지역 안보·투자 환경과 회랑 사업의 불확실성이 커질 수 있다.",
+      "stance": "중앙아 지역 매체",
+      "score": 4
+    },
+    {
+      "id": "timesca:05086b0834",
+      "source": "timesca",
+      "source_name": "The Times of Central Asia",
+      "title": "타지키스탄, WEF 관광개발지수에서 빠져…관광객 수는 증가",
+      "url": "https://timesca.com/tajikistan-tourism-ranking-wef-2026/",
+      "published": "2026-11-19T19:49:44+09:00",
+      "category": "Business & Economy",
+      "subtitle": "Tajikistan is missing from the World Economic Forum’s 2026 Travel & Tourism Development Index, and the report does not explain",
+      "author": "",
+      "body": "",
+      "summary": "세계경제포럼 2026 관광개발지수에서 타지키스탄이 제외됐으며 보고서는 이유를 설명하지 않았다. 2년 전에는 119개국 중 99위였고, 카자흐스탄 56위, 우즈베키스탄 76위, 키르기스스탄 93위다. 2026년 상반기 외국인 관광객은 약 89만 명으로 16.7% 늘었고 우즈베키스탄이 51만 400명으로 최다다.",
+      "why": "중앙아 소국의 관광·서비스 부문 성장과 데이터 가시성 문제를 보여 준다.",
+      "insight": "지수는 방문객 수가 아닌 환경을 평가하므로 순위 제외와 관광객 증가는 별개다. 높은 항공료와 인프라 부족이 성장 제약이라고 현지 업계는 지적했다.",
+      "terms": [],
+      "tags": [
+        "타지키스탄",
+        "관광",
+        "중앙아시아"
+      ],
+      "relevance": 1,
+      "geo": {},
+      "orig_title": "Tajikistan Absent From Global Tourism Development Index as Tourist Arrivals Rise",
+      "lang": "en",
+      "logistics": "",
+      "stance": "중앙아 지역 매체",
+      "score": 4
+    },
+    {
+      "id": "portnews:80bbb7e755",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "title": "FESCO, 2026년 1~9월 러시아 컨테이너 시장 권역별 집계 공개…극동 수입이 견인",
+      "url": "https://portnews.ru/news/399840/",
+      "published": "2026-11-19T19:35:00+09:00",
+      "category": "контейнеры",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "FESCO에 따르면 1~9월 적재 컨테이너 물동량은 발트 권역 5% 증가한 83만 7천 TEU, 극동 21% 증가한 136만 3천 TEU, 북극 41% 증가한 5천 TEU였다. 아조프-흑해 권역은 12% 감소한 52만 5천 TEU였다. 국경 통과 컨테이너는 6% 늘어 166만 5천 TEU, 환적(트랜짓)은 1% 줄었다.",
+      "why": "제재 이후 러시아 대외무역의 물류 축이 극동과 발트로 재편되는 양상을 수치로 보여 준다.",
+      "insight": "흑해 권역 감소는 우크라이나 전쟁 영향 때문이며, FESCO가 전한 대로 열차 연계 서비스와 러시아를 거치지 않는 동남아·아프리카 서비스로 확장하는 것이 2027년 전략이다. 업체별 집계 차이(로고퍼는 극동만 증가)가 있어 자료 출처를 비교해야 한다.",
+      "terms": [
+        {
+          "term": "TEU",
+          "explanation": "20피트 컨테이너 1개를 기준으로 한 컨테이너 물동량 단위."
+        }
+      ],
+      "tags": [
+        "러시아",
+        "컨테이너",
+        "극동항만",
+        "FESCO"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "FESCO привела собственные данные по контейнерному рынку РФ за 9 месяцев 2026 года в разрезе бассейнов",
+      "lang": "ru",
+      "logistics": "인도·튀르키예발 화물이 상트페테르부르크로, 중국발 화물이 극동과 상트페테르부르크로 돌려져 극동 항만과 철도 의존이 커졌다.",
+      "stance": "러시아 해운 업계지 · 상트페테르부르크",
+      "score": 4
+    },
+    {
+      "id": "moscowtimes:afa5aed85c",
       "source": "moscowtimes",
       "source_name": "The Moscow Times",
-      "stance": "독립 언론 · 암스테르담",
-      "url": "https://www.themoscowtimes.com/2026/11/18/prosecution-seeks-to-drop-khachaturyan-sisters-murder-case-a94304",
-      "title": "Prosecution Seeks to Drop Khachaturyan Sisters Murder Case",
-      "description": "The sisters, who were 17, 18 and 19 when they killed their father have been barred from communicating with one another for more than eight years.",
+      "title": "트럼프·시진핑·푸틴 3자 회동…중·러 \"평화 선언\" 공개",
+      "url": "https://www.themoscowtimes.com/2026/11/19/us-china-can-help-end-ukraine-war-trump-tells-xi-before-trilateral-with-putin-a94307",
+      "published": "2026-11-19T18:53:00+09:00",
       "category": "",
-      "published": "2026-11-19T00:48:33+09:00"
+      "subtitle": "\"We are really making history,\" Trump said at the beginning. “No peace was ever forged by declining opportunities for engagement.”",
+      "author": "",
+      "body": "",
+      "summary": "선전에서 열린 첫 3자 정상회담 후 중국과 러시아는 3국이 핵전쟁은 결코 치러져서는 안 된다는 점을 재확인하는 '평화 선언'에 합의했다고 밝혔다. 선언에는 유엔 개혁 추진, 모든 국가에 대한 정제유 공급 확대, 국제재판소에서 국가 공직자 면책 보장도 담겼다. 푸틴은 미국이 유럽의 협상 참여를 \"상당히 집요하게\" 요구하고 있다고 말했고 유럽 대표를 모스크바로 초청했다고 밝혔다. 트럼프는 호르무즈 해협을 통한 원유 흐름을 중시한다고 했으며, 3국은 우크라이나·이란·핵·무역에서 깊은 이견을 안고 있다고 매체는 전했다.",
+      "why": "미·중·러 정상이 한자리에 모여 전쟁과 에너지 흐름을 논의했다는 점에서 지정학적 의미가 크지만 실질적 합의는 불확실하다.",
+      "insight": "선언은 구속력 있는 합의라기보다 상징적 메시지에 가깝고, 국제형사재판소 관련 공직자 면책 문구는 푸틴 체포영장 문제와 연결해 읽을 만하다. 정제유 공급 확대는 우크라이나의 정유소 타격 속에서 러시아의 공급 능력과 어긋난다.",
+      "terms": [
+        {
+          "term": "공직자 면책",
+          "explanation": "국가 원수·공직자는 외국·국제 재판소의 기소에서 면제된다는 원칙으로, ICC 영장을 받은 푸틴과 관련해 거론된다."
+        }
+      ],
+      "tags": [
+        "미중러정상회담",
+        "우크라이나전쟁",
+        "중국",
+        "호르무즈"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "China and Russia Release ‘Peace Declaration’ After Trump, Xi, Putin Meeting",
+      "lang": "en",
+      "logistics": "이란 전쟁으로 차질을 빚는 호르무즈 해협 에너지 수송과 정제유 공급 확대 문구는 유가와 유조선 운임, 러시아 석유제품 수출 환경에 영향을 줄 수 있다.",
+      "stance": "독립 언론 · 암스테르담",
+      "score": 5
+    },
+    {
+      "id": "portnews:a3fa6e182c",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "title": "극동철도 반화차 컨테이너 수송, 1~10월 2.4배 급증한 54만 6,400TEU",
+      "url": "https://portnews.ru/news/399832/",
+      "published": "2026-11-19T16:50:00+09:00",
+      "category": "контейнеры",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "극동철도(ДВЖД)에 따르면 2026년 1~10월 반화차(개방형 화차)에 실은 컨테이너가 54만 6,400TEU로 전년 대비 2.4배였다. 27만 3,200량으로 3,709개 열차를 편성했고 나홋카-보스토치나야, 나홋카, 므이스 추르킨 등이 주요 발송역이다. 항구에서 내륙 건식터미널로 보내는 셔틀열차는 10월에 18회(약 2만 톤)로 연중 최고였다.",
+      "why": "극동 항만 수입 증가에 따른 컨테이너 부족·적체를 철도가 임시 장비로 흡수하는 모습이다.",
+      "insight": "앞 기사의 극동 수입 21% 증가와 맞물려 극동 항만-철도 복합 체계 의존이 깊어짐을 시사한다. 다만 철도 발표라 효율 개선 주장은 그대로 받아들이기보다 확인이 필요하다.",
+      "terms": [
+        {
+          "term": "반화차(полувагон)",
+          "explanation": "지붕 없는 개방형 화차로 본래 석탄·광물용이나 컨테이너 수송에도 쓰인다."
+        }
+      ],
+      "tags": [
+        "극동철도",
+        "컨테이너",
+        "시베리아횡단철도",
+        "나홋카"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "Отправка контейнеров в полувагонах с Дальнего Востока выросла за 10 месяцев 2026 года в 2,4 раза — до 546,4 тыс. TEU",
+      "lang": "ru",
+      "logistics": "컨테이너를 반화차로 수송하는 것은 전용 플랫폼 부족을 보완하는 방식으로, 극동 항만 병목 완화와 내륙 연계 속도에 영향을 준다.",
+      "stance": "러시아 해운 업계지 · 상트페테르부르크",
+      "score": 4
+    },
+    {
+      "id": "meduza:623725cdc2",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "title": "우크라이나, 트럼프·푸틴·시진핑 회동 앞두고 크림대교 철도부 공격…일주일간 세 번째",
+      "url": "https://meduza.io/en/news/2026/11/19/ukraine-attacks-crimean-bridge-overnight-ahead-of-meeting-between-trump-putin-and-xi",
+      "published": "2026-11-19T10:22:59+09:00",
+      "category": "",
+      "subtitle": "Overnight into November 19, Ukraine attacked the Crimean Bridge again, targeting its railway section, which had survived earlier attacks. The bridge is closed to traffic, said Sergei Aksyonov, the head of annexed Crimea.",
+      "author": "",
+      "body": "",
+      "summary": "11월 19일 새벽 우크라이나가 크림대교 철도 구간을 다시 공격했고, 크림 수장 악쇼노프는 다리 통행이 중단됐다고 밝혔다. 피해 규모는 알려지지 않았으며 비공식 보도로는 철도교가 최소 두 차례 피격됐다. 17일 새벽 공격으로는 도로 구간 아치 하나가 파괴됐다.",
+      "why": "크림 보급로를 겨냥한 타격이 협상 국면과 동시에 강화되고 있다.",
+      "insight": "러시아가 남부 물류를 극동·발트로 돌리는 흐름과 연결해 볼 만하다. 이번 공격의 실제 피해는 확인되지 않았다.",
+      "terms": [],
+      "tags": [
+        "우크라이나전쟁",
+        "크림대교",
+        "흑해"
+      ],
+      "relevance": 4,
+      "geo": {},
+      "orig_title": "Ukraine attacks Crimean Bridge overnight ahead of meeting between Trump, Putin, and Xi — the third attack in a week",
+      "lang": "en",
+      "logistics": "크림대교 철도 마비는 크림 및 남부 전선 보급과 흑해·아조프 권역 화물 흐름에 부담을 주며, 해당 권역 물동량 감소를 심화시킬 수 있다.",
+      "stance": "독립 언론 · 리가",
+      "score": 4
     },
     {
       "id": "meduza:7f09eda8d9",
       "source": "meduza",
       "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
+      "title": "미국 특사, 러시아에 \"트럼프에게 협상 여지가 있는 지금 평화 맺어야\" 경고…키이우인디펜던트",
       "url": "https://meduza.io/en/news/2026/11/19/u-s-warns-russia-it-should-make-peace-with-ukraine-now-while-trump-still-has-room-to-negotiate-the-kyiv-independent-reports",
-      "title": "U.S. warns Russia it should make peace with Ukraine now, while Trump still has room to negotiate, The Kyiv Independent reports",
-      "description": "U.S. President Donald Trump’s special envoys Steve Witkoff and Jared Kushner told Russian and Ukrainian negotiators that the current round of talks may be the last real chance to reach a peace agreement before the political situation in Washington changes, according to sources who spoke to The Kyiv Independent.",
+      "published": "2026-11-19T06:38:19+09:00",
       "category": "",
-      "published": "2026-11-19T06:38:19+09:00"
+      "subtitle": "U.S. President Donald Trump’s special envoys Steve Witkoff and Jared Kushner told Russian and Ukrainian negotiators that the current round of talks may be the last real chance to reach a peace agreement before the political situation in Washington changes, according to sources who spoke to The Kyiv ",
+      "author": "",
+      "body": "",
+      "summary": "키이우인디펜던트는 위트코프와 쿠슈너가 이번 협상이 정치 지형이 바뀌기 전 마지막 실질적 기회일 수 있다고 양측에 전했다고 보도했다. 민주당이 의회를 장악하면 우크라이나 지원 확대 압박과 트럼프 행정부의 크렘린 접촉 감시가 강해져 러시아 입지가 약해질 수 있다는 취지다. 아부다비 협상은 돌파구 없이 끝났고 대규모 포로 교환과 협상 지속만 발표됐으며 일정은 미정이다.",
+      "why": "미국 국내 정치 일정이 우크라이나 전쟁 협상의 시한 압박으로 작용하고 있다.",
+      "insight": "익명 취재원 기반 보도로 미국 측의 압박 전술일 수도 있다. 푸틴이 제안한 3자 회동에서 시진핑이 전쟁 의제를 거부했다는 보도는 중국의 거리두기를 시사한다.",
+      "terms": [],
+      "tags": [
+        "우크라이나전쟁",
+        "미러협상",
+        "제재",
+        "미국"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "U.S. warns Russia it should make peace with Ukraine now, while Trump still has room to negotiate, The Kyiv Independent reports",
+      "lang": "en",
+      "logistics": "협상 결렬 시 제재 강화 가능성이 커져 해운·금융 제재 집행과 그림자 선단 단속 강도에 영향을 줄 수 있다.",
+      "stance": "독립 언론 · 리가",
+      "score": 4
     },
     {
       "id": "meduza:6e2af30740",
       "source": "meduza",
       "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
+      "title": "로이터 \"우크라이나 드론 공격으로 러시아 정제량 10월 말 이후 45% 감소\"",
       "url": "https://meduza.io/en/news/2026/11/19/ukrainian-drone-attacks-have-cut-the-amount-of-oil-russia-refines-by-45-since-late-october-reuters-reports",
-      "title": "Ukrainian drone attacks have cut the amount of oil Russia refines by 45% since late October, Reuters reports",
-      "description": "Ukrainian drone attacks have cut the amount of oil Russian refineries process by 45% since late October, according to estimates two industry sources shared with Reuters.",
+      "published": "2026-11-19T06:05:24+09:00",
       "category": "",
-      "published": "2026-11-19T06:05:24+09:00"
+      "subtitle": "Ukrainian drone attacks have cut the amount of oil Russian refineries process by 45% since late October, according to estimates two industry sources shared with Reuters.",
+      "author": "",
+      "body": "",
+      "summary": "업계 소식통 2명이 로이터에 밝힌 추정으로, 우크라이나 드론 공격 때문에 러시아의 석유 정제량이 10월 말 이후 45% 줄었다. 35대 대형 정유소 중 15곳이 가동 차질 또는 중단 상태이며, 지난주 중반에는 9곳이었다. 일일 정제량은 70만 톤 이상에서 약 40만 톤으로 떨어졌고, 평시 정제 능력은 하루 93만 톤으로 추산된다. 11월 초부터 일부 지역은 주유소 휘발유 판매 제한을 다시 도입했다.",
+      "why": "우크라이나의 에너지 인프라 타격이 러시아 내수 연료와 재정·수출 구조에 직접 부담을 주는 단계로 확대되고 있다.",
+      "insight": "소식통 추정치이므로 수치는 확인이 필요하다. 한편 3국 선언의 정제유 공급 확대 문구와 대비되며, 러시아가 원유를 더 수출하거나 연료를 수입해야 하는 상황이 올 가능성이 있다.",
+      "terms": [],
+      "tags": [
+        "우크라이나전쟁",
+        "정유",
+        "러시아경제",
+        "유가"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "Ukrainian drone attacks have cut the amount of oil Russia refines by 45% since late October, Reuters reports",
+      "lang": "en",
+      "logistics": "정제량 급감으로 석유제품 수출이 줄고 원유 수출 비중이 늘 수 있으며, 항만·철도의 제품 물량과 원유 유조선 수요가 달라질 수 있다.",
+      "stance": "독립 언론 · 리가",
+      "score": 5
     },
     {
       "id": "meduza:59520296f2",
       "source": "meduza",
       "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
+      "title": "러시아, 요구 수용 시 칼리닌그라드·벨라루스 병력 감축 용의…블룸버그",
       "url": "https://meduza.io/en/feature/2026/11/18/russia-is-prepared-to-reduce-its-military-presence-in-the-kaliningrad-region-and-belarus-if-its-demands-are-met-bloomberg-reports",
-      "title": "Russia is prepared to reduce its military presence in the Kaliningrad region and Belarus if its demands are met, Bloomberg reports",
-      "description": "In peace talks, Russia has demanded that the European Union and NATO countries roll back NATO’s military presence to its 1997 footprint and stop regarding Moscow as “an adversary or a threat.” In exchange, the Kremlin is prepared to make some concessions.",
+      "published": "2026-11-19T05:29:16+09:00",
       "category": "",
-      "published": "2026-11-19T05:29:16+09:00"
+      "subtitle": "In peace talks, Russia has demanded that the European Union and NATO countries roll back NATO’s military presence to its 1997 footprint and stop regarding Moscow as “an adversary or a threat.” In exchange, the Kremlin is prepared to make some concessions.",
+      "author": "",
+      "body": "",
+      "summary": "러시아는 협상에서 나토의 군사 배치를 1997년 수준으로 되돌리고 러시아를 적이나 위협으로 보지 말라고 요구했다고 뉴욕타임스·블룸버그가 보도했다. 대가로 블룸버그 취재원에 따르면 칼리닌그라드와 벨라루스의 군사 주둔을 줄일 용의가 있으며, 벨라루스 핵무기 철수와 오레시니크 배치 포기가 거론됐다. 유럽은 전투 중단이 선행돼야 한다는 입장이며, 위트코프·쿠슈너는 11월 19일 베를린에서 우크라이나·EU 대표와 종전 후 안전보장을 논의할 예정이다.",
+      "why": "우크라이나 휴전 협상이 유럽 전체 안보 구도 재편 협상으로 확장되고 있다.",
+      "insight": "러시아의 요구는 사실상 수용 불가 수준이라 협상 교착이 길어질 가능성이 높다. 앞선 중앙아시아 포함 요구와 같은 문서의 일부로 보인다.",
+      "terms": [
+        {
+          "term": "오레시니크(Oreshnik)",
+          "explanation": "러시아의 중거리 탄도미사일 체계로, 2025년 말 벨라루스에서 전투 임무에 들어갔다고 러시아 국방부가 밝혔다."
+        }
+      ],
+      "tags": [
+        "우크라이나전쟁",
+        "나토",
+        "벨라루스",
+        "칼리닌그라드"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "Russia is prepared to reduce its military presence in the Kaliningrad region and Belarus if its demands are met, Bloomberg reports",
+      "lang": "en",
+      "logistics": "발트해·흑해 '사고 방지 메커니즘' 논의는 발트 항로와 칼리닌그라드 경유 물류의 군사 긴장 완화와 연결될 수 있다.",
+      "stance": "독립 언론 · 리가",
+      "score": 4
+    }
+  ],
+  "screened": [
+    {
+      "id": "portnews:f2d2a6252f",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399862/",
+      "title": "Прирост портовых мощностей в РФ с 2025 года достиг 38 млн тонн в год",
+      "title_ko": "러시아 항만 능력, 2025년 이후 연 3,800만 톤 증가",
+      "score": 3,
+      "published": "2026-11-19T23:17:00+09:00"
     },
     {
-      "id": "meduza:5fb9de6519",
+      "id": "portnews:e885518d7a",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399859/",
+      "title": "На реализацию новой стратегии развития транспорта планируется направить 5,5 трлн рублей",
+      "title_ko": "러시아 신 교통발전전략에 5조 5,000억 루블 투입 계획",
+      "score": 3,
+      "published": "2026-11-19T23:02:00+09:00"
+    },
+    {
+      "id": "portnews:2bfc936603",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399854/",
+      "title": "Количество судов под флагом России достигло почти 5 тыс. единиц",
+      "title_ko": "러시아 국적 선박 5천 척 육박",
+      "score": 3,
+      "published": "2026-11-19T21:57:00+09:00"
+    },
+    {
+      "id": "portnews:90629e8c57",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399853/",
+      "title": "Реконструкцию пункта пропуска и речного терминала в рамках строительства моста Джалинда — Мохэ завершат в 2027 году",
+      "title_ko": "잘린다–모허 교량 사업, 검문소·하항 터미널 2027년 완공",
+      "score": 3,
+      "published": "2026-11-19T21:32:00+09:00"
+    },
+    {
+      "id": "timesca:1d23f10a90",
+      "source": "timesca",
+      "source_name": "The Times of Central Asia",
+      "url": "https://timesca.com/turkmenistan-exports-sme-reduce-reliance-on-hydrocarbons/",
+      "title": "Turkmenistan’s SME Exports Targeted to Double by 2045",
+      "title_ko": "투르크메니스탄, 2045년까지 중소기업 수출 두 배 목표",
+      "score": 3,
+      "published": "2026-11-19T21:24:22+09:00"
+    },
+    {
+      "id": "timesca:8f7ae965ab",
+      "source": "timesca",
+      "source_name": "The Times of Central Asia",
+      "url": "https://timesca.com/imf-kazakhstan-base-rate-increase/",
+      "title": "IMF Calls for Increase in Kazakhstan Base Rate Amid Inflation Risks",
+      "title_ko": "IMF, 카자흐 기준금리 인상 검토 권고",
+      "score": 3,
+      "published": "2026-11-19T21:10:47+09:00"
+    },
+    {
+      "id": "timesca:32a1aca32e",
+      "source": "timesca",
+      "source_name": "The Times of Central Asia",
+      "url": "https://timesca.com/kyrgyzstan-land-use-plan-apartment-buildings-farmland/",
+      "title": "Kyrgyzstan’s Land-Use Plan Favors Apartments to Protect Farmland",
+      "title_ko": "키르기스스탄 토지이용 계획, 농지 보호 위해 아파트 장려",
+      "score": 3,
+      "published": "2026-11-19T21:09:25+09:00"
+    },
+    {
+      "id": "moscowtimes:f8f8b44c88",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/11/19/russia-has-delayed-116bln-in-state-construction-projects-since-invading-ukraine-a94310",
+      "title": "Russia Has Delayed $116Bln in State Construction Projects Since Invading Ukraine",
+      "title_ko": "러, 우크라 침공 이후 국책 건설사업 1,160억 달러 지연",
+      "score": 3,
+      "published": "2026-11-19T20:20:00+09:00"
+    },
+    {
+      "id": "moscowtimes:61df45758a",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/11/19/wildberries-quietly-expands-in-georgia-through-ruling-party-linked-firm-think-tank-says-a94308",
+      "title": "Wildberries Quietly Expands in Georgia Through Ruling Party-Linked Firm, Think Tank Says",
+      "title_ko": "와일드베리스, 조지아 집권당 연계 기업 통해 조용히 확장",
+      "score": 3,
+      "published": "2026-11-19T20:01:50+09:00"
+    },
+    {
+      "id": "portnews:be14027c57",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399839/",
+      "title": "Совокупная доля российских линий на контейнерном рынке РФ составляет 20%",
+      "title_ko": "러시아 선사의 컨테이너 시장 점유율 합계 20%",
+      "score": 3,
+      "published": "2026-11-19T19:25:00+09:00"
+    },
+    {
+      "id": "portnews:af533562d1",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399837/",
+      "title": "Контейнерные перевозчики предложили обнулить НДС при бункеровке российских судов",
+      "title_ko": "컨테이너 선사들, 러시아 선박 벙커링 부가세 면제 제안",
+      "score": 3,
+      "published": "2026-11-19T18:43:00+09:00"
+    },
+    {
+      "id": "meduza:2a12324063",
       "source": "meduza",
       "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
-      "url": "https://meduza.io/en/news/2026/11/18/telegram-tests-password-protected-hidden-chats-on-macos",
-      "title": "Telegram tests password-protected ‘hidden chats’ on macOS",
-      "description": "A beta version of Telegram 13.2.0 for macOS has a new hidden-chats feature, Kod.ru reported. It lets users hide individual conversations and channels from their main chat list.",
-      "category": "",
-      "published": "2026-11-19T05:00:54+09:00"
+      "url": "https://meduza.io/en/news/2026/11/19/ukrainian-drones-attack-oil-storage-tanks-in-russia-s-tatarstan",
+      "title": "Ukrainian drones attack oil storage tanks in Russia’s Tatarstan",
+      "title_ko": "우크라 드론, 타타르스탄 알메티옙스크 유류 저장탱크 타격",
+      "score": 3,
+      "published": "2026-11-19T18:03:32+09:00"
+    },
+    {
+      "id": "portnews:0911d13da9",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399833/",
+      "title": "РЖД и АПСРТ договорились о совместной работе над мультимодальными маршрутами",
+      "title_ko": "러시아철도·APSRT, 복합운송 노선 공동 추진 합의",
+      "score": 3,
+      "published": "2026-11-19T17:33:00+09:00"
+    },
+    {
+      "id": "eurasianet:faad342bf4",
+      "source": "eurasianet",
+      "source_name": "Eurasianet",
+      "url": "https://eurasianet.org/pashinyan-pushes-for-constitutional-referendum",
+      "title": "Pashinyan pushes for constitutional referendum",
+      "title_ko": "파シ냔, 헌법 개정 국민투표 추진",
+      "score": 3,
+      "published": "2026-11-19T12:00:00+09:00"
     },
     {
       "id": "meduza:aa96e62f99",
       "source": "meduza",
       "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
       "url": "https://meduza.io/en/feature/2026/11/18/ukraine-hit-the-crimean-bridge-with-ruta-missiles-from-a-firm-russian-born-mikhail-kokorich-founded-in-switzerland-after-the-u-s-barred-him-from-his-own-startup-s-technology",
       "title": "Ukraine hit the Crimean Bridge with Ruta missiles from a firm Russian-born Mikhail Kokorich founded in Switzerland after the U.S. barred him from his own startup’s technology",
-      "description": "Ukraine has begun gradually releasing details of its successful strike on the Crimean Bridge. Ruta drones helped bring down one of the bridge’s spans. The drones are made by a company founded by Mikhail Kokorich, a Russian-born businessman who left Russia after it annexed Crimea and later had to give up running his U.S. startup. Here’s what we know about him.",
-      "category": "",
+      "title_ko": "크림대교 타격에 쓰인 루타 드론, 러시아 출신 코코리치 창업 스위스 기업 제작",
+      "score": 3,
       "published": "2026-11-19T04:48:13+09:00"
-    },
-    {
-      "id": "meduza:b314f6bf00",
-      "source": "meduza",
-      "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
-      "url": "https://meduza.io/en/news/2026/11/18/slovenia-stops-taking-tourist-visa-applications-in-russia-extends-restrictions-to-russians-in-serbia",
-      "title": "Slovenia stops taking tourist visa applications in Russia, extends restrictions to Russians in Serbia",
-      "description": "Slovenia’s visa centers in Russia have stopped accepting tourist visa applications, according to a notice on the website of VFS Global, which runs the centers.",
-      "category": "",
-      "published": "2026-11-19T04:00:32+09:00"
-    },
-    {
-      "id": "meduza:84c1130e7d",
-      "source": "meduza",
-      "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
-      "url": "https://meduza.io/en/news/2026/11/18/russian-prosecutors-call-for-an-end-to-the-khachaturyan-sisters-murder-case-saying-they-acted-in-self-defense-when-they-killed-their-abusive-father",
-      "title": "Russian prosecutors call for an end to the Khachaturyan sisters’ murder case, saying they acted in self-defense when they killed their abusive father",
-      "description": "Prosecutors believe Krestina, Angelina, and Maria Khachaturyan, the sisters accused of killing their father, Mikhail Khachaturyan, acted in self-defense and that the case against them should therefore be dropped, the state news agency RIA Novosti reported from Moscow’s Basmanny District Court.",
-      "category": "",
-      "published": "2026-11-19T03:50:11+09:00"
-    },
-    {
-      "id": "meduza:dbc6c1da87",
-      "source": "meduza",
-      "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
-      "url": "https://meduza.io/en/news/2026/11/18/russia-s-state-duma-approves-law-restricting-library-access-to-books-by-foreign-agents",
-      "title": "Russia’s State Duma approves law restricting library access to books by ‘foreign agents’",
-      "description": "Russia’s State Duma has passed a law restricting access to books by “foreign agents” in the country’s libraries, approving it in its second and third readings. The measure amends existing rules under Russia’s library law.",
-      "category": "",
-      "published": "2026-11-19T03:39:49+09:00"
-    },
-    {
-      "id": "meduza:6de8d1edb5",
-      "source": "meduza",
-      "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
-      "url": "https://meduza.io/en/feature/2026/11/18/four-ways-china-treated-trump-and-putin-differently-at-the-apec-summit-in-shenzhen",
-      "title": "Four ways China treated Trump and Putin differently at the APEC summit in Shenzhen",
-      "description": "The Asia-Pacific Economic Cooperation (APEC) summit opened in Shenzhen, China, on November 18, and Russian President Vladimir Putin is among the leaders attending. Putin, U.S. President Donald Trump, and Chinese leader Xi Jinping are expected to hold a three-way meeting on the summit’s second day. Putin himself proposed the meeting. Ahead of the summit, Russian pro-government outlets dubbed it a “",
-      "category": "",
-      "published": "2026-11-19T03:29:01+09:00"
-    },
-    {
-      "id": "meduza:8f16412c35",
-      "source": "meduza",
-      "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
-      "url": "https://meduza.io/en/news/2026/11/18/polish-president-karol-nawrocki-gave-trump-an-amber-adorned-throne-for-his-80th-birthday",
-      "title": "Polish President Karol Nawrocki gave Trump an amber-adorned ‘throne’ for his 80th birthday",
-      "description": "Polish President Karol Nawrocki gave Donald Trump an armchair decorated with amber for his 80th birthday, the Polish outlet TVN24+ reported. Even officials at Poland’s Foreign Ministry and the Polish Embassy in Washington didn’t know about the unusual gift to the U.S. president.",
-      "category": "",
-      "published": "2026-11-19T03:20:18+09:00"
-    },
-    {
-      "id": "meduza:f032fdf9de",
-      "source": "meduza",
-      "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
-      "url": "https://meduza.io/en/news/2026/11/18/russian-investigators-decline-to-open-criminal-case-after-st-petersburg-woman-reports-beating-and-abuse-at-police-station",
-      "title": "Russian investigators decline to open criminal case after St. Petersburg woman reports beating and abuse at police station",
-      "description": "Russia’s Investigative Committee has declined to open a criminal case in response to a complaint from Irina, a St. Petersburg resident who accused an officer at Police Station No. 14 in the city’s Frunzensky District of abusing her, beating her, and sexually assaulting her. Irina reported the decision on social media.",
-      "category": "",
-      "published": "2026-11-19T03:10:32+09:00"
-    },
-    {
-      "id": "meduza:e199d0c25f",
-      "source": "meduza",
-      "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
-      "url": "https://meduza.io/en/news/2026/11/18/russia-s-fsb-reportedly-has-a-list-of-at-least-1-000-azov-personnel-who-could-face-prosecution-in-russia-some-still-live-in-russian-occupied-territory",
-      "title": "Russia’s FSB reportedly has a list of at least 1,000 Azov personnel who could face prosecution in Russia. Some still live in Russian-occupied territory.",
-      "description": "Russia’s Federal Security Service (FSB) has a roster of Azov personnel that names at least 1,084 people, the independent outlet Mediazona has learned. The list includes people who held civilian jobs with the Ukrainian brigade and still live in Russian-occupied territory.",
-      "category": "",
-      "published": "2026-11-19T03:01:37+09:00"
-    },
-    {
-      "id": "meduza:e7a9bc7f0a",
-      "source": "meduza",
-      "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
-      "url": "https://meduza.io/en/news/2026/11/18/germany-s-ruling-conservatives-propose-rolling-back-2024-citizenship-reforms-bild-reports",
-      "title": "Germany’s ruling conservatives propose rolling back 2024 citizenship reforms, Bild reports",
-      "description": "Chancellor Friedrich Merz’s ruling conservative CDU/CSU bloc has proposed tightening the rules for German citizenship, Bild reported.",
-      "category": "",
-      "published": "2026-11-19T02:34:48+09:00"
-    },
-    {
-      "id": "meduza:33b55cb578",
-      "source": "meduza",
-      "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
-      "url": "https://meduza.io/en/news/2026/11/18/state-duma-advances-bill-imposing-fines-for-discrediting-traditional-values",
-      "title": "State Duma advances bill imposing fines for ‘discrediting traditional values’",
-      "description": "Russia’s State Duma approved a bill in its first reading that would impose fines for “discrediting traditional values.”",
-      "category": "",
-      "published": "2026-11-19T02:27:29+09:00"
-    },
-    {
-      "id": "meduza:8ff3e48ef8",
-      "source": "meduza",
-      "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
-      "url": "https://meduza.io/en/news/2026/11/18/russians-to-be-asked-about-plans-to-have-children-every-three-years",
-      "title": "Russians to be asked about plans to have children every three years",
-      "description": "Rosstat will survey Russians about their plans to have children every three years instead of every five, after President Vladimir Putin ordered the agency in February 2026 to shorten the interval between surveys.",
-      "category": "",
-      "published": "2026-11-19T01:39:43+09:00"
-    },
-    {
-      "id": "meduza:fbf882aac3",
-      "source": "meduza",
-      "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
-      "url": "https://meduza.io/en/feature/2026/11/18/russia-has-closed-one-in-six-maternity-hospitals-in-six-years-bbc-russia-finds-officials-blame-falling-birth-rates-and-declining-women-s-health",
-      "title": "Russia has closed one in six maternity hospitals in six years, BBC Russia finds. Officials blame falling birth rates and declining women’s health.",
-      "description": "The number of maternity hospitals and hospitals with maternity wards in Russia and occupied Crimea has fallen 18% since late 2020, according to calculations by BBC Russia based on data from the Federal Register of Medical Organizations (FRMO).",
-      "category": "",
-      "published": "2026-11-19T00:22:18+09:00"
-    },
-    {
-      "id": "portnews:660c566951",
-      "source": "portnews",
-      "source_name": "PortNews",
-      "stance": "러시아 해운 업계지 · 상트페테르부르크",
-      "url": "https://portnews.ru/news/399801/",
-      "title": "Университетские команды приступили к разработке предложений для грантовой программы имени Артура Чилингарова",
-      "description": "",
-      "category": "Арктика",
-      "published": "2026-11-19T01:00:00+09:00"
-    },
-    {
-      "id": "portnews:3642d7eb6b",
-      "source": "portnews",
-      "source_name": "PortNews",
-      "stance": "러시아 해운 업계지 · 상트페테르부르크",
-      "url": "https://portnews.ru/news/399805/",
-      "title": "Более 650 тонн мусора собрал коммунальный флот ГУП «Мосводосток» за летнюю навигацию 2026 года",
-      "description": "",
-      "category": "судоходство",
-      "published": "2026-11-19T00:59:00+09:00"
-    },
-    {
-      "id": "portnews:e9b3f688e5",
-      "source": "portnews",
-      "source_name": "PortNews",
-      "stance": "러시아 해운 업계지 · 상트페테르부르크",
-      "url": "https://portnews.ru/news/399804/",
-      "title": "ГТЛК совместно с Мосгортрансом и Московской верфью будут развивать электродвижение в столице",
-      "description": "",
-      "category": "судостроение",
-      "published": "2026-11-19T00:55:00+09:00"
-    },
-    {
-      "id": "portnews:f048c6fef9",
-      "source": "portnews",
-      "source_name": "PortNews",
-      "stance": "러시아 해운 업계지 · 상트페테르부르크",
-      "url": "https://portnews.ru/news/399802/",
-      "title": "В Новороссийске таможенники нашли 30 тонн незадекларированного топлива на теплоходе из Турции",
-      "description": "",
-      "category": "происшествия",
-      "published": "2026-11-19T00:49:00+09:00"
-    },
-    {
-      "id": "portnews:b654c0e4aa",
-      "source": "portnews",
-      "source_name": "PortNews",
-      "stance": "러시아 해운 업계지 · 상트페테르부르크",
-      "url": "https://portnews.ru/news/399800/",
-      "title": "«Заводы НТК» выполнили 7,4 тыс. плановых ремонтов вагонов за десять месяцев 2026 года",
-      "description": "",
-      "category": "железная дорога",
-      "published": "2026-11-19T00:34:00+09:00"
     },
     {
       "id": "portnews:1d98172245",
       "source": "portnews",
       "source_name": "PortNews",
-      "stance": "러시아 해운 업계지 · 상트페테르부르크",
       "url": "https://portnews.ru/news/399803/",
       "title": "Для загрузки «Жатайской судоверфи» необходим особый льготный лизинг судов для Арктики",
-      "description": "",
-      "category": "судостроение",
+      "title_ko": "자타이 조선소 가동 위해 북극용 선박 특별 우대 리스 필요",
+      "score": 3,
       "published": "2026-11-19T00:24:00+09:00"
     },
     {
       "id": "portnews:2ec65f229f",
       "source": "portnews",
       "source_name": "PortNews",
-      "stance": "러시아 해운 업계지 · 상트페테르부르크",
       "url": "https://portnews.ru/news/399796/",
       "title": "Перевозки нефти через Ормузский пролив на танкерах Suezmax и Aframax превысили 2 млн баррелей в сутки",
-      "description": "",
-      "category": "нефтегазовый рынок",
+      "title_ko": "호르무즈 해협 수에즈막스·아프라막스 원유 수송 하루 200만 배럴 넘어",
+      "score": 3,
       "published": "2026-11-19T00:12:00+09:00"
     },
     {
-      "id": "meduza:31662dc3d1",
+      "id": "meduza:1a0920ef70",
       "source": "meduza",
       "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
-      "url": "https://meduza.io/en/news/2026/11/19/russian-state-duma-approves-2027-2029-federal-budget-in-second-reading",
-      "title": "Russian State Duma approves 2027–2029 federal budget in second reading",
-      "description": "Russia’s State Duma approved the draft federal budget for 2027 and the 2028–2029 planning period in its second reading.",
-      "category": "",
-      "published": "2026-11-19T21:46:36+09:00"
+      "url": "https://meduza.io/en/news/2026/11/19/russia-invites-european-representatives-to-moscow-for-talks-putin-says",
+      "title": "Russia invites European representatives to Moscow for talks",
+      "title_ko": "러, 유럽 대표단을 모스크바 협상에 초청",
+      "score": 2,
+      "published": "2026-11-19T23:30:03+09:00"
+    },
+    {
+      "id": "portnews:b1d4677e3f",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399861/",
+      "title": "Погрузка в черноморских портах Турции сократилась на 11,7% за 9 месяцев",
+      "title_ko": "튀르키예 흑해 항만 선적량, 1~9월 11.7% 감소",
+      "score": 2,
+      "published": "2026-11-19T23:27:00+09:00"
+    },
+    {
+      "id": "moscowtimes:fc96ac669f",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/11/19/a-new-yalta-in-china-putin-gets-what-he-wants-mostly-a94314",
+      "title": "A New Yalta? In China, Putin Gets What He Wants – Mostly.",
+      "title_ko": "새로운 얄타? 푸틴, 중국서 대체로 원하는 것 얻어",
+      "score": 2,
+      "published": "2026-11-19T23:09:00+09:00"
+    },
+    {
+      "id": "moscowtimes:f85dd91897",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/11/19/putin-vows-painful-retaliation-to-crimean-bridge-attacks-a94315",
+      "title": "Putin Vows ‘Painful’ Retaliation to Crimean Bridge Attacks",
+      "title_ko": "푸틴, 크림대교 공격에 '고통스러운' 보복 공언",
+      "score": 2,
+      "published": "2026-11-19T22:35:00+09:00"
+    },
+    {
+      "id": "meduza:d391377d8e",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/news/2026/11/19/latvia-s-government-plans-to-adopt-a-de-russification-declaration-but-exactly-how-it-plans-to-limit-the-use-of-russian-is-unclear",
+      "title": "Latvia’s government plans to adopt a ‘de-Russification declaration.’ But exactly how it plans to limit the use of Russian is unclear.",
+      "title_ko": "라트비아 정부, '탈러시아화 선언' 추진",
+      "score": 2,
+      "published": "2026-11-19T22:21:22+09:00"
+    },
+    {
+      "id": "moscowtimes:1e5b79b300",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/11/19/us-indicts-russian-national-for-stalking-palantir-employees-as-foreign-agent-a94313",
+      "title": "U.S. Indicts Russian National for Stalking Palantir Employees as ‘Foreign Agent’",
+      "title_ko": "미, 팔란티어 직원 스토킹한 러시아인 '외국 대리인'으로 기소",
+      "score": 2,
+      "published": "2026-11-19T22:18:14+09:00"
+    },
+    {
+      "id": "timesca:74d386dde9",
+      "source": "timesca",
+      "source_name": "The Times of Central Asia",
+      "url": "https://timesca.com/business-inspections-in-kazakhstan-digital-overhaul/",
+      "title": "Kazakhstan’s Ombudsman Proposes Using Risk Data to Cut On-Site Business Inspections",
+      "title_ko": "카자흐 기업 옴부즈맨, 위험 데이터로 현장 검사 축소 제안",
+      "score": 2,
+      "published": "2026-11-19T22:07:00+09:00"
     },
     {
       "id": "meduza:d2ef379cbb",
       "source": "meduza",
       "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
       "url": "https://meduza.io/en/news/2026/11/19/putin-russia-refuses-to-negotiate-ceasefire-with-ukraine-after-strikes-on-crimean-bridge",
       "title": "Putin: Russia refuses to negotiate ceasefire with Ukraine after strikes on Crimean Bridge",
-      "description": "Russian President Vladimir Putin said he discussed a possible ceasefire with Ukraine in several areas with Russia’s Security Council, a body that advises the president on national security, but abandoned the idea after Ukrainian armed forces attacked the Crimean Bridge in recent days.",
-      "category": "",
+      "title_ko": "푸틴, 크림대교 타격 뒤 우크라 휴전 협상 거부",
+      "score": 2,
       "published": "2026-11-19T21:29:54+09:00"
+    },
+    {
+      "id": "portnews:ce941c5b32",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399845/",
+      "title": "В Южном центре ОСК началась окраска блоков строящегося плавдока «Владимир Емельянов»",
+      "title_ko": "OSK 남부센터, 부유식 도크 '블라디미르 예멜리야노프' 블록 도장 시작",
+      "score": 2,
+      "published": "2026-11-19T21:10:00+09:00"
     },
     {
       "id": "meduza:be31f5db15",
       "source": "meduza",
       "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
       "url": "https://meduza.io/en/feature/2026/11/19/putin-trump-and-xi-warn-international-criminal-court-against-abusing-its-jurisdiction-putin-has-faced-an-icc-arrest-warrant-since-2023",
       "title": "Putin, Trump, and Xi warn International Criminal Court against ‘abusing its jurisdiction.’ Putin has faced an ICC arrest warrant since 2023.",
-      "description": "A trilateral meeting of the leaders of China, the United States, and Russia — Xi Jinping, Donald Trump, and Vladimir Putin — has concluded in Shenzhen. A joint declaration was published following the talks. Here is a brief summary of its points.",
-      "category": "",
+      "title_ko": "푸틴·트럼프·시진핑, 국제형사재판소 '관할권 남용' 경고",
+      "score": 2,
       "published": "2026-11-19T21:09:32+09:00"
+    },
+    {
+      "id": "portnews:78db90f12f",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399844/",
+      "title": "Навигация по Сайменскому каналу завершится досрочно — 20 ноября",
+      "title_ko": "사이마 운하 항행, 11월 20일 조기 종료",
+      "score": 2,
+      "published": "2026-11-19T20:56:00+09:00"
+    },
+    {
+      "id": "moscowtimes:524256a300",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/11/19/kursk-daytime-ukrainian-attack-injures-11-in-kursk-a94309",
+      "title": "Daytime Ukrainian Attack Injures 11 in Kursk",
+      "title_ko": "쿠르스크 낮 시간 우크라 공격으로 11명 부상",
+      "score": 2,
+      "published": "2026-11-19T20:31:10+09:00"
     },
     {
       "id": "meduza:c7e68976fb",
       "source": "meduza",
       "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
       "url": "https://meduza.io/en/news/2026/11/19/xi-jinping-calls-for-total-elimination-of-nuclear-weapons-at-meeting-with-trump-and-putin",
       "title": "Xi Jinping calls for total elimination of nuclear weapons at meeting with Trump and Putin",
-      "description": "Chinese President Xi Jinping called for nuclear weapons to be banned and destroyed entirely, speaking at a meeting with U.S. President Donald Trump and Russian President Vladimir Putin.",
-      "category": "",
+      "title_ko": "시진핑, 트럼프·푸틴 앞에서 핵무기 전면 폐기 촉구",
+      "score": 2,
       "published": "2026-11-19T20:20:43+09:00"
+    },
+    {
+      "id": "barents:f13d777f32",
+      "source": "barents",
+      "source_name": "The Barents Observer",
+      "url": "https://www.thebarentsobserver.com/news/vitaly-orlovs-fishing-conglomerate-loses-lawsuit-against-norway/462193",
+      "title": "Vitaly Orlov’s fishing conglomerate loses lawsuit against Norway",
+      "title_ko": "오를로프 어업 대기업 노레보, 노르웨이 소송서 패소",
+      "score": 2,
+      "published": "2026-11-19T20:09:49+09:00"
     },
     {
       "id": "meduza:fb117a9b15",
       "source": "meduza",
       "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
       "url": "https://meduza.io/en/news/2026/11/19/ukrainian-drone-attack-on-russia-s-kursk-injures-11-people",
       "title": "Ukrainian drone attack on Russia’s Kursk injures 11 people",
-      "description": "Ukrainian drones attacked Kursk on the morning of November 19, injuring 11 people, Kursk Governor Alexander Khinshtein said.",
-      "category": "",
+      "title_ko": "우크라 드론, 쿠르스크 공격해 11명 부상",
+      "score": 2,
       "published": "2026-11-19T19:25:58+09:00"
+    },
+    {
+      "id": "portnews:5e2f4abeac",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399838/",
+      "title": "Строительство и проведение работ в морской акватории предложено не согласовывать с капитаном порта",
+      "title_ko": "해상 공사·작업 시 항만 선장 승인 폐지 제안",
+      "score": 2,
+      "published": "2026-11-19T19:15:00+09:00"
     },
     {
       "id": "meduza:0af18baa8b",
       "source": "meduza",
       "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
       "url": "https://meduza.io/en/news/2026/11/19/eu-bars-people-living-in-russia-from-taking-part-in-erasmus-student-and-teacher-exchange-program",
       "title": "EU bars people living in Russia from taking part in Erasmus+ student and teacher exchange program",
-      "description": "Russian residents and organizations can no longer take part in Erasmus+, the European Union’s exchange program for students and teachers.",
-      "category": "",
+      "title_ko": "EU, 러시아 거주자의 에라스뮈스+ 참여 금지",
+      "score": 2,
       "published": "2026-11-19T18:41:12+09:00"
-    },
-    {
-      "id": "meduza:2a12324063",
-      "source": "meduza",
-      "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
-      "url": "https://meduza.io/en/news/2026/11/19/ukrainian-drones-attack-oil-storage-tanks-in-russia-s-tatarstan",
-      "title": "Ukrainian drones attack oil storage tanks in Russia’s Tatarstan",
-      "description": "Ukrainian drones struck oil storage tanks near Almetyevsk overnight on November 19, according to the press service of Tatarstan’s head.",
-      "category": "",
-      "published": "2026-11-19T18:03:32+09:00"
     },
     {
       "id": "meduza:93d7b1c511",
       "source": "meduza",
       "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
       "url": "https://meduza.io/en/news/2026/11/19/who-s-that-he-s-my-friend-trump-greets-putin-at-summit-in-china-as-the-two-hold-40-minute-meeting",
       "title": "‘Who’s that? He’s my friend’: Trump greets Putin at summit in China as the two hold 40-minute meeting",
-      "description": "U.S. President Donald Trump and Russian President Vladimir Putin met on the sidelines of the APEC summit in Shenzhen, China, for about 40 minutes.",
-      "category": "",
+      "title_ko": "트럼프, 선전서 푸틴에 인사하며 40분 회담",
+      "score": 2,
       "published": "2026-11-19T17:33:02+09:00"
+    },
+    {
+      "id": "portnews:ad58826dee",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399830/",
+      "title": "Десять крупнейших контейнерных операторов мира забрали себе почти половину рынка",
+      "title_ko": "세계 10대 컨테이너 선사, 시장 거의 절반 장악",
+      "score": 2,
+      "published": "2026-11-19T17:11:00+09:00"
     },
     {
       "id": "meduza:6d8ee6641e",
       "source": "meduza",
       "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
       "url": "https://meduza.io/en/news/2026/11/19/ukraine-strikes-crimean-bridge-again-halting-train-traffic",
       "title": "Train traffic across Crimean Bridge suspended after another Ukrainian strike",
-      "description": "Ukrainian forces again struck the Crimean Bridge, which connects occupied Crimea to Russia’s Krasnodar Krai. Train traffic across the bridge has been halted, Russia’s Transport Ministry said.",
-      "category": "",
+      "title_ko": "우크라 재타격에 크림대교 철도 운행 중단",
+      "score": 2,
       "published": "2026-11-19T17:06:04+09:00"
     },
     {
-      "id": "meduza:623725cdc2",
+      "id": "moscowtimes:704c53b6f9",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/11/19/traffic-suspended-over-crimean-bridge-after-attack-moscow-installed-official-says-a94306",
+      "title": "Traffic Suspended Over Crimean Bridge After Attack, Moscow-Installed Official Says",
+      "title_ko": "크림대교 공격 후 통행 중단, 사흘 새 세 번째",
+      "score": 2,
+      "published": "2026-11-19T16:00:00+09:00"
+    },
+    {
+      "id": "portnews:d636448108",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399820/",
+      "title": "Глава Международной палаты судоходства призвал Китай помочь согласовать плату за выбросы судов",
+      "title_ko": "국제해운회의소, 中에 선박 배출 부담금 합의 지원 촉구",
+      "score": 2,
+      "published": "2026-11-19T14:21:00+09:00"
+    },
+    {
+      "id": "eurasianet:0962502d9d",
+      "source": "eurasianet",
+      "source_name": "Eurasianet",
+      "url": "https://eurasianet.org/church-support-for-georgian-government-slipping",
+      "title": "Church support for Georgian government slipping",
+      "title_ko": "조지아 정교회 내 집권당 지지 약화",
+      "score": 2,
+      "published": "2026-11-19T12:00:00+09:00"
+    },
+    {
+      "id": "meduza:b314f6bf00",
       "source": "meduza",
       "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
-      "url": "https://meduza.io/en/news/2026/11/19/ukraine-attacks-crimean-bridge-overnight-ahead-of-meeting-between-trump-putin-and-xi",
-      "title": "Ukraine attacks Crimean Bridge overnight ahead of meeting between Trump, Putin, and Xi — the third attack in a week",
-      "description": "Overnight into November 19, Ukraine attacked the Crimean Bridge again, targeting its railway section, which had survived earlier attacks. The bridge is closed to traffic, said Sergei Aksyonov, the head of annexed Crimea.",
-      "category": "",
-      "published": "2026-11-19T10:22:59+09:00"
+      "url": "https://meduza.io/en/news/2026/11/18/slovenia-stops-taking-tourist-visa-applications-in-russia-extends-restrictions-to-russians-in-serbia",
+      "title": "Slovenia stops taking tourist visa applications in Russia, extends restrictions to Russians in Serbia",
+      "title_ko": "슬로베니아, 러시아 내 관광비자 접수 중단·세르비아 거주 러시아인도 제한",
+      "score": 2,
+      "published": "2026-11-19T04:00:32+09:00"
+    },
+    {
+      "id": "meduza:dbc6c1da87",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/news/2026/11/18/russia-s-state-duma-approves-law-restricting-library-access-to-books-by-foreign-agents",
+      "title": "Russia’s State Duma approves law restricting library access to books by ‘foreign agents’",
+      "title_ko": "러 하원, '외국 대리인' 저작물 도서관 열람 제한법 통과",
+      "score": 2,
+      "published": "2026-11-19T03:39:49+09:00"
+    },
+    {
+      "id": "meduza:6de8d1edb5",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/feature/2026/11/18/four-ways-china-treated-trump-and-putin-differently-at-the-apec-summit-in-shenzhen",
+      "title": "Four ways China treated Trump and Putin differently at the APEC summit in Shenzhen",
+      "title_ko": "선전 APEC서 중국이 트럼프와 푸틴을 달리 대우한 네 가지",
+      "score": 2,
+      "published": "2026-11-19T03:29:01+09:00"
+    },
+    {
+      "id": "meduza:e199d0c25f",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/news/2026/11/18/russia-s-fsb-reportedly-has-a-list-of-at-least-1-000-azov-personnel-who-could-face-prosecution-in-russia-some-still-live-in-russian-occupied-territory",
+      "title": "Russia’s FSB reportedly has a list of at least 1,000 Azov personnel who could face prosecution in Russia. Some still live in Russian-occupied territory.",
+      "title_ko": "FSB, 아조프 인원 1,084명 이상 명단 보유, 매체 보도",
+      "score": 2,
+      "published": "2026-11-19T03:01:37+09:00"
+    },
+    {
+      "id": "meduza:33b55cb578",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/news/2026/11/18/state-duma-advances-bill-imposing-fines-for-discrediting-traditional-values",
+      "title": "State Duma advances bill imposing fines for ‘discrediting traditional values’",
+      "title_ko": "러 하원, '전통 가치 훼손' 벌금법안 1독회 통과",
+      "score": 2,
+      "published": "2026-11-19T02:27:29+09:00"
+    },
+    {
+      "id": "portnews:660c566951",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399801/",
+      "title": "Университетские команды приступили к разработке предложений для грантовой программы имени Артура Чилингарова",
+      "title_ko": "대학 팀들, 칠링가로프 기념 보조금 프로그램 제안서 작성 착수",
+      "score": 2,
+      "published": "2026-11-19T01:00:00+09:00"
+    },
+    {
+      "id": "moscowtimes:c21391b24b",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/11/18/the-researchers-counting-russias-war-dead-one-name-at-a-time-a94302",
+      "title": "The Researchers Counting Russia’s War Dead, One Name at a Time",
+      "title_ko": "러시아 전사자 28만 5천 명 이상, 실명 확인 작업 이어가",
+      "score": 2,
+      "published": "2026-11-19T00:49:00+09:00"
+    },
+    {
+      "id": "portnews:f048c6fef9",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399802/",
+      "title": "В Новороссийске таможенники нашли 30 тонн незадекларированного топлива на теплоходе из Турции",
+      "title_ko": "노보로시스크 세관, 튀르키예발 선박서 미신고 연료 30톤 적발",
+      "score": 2,
+      "published": "2026-11-19T00:49:00+09:00"
+    },
+    {
+      "id": "portnews:b654c0e4aa",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399800/",
+      "title": "«Заводы НТК» выполнили 7,4 тыс. плановых ремонтов вагонов за десять месяцев 2026 года",
+      "title_ko": "NTK 공장, 2026년 10개월간 화차 정비 7,400건 수행",
+      "score": 2,
+      "published": "2026-11-19T00:34:00+09:00"
+    },
+    {
+      "id": "meduza:fbf882aac3",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/feature/2026/11/18/russia-has-closed-one-in-six-maternity-hospitals-in-six-years-bbc-russia-finds-officials-blame-falling-birth-rates-and-declining-women-s-health",
+      "title": "Russia has closed one in six maternity hospitals in six years, BBC Russia finds. Officials blame falling birth rates and declining women’s health.",
+      "title_ko": "러 산부인과 6년간 18% 폐쇄, BBC 러시아어 분석",
+      "score": 2,
+      "published": "2026-11-19T00:22:18+09:00"
+    },
+    {
+      "id": "meduza:11e5a53368",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/news/2026/11/19/a-russian-state-tv-reporter-asked-lavrov-whether-putin-s-talks-with-trump-and-xi-went-well-lavrov-only-snapped-back",
+      "title": "A Russian state TV reporter asked Lavrov whether Putin’s talks with Trump and Xi ‘went well.’ Lavrov only snapped back.",
+      "title_ko": "라브로프, 푸틴 회담 평가 묻는 국영TV 기자에 쏘아붙여",
+      "score": 1,
+      "published": "2026-11-19T22:44:02+09:00"
+    },
+    {
+      "id": "meduza:ef1a9994db",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/news/2026/11/19/russia-s-interior-ministry-to-charge-banks-telecom-providers-a-fee-for-each-database-query",
+      "title": "Russia’s Interior Ministry to charge banks, telecom providers a fee for each database query",
+      "title_ko": "러 내무부, DB 조회당 은행·통신사에 50루블 부과",
+      "score": 1,
+      "published": "2026-11-19T22:09:40+09:00"
+    },
+    {
+      "id": "timesca:7e57da64c3",
+      "source": "timesca",
+      "source_name": "The Times of Central Asia",
+      "url": "https://timesca.com/tajikistan-gef-funding-falls-30-percent/",
+      "title": "Tajikistan’s GEF Allocation Falls 30% to $6.3 Million",
+      "title_ko": "타지키스탄 GEF 배정액 30% 삭감된 630만 달러",
+      "score": 1,
+      "published": "2026-11-19T20:47:54+09:00"
+    },
+    {
+      "id": "portnews:d5d991797f",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399842/",
+      "title": "ГТЛК, «Сириус» и «Нева Тревел» договорились о развитии морского пассажирского сообщения",
+      "title_ko": "GTLK·시리우스·네바트래블, 해상 여객 운송 발전 합의",
+      "score": 1,
+      "published": "2026-11-19T20:31:00+09:00"
+    },
+    {
+      "id": "timesca:f2ef9fc798",
+      "source": "timesca",
+      "source_name": "The Times of Central Asia",
+      "url": "https://timesca.com/what-is-samruk-kazyna/",
+      "title": "What Is Samruk-Kazyna? Inside Kazakhstan’s $88 Billion Fund After Corruption Arrests",
+      "title_ko": "삼룩카지나란? 부패 체포 뒤 카자흐 880억 달러 국부펀드",
+      "score": 1,
+      "published": "2026-11-19T20:23:44+09:00"
+    },
+    {
+      "id": "portnews:860c361408",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399841/",
+      "title": "Внедрение роботизированной линии резки позволит сократить объем ручных операций на заводе «Янтарь»",
+      "title_ko": "얀타르 조선소, 로봇 절단 라인 도입으로 수작업 축소",
+      "score": 1,
+      "published": "2026-11-19T20:12:00+09:00"
+    },
+    {
+      "id": "portnews:032c6e9052",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399836/",
+      "title": "АО «Порт Восточные ворота — Приморский завод» возместило 1,3 млн рублей за загрязнение бухты Находка",
+      "title_ko": "보스토치니 게이트–프리모르스키 공장, 나홋카만 오염 배상금 130만 루블",
+      "score": 1,
+      "published": "2026-11-19T18:32:00+09:00"
+    },
+    {
+      "id": "portnews:86a0f4d0f4",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399835/",
+      "title": "Перевозки пассажиров в Московском бассейне ВВП за навигацию-2026 выросли на 2% — до 3,2 млн человек",
+      "title_ko": "모스크바 수계 여객 운송, 2026년 항행기 2% 증가한 320만 명",
+      "score": 1,
+      "published": "2026-11-19T18:17:00+09:00"
+    },
+    {
+      "id": "portnews:b41c50a62b",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399834/",
+      "title": "Пассажиропоток Северного и Южного речных вокзалов Москвы превысил 360 тыс. человек в 2026 году",
+      "title_ko": "모스크바 북·남 강변 터미널 여객 36만 명 돌파",
+      "score": 1,
+      "published": "2026-11-19T17:58:00+09:00"
+    },
+    {
+      "id": "portnews:8d417ca39f",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399831/",
+      "title": "Забастовка охранников грозит остановить работу крупнейших портов США",
+      "title_ko": "美 항만 경비원 파업, 대형 항만 가동 중단 위기",
+      "score": 1,
+      "published": "2026-11-19T16:32:00+09:00"
+    },
+    {
+      "id": "portnews:6fe84bd05d",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399829/",
+      "title": "Гвинея обошла ЮАР и стала третьим в мире морским экспортером железной руды",
+      "title_ko": "기니, 남아공 제치고 세계 3위 철광석 해상 수출국으로",
+      "score": 1,
+      "published": "2026-11-19T16:14:00+09:00"
+    },
+    {
+      "id": "portnews:84d9f11450",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399828/",
+      "title": "В порту Корсаков (Сахалин) завершена реконструкция пяти причалов Рыбного порта",
+      "title_ko": "사할린 코르사코프항 수산항 부두 5곳 재건 완료",
+      "score": 1,
+      "published": "2026-11-19T15:52:00+09:00"
+    },
+    {
+      "id": "portnews:87c2095d63",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399826/",
+      "title": "Новый катер-торпедолов ТЛ-2202 вошел в состав Северного флота",
+      "title_ko": "신형 어뢰회수정 TL-2202, 북방함대 편입",
+      "score": 1,
+      "published": "2026-11-19T15:28:00+09:00"
+    },
+    {
+      "id": "portnews:a5c7cd260d",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399825/",
+      "title": "Прокуратура потребовала устранить нарушения санитарных норм на грузовом причале в Балаково",
+      "title_ko": "검찰, 발라코보 화물부두 위생기준 위반 시정 요구",
+      "score": 1,
+      "published": "2026-11-19T15:06:00+09:00"
+    },
+    {
+      "id": "portnews:97f9e2d945",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399824/",
+      "title": "ОСК наращивает инвестиции в персонал и социальные гарантии",
+      "title_ko": "OSK, 인력 투자·사회보장 확대",
+      "score": 1,
+      "published": "2026-11-19T14:43:00+09:00"
+    },
+    {
+      "id": "portnews:12662da7f4",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399814/",
+      "title": "Сингапурская Poseidon Brokerage Services запустила бесплатный калькулятор сталийного времени и демереджа",
+      "title_ko": "싱가포르 포세이돈, 정박시간·체선료 무료 계산기 출시",
+      "score": 1,
+      "published": "2026-11-19T14:00:00+09:00"
+    },
+    {
+      "id": "meduza:5fb9de6519",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/news/2026/11/18/telegram-tests-password-protected-hidden-chats-on-macos",
+      "title": "Telegram tests password-protected ‘hidden chats’ on macOS",
+      "title_ko": "텔레그램, macOS에서 비밀번호 보호 '숨김 채팅' 시험",
+      "score": 1,
+      "published": "2026-11-19T05:00:54+09:00"
+    },
+    {
+      "id": "meduza:84c1130e7d",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/news/2026/11/18/russian-prosecutors-call-for-an-end-to-the-khachaturyan-sisters-murder-case-saying-they-acted-in-self-defense-when-they-killed-their-abusive-father",
+      "title": "Russian prosecutors call for an end to the Khachaturyan sisters’ murder case, saying they acted in self-defense when they killed their abusive father",
+      "title_ko": "검찰, 하차투랸 자매 정당방위 인정하며 사건 종결 요구",
+      "score": 1,
+      "published": "2026-11-19T03:50:11+09:00"
+    },
+    {
+      "id": "meduza:8f16412c35",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/news/2026/11/18/polish-president-karol-nawrocki-gave-trump-an-amber-adorned-throne-for-his-80th-birthday",
+      "title": "Polish President Karol Nawrocki gave Trump an amber-adorned ‘throne’ for his 80th birthday",
+      "title_ko": "폴란드 대통령, 트럼프 80세 생일에 호박 장식 '왕좌' 선물",
+      "score": 1,
+      "published": "2026-11-19T03:20:18+09:00"
+    },
+    {
+      "id": "meduza:f032fdf9de",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/news/2026/11/18/russian-investigators-decline-to-open-criminal-case-after-st-petersburg-woman-reports-beating-and-abuse-at-police-station",
+      "title": "Russian investigators decline to open criminal case after St. Petersburg woman reports beating and abuse at police station",
+      "title_ko": "상트페테르부르크 여성 경찰서 폭행 신고, 수사위가 형사사건 입건 거부",
+      "score": 1,
+      "published": "2026-11-19T03:10:32+09:00"
+    },
+    {
+      "id": "meduza:e7a9bc7f0a",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/news/2026/11/18/germany-s-ruling-conservatives-propose-rolling-back-2024-citizenship-reforms-bild-reports",
+      "title": "Germany’s ruling conservatives propose rolling back 2024 citizenship reforms, Bild reports",
+      "title_ko": "독일 보수 연합, 2024년 시민권 개혁 되돌리자 제안",
+      "score": 1,
+      "published": "2026-11-19T02:34:48+09:00"
+    },
+    {
+      "id": "meduza:8ff3e48ef8",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/news/2026/11/18/russians-to-be-asked-about-plans-to-have-children-every-three-years",
+      "title": "Russians to be asked about plans to have children every three years",
+      "title_ko": "로스스타트, 출산 계획 조사를 5년→3년 주기로 단축",
+      "score": 1,
+      "published": "2026-11-19T01:39:43+09:00"
+    },
+    {
+      "id": "portnews:3642d7eb6b",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399805/",
+      "title": "Более 650 тонн мусора собрал коммунальный флот ГУП «Мосводосток» за летнюю навигацию 2026 года",
+      "title_ko": "모스크바 수로청 청소선단, 2026년 여름 항행 중 쓰레기 650톤 수거",
+      "score": 1,
+      "published": "2026-11-19T00:59:00+09:00"
+    },
+    {
+      "id": "portnews:e9b3f688e5",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/399804/",
+      "title": "ГТЛК совместно с Мосгортрансом и Московской верфью будут развивать электродвижение в столице",
+      "title_ko": "GTLK·모스크바 교통공사·조선소, 모스크바 전기추진 선박 개발 협력",
+      "score": 1,
+      "published": "2026-11-19T00:55:00+09:00"
+    },
+    {
+      "id": "moscowtimes:eef43ceccc",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/11/18/prosecution-seeks-to-drop-khachaturyan-sisters-murder-case-a94304",
+      "title": "Prosecution Seeks to Drop Khachaturyan Sisters Murder Case",
+      "title_ko": "하차투랸 자매 살인 사건, 검찰이 공소 취하 요청",
+      "score": 1,
+      "published": "2026-11-19T00:48:33+09:00"
     }
   ],
-  "brief": {},
-  "published_at": null,
-  "collected_at": "2026-11-19T21:53:11+09:00"
+  "pending": [],
+  "brief": {
+    "headline": "미·중·러 회동 뒤 협상 교착, 북극·극동 물류는 질주",
+    "overview": "푸틴은 트럼프·시진핑과의 3자 회동 뒤에도 영토 양보는 없다고 못 박고 유럽 대표를 모스크바로 초청했다고 매체는 전했다. 한편 우크라이나는 크림대교와 정유소를 연달아 타격했고, 로이터 소식통 추정으로는 러시아 정제량이 10월 말 이후 45% 줄었다. 아부다비 협상은 돌파구 없이 끝났고, 러시아가 NATO 배치를 1997년 수준으로 되돌리라는 안보 요구를 내걸어 협상이 유럽 안보 구도 전반으로 번지고 있다. 이런 가운데 NSR 화물량 4,000만 톤 돌파, 극동 컨테이너·철도 수송 급증, EU의 제재 집행 부서 신설이 겹치면서, 러시아 물류는 동방·북극 쪽으로 재편되고 서방의 집행은 더 촘촘해지는 구도다. 다만 NSR 수치와 극동 증가세는 러시아 정부·업계 발표라는 점에 유의해야 한다.",
+    "watch": [
+      "11월 19일 베를린 위트코프·쿠슈너와 우크라이나·EU 대표 회담에서 안전보장 논의가 어디까지 가는지, 푸틴이 초청한 유럽 대표단이 모스크바에 가는지 지켜볼 만하다.",
+      "러시아 정제량 급감이 석유제품 수출, 원유 수출 비중, 루블과 재정(11월 24일 예산 3차 심의)에 어떻게 반영되는지 봐야 한다.",
+      "크림대교 마비가 길어질 경우 아조프-흑해 물동량 감소가 심해지는지, 극동 항만·철도 병목이 완화되는지 확인해야 한다."
+    ],
+    "top_source": "model",
+    "top": [
+      {
+        "id": "meduza:a83162619a",
+        "reason": "미·중·러 회동 직후 푸틴의 영토 불양보·크림대교 보복·유럽 초청 발언이 앞으로 협상과 제재 흐름의 기준선이 된다."
+      },
+      {
+        "id": "portnews:b59f902db9",
+        "reason": "NSR 화물량이 사상 처음 4,000만 톤을 넘고 연중 운항이 다음 목표로 제시돼, 북극항로 물류를 준비하는 독자가 꼭 확인할 수치다."
+      },
+      {
+        "id": "portnews:b715a06598",
+        "reason": "EU가 제재 감독 통합 부서와 특별대표를 신설해 우회 무역·그림자 선단 단속이 강화될 전망이어서 포워더 컴플라이언스에 직결된다."
+      }
+    ],
+    "model": "claude-sonnet-5-5",
+    "summarized_at": "2026-11-20T11:39:02.623541+09:00"
+  },
+  "published_at": "2026-11-20T11:36:35+09:00",
+  "collected_at": "2026-11-20T11:36:34+09:00",
+  "generated_at": "2026-11-20T11:39:02.623735+09:00"
 }
