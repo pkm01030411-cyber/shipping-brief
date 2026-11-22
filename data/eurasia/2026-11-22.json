@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-22",
+  "articles": [],
+  "screened": [],
+  "pending": [
+    {
+      "id": "portnews:43c708e220",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "stance": "러시아 해운 업계지 · 상트페테르부르크",
+      "url": "https://portnews.ru/news/399943/",
+      "title": "К атакованному в Финском заливе сухогрузу подошло российское спасательное судно",
+      "description": "",
+      "category": "судоходство",
+      "published": "2026-11-22T03:56:00+09:00"
+    }
+  ],
+  "brief": {},
+  "published_at": null,
+  "collected_at": "2026-11-22T11:09:22+09:00"
+}
