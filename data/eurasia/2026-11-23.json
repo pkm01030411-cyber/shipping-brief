@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-23",
+  "articles": [],
+  "screened": [],
+  "pending": [
+    {
+      "id": "moscowtimes:6e73c26c93",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "stance": "독립 언론 · 암스테르담",
+      "url": "https://www.themoscowtimes.com/2026/11/22/russian-cargo-ship-still-on-fire-off-finland-after-attack-a94343",
+      "title": "Russia Starts Towing Ship Hit by Drones in Baltic, Finland Says",
+      "description": "A fire onboard a Russian cargo ship struck by drones continued to burn through the night, even as efforts were made to douse the flames.",
+      "category": "",
+      "published": "2026-11-23T01:26:00+09:00"
+    },
+    {
+      "id": "moscowtimes:49ae869d65",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "stance": "독립 언론 · 암스테르담",
+      "url": "https://www.themoscowtimes.com/2026/11/22/at-least-4-killed-in-russian-drone-attacks-on-kyiv-region-officials-say-a94345",
+      "title": "At Least 4 Killed in Russian Drone Attacks on Kyiv Region, Officials Say",
+      "description": "At least four people were killed in Russian drone attacks on Ukraine's Kyiv region on Sunday, President Volodymyr Zelensky and local officials said.",
+      "category": "",
+      "published": "2026-11-23T01:07:14+09:00"
+    },
+    {
+      "id": "moscowtimes:c7e65698b6",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "stance": "독립 언론 · 암스테르담",
+      "url": "https://www.themoscowtimes.com/2026/11/22/libyas-eastern-government-suspects-drone-attack-caused-explosion-on-russian-ship-at-benghazi-port-a94344",
+      "title": "Libya’s Eastern Government Suspects Drone Attack Caused Explosion on Russian Ship",
+      "description": "The government stressed that Libya was not a party to the war between Russia and Ukraine, saying its relations with friendly countries were a sovereign matter.",
+      "category": "",
+      "published": "2026-11-23T00:23:00+09:00"
+    },
+    {
+      "id": "portnews:cbb57ba125",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "stance": "러시아 해운 업계지 · 상트페테르부르크",
+      "url": "https://portnews.ru/news/399963/",
+      "title": "В Финском заливе началась буксировка атакованного беспилотниками судна «Спарта II»",
+      "description": "",
+      "category": "происшествия",
+      "published": "2026-11-23T06:30:00+09:00"
+    }
+  ],
+  "brief": {},
+  "published_at": null,
+  "collected_at": "2026-11-23T08:34:53+09:00"
+}

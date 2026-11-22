@@ -1,0 +1,1086 @@
+{
+  "week": "2026-W47",
+  "start": "2026-11-16",
+  "end": "2026-11-22",
+  "generated_at": "2026-11-23T08:35:33.568104+09:00",
+  "article_count": 63,
+  "review": {
+    "headline": "크림대교 붕괴·정유소 타격 속 3자 회담 무성과",
+    "overview": "이번 주 정세는 선전 APEC 계기의 트럼프·시진핑·푸틴 3자 회담을 축으로 움직였다. 회담은 '핵전쟁 불가' 평화 선언만 내놓았고 우크라이나 종전과 제재 완화는 합의하지 못했으며, 매체에 따르면 우크라이나 조항은 미국 요청으로 빠졌다. 푸틴은 크림대교 공격 이후 협상을 하지 않겠다고 했고, 러시아는 곧바로 키이우에 대규모 공습을 가했다. 반면 미국은 2027년 1월 초 이전 합의를 서두른다는 FT 보도가 나왔다. 우크라이나는 크림대교를 사흘 연속 공격해 도로 주경간을 무너뜨렸고, 정유소 타격으로 러시아 정제량이 10월 말 이후 45% 줄었다는 추정도 나왔다. 핀란드만에서 칼리닌그라드행 화물선이 피격되고 에스토니아가 도로 검문소를 닫는 등 발트해 안보 위험도 커졌다. 한편 러시아는 NSR 4,000만 톤 돌파, 모허–나이바 회랑, 극동철도 컨테이너 급증 같은 '동방 전환' 물류 성과를 부각했다. 이는 제재 압박과 EU의 제재 감독 부서 신설이 겹친 환경에서 나온 것이다.",
+    "themes": [
+      {
+        "title": "3자 회담의 무성과와 종전 협상의 교착",
+        "body": "선전 3자 회담은 평화 선언 외에 구체 합의가 없었고, MOEX는 2.3% 하락했다. 푸틴은 영토 양보 불가와 크림대교 이후 협상 불가를 밝혔다. 미국은 민주당 의회 장악 전인 1월 초까지 합의를 원한다고 FT가 전했다. 러시아가 나토 1997년 수준 환원을 요구하고 유럽을 모스크바로 초청한 점도 협상 구도의 변수다.",
+        "article_ids": [
+          "moscowtimes:776b8c8299",
+          "moscowtimes:afa5aed85c",
+          "meduza:a83162619a",
+          "meduza:7f2de9a1fb",
+          "moscowtimes:827ea1de34",
+          "meduza:59520296f2"
+        ]
+      },
+      {
+        "title": "크림대교·정유소: 인프라가 표적이 된 전쟁",
+        "body": "우크라이나는 크림대교의 도로 구간을 무너뜨렸고 러시아는 키이우의 다리와 에너지 시설을 공격했다. 로이터 추정으로 러시아 정제량은 10월 말 이후 45% 줄었다. 크림 육상·철도 보급이 흔들리고 정제 차질은 석유제품 수출과 국내 연료 공급에 영향을 줄 수 있다.",
+        "article_ids": [
+          "meduza:aeec41c3b6",
+          "moscowtimes:91d2fafedd",
+          "meduza:6e2af30740",
+          "moscowtimes:9a07ddd957",
+          "moscowtimes:2b93e4fb81",
+          "meduza:97f1ff3052"
+        ]
+      },
+      {
+        "title": "동방 전환 물류: NSR·극동 회랑·철도",
+        "body": "러시아는 NSR 화물이 사상 처음 4,000만 톤을 넘었고 2030년 목표는 7,000만 톤이라고 밝혔다. 모허–나이바–마가단 회랑이 제시되고 동부 폴리곤은 한계에 달했다. 극동철도 반화차 컨테이너는 2.4배로 늘었고, FESCO 통계에서는 극동 수입이 견인했다. 아크틱 LNG-2용 Arc7 3호선도 연말 인도된다.",
+        "article_ids": [
+          "portnews:b59f902db9",
+          "portnews:3f3e828ee5",
+          "portnews:88066d60ba",
+          "portnews:a3fa6e182c",
+          "portnews:80bbb7e755",
+          "portnews:a8e89b33c2"
+        ]
+      },
+      {
+        "title": "제재·해상 안보와 주변국 압박",
+        "body": "EU는 제재 이행 감독 부서를 신설하고 유니스트림·와일드베리스 등을 제재했다. 중국은 드론 부품 수출통제를 강화했다. 핀란드만 화물선 피격, 에스토니아 검문소 폐쇄, 호르무즈 유조선 피격은 해상·국경 물류 리스크를 키운다. 중앙아에서는 타지키스탄 송금 의존과 KTZ 회장 체포가 부각됐다.",
+        "article_ids": [
+          "portnews:b715a06598",
+          "timesca:ef8e4a7bda",
+          "moscowtimes:27120a58ce",
+          "moscowtimes:31ceb74c63",
+          "meduza:4ab7110adc",
+          "portnews:9a431ee9c2",
+          "timesca:5b92f3a5a6",
+          "meduza:ee85f7de3a"
+        ]
+      }
+    ],
+    "questions": [
+      "크림대교 손상과 발트해 화물선 피격이 러시아 남부·서부 물류 경로와 보험료, 곡물·비료 수출 항만 선택에 어떤 영향을 줄지 설명해 보라.",
+      "NSR 4,000만 톤 돌파와 모허–나이바 회랑 구상에서 실제 상업성을 가를 변수는 무엇이며, 포워더로서 어떤 근거로 판단하겠는가.",
+      "EU 제재 감독 부서 신설과 중앙아·튀르키예 경유 우회무역 단속 강화가 중간회랑이나 환적 허브 비즈니스에 주는 기회와 리스크는 무엇인가."
+    ],
+    "top": [
+      {
+        "id": "moscowtimes:afa5aed85c",
+        "reason": "3자 회담이 평화 선언 외에 구체 합의 없이 끝나 전쟁·제재 전망을 좌우하는 이번 주의 중심 사건이다."
+      },
+      {
+        "id": "meduza:eddbe5a1ca",
+        "reason": "크림대교 도로 상판 붕괴는 러시아의 남부 보급과 육상 물류에 직접 타격을 주는 전쟁 양상의 변화다."
+      },
+      {
+        "id": "meduza:6e2af30740",
+        "reason": "정제량 45% 감소는 러시아 연료 공급과 석유제품 수출에 영향을 줄 수 있다."
+      },
+      {
+        "id": "portnews:b59f902db9",
+        "reason": "NSR 화물 4,000만 톤 돌파와 연중 운항 목표는 북극항로 상업화의 현재 위치를 보여 준다."
+      },
+      {
+        "id": "portnews:b715a06598",
+        "reason": "EU의 제재 감독 통합 부서와 특별대표 신설은 우회무역 단속이 강해질 신호로, 물류 컴플라이언스에 중요하다."
+      }
+    ],
+    "model": "claude-sonnet-5-5"
+  },
+  "kotra": [
+    {
+      "id": "kotra:245082",
+      "title": "2026년 러시아 극동지역 차세대 한국전문가 초청 세미나 참관기",
+      "summary_raw": "지난 10월 30일, 러시아 블라디보스톡에서 차세대 한국전문가 초청 세미나가 개최됐다. 한·러 교역환경의 변화와 경제협력 현황을 공유하고, 한국어·한국학을 전공하는 현지 대학생 135명과 함께 양국 교류의 지속 가능성과 차세대 전문인력의 역할을 모색했다.",
+      "date": "2026-11-17",
+      "kbc": "블라디보스톡무역관",
+      "nat": "러시아연방",
+      "board": "현장·인터뷰",
+      "url": "https://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&MENU_ID=70&CONTENTS_NO=1&bbsGbn=245&bbsSn=245&pNttSn=245082",
+      "country": "러시아",
+      "summary": "주블라디보스톡 총영사관이 10월 30일 극동 한국어 전공 대학생 약 135명을 초청해 2회차 '차세대 한국전문가 세미나'를 열었다. KOTRA는 2025년 한국의 대러 수출 40억 4,000만 달러(2021년 대비 59.5% 감소), 수입 68억 9,000만 달러(60.3% 감소)를 소개했고, 극동 유통업체는 한국 식품 판매가 늘고 있다고 밝혔다.",
+      "point": "교역은 2021년의 40% 안팎으로 줄었지만 극동에서 한국 식품 수요는 견조하므로, 제재 준수를 전제로 한 소비재 수요와 극동 인적 네트워크를 파악해 둘 필요가 있다."
+    }
+  ],
+  "tag_counts": [
+    [
+      "우크라이나전쟁",
+      28
+    ],
+    [
+      "러시아",
+      20
+    ],
+    [
+      "제재",
+      12
+    ],
+    [
+      "크림대교",
+      7
+    ],
+    [
+      "북극항로",
+      7
+    ],
+    [
+      "중앙아시아",
+      6
+    ],
+    [
+      "러시아경제",
+      6
+    ],
+    [
+      "중국",
+      5
+    ],
+    [
+      "나토",
+      4
+    ],
+    [
+      "무르만스크",
+      3
+    ],
+    [
+      "카자흐스탄",
+      3
+    ],
+    [
+      "타지키스탄",
+      3
+    ],
+    [
+      "APEC",
+      3
+    ],
+    [
+      "해운",
+      3
+    ],
+    [
+      "협상",
+      3
+    ],
+    [
+      "칼리닌그라드",
+      3
+    ]
+  ],
+  "articles": [
+    {
+      "id": "timesca:5b92f3a5a6",
+      "source": "timesca",
+      "source_name": "The Times of Central Asia",
+      "title": "KTZ 회장 체포 이후 부채와 IPO 전망: 전 홍보국장 \"안정성 위협은 아니다\"",
+      "url": "https://timesca.com/murat-buldekbayev-on-ktzs-debt-and-ipo-prospects-after-the-arrests/",
+      "published": "2026-11-18T21:09:57+09:00",
+      "category": "Local Politics",
+      "subtitle": "The detention of Yelzhas Otynshiyev, chairman of Kazakhstan’s national railway company Kazakhstan Temir Zholy (KTZ), and Nurlan Zhakupov, head of",
+      "author": "",
+      "body": "",
+      "summary": "카자흐스탄 국영철도 KTZ의 옐자스 오틴시예프 회장과 삼룩-카지나의 누를란 자쿠포프 대표가 11월 11일 KNB 반부패국에 구금됐고, 법원이 14일 구금을 명령했다. KTZ의 차입금은 2026년 상반기 22.4% 늘어 3.9조 텡게(약 88억 달러)에 달하며, 재무 약정 위반으로 HSBC가 11월 30일까지 한시 면제를 줬다고 한다. 전 홍보국장 부르데크바예프는 IPO 준비가 복잡해질 수는 있어도 철도의 안정성은 위협받지 않는다고 평가했지만, 소액주주 측과 애널리스트는 IPO 연기를 주장했다.",
+      "why": "카자흐스탄 철도·국부펀드 최고위층이 동시에 구금돼 유라시아 핵심 물류 인프라의 지배구조와 자금 조달에 불확실성이 생겼다.",
+      "insight": "KTZ는 100% 국가 소유라 채권자 위험은 제한적이라는 시각이 있지만, 약정 위반과 면제 시한이 겹쳐 있어 11월 30일 이후 조치가 관건이다. 반부패 사정이 정치적 의도를 가졌는지는 기사만으로 판단할 수 없다.",
+      "terms": [
+        {
+          "term": "삼룩-카지나(Samruk-Kazyna)",
+          "explanation": "KTZ 등 카자흐스탄 주요 국영기업을 소유·관리하는 국부펀드."
+        },
+        {
+          "term": "재무 약정(covenant)",
+          "explanation": "대출 계약에서 차입자가 지켜야 하는 재무비율 등의 조건으로, 위반 시 만기 단축 등 불이익이 생길 수 있다."
+        }
+      ],
+      "tags": [
+        "카자흐스탄",
+        "KTZ",
+        "중간회랑",
+        "반부패"
+      ],
+      "relevance": 4,
+      "geo": {},
+      "orig_title": "Murat Buldekbayev on KTZ’s Debt and IPO Prospects After the Arrests",
+      "lang": "en",
+      "logistics": "중간회랑과 중국~유럽 철도 환적의 핵심 운영사인 KTZ의 IPO 지연이나 재무 압박은 인프라 투자와 회랑 확장 속도에 영향을 줄 수 있다.",
+      "stance": "중앙아 지역 매체",
+      "score": 3,
+      "date": "2026-11-18"
+    },
+    {
+      "id": "portnews:88066d60ba",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "title": "러 교통부, 동부 철도 3단계 확장·내륙수운·모허–나이바 복합운송 회랑 우선 추진",
+      "url": "https://portnews.ru/news/399774/",
+      "published": "2026-11-18T20:45:00+09:00",
+      "category": "логистика",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "알렉세이 실로(Aleksei Shilo) 러시아 교통부 차관은 '교통주간 2026'에서 동부 폴리곤 3단계 확장, 내륙수운(VVP) 활성화, 복합운송 회랑을 우선 과제로 꼽았다. 동부 폴리곤의 연 1억 8,000만 t 수송능력은 이미 한계에 도달했고, 터널 3개와 교량 1개 건설이 진행 중이라고 밝혔다. 가장 유망한 회랑으로 모허–나이바를 언급했다.",
+      "why": "러시아가 대중 물동량 급증으로 동쪽 인프라 병목에 직면했으며, 정책 우선순위가 아시아 방향 회랑에 쏠려 있음을 보여 준다.",
+      "insight": "수송능력이 '완전히 소진'됐다는 표현은 석탄·원유 등 동향 수출이 늘어난 결과를 인정한 것으로 읽힌다. 모허–나이바는 이 병목을 우회하려는 북극·북동 방향 대안 구상으로 볼 수 있다.",
+      "terms": [
+        {
+          "term": "동부 폴리곤(Восточный полигон)",
+          "explanation": "바이칼–아무르 철도(BAM)와 시베리아횡단철도 동부 구간을 묶어 극동 항만·국경으로 화물을 보내는 러시아 철도의 핵심 축."
+        },
+        {
+          "term": "내륙수운(ВВП)",
+          "explanation": "볼가·레나 등 하천과 운하를 이용한 러시아의 내륙 수상 운송."
+        }
+      ],
+      "tags": [
+        "러시아",
+        "시베리아횡단철도",
+        "철도",
+        "인프라"
+      ],
+      "relevance": 4,
+      "geo": {},
+      "orig_title": "Минтранс считает приоритетным развитие Восточного полигона, ВВП и мультимодальных коридоров",
+      "lang": "ru",
+      "logistics": "동부 폴리곤(바이칼–아무르 철도·시베리아횡단철도 동부 구간) 용량 포화는 극동 항만·중국행 철도 화물의 지연과 비용 상승 요인이며, 3단계 완공 전까지 병목이 이어질 수 있다.",
+      "stance": "러시아 해운 업계지 · 상트페테르부르크",
+      "score": 4,
+      "date": "2026-11-18"
+    },
+    {
+      "id": "portnews:3f3e828ee5",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "title": "하얼빈–로테르담 TEU당 $2,000~2,700…모허–나이바–마가단 경로 제시",
+      "url": "https://portnews.ru/news/399777/",
+      "published": "2026-11-18T20:36:00+09:00",
+      "category": "грузоперевозки",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "아이센 니콜라예프(Aisen Nikolaev) 사하(야쿠티아) 공화국 수장은 하얼빈에서 로테르담까지 모허–나이바–마가단 경로로 TEU를 운송하면 비용이 $2,000~2,700, 소요 17~21일, 거리 10,700km라고 계산했다. 나이바 심해 터미널 부지에는 장비가 투입됐고 내년부터 본공사를 시작할 계획이다. 사업은 4단계로 나뉘며 연 3,000만 t 수송, 총투자 1.13조 루블로 추산되고, 수에즈 경유 대비 거리가 절반이라고 소개됐다.",
+      "why": "중국 동북부와 북극 연안을 잇는 신규 복합 회랑 구상이 구체적 비용·일정 수치와 함께 제시됐다.",
+      "insight": "러시아 지방 수장의 계산치는 홍보 성격이 강해 수에즈·TSR 대비 실제 경쟁력은 검증이 필요하다. 마가단·나이바(티크시 항) 모두 겨울 결빙과 인프라 부재가 관건이어서 일정 지연 가능성이 있다.",
+      "terms": [
+        {
+          "term": "모허–나이바 회랑",
+          "explanation": "중국 헤이룽장성 모허에서 야쿠티아 북극 연안 나이바(티크시 항)와 마가단으로 연결하려는 철도·도로·항만 복합운송 구상."
+        }
+      ],
+      "tags": [
+        "북극항로",
+        "복합운송",
+        "러시아",
+        "중국"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "Стоимость перевозки TEU из Харбина в Роттердам по маршруту Мохэ — Найба составит $2-2,7 тыс.",
+      "lang": "ru",
+      "logistics": "실현되면 북극항로(NSR) 연계 중국발 유럽행 대체 경로가 될 수 있으나, 수치는 사업 주체의 추산이며 철도·항만 건설과 북극 항행 가능 기간에 좌우된다.",
+      "stance": "러시아 해운 업계지 · 상트페테르부르크",
+      "score": 4,
+      "date": "2026-11-18"
+    },
+    {
+      "id": "timesca:ef8e4a7bda",
+      "source": "timesca",
+      "source_name": "The Times of Central Asia",
+      "title": "푸틴 타지키스탄 방문…EU, 이주노동자 송금사 유니스트림 제재",
+      "url": "https://timesca.com/putin-visits-tajikistan-as-pressure-mounts-on-migrants-in-russia/",
+      "published": "2026-11-18T20:16:22+09:00",
+      "category": "Home",
+      "subtitle": "Tajikistan is preparing to receive Vladimir Putin days after the European Union sanctioned Unistream, a Russian bank used by Tajik",
+      "author": "",
+      "body": "",
+      "summary": "푸틴은 11월 19~20일 라흐몬 대통령 초청으로 타지키스탄을 방문한다. 직전인 11월 16일 EU는 타지크 이주노동자가 쓰는 러시아 송금 은행 유니스트림(Unistream)을 12명·101개 기관 제재 패키지에 포함했다. 이유는 우크라이나에서 싸우는 군인 등에게 대출 상환 유예를 제공한다는 것인데, 유니스트림은 이를 부인하며 유럽 자산이 없어 큰 변화는 없을 것이라고 밝혔다. 타지키스탄의 2025년 개인 송금 유입은 GDP의 57.7%로 세계 최고 수준이다.",
+      "why": "송금 의존도가 극단적인 타지키스탄에서 대러 제재 2차 영향과 러시아 내 이주민 압박이 겹치는 지점이다.",
+      "insight": "2023년 미 재무부 제재 후 달러·유로 송금이 끊기고 루블만 유지된 선례가 있어, 이번에도 통화·채널 전환 형태로 나타날 가능성이 있다. 같은 시기 미 국무부 부장관 랜도의 지역 순방은 중앙아시아가 러시아·미국 양쪽의 구애 대상임을 보여 준다.",
+      "terms": [
+        {
+          "term": "송금 의존 경제",
+          "explanation": "해외 취업자의 본국 송금이 GDP에서 큰 비중을 차지해 외화 수입과 가계 소비를 좌우하는 구조."
+        }
+      ],
+      "tags": [
+        "타지키스탄",
+        "제재",
+        "이주노동자",
+        "중앙아시아"
+      ],
+      "relevance": 4,
+      "geo": {},
+      "orig_title": "Putin Visits Tajikistan as Pressure Mounts on Migrants in Russia",
+      "lang": "en",
+      "logistics": "결제·송금 채널 제재는 중앙아시아 대러 교역 금융 경로(루블·CIS 통화 결제)의 위험을 키우고, 2023년 미국 제재 때처럼 달러·유로 송금이 중단될 가능성을 시사한다.",
+      "stance": "중앙아 지역 매체",
+      "score": 4,
+      "date": "2026-11-18"
+    },
+    {
+      "id": "moscowtimes:776b8c8299",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "title": "시진핑·푸틴, 서방 '보호무역'·제재 비판…트럼프 중국 도착, 3자 회담 앞두고",
+      "url": "https://www.themoscowtimes.com/2026/11/18/xi-and-putin-blast-western-protectionism-sanctions-as-trump-lands-in-china-a94292",
+      "published": "2026-11-18T17:02:00+09:00",
+      "category": "",
+      "subtitle": "The three men are due to meet on Thursday and potentially discuss Russia's war with Ukraine and the U.S. war in Iran, as well as other flashpoints.",
+      "author": "",
+      "body": "",
+      "summary": "시진핑은 선전 APEC에서 WTO 중심의 자유무역 수호를 강조했고, 푸틴은 서방 제재를 비판했다. 트럼프는 마닐라를 거쳐 중국에 도착했고 시진핑이 공항에서 직접 영접했다. 목요일 APEC 계기로 푸틴을 포함한 3자 회담이 열려 우크라이나 전쟁, 미국의 이란 전쟁, 무역, AI, 핵무기 등이 논의될 수 있다고 매체는 전했다. 일부 유럽·아시아 국가는 이를 1945년 얄타 회담에 비유하며 이해관계가 무시될 것을 우려한다.",
+      "why": "러·중·미 정상이 한자리에 모이는 첫 3자 회담은 우크라이나 협상과 제재 체제에 직접 영향을 줄 수 있다.",
+      "insight": "얄타 비유는 소국 배제에 대한 우려를 반영하나 실제 합의 여부는 불확실하다. 시진핑이 자유무역 수호자 이미지를 내세우는 점은 미국 관세 정책과 대비 구도를 만들려는 의도로 볼 수 있다.",
+      "terms": [],
+      "tags": [
+        "러중관계",
+        "APEC",
+        "미중관계",
+        "우크라이나전쟁"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "Xi and Putin Blast Western 'Protectionism,' Sanctions as Trump Lands in China",
+      "lang": "en",
+      "logistics": "미국의 첨단 AI 칩 대중 수출 제한 강화와 중국의 보복 예고는 무역 휴전의 불안 요인이어서 대중 해운·물동량 전망에 변수가 된다.",
+      "stance": "독립 언론 · 암스테르담",
+      "score": 4,
+      "date": "2026-11-18"
+    },
+    {
+      "id": "moscowtimes:9a07ddd957",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "title": "우크라이나 드론, 바슈코르토스탄 가스프롬 살라바트 정유소 타격…요격 1,441대 기록",
+      "url": "https://www.themoscowtimes.com/2026/11/17/ukrainian-drones-hit-gazprom-refinery-in-bashkortostan-in-second-record-overnight-attack-a94282",
+      "published": "2026-11-17T18:50:00+09:00",
+      "category": "",
+      "subtitle": "The Defense Ministry said it intercepted a record 1,441 Ukrainian drones over Russian regions and annexed Crimea.",
+      "author": "",
+      "body": "",
+      "summary": "화요일 우크라이나 드론이 바슈코르토스탄의 가스프롬 네프테힘 살라바트 정유소를 공격했고 우크라이나 총참모부가 타격을 확인했다. 이곳은 연 약 1,000만 t을 처리하며 러시아 전체 정제량의 2.7%를 차지한다. 러시아 국방부는 사상 최대인 1,441대를 요격했다고 밝혔고, 모스크바 쪽으로 800대가 날아왔다고 소뱌닌 시장이 전했다. 크림대교도 두 번째 미사일 공격으로 피해를 입었다고 조사당국이 확인했다. EU는 전날 살라바트 등 러시아 에너지 기업을 제재했다.",
+      "why": "러시아 심장부까지 닿는 대규모 드론전과 크림대교 타격은 전쟁 확전 양상과 에너지 인프라 취약성을 보여 준다.",
+      "insight": "EU 제재 직후 타격이 이어져 경제·군사 압박이 동시에 진행되는 모습이다. 기록 경신이 이틀 연속인 점은 우크라이나의 드론 생산·운용 능력이 커졌다는 신호일 가능성이 있다.",
+      "terms": [],
+      "tags": [
+        "우크라이나전쟁",
+        "정유소",
+        "제재",
+        "크림대교"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "Ukrainian Drones Hit Gazprom Refinery in Bashkortostan in Second Record Overnight Attack",
+      "lang": "en",
+      "logistics": "정제 설비와 크림대교 피해는 러시아 내 연료 공급, 남부 물류와 흑해 연안 운송에 부담이며 EU 에너지 제재 강화와 겹친다.",
+      "stance": "독립 언론 · 암스테르담",
+      "score": 4,
+      "date": "2026-11-18"
+    },
+    {
+      "id": "meduza:a83162619a",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "title": "푸틴, 트럼프·시진핑 회동 뒤 \"영토 양보 없다\"…크림대교 공격엔 보복 예고, 유럽은 모스크바로 초청",
+      "url": "https://meduza.io/en/feature/2026/11/19/no-territorial-concessions-retaliation-for-crimean-bridge-strikes-and-europeans-are-invited-to-moscow-putin-s-remarks-on-the-war-after-meeting-trump-and-xi",
+      "published": "2026-11-19T23:07:25+09:00",
+      "category": "",
+      "subtitle": "The United States proposed compromises back in Anchorage, and now the question is whether Ukraine and its European backers are willing to accept them. Apparently, they aren’t, at least not yet. We’ll see; everything changes. Kyiv doesn’t want the war to end because that would immediately force it to",
+      "author": "",
+      "body": "",
+      "summary": "푸틴은 중국·미국 정상과 만난 뒤 기자회견에서 우크라이나 전쟁에 관해 발언했다. 미국이 앵커리지에서 타협안을 냈고 이제 우크라이나와 유럽이 받아들일지가 관건이라고 했다. 영토 문제로 러시아를 압박하는 것은 무의미하며, 크림대교 공격 이후에는 부분 휴전을 논의하지 않겠다고 밝혔다. 크림대교는 순수 민간 시설이고 보복은 훨씬 고통스러울 것이며 다리는 복구된다고 말했다. 또 유럽 측을 모스크바로 초청해 입장을 확인한 뒤 대화 방식을 정하겠다고 했다. 이상은 매체가 정리한 푸틴의 발언이다.",
+      "why": "러시아가 영토 양보 거부와 유럽 참여 조건부 수용이라는 협상 입장을 재확인하면서, 크림대교 타격 이후 군사적 확전 가능성도 함께 내비쳤다.",
+      "insight": "\"키이우는 선거 때문에 종전을 원치 않는다\"는 주장은 푸틴 측의 프레이밍이므로 사실로 읽으면 안 된다. 유럽을 모스크바로 부르는 제안은 미국이 요구한 유럽 참여를 받아들이는 모양새를 취하면서 협상 주도권과 형식을 러시아가 쥐려는 시도일 가능성이 있다.",
+      "terms": [
+        {
+          "term": "앵커리지 회담",
+          "explanation": "푸틴과 트럼프가 알래스카 앵커리지에서 가진 정상회담으로, 푸틴은 여기서 미국이 타협안을 제시했다고 주장한다."
+        }
+      ],
+      "tags": [
+        "우크라이나전쟁",
+        "러시아",
+        "협상",
+        "크림대교"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "No territorial concessions, retaliation for Crimean Bridge strikes, and Europeans are invited to Moscow. Putin’s remarks on the war after meeting Trump and Xi.",
+      "lang": "en",
+      "logistics": "크림대교가 다시 공격 대상이 되면 크림반도 육상 보급과 흑해·아조프해 인근 물류 리스크가 커지고, 보복 확전 시 흑해 항만과 해상 운송 보험료에 부담이 될 수 있다.",
+      "stance": "독립 언론 · 리가",
+      "score": 5,
+      "date": "2026-11-19"
+    },
+    {
+      "id": "portnews:b715a06598",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "title": "유럽연합 집행위, 제재 이행 감독 통합 부서 신설…2027년 1월 출범",
+      "url": "https://portnews.ru/news/399858/",
+      "published": "2026-11-19T22:29:00+09:00",
+      "category": "регулирование",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "유럽연합 집행위는 11월 18일 제재 수립·적용·준수 감독과 우회 차단을 조율할 단일 제재 부서를 신설한다고 발표했다. 2027년 1월 16일 브뤼셀에서 출범해 직원 50~60명 규모이며, 현재 여러 부서에 흩어진 약 45명을 통합한다. 스웨덴 외교관 라르스 다니엘손이 2027년 2월 6일 EU 제재 이행 특별대표로 취임해 데이비드 오설리번의 후임이 되고, 제3국과 대체 무역로·금융·조달망을 통한 우회를 막는 역할을 맡는다. 관할은 러시아·벨라루스·이란·북한·시리아 등 모든 제재이며, 2022년 이후 대러 제재는 21차 패키지까지 채택되었다.",
+      "why": "EU가 제재 집행의 회원국 간 편차를 줄이려는 제도 정비에 나선 것으로, 대러 제재 압박의 지속성을 보여 준다.",
+      "insight": "EU 회계감사원이 회원국 간 집행 차이를 지적한 것이 계기라고 한다. 제재 자체보다 집행 역량이 관건이라는 인식이 반영된 조치로 보인다.",
+      "terms": [
+        {
+          "term": "제재 우회",
+          "explanation": "제3국 기업·무역로·금융 채널을 통해 제재 대상 상품이나 거래를 이어 가는 행위."
+        }
+      ],
+      "tags": [
+        "제재",
+        "EU",
+        "제재우회",
+        "러시아"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "Еврокомиссия создала единое управление по контролю за исполнением санкций",
+      "lang": "ru",
+      "logistics": "제3국 경유 우회 무역과 그림자 선단 관련 집행이 강화될 수 있어, 중앙아시아·코카서스·튀르키예 경유 물류와 포워더의 컴플라이언스 부담이 커질 수 있다.",
+      "stance": "러시아 해운 업계지 · 상트페테르부르크",
+      "score": 4,
+      "date": "2026-11-19"
+    },
+    {
+      "id": "portnews:a8e89b33c2",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "title": "러시아산 세 번째 Arc7 LNG 운반선 '표트르 스톨리핀', 2026년 말 인도",
+      "url": "https://portnews.ru/news/399856/",
+      "published": "2026-11-19T22:06:00+09:00",
+      "category": "судостроение",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "올레그 코제먀코 부총리 겸 극동연방관구 대통령 전권대표는 운송주간에서 즈베즈다 조선소가 건조 중인 세 번째 Arc7 가스운반선이 올해 말 인도된다고 밝혔다. 선박은 '표트르 스톨리핀'으로 NSR에서 연중 운항용이다. 아크틱 LNG-2 프로젝트용으로 러시아에서 처음 건조되는 5척 시리즈 중 하나로, 적재량 172,600㎥, 길이 300m, 추진 출력 45MW다. 그는 자원 개발업체가 북극용 선박을 전문 조선소에 직접 발주하길 기대한다고 말했다.",
+      "why": "제재 속에서 러시아가 자체 쇄빙 LNG선 건조 능력으로 북극 LNG 수출망을 만들고 있다는 신호다.",
+      "insight": "5척 중 3번째가 인도된다는 점은 진전이지만 계획보다 지연됐다는 평가가 있다. 실제 수출 확대는 제재 대상 프로젝트의 구매자와 환적 방식에 달려 있다.",
+      "terms": [
+        {
+          "term": "Arc7",
+          "explanation": "두꺼운 다년빙 해역에서 독자 항행이 가능한 가장 높은 수준 중 하나의 쇄빙 등급으로, 연중 NSR 운항용 선박에 쓰인다."
+        }
+      ],
+      "tags": [
+        "북극LNG",
+        "조선",
+        "북극항로",
+        "즈베즈다"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "Третий российский газовоз класса Arc7 будет сдан в конце 2026 года",
+      "lang": "ru",
+      "logistics": "Arc7 선대 확충은 아크틱 LNG-2의 NSR 연중 수송 능력과 대아시아 LNG 운송에 직접 영향을 주며, 한국 조선업이 빠진 자리를 러시아 조선소가 메우는 구도와도 관련된다.",
+      "stance": "러시아 해운 업계지 · 상트페테르부르크",
+      "score": 4,
+      "date": "2026-11-19"
+    },
+    {
+      "id": "portnews:b59f902db9",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "title": "북극항로 화물 운송량, 사상 처음 4,000만 톤 돌파…2030년 목표 7,000만 톤",
+      "url": "https://portnews.ru/news/399855/",
+      "published": "2026-11-19T21:49:00+09:00",
+      "category": "Северный морской путь",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "안드레이 니키틴 러시아 부총리는 운송주간 토론에서 북극항로(NSR) 화물량이 11월 중순 연간 계획을 넘어 사상 처음 4,000만 톤에 이르렀다고 밝혔다. 2030년 목표는 7,000만 톤이며, 다음 단계는 동방으로 가는 정기 연중 운항이라고 했다. 선주는 1년 단위로 물류를 계획할 수 있게 되고 NSR은 상트페테르부르크·무르만스크에서 블라디보스토크와 아시아 시장으로 이어지는 '트랜스북극 운송회랑'의 중심이 된다고 설명했다. 2025년 운송량은 3,700만 톤 이상이었다.",
+      "why": "러시아가 제재 속에서 북극을 대아시아 수출의 핵심 축으로 키우려는 계획이 수치로 드러났다.",
+      "insight": "4,000만 톤은 대부분 자원 수출이 차지하는 것으로 알려져 있어 컨테이너 환적 항로로서의 상업성과는 구분해서 봐야 한다. 정부 발표 수치이고 목표 7,000만 톤은 선박·쇄빙선 확보에 달려 있다.",
+      "terms": [
+        {
+          "term": "트랜스북극 운송회랑(ТТК)",
+          "explanation": "NSR을 중심으로 상트페테르부르크·무르만스크에서 블라디보스토크와 아시아로 이어지는 러시아의 연중 운송 구상."
+        }
+      ],
+      "tags": [
+        "북극항로",
+        "러시아",
+        "무르만스크",
+        "LNG"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "Грузоперевозки по СМП впервые в истории превысили 40 млн тонн",
+      "lang": "ru",
+      "logistics": "운송량 증가는 북극 LNG·에너지 화물 중심이며, 연중 운항 체제로 가면 쇄빙선·내빙 선박 수요와 무르만스크·캄차카 환적 거점의 중요성이 커진다.",
+      "stance": "러시아 해운 업계지 · 상트페테르부르크",
+      "score": 5,
+      "date": "2026-11-19"
+    },
+    {
+      "id": "portnews:80bbb7e755",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "title": "FESCO, 2026년 1~9월 러시아 컨테이너 시장 권역별 집계 공개…극동 수입이 견인",
+      "url": "https://portnews.ru/news/399840/",
+      "published": "2026-11-19T19:35:00+09:00",
+      "category": "контейнеры",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "FESCO에 따르면 1~9월 적재 컨테이너 물동량은 발트 권역 5% 증가한 83만 7천 TEU, 극동 21% 증가한 136만 3천 TEU, 북극 41% 증가한 5천 TEU였다. 아조프-흑해 권역은 12% 감소한 52만 5천 TEU였다. 국경 통과 컨테이너는 6% 늘어 166만 5천 TEU, 환적(트랜짓)은 1% 줄었다.",
+      "why": "제재 이후 러시아 대외무역의 물류 축이 극동과 발트로 재편되는 양상을 수치로 보여 준다.",
+      "insight": "흑해 권역 감소는 우크라이나 전쟁 영향 때문이며, FESCO가 전한 대로 열차 연계 서비스와 러시아를 거치지 않는 동남아·아프리카 서비스로 확장하는 것이 2027년 전략이다. 업체별 집계 차이(로고퍼는 극동만 증가)가 있어 자료 출처를 비교해야 한다.",
+      "terms": [
+        {
+          "term": "TEU",
+          "explanation": "20피트 컨테이너 1개를 기준으로 한 컨테이너 물동량 단위."
+        }
+      ],
+      "tags": [
+        "러시아",
+        "컨테이너",
+        "극동항만",
+        "FESCO"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "FESCO привела собственные данные по контейнерному рынку РФ за 9 месяцев 2026 года в разрезе бассейнов",
+      "lang": "ru",
+      "logistics": "인도·튀르키예발 화물이 상트페테르부르크로, 중국발 화물이 극동과 상트페테르부르크로 돌려져 극동 항만과 철도 의존이 커졌다.",
+      "stance": "러시아 해운 업계지 · 상트페테르부르크",
+      "score": 4,
+      "date": "2026-11-19"
+    },
+    {
+      "id": "moscowtimes:afa5aed85c",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "title": "트럼프·시진핑·푸틴 3자 회동…중·러 \"평화 선언\" 공개",
+      "url": "https://www.themoscowtimes.com/2026/11/19/us-china-can-help-end-ukraine-war-trump-tells-xi-before-trilateral-with-putin-a94307",
+      "published": "2026-11-19T18:53:00+09:00",
+      "category": "",
+      "subtitle": "\"We are really making history,\" Trump said at the beginning. “No peace was ever forged by declining opportunities for engagement.”",
+      "author": "",
+      "body": "",
+      "summary": "선전에서 열린 첫 3자 정상회담 후 중국과 러시아는 3국이 핵전쟁은 결코 치러져서는 안 된다는 점을 재확인하는 '평화 선언'에 합의했다고 밝혔다. 선언에는 유엔 개혁 추진, 모든 국가에 대한 정제유 공급 확대, 국제재판소에서 국가 공직자 면책 보장도 담겼다. 푸틴은 미국이 유럽의 협상 참여를 \"상당히 집요하게\" 요구하고 있다고 말했고 유럽 대표를 모스크바로 초청했다고 밝혔다. 트럼프는 호르무즈 해협을 통한 원유 흐름을 중시한다고 했으며, 3국은 우크라이나·이란·핵·무역에서 깊은 이견을 안고 있다고 매체는 전했다.",
+      "why": "미·중·러 정상이 한자리에 모여 전쟁과 에너지 흐름을 논의했다는 점에서 지정학적 의미가 크지만 실질적 합의는 불확실하다.",
+      "insight": "선언은 구속력 있는 합의라기보다 상징적 메시지에 가깝고, 국제형사재판소 관련 공직자 면책 문구는 푸틴 체포영장 문제와 연결해 읽을 만하다. 정제유 공급 확대는 우크라이나의 정유소 타격 속에서 러시아의 공급 능력과 어긋난다.",
+      "terms": [
+        {
+          "term": "공직자 면책",
+          "explanation": "국가 원수·공직자는 외국·국제 재판소의 기소에서 면제된다는 원칙으로, ICC 영장을 받은 푸틴과 관련해 거론된다."
+        }
+      ],
+      "tags": [
+        "미중러정상회담",
+        "우크라이나전쟁",
+        "중국",
+        "호르무즈"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "China and Russia Release ‘Peace Declaration’ After Trump, Xi, Putin Meeting",
+      "lang": "en",
+      "logistics": "이란 전쟁으로 차질을 빚는 호르무즈 해협 에너지 수송과 정제유 공급 확대 문구는 유가와 유조선 운임, 러시아 석유제품 수출 환경에 영향을 줄 수 있다.",
+      "stance": "독립 언론 · 암스테르담",
+      "score": 5,
+      "date": "2026-11-19"
+    },
+    {
+      "id": "portnews:a3fa6e182c",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "title": "극동철도 반화차 컨테이너 수송, 1~10월 2.4배 급증한 54만 6,400TEU",
+      "url": "https://portnews.ru/news/399832/",
+      "published": "2026-11-19T16:50:00+09:00",
+      "category": "контейнеры",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "극동철도(ДВЖД)에 따르면 2026년 1~10월 반화차(개방형 화차)에 실은 컨테이너가 54만 6,400TEU로 전년 대비 2.4배였다. 27만 3,200량으로 3,709개 열차를 편성했고 나홋카-보스토치나야, 나홋카, 므이스 추르킨 등이 주요 발송역이다. 항구에서 내륙 건식터미널로 보내는 셔틀열차는 10월에 18회(약 2만 톤)로 연중 최고였다.",
+      "why": "극동 항만 수입 증가에 따른 컨테이너 부족·적체를 철도가 임시 장비로 흡수하는 모습이다.",
+      "insight": "앞 기사의 극동 수입 21% 증가와 맞물려 극동 항만-철도 복합 체계 의존이 깊어짐을 시사한다. 다만 철도 발표라 효율 개선 주장은 그대로 받아들이기보다 확인이 필요하다.",
+      "terms": [
+        {
+          "term": "반화차(полувагон)",
+          "explanation": "지붕 없는 개방형 화차로 본래 석탄·광물용이나 컨테이너 수송에도 쓰인다."
+        }
+      ],
+      "tags": [
+        "극동철도",
+        "컨테이너",
+        "시베리아횡단철도",
+        "나홋카"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "Отправка контейнеров в полувагонах с Дальнего Востока выросла за 10 месяцев 2026 года в 2,4 раза — до 546,4 тыс. TEU",
+      "lang": "ru",
+      "logistics": "컨테이너를 반화차로 수송하는 것은 전용 플랫폼 부족을 보완하는 방식으로, 극동 항만 병목 완화와 내륙 연계 속도에 영향을 준다.",
+      "stance": "러시아 해운 업계지 · 상트페테르부르크",
+      "score": 4,
+      "date": "2026-11-19"
+    },
+    {
+      "id": "meduza:6e2af30740",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "title": "로이터 \"우크라이나 드론 공격으로 러시아 정제량 10월 말 이후 45% 감소\"",
+      "url": "https://meduza.io/en/news/2026/11/19/ukrainian-drone-attacks-have-cut-the-amount-of-oil-russia-refines-by-45-since-late-october-reuters-reports",
+      "published": "2026-11-19T06:05:24+09:00",
+      "category": "",
+      "subtitle": "Ukrainian drone attacks have cut the amount of oil Russian refineries process by 45% since late October, according to estimates two industry sources shared with Reuters.",
+      "author": "",
+      "body": "",
+      "summary": "업계 소식통 2명이 로이터에 밝힌 추정으로, 우크라이나 드론 공격 때문에 러시아의 석유 정제량이 10월 말 이후 45% 줄었다. 35대 대형 정유소 중 15곳이 가동 차질 또는 중단 상태이며, 지난주 중반에는 9곳이었다. 일일 정제량은 70만 톤 이상에서 약 40만 톤으로 떨어졌고, 평시 정제 능력은 하루 93만 톤으로 추산된다. 11월 초부터 일부 지역은 주유소 휘발유 판매 제한을 다시 도입했다.",
+      "why": "우크라이나의 에너지 인프라 타격이 러시아 내수 연료와 재정·수출 구조에 직접 부담을 주는 단계로 확대되고 있다.",
+      "insight": "소식통 추정치이므로 수치는 확인이 필요하다. 한편 3국 선언의 정제유 공급 확대 문구와 대비되며, 러시아가 원유를 더 수출하거나 연료를 수입해야 하는 상황이 올 가능성이 있다.",
+      "terms": [],
+      "tags": [
+        "우크라이나전쟁",
+        "정유",
+        "러시아경제",
+        "유가"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "Ukrainian drone attacks have cut the amount of oil Russia refines by 45% since late October, Reuters reports",
+      "lang": "en",
+      "logistics": "정제량 급감으로 석유제품 수출이 줄고 원유 수출 비중이 늘 수 있으며, 항만·철도의 제품 물량과 원유 유조선 수요가 달라질 수 있다.",
+      "stance": "독립 언론 · 리가",
+      "score": 5,
+      "date": "2026-11-19"
+    },
+    {
+      "id": "meduza:59520296f2",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "title": "러시아, 요구 수용 시 칼리닌그라드·벨라루스 병력 감축 용의…블룸버그",
+      "url": "https://meduza.io/en/feature/2026/11/18/russia-is-prepared-to-reduce-its-military-presence-in-the-kaliningrad-region-and-belarus-if-its-demands-are-met-bloomberg-reports",
+      "published": "2026-11-19T05:29:16+09:00",
+      "category": "",
+      "subtitle": "In peace talks, Russia has demanded that the European Union and NATO countries roll back NATO’s military presence to its 1997 footprint and stop regarding Moscow as “an adversary or a threat.” In exchange, the Kremlin is prepared to make some concessions.",
+      "author": "",
+      "body": "",
+      "summary": "러시아는 협상에서 나토의 군사 배치를 1997년 수준으로 되돌리고 러시아를 적이나 위협으로 보지 말라고 요구했다고 뉴욕타임스·블룸버그가 보도했다. 대가로 블룸버그 취재원에 따르면 칼리닌그라드와 벨라루스의 군사 주둔을 줄일 용의가 있으며, 벨라루스 핵무기 철수와 오레시니크 배치 포기가 거론됐다. 유럽은 전투 중단이 선행돼야 한다는 입장이며, 위트코프·쿠슈너는 11월 19일 베를린에서 우크라이나·EU 대표와 종전 후 안전보장을 논의할 예정이다.",
+      "why": "우크라이나 휴전 협상이 유럽 전체 안보 구도 재편 협상으로 확장되고 있다.",
+      "insight": "러시아의 요구는 사실상 수용 불가 수준이라 협상 교착이 길어질 가능성이 높다. 앞선 중앙아시아 포함 요구와 같은 문서의 일부로 보인다.",
+      "terms": [
+        {
+          "term": "오레시니크(Oreshnik)",
+          "explanation": "러시아의 중거리 탄도미사일 체계로, 2025년 말 벨라루스에서 전투 임무에 들어갔다고 러시아 국방부가 밝혔다."
+        }
+      ],
+      "tags": [
+        "우크라이나전쟁",
+        "나토",
+        "벨라루스",
+        "칼리닌그라드"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "Russia is prepared to reduce its military presence in the Kaliningrad region and Belarus if its demands are met, Bloomberg reports",
+      "lang": "en",
+      "logistics": "발트해·흑해 '사고 방지 메커니즘' 논의는 발트 항로와 칼리닌그라드 경유 물류의 군사 긴장 완화와 연결될 수 있다.",
+      "stance": "독립 언론 · 리가",
+      "score": 4,
+      "date": "2026-11-19"
+    },
+    {
+      "id": "moscowtimes:827ea1de34",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "title": "푸틴·트럼프·시진핑 회담서 돌파구 없자 러시아 증시 하락",
+      "url": "https://www.themoscowtimes.com/2026/11/20/russian-stocks-fall-after-no-breakthrough-at-putin-trump-xi-summit-a94334",
+      "published": "2026-11-20T23:20:46+09:00",
+      "category": "",
+      "subtitle": "The benchmark ruble-denominated MOEX index dropped below 2,400 points in morning trading for the first time since mid-October.",
+      "author": "",
+      "body": "",
+      "summary": "푸틴·트럼프·시진핑이 선전 APEC 회담에서 핵 위험 감축과 유엔 개혁 선언만 내놓고 우크라이나·제재 완화 합의는 없자, MOEX 지수가 2.3% 하락한 2,364포인트로 10월 9일 이후 최저를 기록했다. 거의 모든 대형주가 하락했다고 RBC는 전했다. 투자 전문가는 결제·장비 수령·보험·무역 확대가 필요하다며 제재가 조금만 완화돼도 기업 비용이 낮아질 것이라고 말했다.",
+      "why": "러시아 시장이 평화·제재 완화 기대에 민감하게 반응함을 보여 준다.",
+      "insight": "증시는 협상 기대가 꺾이거나 중앙은행이 긴축 신호를 보낼 때마다 반복적으로 하락해 왔다. 중앙은행 계산상 MOEX는 배당 포함 10.5% 손실로 침공 이후 최악 자산군에 속한다.",
+      "terms": [
+        {
+          "term": "MOEX 지수",
+          "explanation": "모스크바 거래소의 루블 표시 대표 주가지수다."
+        }
+      ],
+      "tags": [
+        "러시아경제",
+        "증시",
+        "제재",
+        "APEC"
+      ],
+      "relevance": 4,
+      "geo": {},
+      "orig_title": "Russian Stocks Fall After No Breakthrough at Putin-Trump-Xi Summit",
+      "lang": "en",
+      "logistics": "결제·보험·장비 수입 제약이 기업 핵심 병목으로 지목돼, 제재 완화 여부가 러시아 대외무역 비용에 직결됨을 시사한다.",
+      "stance": "독립 언론 · 암스테르담",
+      "score": 4,
+      "date": "2026-11-20"
+    },
+    {
+      "id": "moscowtimes:91d2fafedd",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "title": "러시아 부총리 \"크림교 복구 일정 미정\"",
+      "url": "https://www.themoscowtimes.com/2026/11/20/russia-has-no-timeline-for-crimean-bridge-repairs-deputy-pm-says-a94332",
+      "published": "2026-11-20T22:40:21+09:00",
+      "category": "",
+      "subtitle": "Deputy Prime Minister Marat Khusnullin said both the steel arch and the main beam supporting the roadway were damaged in this week's Ukrainian strikes.",
+      "author": "",
+      "body": "",
+      "summary": "마라트 후스눌린 부총리는 우크라이나 공격으로 교량 도로 본경간이 무너졌으나 복구 기간은 설계 완료 후 알 수 있다고 밝혔다. 도로 통행은 막혔고 철도는 단선으로 부분 재개됐으며, 후스눌린은 일부 요소가 1~2개월 내 재개될 수 있다고 했지만 겨울 폭풍이 변수라고 했다. 기술자들은 뉴욕타임스에 전시 조건에서 붕괴한 아치 교체에 약 2년이 걸릴 수 있다고 말했다.",
+      "why": "크림 보급의 핵심 연결로가 장기간 마비될 수 있어 전황과 협상 구도에 영향을 준다.",
+      "insight": "공식 '1~2개월'과 기술자의 '약 2년' 전망의 격차가 크다. 크림 민간공항도 닫혀 있어 크림 접근 수단이 전반적으로 제한된 상태다.",
+      "terms": [
+        {
+          "term": "R-280 고속도로",
+          "explanation": "러시아 점령 우크라이나 남부를 거쳐 크림으로 이어지는 도로로, 케르치 교량 우회로로 쓰인다."
+        }
+      ],
+      "tags": [
+        "크림교",
+        "우크라이나전쟁",
+        "물류",
+        "러시아"
+      ],
+      "relevance": 4,
+      "geo": {},
+      "orig_title": "Russia Has No Timeline for Crimean Bridge Repairs, Deputy PM Says",
+      "lang": "en",
+      "logistics": "크림 육상 운송이 막혀 우크라이나 점령지를 지나는 R-280 도로로 우회가 시도되고 있고, 이 도로도 공격 대상이어서 남부 러시아-크림 물류 비용과 지연이 커질 수 있다.",
+      "stance": "독립 언론 · 암스테르담",
+      "score": 4,
+      "date": "2026-11-20"
+    },
+    {
+      "id": "meduza:ee85f7de3a",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "title": "트럼프-푸틴 합의로 미국행이던 러시아 디젤 탱커, 브라질에 도착",
+      "url": "https://meduza.io/en/news/2026/11/20/russian-diesel-tankers-sent-to-the-u-s-under-trump-putin-deal-arrive-in-brazil",
+      "published": "2026-11-20T16:36:57+09:00",
+      "category": "",
+      "subtitle": "Tankers carrying Russian fuel that were sent to the United States under a diesel deal have arrived in Brazil instead, The Maritime Executive reported. None of the tankers stopped at a U.S. port on those voyages, the publication said.",
+      "author": "",
+      "body": "",
+      "summary": "메리타임 이그제큐티브에 따르면 미국으로 향한다던 러시아산 디젤 탱커들이 미국 항구에 들르지 않고 브라질에 도착했다. 10월 초 트럼프와 푸틴이 러시아 디젤을 미국·세계 시장에 공급하기로 합의했고, 미 재무부는 제재 대상 러시아 디젤 거래를 한시 허용했다. 러시아는 모두 4척을 보냈으며, 중간선거에서 공화당이 의회 다수당 지위를 잃은 직후 이 사실이 드러났다.",
+      "why": "미·러 에너지 거래의 실효성과 정치적 의도에 의문이 제기되며, 제재 예외의 실제 효과가 드러났다.",
+      "insight": "전문가들은 합의 물량이 미국 연료 가격을 낮추지 못한다고 봤고, 결과도 이를 뒷받침한다. 같은 탱커(탈리스만호)가 비티노 기사에도 등장해 제재 대상 선장·선박이 이 거래에 쓰였다는 점이 눈에 띈다.",
+      "terms": [
+        {
+          "term": "제재 예외 허가(general license)",
+          "explanation": "미 재무부가 제재 대상과의 특정 거래를 한시적으로 허용하는 조치다."
+        }
+      ],
+      "tags": [
+        "제재",
+        "디젤",
+        "미러관계",
+        "유조선"
+      ],
+      "relevance": 4,
+      "geo": {},
+      "orig_title": "Tankers carrying Russian diesel sent to the U.S. under Trump-Putin deal arrive in Brazil",
+      "lang": "en",
+      "logistics": "제재 예외 허가가 있어도 물량이 제3국 시장으로 향할 수 있어, 러시아산 정제유의 목적지 추적과 제재 집행 판단이 더 복잡해진다.",
+      "stance": "독립 언론 · 리가",
+      "score": 5,
+      "date": "2026-11-20"
+    },
+    {
+      "id": "meduza:eddbe5a1ca",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "title": "위성사진으로 확인된 크림대교 상판 붕괴…일주일 새 세 번째 우크라이나 공격",
+      "url": "https://meduza.io/en/news/2026/11/19/satellite-images-show-a-collapsed-span-of-the-crimean-bridge-after-ukraine-s-third-strike-in-a-week",
+      "published": "2026-11-20T03:11:41+09:00",
+      "category": "",
+      "subtitle": "Ukrainian OSINT channels published satellite images of the Crimean Bridge taken on November 19, after three Ukrainian attacks in a single week.",
+      "author": "",
+      "body": "",
+      "summary": "우크라이나 OSINT 채널이 11월 19일 촬영한 크림대교 위성사진을 공개했다. 도로 상판 한 구간이 바다로 무너졌고 병행 철도 구간도 손상됐다. 공격은 11월 15~16일, 16~17일, 18~19일 밤 세 차례였으며, 철도 운행은 일시 중단됐다가 19일 재개됐다.",
+      "why": "러시아가 크림반도 병참의 핵심 연결로를 반복 타격받아 전쟁 보급과 크림 접근성에 큰 변수가 생겼다.",
+      "insight": "세 번째 공격이 미·러·중 정상 회동 직전에 이뤄졌다는 점은 군사 행동과 외교 일정이 맞물려 있음을 시사한다. 메두자 보도는 우크라이나 측 OSINT에 의존한 것이라 독립 검증이 필요하다.",
+      "terms": [],
+      "tags": [
+        "크림대교",
+        "우크라이나전쟁",
+        "케르치해협"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "Satellite images show a collapsed span of the Crimean Bridge after Ukraine’s third strike in a week",
+      "lang": "en",
+      "logistics": "케르치해협 통행과 크림 육상 보급로에 차질이 생기고, 해협 항로 이용 선박에도 영향을 줄 가능성이 있다.",
+      "stance": "독립 언론 · 리가",
+      "score": 4,
+      "date": "2026-11-20"
+    },
+    {
+      "id": "moscowtimes:27120a58ce",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "title": "중국, 러시아가 쓰는 드론 부품 수출통제 강화",
+      "url": "https://www.themoscowtimes.com/2026/11/19/china-tightens-export-controls-on-drone-parts-used-by-russia-a94318",
+      "published": "2026-11-20T00:46:47+09:00",
+      "category": "",
+      "subtitle": "Some of the engines covered by the rules are used in Shahed drones that Russia assembles at its Alabuga facility in the republic of Tatarstan.",
+      "author": "",
+      "body": "",
+      "summary": "중국 상무부는 드론 엔진, 무선 모듈, 속도 제어기, 전기모터 등 일부 부품의 수출에 허가를 의무화했다. 조치는 푸틴이 선전에서 시진핑·트럼프와 회담하러 도착한 수요일에 발효됐다. 우크라이나 제재 담당 블라시우크는 환영하며 엄격한 집행을 기대했지만, 일부 핵심 부품은 여전히 규제 밖이라고 밝혔다.",
+      "why": "중국이 러시아 군수 공급망에 대한 압박 신호를 낸 것인지, 상징적 조치인지가 중러 관계와 제재 실효성의 관건이다.",
+      "insight": "블룸버그 보도에 따르면 러시아는 핵심 부품의 약 90%를 중국에서 조달하며, EU는 보복을 우려해 중국 제재를 꺼린다. 이번 조치의 실제 집행 강도가 중요하다.",
+      "terms": [
+        {
+          "term": "이중용도 품목",
+          "explanation": "민수·군사 양쪽에 쓸 수 있어 수출통제 대상이 되는 기술·부품."
+        }
+      ],
+      "tags": [
+        "중국",
+        "제재",
+        "수출통제",
+        "우크라이나전쟁"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "China Tightens Export Controls on Drone Parts Used by Russia",
+      "lang": "en",
+      "logistics": "중국발 이중용도 품목의 통관·허가 심사가 강화되면 러시아향 부품 무역과 제3국 경유 거래의 검증 부담이 커질 가능성이 있다.",
+      "stance": "독립 언론 · 암스테르담",
+      "score": 4,
+      "date": "2026-11-20"
+    },
+    {
+      "id": "meduza:aeec41c3b6",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "title": "우크라이나는 크림대교를 무너뜨렸다…푸틴은 보복을 공언했지만 러시아는 다리 파괴에 번번이 실패했다",
+      "url": "https://meduza.io/en/feature/2026/11/19/ukraine-destroyed-the-crimean-bridge-putin-has-vowed-to-retaliate-but-russia-has-repeatedly-failed-to-bring-down-bridges-in-ukraine-can-moscow-deliver",
+      "published": "2026-11-20T00:42:14+09:00",
+      "category": "",
+      "subtitle": "Ukraine’s attack on the Crimean Bridge showed that destroying structures like this with strikes launched from hundreds of kilometers away, in the face of active enemy air defense and electronic warfare, is possible. Before this, Russia had spent several months proving the opposite: every attempt to ",
+      "author": "",
+      "body": "",
+      "summary": "메두자는 11월 17일 우크라이나군이 순항미사일과 드론으로 크림대교 도로 구간 한 경간을 파괴하고, 항로 위 아치를 무너뜨려 잔해로 막았으며 철도 구간도 손상시켰다고 전했다. 같은 시각 러시아는 키이우 북교를 이스칸데르-M으로 타격했으나 다리는 서 있었고 차량 통행만 막혔다. 매체는 러시아가 드니프로강 다리 파괴에 계속 실패했다며, 정밀무기가 있어도 다리를 파괴하려면 고비용이 든다고 분석했다.",
+      "why": "장거리 타격으로 핵심 교량을 파괴할 수 있음이 입증돼 양측의 인프라 타격과 보복 확대 가능성이 커졌다.",
+      "insight": "러시아가 '훨씬 고통스러운' 보복을 공언했으나 메두자는 러시아의 과거 교량 타격 실패를 근거로 실제 효과에 의문을 제기한다. 다만 이는 매체의 군사 분석이므로 이후 전황으로 확인해야 한다.",
+      "terms": [],
+      "tags": [
+        "크림대교",
+        "우크라이나전쟁",
+        "인프라",
+        "보복"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "Ukraine destroyed the Crimean Bridge. Putin has vowed to retaliate, but Russia has repeatedly failed to bring down bridges in Ukraine. Can Moscow deliver?",
+      "lang": "en",
+      "logistics": "크림대교 항로가 잔해로 막혔다는 보도는 케르치해협 통항과 크림 보급 경로에 영향을 줄 수 있으며, 러시아의 교량·인프라 보복이 우크라이나 물류에도 위험이다.",
+      "stance": "독립 언론 · 리가",
+      "score": 4,
+      "date": "2026-11-20"
+    },
+    {
+      "id": "moscowtimes:31ceb74c63",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "title": "핀란드만에서 칼리닌그라드행 러시아 화물선, 드론 공격 받아",
+      "url": "https://www.themoscowtimes.com/2026/11/21/russia-says-cargo-vessel-struck-by-drones-in-gulf-of-finland-a94342",
+      "published": "2026-11-21T20:50:00+09:00",
+      "category": "",
+      "subtitle": "Finland said that the damaged vessel was on fire and had drifted from international waters into its territorial waters.",
+      "author": "",
+      "body": "",
+      "summary": "토요일 핀란드만 국제수역에서 칼리닌그라드로 향하던 러시아 화물선 스파르타 II호가 드론 두 대의 공격을 받아 화재가 났고, 이후 핀란드 영해로 떠내려갔다고 러시아·핀란드 당국이 밝혔다. 핀란드는 동부 핀란드만에 임시 항공·해상 제한을 재도입했다. 칼리닌그라드 주지사는 지역 공급에 위협이 없다고 말했고, 레닌그라드주에서는 드론 80대가 격추됐다고 한다.",
+      "why": "전쟁의 여파가 발트해 NATO 인접 해역까지 번지며 핀란드 등 주변국이 연루되는 양상이다.",
+      "insight": "크림대교 공격 등 인프라 타격 공방과 함께 읽으면 상선·물류 거점이 표적이 되는 흐름이다. 핀란드 총리가 우크라이나의 ‘권리’를 언급한 점은 주변국 반응의 변화로 볼 수 있다.",
+      "terms": [
+        {
+          "term": "칼리닌그라드",
+          "explanation": "폴란드와 리투아니아 사이에 낀 발트해 연안 러시아 역외영토로, NATO·EU와의 충돌 지점이 되곤 한다."
+        }
+      ],
+      "tags": [
+        "발트해",
+        "드론공격",
+        "칼리닌그라드",
+        "해상안보"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "Russia Says Cargo Vessel Struck by Drones in Gulf of Finland",
+      "lang": "en",
+      "logistics": "상트페테르부르크·우스트루가 등 러시아 발트 항만과 칼리닌그라드 해상 보급로의 안전 및 보험료에 부담이 될 수 있으나, 핀란드는 다른 선박 운항에는 위험이 없다고 밝혔다.",
+      "stance": "독립 언론 · 암스테르담",
+      "score": 4,
+      "date": "2026-11-21"
+    },
+    {
+      "id": "moscowtimes:2b93e4fb81",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "title": "크림에서 키이우까지: 러·우 전쟁에서 교량이 표적으로",
+      "url": "https://www.themoscowtimes.com/2026/11/21/from-crimea-to-kyiv-bridges-become-targets-in-russias-war-on-ukraine-a94335",
+      "published": "2026-11-21T18:57:00+09:00",
+      "category": "",
+      "subtitle": "Ukraine’s destruction of the Crimean Bridge’s road span and Russia’s strikes on Kyiv’s bridges mark the latest stages of each side’s war strategy.",
+      "author": "",
+      "body": "",
+      "summary": "이번 주 우크라이나는 사흘 밤 공격으로 크림대교의 도로 주경간을 무너뜨렸고, 러시아는 키이우의 다리들에 탄도미사일을 쏴 3명이 숨지고 드니프로강 통행이 중단됐다. 러시아는 군수 보급을 점령지 남부 고속도로와 페리로 돌려야 하며, 철도 운행도 세 번째 공격 후 다시 멈췄다. 러시아 부총리는 복구 기간을 아직 정하지 못했다고 밝혔고, 전문가들은 우크라이나의 목표가 자포리자·헤르손 일대 러시아 능력 약화라고 분석했다.",
+      "why": "교통 인프라 공방이 전선 보급과 민간 생활 모두에 영향을 주며 전쟁이 물류망 타격전으로 심화됨을 보여 준다.",
+      "insight": "크림대교의 군수 비중이 이미 낮아졌다는 분석이 있어 군사적 효과보다 보급 부담 누적과 상징성이 더 클 가능성이 있다. 핀란드만 선박 공격과 함께 물류 거점 공격이 확산되는 흐름으로 볼 수 있다.",
+      "terms": [],
+      "tags": [
+        "크림대교",
+        "우크라이나전쟁",
+        "인프라공격",
+        "물류"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "From Crimea to Kyiv, Bridges Become Targets in Russia’s War on Ukraine",
+      "lang": "en",
+      "logistics": "크림 철도·도로 화물 우회로 흑해 북부·아조프해 일대 육상·페리 물류가 압박받고, 점령지 육로 회랑에 대한 공격 위험도 커진다.",
+      "stance": "독립 언론 · 암스테르담",
+      "score": 4,
+      "date": "2026-11-21"
+    },
+    {
+      "id": "portnews:9a431ee9c2",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "title": "호르무즈 해협 인근에서 하루 새 유조선 3척 피격",
+      "url": "https://portnews.ru/news/399941/",
+      "published": "2026-11-21T18:34:00+09:00",
+      "category": "происшествия",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "영국 해상무역운영센터(UKMTO)에 따르면 11월 21일 오만 하사브 인근에서 유조선 3척이 공격받았다. 한 건은 선미에, 다른 한 건은 기관실에 탄약이 명중했다. 전날인 20일에도 유조선 한 척이 좌현에 피격돼 화재가 났다. 인명 피해와 오염은 보고되지 않았으며, 이 해역은 미국·이스라엘과 이란의 분쟁으로 군사 위험 지역이 됐다.",
+      "why": "세계 원유 수송의 핵심 길목에서 공격이 이어져 유가와 해운 위험도에 영향을 준다.",
+      "insight": "중동 해상 리스크가 커지면 유가 상승으로 러시아 재정에 유리한 면이 있지만 에너지 수송 불안은 전 세계 물류에 부담이다. 러시아 업계지가 이를 비중 있게 다룬 것은 에너지·해운 시장 연동성 때문으로 보인다.",
+      "terms": [
+        {
+          "term": "UKMTO",
+          "explanation": "영국 해군 산하의 해상무역 안전 정보 센터로, 중동 해역의 선박 사고를 공지한다."
+        }
+      ],
+      "tags": [
+        "호르무즈",
+        "유조선",
+        "해상안보",
+        "유가"
+      ],
+      "relevance": 4,
+      "geo": {},
+      "orig_title": "Три танкера подверглись обстрелу у Ормузского пролива за сутки",
+      "lang": "ru",
+      "logistics": "호르무즈 통과 유조선의 전쟁보험료·운임 상승과 우회 압력이 커질 수 있으며, 이는 러시아산 원유 수출 수요와 유가에도 간접 영향을 줄 수 있다.",
+      "stance": "러시아 해운 업계지 · 상트페테르부르크",
+      "score": 3,
+      "date": "2026-11-21"
+    },
+    {
+      "id": "meduza:97f1ff3052",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "title": "푸틴·트럼프·시진핑 회동 다음 날 러시아, 키이우 등 우크라이나에 대규모 공습",
+      "url": "https://meduza.io/en/feature/2026/11/21/russia-launches-massive-attack-on-ukraine-a-day-after-putin-s-meeting-with-trump-and-xi",
+      "published": "2026-11-21T07:35:07+09:00",
+      "category": "",
+      "subtitle": "Russian forces attacked Kyiv with missiles and drones overnight November 19–20. Kyiv Mayor Vitali Klitschko said three bridges were damaged. The Podilsko-Voskresenskyi Bridge is closed to traffic from the right bank to the left. The Darnytskyi and Pivdennyi (Southern) bridges were also damaged. The ",
+      "author": "",
+      "body": "",
+      "summary": "11월 19~20일 밤 러시아는 키이우와 9개 주에 미사일과 드론을 발사했다. 우크라이나 공군에 따르면 탄도미사일과 순항미사일 84발, 공격 드론 404대가 동원됐고 순항미사일 79발과 드론 380대가 격추됐다. 코레츠키 우크라이나 총리는 사망 8명(키이우 6명), 부상 28명이라고 밝혔다. 키이우의 다리 3곳이 손상됐고 원전은 출력을 줄였으며 여러 지역이 정전됐다. 젤렌스키 대통령은 푸틴이 중국 회동 성과가 부족하자 이번 공격을 과시용으로 벌였다고 주장했다. 러시아 국방부는 우크라이나 방산시설 등을 겨냥했다고 밝혔다.",
+      "why": "3국 정상회동 직후 에너지·교통 인프라를 겨냥한 대규모 공습이 나와 협상 국면에서 러시아의 압박 기조가 이어짐을 보여 준다.",
+      "insight": "정상회담 직후 공습은 외교와 군사 압박을 병행하는 러시아의 반복된 패턴이다. 전력망 타격이 원전 출력 감축으로 이어진 점은 겨울철 에너지 인프라 공방이 다시 격화될 가능성을 시사한다.",
+      "terms": [],
+      "tags": [
+        "우크라이나전쟁",
+        "러시아",
+        "공습",
+        "에너지인프라"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "Russia launches massive attack on Ukraine a day after Putin’s meeting with Trump and Xi",
+      "lang": "en",
+      "logistics": "드니프로강 교량 손상과 오데사·미콜라이우 등지 기업 피해로 우크라이나 내 물류 흐름과 전력 의존 운송에 차질이 생길 수 있다.",
+      "stance": "독립 언론 · 리가",
+      "score": 3,
+      "date": "2026-11-21"
+    },
+    {
+      "id": "meduza:7f2de9a1fb",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "title": "FT “트럼프, 민주당 의회 장악 전인 1월 초까지 종전 합의 압박… 우크라이나 양보 우려”",
+      "url": "https://meduza.io/en/news/2026/11/20/european-official-fears-ukraine-may-have-to-make-major-concessions-as-trump-pushes-for-a-peace-deal-by-early-january-before-democrats-take-control-of-congress-ft-reports",
+      "published": "2026-11-21T04:47:58+09:00",
+      "category": "",
+      "subtitle": "U.S. negotiators have told European and Ukrainian officials that the White House would like Russia and Ukraine to reach a peace deal by early January 2027 — before Democrats take control of both chambers of Congress, the Financial Times reported, citing four people familiar with the matter.",
+      "author": "",
+      "body": "",
+      "summary": "파이낸셜타임스는 미국 협상단이 2027년 1월 초, 즉 민주당이 상·하원을 장악하기 전까지 러·우 평화 합의를 원한다고 유럽·우크라이나에 전했다고 보도했다. 한 유럽 관리는 합의를 위해 우크라이나의 대규모 양보가 필요할 수 있다고 우려했고, “미국은 급하고 푸틴은 급하지 않다”는 발언도 나왔다. 푸틴은 중국 기자회견에서 크림대교 공격 이후에는 협상하지 않겠다고 말했다.",
+      "why": "미국 국내 정치 일정이 종전 협상의 시한과 조건을 좌우하기 시작했다는 점에서 중요하다.",
+      "insight": "시한 압박은 협상력이 약한 쪽에 불리하게 작용하기 쉬워 우크라이나 양보론이 커질 가능성이 있다. 반면 푸틴이 서두르지 않는다면 교착이 길어질 수 있다.",
+      "terms": [
+        {
+          "term": "의지의 연합(coalition of the willing)",
+          "explanation": "우크라이나 안전보장 등을 지원하기 위해 모인 유럽 중심의 국가 협의체."
+        }
+      ],
+      "tags": [
+        "우크라이나전쟁",
+        "종전협상",
+        "미국",
+        "러시아"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "European official fears Ukraine may have to make major concessions as Trump pushes for a peace deal by early January, before Democrats take control of Congress, FT reports",
+      "lang": "en",
+      "logistics": "종전·제재 완화 가능성은 흑해·발트해 해운 위험 프리미엄과 대러 제재 전망에 직결되지만, 현재로선 합의가 불투명하다.",
+      "stance": "독립 언론 · 리가",
+      "score": 5,
+      "date": "2026-11-21"
+    },
+    {
+      "id": "meduza:4ab7110adc",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "title": "에스토니아, 러시아와의 도로 국경검문소 전면 폐쇄",
+      "url": "https://meduza.io/en/news/2026/11/20/estonia-to-close-all-road-crossings-with-russia",
+      "published": "2026-11-21T02:31:56+09:00",
+      "category": "",
+      "subtitle": "Estonia’s government has decided to temporarily close its road border crossings with Russia starting December 1, citing national security.",
+      "author": "",
+      "body": "",
+      "summary": "에스토니아 정부는 국가안보를 이유로 12월 1일부터 나르바-1·2, 코이둘라, 루하마, 사체 등 러시아와의 도로 검문소 5곳을 임시 폐쇄하기로 했다. 철도 화물은 기존 제한과 엄격한 세관 검사 아래 계속된다. 11월 13~14일 밤 방산업체 시설 방화 시도로 라트비아 주민 8명이 체포됐고, 에스토니아 당국은 러시아 정보기관 배후를 주장했다.",
+      "why": "NATO·EU 최전선 국가가 러시아의 하이브리드 공세에 국경 폐쇄로 대응하며 발트 지역 긴장이 높아졌다.",
+      "insight": "핀란드가 2023년 국경을 닫은 선례와 비슷한 수순으로, 발트·북유럽의 대러 연결이 계속 줄어드는 흐름이다. 철도 화물을 남긴 점은 경제·안보 사이의 타협으로 볼 수 있다.",
+      "terms": [],
+      "tags": [
+        "에스토니아",
+        "국경폐쇄",
+        "하이브리드전",
+        "발트"
+      ],
+      "relevance": 4,
+      "geo": {},
+      "orig_title": "Estonia to close all road crossings with Russia",
+      "lang": "en",
+      "logistics": "도로 운송이 막혀 에스토니아 경유 대러 육상 통행은 크게 제한되지만, 철도 화물은 유지돼 영향이 일부 완화된다.",
+      "stance": "독립 언론 · 리가",
+      "score": 4,
+      "date": "2026-11-21"
+    }
+  ]
+}
