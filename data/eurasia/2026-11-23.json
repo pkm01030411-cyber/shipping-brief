@@ -46,9 +46,185 @@
       "description": "",
       "category": "происшествия",
       "published": "2026-11-23T06:30:00+09:00"
+    },
+    {
+      "id": "meduza:943816130b",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/feature/2026/11/23/the-russian-born-collaboration-platform-miro-has-a-new-owner-meet-bending-spoons-the-tech-giant-that-buys-popular-apps-cuts-jobs-and-raises-prices",
+      "title": "The Russian-born collaboration platform Miro has a new owner. Meet Bending Spoons, the tech giant that buys popular apps, cuts jobs, and raises prices.",
+      "description": "In late October, Miro — a collaboration platform created by Russian developers that took off during the pandemic — got a new owner. The buyer was Bending Spoons, an Italian technology company that acquires well-known internet projects past their peak of popularity. Bending Spoons’s tactic is simple: buy a business with a strong customer base, cut the team, and raise prices, using the resulting pro",
+      "category": "",
+      "published": "2026-11-23T23:11:01+09:00"
+    },
+    {
+      "id": "meduza:b9ce6372e5",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/23/moscow-and-st-petersburg-residents-report-disruptions-to-mobile-and-home-internet-services",
+      "title": "Moscow and St. Petersburg residents report disruptions to mobile and home internet services",
+      "description": "Residents of Moscow and St. Petersburg began reporting internet outages on the morning of November 23, according to Downdetector, which said complaints about internet service peaked around eight a.m. The cause of the problems was not known.",
+      "category": "",
+      "published": "2026-11-23T22:35:53+09:00"
+    },
+    {
+      "id": "meduza:3beab7b6f9",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/23/russia-again-proposes-requiring-distribution-certificates-for-video-games-kommersant-reports",
+      "title": "Russia again proposes requiring distribution certificates for video games, Kommersant reports",
+      "description": "Russia’s government believes video games should require distribution certificates similar to those already mandated for films, the Russian business daily Kommersant reported, citing sources.",
+      "category": "",
+      "published": "2026-11-23T22:05:00+09:00"
+    },
+    {
+      "id": "meduza:38533bc474",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/feature/2026/11/23/western-intelligence-services-say-russia-could-put-satellite-with-nuclear-warhead-into-orbit-in-coming-months",
+      "title": "Western intelligence services say Russia could put satellite with nuclear warhead into orbit in coming months",
+      "description": "Russia may put a satellite carrying a nuclear explosive device into orbit, Western intelligence services and military officials believe, including the Bundeswehr (Germany’s armed forces) and Germany’s Federal Intelligence Service. Representatives of several NATO countries recently exchanged information on the matter, the German outlets WDR, NDR, and Süddeutsche Zeitung reported.",
+      "category": "",
+      "published": "2026-11-23T21:31:01+09:00"
+    },
+    {
+      "id": "meduza:094efa9a78",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/23/ukrainian-drones-strike-two-russian-oil-refineries-and-pumping-station-in-overnight-attacks",
+      "title": "Ukrainian drones strike two Russian oil refineries and pumping station in overnight attacks",
+      "description": "Ukrainian forces struck oil infrastructure facilities in Almetyevsk, Tatarstan, and Novoshakhtinsk, Rostov region, overnight on November 23.",
+      "category": "",
+      "published": "2026-11-23T20:24:03+09:00"
+    },
+    {
+      "id": "meduza:62beb882a8",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/23/finnish-lawmakers-back-anti-tank-barriers-along-border-with-russia",
+      "title": "Finnish lawmakers back anti-tank barriers along border with Russia",
+      "description": "Heikki Autto, chairman of the Finnish parliament’s defense committee, has backed plans to build anti-tank barriers along the border with Russia, Bloomberg reported.",
+      "category": "",
+      "published": "2026-11-23T20:17:11+09:00"
+    },
+    {
+      "id": "meduza:46b68ab9ad",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/feature/2026/11/23/ukrainian-sea-drones-sink-russian-warship-in-libya-killing-russians-and-libyans",
+      "title": "Ukrainian sea drones sink Russian warship in Libya, killing Russians and Libyans",
+      "description": "The Russian Navy corvette Merkury sank in the Libyan port of Benghazi on November 22 after naval drones struck the warship. An explosion tore through the vessel, igniting a major fire. The corvette went down, leaving only its bow visible above the water.",
+      "category": "",
+      "published": "2026-11-23T19:58:56+09:00"
+    },
+    {
+      "id": "meduza:7ec8449a0c",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/23/al-jazeera-russians-libyans-killed-in-explosion-aboard-russian-navy-corvette-at-benghazi-port",
+      "title": "Al Jazeera: Russians, Libyans killed in explosion aboard Russian Navy corvette at Benghazi port",
+      "description": "An explosion aboard the Russian Navy corvette Merkury, docked at the port of Benghazi, Libya, killed an unspecified number of Russians and Libyans, sources who spoke to the Al Jazeera television network said. The ship sank; photos show only its bow rising above the water’s surface.",
+      "category": "",
+      "published": "2026-11-23T19:09:44+09:00"
+    },
+    {
+      "id": "meduza:794eba1bb9",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/23/all-three-flying-objects-that-fell-in-poland-turned-out-to-be-russian-x-101-cruise-missiles",
+      "title": "All three ‘flying objects’ that fell in Poland turned out to be Russian X-101 cruise missiles",
+      "description": "Debris from X-101 cruise missiles turned up in all three Polish towns where Russian objects fell during the overnight attack on Ukraine on November 20.",
+      "category": "",
+      "published": "2026-11-23T18:23:54+09:00"
+    },
+    {
+      "id": "meduza:cf35e87b56",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/23/meduza-and-other-independent-outlets-analyzed-leaked-russian-mortality-data-new-estimate-of-military-deaths-in-ukraine-will-be-published-november-23",
+      "title": "Meduza and other independent outlets analyzed leaked Russian mortality data. New estimate of military deaths in Ukraine will be published November 23.",
+      "description": "Meduza, Mediazona, and more than a dozen other journalistic teams will present the results of an independent analysis of Russian mortality data tonight, after 5 p.m. CET. The data came from the hacker groups Cyber Partisans of Belarus and SilentCrow, who obtained it after hacking Rosstat’s database.",
+      "category": "",
+      "published": "2026-11-23T17:59:59+09:00"
+    },
+    {
+      "id": "meduza:540fcec685",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/23/armenia-unveils-draft-constitution-removing-reference-to-nagorno-karabakh-reunification-in-concession-to-azerbaijan",
+      "title": "Armenia unveils draft constitution removing reference to Nagorno-Karabakh reunification in concession to Azerbaijan",
+      "description": "Armenian Prime Minister Nikol Pashinyan has published a draft of the country’s new constitution.",
+      "category": "",
+      "published": "2026-11-23T17:48:52+09:00"
+    },
+    {
+      "id": "meduza:94a468da82",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/23/he-is-not-america-s-friend-in-ukraine-not-at-all-u-s-intelligence-chief-responds-to-trump-calling-putin-his-friend",
+      "title": "‘He is not America’s friend in Ukraine. Not at all’: U.S. intelligence chief responds to Trump calling Putin his ‘friend’",
+      "description": "U.S. Director of National Intelligence Jay Clayton spoke to ABC News about President Donald Trump’s remarks after Trump twice called Vladimir Putin his friend.",
+      "category": "",
+      "published": "2026-11-23T17:27:49+09:00"
+    },
+    {
+      "id": "meduza:a90aa18792",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/23/11-killed-in-russian-strike-on-ukraine-s-dymer-in-kyiv-region",
+      "title": "11 killed in Russian strike on Ukraine’s Dymer in Kyiv region",
+      "description": "Rescue crews are still clearing rubble in the village of Dymer, in the Kyiv region, after a Russian drone struck a five-story apartment building there overnight on November 22.",
+      "category": "",
+      "published": "2026-11-23T17:09:12+09:00"
+    },
+    {
+      "id": "meduza:c7cc8560aa",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/feature/2026/11/23/russia-s-fsb-hackers-launch-new-phishing-attacks-on-journalists-targeting-christo-grozev-and-a-reporter-behind-the-panama-papers",
+      "title": "Russia’s FSB hackers launch new phishing attacks on journalists, targeting Christo Grozev and a reporter behind the Panama Papers",
+      "description": "In recent days, several journalists and politicians have said they were targeted in attempted cyberattacks by hackers believed to be linked to Russia’s Federal Security Service (FSB). The independent news outlet Agentstvo reported on the attempts.",
+      "category": "",
+      "published": "2026-11-23T17:00:41+09:00"
+    },
+    {
+      "id": "meduza:bec25d3370",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/23/zelensky-confirms-ukrainian-strike-on-russian-warship-in-libya",
+      "title": "‘An exemplary Ukrainian operation’: Zelensky confirms strike on Russian warship in Libya",
+      "description": "Ukrainian President Volodymyr Zelensky has confirmed that Ukraine’s military attacked the Russian Navy corvette Merkury off the coast of Libya.",
+      "category": "",
+      "published": "2026-11-23T16:46:28+09:00"
+    },
+    {
+      "id": "meduza:6a0868955e",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/feature/2026/11/23/why-ukraine-s-defense-industry-may-have-hit-a-ceiling",
+      "title": "Why Ukraine’s defense industry may have hit a ceiling",
+      "description": "Ukraine’s defense industry fell apart after the Soviet Union collapsed, and by the start of Russia’s full-scale invasion, the country made almost no weapons of its own. After the invasion, however, the sector grew rapidly, largely thanks to European funding. That growth has let Ukraine keep fighting even as U.S. support has shrunk and the European Union has been unable to supply enough weapons.",
+      "category": "",
+      "published": "2026-11-23T16:40:07+09:00"
     }
   ],
   "brief": {},
   "published_at": null,
-  "collected_at": "2026-11-23T08:34:53+09:00"
+  "collected_at": "2026-11-23T23:28:37+09:00"
 }
