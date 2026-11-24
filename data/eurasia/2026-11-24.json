@@ -354,9 +354,97 @@
       "description": "",
       "category": "происшествия",
       "published": "2026-11-24T00:06:00+09:00"
+    },
+    {
+      "id": "meduza:151a9af29f",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/feature/2026/11/24/why-is-estonia-closing-its-border-with-russia-estonian-foreign-minister-margus-tsahkna-explains-in-a-column-for-politico",
+      "title": "Why is Estonia closing its border with Russia? Estonian Foreign Minister Margus Tsahkna explains in a column for Politico.",
+      "description": "Estonian authorities have announced the closure of all land border crossings with Russia starting December 1. The move came in response to an attempted arson at the defense company Threod Systems, which Tallinn blames on Russian intelligence. In Estonia itself, the idea has been criticized, particularly in border regions, whose residents regularly travel to Russia. In a column for Politico, Estoni",
+      "category": "",
+      "published": "2026-11-24T20:25:49+09:00"
+    },
+    {
+      "id": "meduza:25b11cc976",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/24/russian-lawyer-who-defended-journalists-and-protesters-loses-license-to-practice-law",
+      "title": "Russian lawyer who defended journalists and protesters loses license to practice law",
+      "description": "Russia’s Justice Ministry lists lawyer Kaloy Akhilgov’s status in its Unified State Register of Lawyers as “terminated.” The Telegram news channel SotaVision drew attention to the change.",
+      "category": "",
+      "published": "2026-11-24T20:03:17+09:00"
+    },
+    {
+      "id": "meduza:f23c6aadea",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/24/lithuanian-sim-cards-found-in-russian-drones-that-attacked-ukraine",
+      "title": "Lithuanian SIM cards found in Russian drones that attacked Ukraine",
+      "description": "Lithuanian prepaid SIM cards have been found in Russian drones that attacked Ukraine in 2025, the Lithuanian outlet 15 min reported, citing data from Ukrainian military intelligence. The 15 min article is behind a paywall; it was summarized by Delfi and LRT.",
+      "category": "",
+      "published": "2026-11-24T19:40:19+09:00"
+    },
+    {
+      "id": "meduza:be98dd4e3c",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/24/chechen-leader-ramzan-kadyrov-s-son-granted-serbian-citizenship",
+      "title": "Chechen leader Ramzan Kadyrov’s son granted Serbian citizenship",
+      "description": "Serbian authorities granted citizenship to Ali Kadyrov, the second son of Chechen leader Ramzan Kadyrov, according to the Navalny-founded Anti‑Corruption Foundation, which found the decision in the “Official Gazette of Serbia.”",
+      "category": "",
+      "published": "2026-11-24T19:30:04+09:00"
+    },
+    {
+      "id": "meduza:0bb78836c5",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/24/russian-lawmakers-draft-bill-that-would-ban-foreign-films-from-cinemas-for-weeks-at-a-time",
+      "title": "Russian lawmakers draft bill that would ban foreign films from cinemas for weeks at a time",
+      "description": "Russia’s State Duma has drafted a bill that would introduce “quotas for foreign films,” according to the Russian state news agency TASS, which said it had obtained a copy of the document. TASS did not say who wrote the bill.",
+      "category": "",
+      "published": "2026-11-24T18:03:47+09:00"
+    },
+    {
+      "id": "meduza:363ea8140d",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/24/south-korea-scrambles-fighter-jets-over-russian-military-aircraft-issues-evacuation-alert-on-island",
+      "title": "South Korea scrambles fighter jets over Russian military aircraft, issues evacuation alert on island",
+      "description": "South Korea’s Joint Chiefs of Staff said several Russian military planes briefly entered the country’s air defense identification zone over the Sea of Japan on the morning of November 24.",
+      "category": "",
+      "published": "2026-11-24T17:31:29+09:00"
+    },
+    {
+      "id": "meduza:6bc2a524f5",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/24/355-ukrainian-drones-flew-toward-moscow-overnight-prompting-flight-restrictions-at-two-airports",
+      "title": "355 Ukrainian drones flew toward Moscow overnight, prompting flight restrictions at two airports",
+      "description": "Moscow Mayor Sergei Sobyanin said 355 Ukrainian drones flew toward the capital overnight on November 24. Air defense forces shot down most of the drones “at distant approaches” and destroyed 63 more as they approached Moscow, he said on his Telegram channel.",
+      "category": "",
+      "published": "2026-11-24T17:22:29+09:00"
+    },
+    {
+      "id": "meduza:da9012405f",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/24/russian-strikes-kill-two-in-ukraine-s-zaporizhzhia-injure-dozens",
+      "title": "Russian strikes kill two in Ukraine’s Zaporizhzhia, injure dozens",
+      "description": "Russian forces struck Zaporizhzhia overnight on November 24, killing two people, said Mykhailo Semikin, the acting head of the regional military administration.",
+      "category": "",
+      "published": "2026-11-24T17:11:10+09:00"
     }
   ],
   "brief": {},
   "published_at": null,
-  "collected_at": "2026-11-24T10:55:39+09:00"
+  "collected_at": "2026-11-24T21:22:43+09:00"
 }
