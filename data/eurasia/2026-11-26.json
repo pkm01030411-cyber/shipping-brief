@@ -255,9 +255,20 @@
       "description": "",
       "category": "экология",
       "published": "2026-11-26T00:11:00+09:00"
+    },
+    {
+      "id": "meduza:eed78b8c39",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/26/kushner-blames-stalled-peace-talks-on-alleged-ukrainian-attack-on-putin-s-residence-an-attack-both-u-s-intelligence-and-trump-say-did-not-happen",
+      "title": "Kushner blames stalled peace talks on alleged Ukrainian attack on Putin’s residence — an attack both U.S. intelligence and Trump say did not happen",
+      "description": "U.S. presidential envoy Jared Kushner said peace negotiations between Ukraine and Russia stalled in early 2026 after an alleged Ukrainian attack on Vladimir Putin’s residence in Valdai. He made the comments in an interview with Axel Springer CEO Mathias Döpfner for Döpfner’s podcast MD Meets.",
+      "category": "",
+      "published": "2026-11-26T16:55:19+09:00"
     }
   ],
   "brief": {},
   "published_at": null,
-  "collected_at": "2026-11-26T09:15:47+09:00"
+  "collected_at": "2026-11-26T17:52:46+09:00"
 }
