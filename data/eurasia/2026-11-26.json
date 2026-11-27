@@ -1,274 +1,1139 @@
 {
   "date": "2026-11-26",
-  "articles": [],
-  "screened": [],
-  "pending": [
+  "articles": [
     {
-      "id": "moscowtimes:7b0b4c256f",
+      "id": "portnews:c988c1cbb6",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "title": "세계 최대급 LR2 제품유 탱커의 4분의 3, 원유 운송으로 전환",
+      "url": "https://portnews.ru/news/400170/",
+      "published": "2026-11-26T22:49:00+09:00",
+      "category": "нефтегазовый рынок",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "Signal Ocean 자료에 따르면 LR2 탱커 542척 중 74.2%(402척)가 10월 30일 기준 원유·흑유 운송에 투입돼 있다. 2025년 1월 1일에는 53%(256척)였고, 정제유 운송 선박은 227척에서 140척으로 38% 줄었다. 호르무즈 해협을 통한 원유 수출 회복과 STS 환적, VLCC·아프라막스 운임 상승이 전환을 부추겼으며, 전환은 2026년 1~4월에 가장 활발했다. 대형 제품유선 부족으로 화주들이 더 작은 선박을 쓰게 되고 있다.",
+      "why": "탱커 시장의 선종 재배치가 원유·제품유 운임과 에너지 물류 구조에 영향을 준다.",
+      "insight": "본문에 '호르무즈 해협 수출 회복'이 언급돼 지난 중동 혼란이 원인이었음을 시사하지만 기사는 세부를 설명하지 않는다. 제재 아래 러시아 제품유 수송에도 선복 부족이 파급될 가능성이 있다.",
+      "terms": [
+        {
+          "term": "LR2",
+          "explanation": "Long Range 2 급으로, 주로 정제 석유제품을 싣는 대형 탱커이며 원유 운송에도 전환 투입된다."
+        },
+        {
+          "term": "STS 환적",
+          "explanation": "선박 간 해상에서 화물을 옮겨 싣는 방식으로, 제재 회피에도 자주 쓰인다."
+        }
+      ],
+      "tags": [
+        "탱커",
+        "유조선",
+        "해운",
+        "운임"
+      ],
+      "relevance": 4,
+      "geo": {},
+      "orig_title": "Три четверти крупнейших в мире танкеров-продуктовозов LR2 переведены на перевозку сырой нефти",
+      "lang": "ru",
+      "logistics": "대형 제품유선이 줄면 러시아산을 포함한 정제유 운송에 소형 선박 의존이 커지고 운임·선복 수급이 흔들릴 수 있다.",
+      "stance": "러시아 해운 업계지 · 상트페테르부르크",
+      "score": 4
+    },
+    {
+      "id": "moscowtimes:8cf39f496a",
       "source": "moscowtimes",
       "source_name": "The Moscow Times",
-      "stance": "독립 언론 · 암스테르담",
-      "url": "https://www.themoscowtimes.com/2026/11/25/russian-official-warns-of-ukrainian-drone-attacks-on-utility-infrastructure-this-a812373",
-      "title": "Russian Official Warns of Ukrainian Drone Attacks on Utility Infrastructure This Winter",
-      "description": "The comments mirrored warnings from Ukrainian leaders about the risk of winter attacks on energy infrastructure disrupting power and heating supplies.",
+      "title": "파시냔 아르메니아 총리, 푸틴 회담 앞두고 EU 가입 의지 재확인",
+      "url": "https://www.themoscowtimes.com/2026/11/26/pm-pashinyan-reaffirms-armenia-s-eu-ambitions-ahead-of-putin-meeting-a812383",
+      "published": "2026-11-26T22:37:53+09:00",
       "category": "Latest Articles",
-      "published": "2026-11-26T02:00:56+09:00"
+      "subtitle": "Pashinyan also repeated plans to gradually end Armenia’s decades-long reliance on Russian border guards, who patrol its border with Turkey and Iran.",
+      "author": "",
+      "body": "",
+      "summary": "파시냔(Nikol Pashinyan) 총리는 EU 가입 절차를 시작한 지난해 법률의 폐기는 가능하지 않다고 말했고, 이달 초에는 2028년까지 공식 가입 신청을 하겠다고 밝혔다. 그는 12월 3일 모스크바 방문과 푸틴 대통령과의 회담을 앞두고 있으며, 유라시아경제연합(EAEU)이 12월에 아르메니아 회원 자격 정지 가능성을 논의할 예정이라고 매체는 전했다. 러시아는 올해 아르메니아 제품을 광범위하게 금지했고 가스 공급 계약 중단·해지도 위협했다. 파시냔은 앞으로 몇 년 안에 러시아 국경수비대에 의존하지 않고 국경을 직접 책임지겠다는 계획도 되풀이했다.",
+      "why": "러시아의 코카서스 영향력 약화와 EAEU 내부 균열을 보여 주는 사안이다.",
+      "insight": "2023년 9월 나고르노카라바흐 사태 이후 멀어진 관계의 연장선이다. 12월 3일 회담과 EAEU 논의 결과에 따라 아르메니아가 EU와 EAEU 사이에서 감수할 비용이 드러날 가능성이 있다.",
+      "terms": [
+        {
+          "term": "EAEU(유라시아경제연합)",
+          "explanation": "러시아 주도의 관세동맹 기반 경제블록으로, 아르메니아·벨라루스·카자흐스탄·키르기스스탄이 회원이다."
+        }
+      ],
+      "tags": [
+        "아르메니아",
+        "코카서스",
+        "EAEU",
+        "러시아"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "PM Pashinyan Reaffirms Armenia’s EU Ambitions Ahead of Putin Meeting",
+      "lang": "en",
+      "logistics": "러시아의 수입 금지와 EAEU 회원 자격 문제는 아르메니아의 대러 무역, 가스 공급, 코카서스 육로 물류에 직접 영향을 줄 수 있다.",
+      "stance": "독립 언론 · 암스테르담",
+      "score": 4
     },
     {
-      "id": "moscowtimes:096fa15e3a",
-      "source": "moscowtimes",
-      "source_name": "The Moscow Times",
-      "stance": "독립 언론 · 암스테르담",
-      "url": "https://www.themoscowtimes.com/2026/11/25/american-billionaire-signs-u-s-backed-share-swap-deal-to-buy-lukoil-global-a812372",
-      "title": "American Billionaire Signs U.S.-Backed Share Swap Deal to Buy Lukoil Global Assets",
-      "description": "The deal, which follows more than a year of negotiations, involves swapping Lukoil securities worth $10 billion for the company's international assets.",
-      "category": "Latest Articles",
-      "published": "2026-11-26T01:50:54+09:00"
-    },
-    {
-      "id": "moscowtimes:d93f339500",
-      "source": "moscowtimes",
-      "source_name": "The Moscow Times",
-      "stance": "독립 언론 · 암스테르담",
-      "url": "https://www.themoscowtimes.com/2026/11/25/z-blogger-vladimir-romanov-resurfaces-following-rumors-of-arrest-a812370",
-      "title": "Z-Blogger Vladimir Romanov Resurfaces Following Rumors of Arrest",
-      "description": "Romanov’s Telegram channel went silent last month after he published and then deleted a post that suggested a U.S.-brokered ceasefire and evacuation effort in Oleshky was unfavorable for Russia.",
-      "category": "Latest Articles",
-      "published": "2026-11-26T00:46:18+09:00"
-    },
-    {
-      "id": "moscowtimes:23c22dce96",
-      "source": "moscowtimes",
-      "source_name": "The Moscow Times",
-      "stance": "독립 언론 · 암스테르담",
-      "url": "https://www.themoscowtimes.com/2026/11/25/putin-orders-data-center-construction-plan-for-russia-s-coal-regions-a812371",
-      "title": "Putin Orders Data Center Construction Plan for Russia’s Coal Regions",
-      "description": "The order comes as Russian officials weigh how to protect the country’s digital infrastructure from drone attacks.",
-      "category": "Latest Articles",
-      "published": "2026-11-26T00:21:54+09:00"
-    },
-    {
-      "id": "meduza:1ef1cd829d",
+      "id": "meduza:49ca65aee8",
       "source": "meduza",
       "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
-      "url": "https://meduza.io/en/news/2026/11/25/russian-billionaire-and-senator-suleiman-kerimov-moved-1-16-billion-from-russia-to-switzerland-through-deutsche-bank-in-2020-investigation-finds",
-      "title": "Russian senator Suleiman Kerimov moved more than a billion euros from Russia to Switzerland through Deutsche Bank in 2020, investigation finds",
-      "description": "Billionaire and Dagestan Senator Suleiman Kerimov moved 1.16 billion euros from Russia to Switzerland in a week in 2020, according to internal Deutsche Bank documents codenamed Project Oak that iStories, an independent Russian investigative outlet, obtained as part of an international journalistic investigation.",
+      "title": "러시아, 전쟁 없었다면 불필요했을 무기·탄약에 약 18.6조 루블 지출…노바야가제타 유럽 추산",
+      "url": "https://meduza.io/en/news/2026/11/26/russia-has-spent-nearly-19-trillion-rubles-on-weapons-and-ammunition-it-wouldn-t-have-needed-without-the-war-money-effectively-lost-to-the-economy-novaya-gazeta-europe-reports",
+      "published": "2026-11-26T22:15:21+09:00",
       "category": "",
-      "published": "2026-11-26T02:05:29+09:00"
+      "subtitle": "Russian authorities have already spent an “excess” 18.6 trillion rubles on weapons and ammunition since the start of the full-scale war, the independent Russian news outlet Novaya Gazeta Europe calculated. These costs emerged only because of the war and never returned to the economy, the outlet said",
+      "author": "",
+      "body": "",
+      "summary": "노바야가제타 유럽은 전면전 개시 이후 2022~2026년 전쟁이 없었다면 쓰지 않았을 '초과' 군사 지출을 43.6조 루블로 추산했다. 이 중 25조 루블은 군인 급여·연금·사망·부상 보상 등 인적 지출로 소비로 환류돼 손실로 보지 않았고, 무기·탄약 쪽 초과 지출 18.6조 루블은 경제에서 사라진 것으로 규정했다. 2026년 예산의 국방비는 12.93조 루블이고, 국가두마를 통과한 2027년 예산안에서는 국방 17.1조 루블(전체의 35.2%), 국가안보·법집행 4.3조 루블로 군·보안 비중이 44%라고 The Bell을 인용해 전했다.",
+      "why": "전쟁 경제의 재정 부담과 기회비용을 가늠하게 하는 독립 언론의 추산이다.",
+      "insight": "추산 방식은 언론사 자체 가정에 따른 것이어서 수치보다 방향성으로 읽는 편이 낫다. 2027년 예산에서도 국방·안보 비중이 높게 유지돼 재정 압박과 민간 투자 위축이 이어질 가능성이 있다.",
+      "terms": [
+        {
+          "term": "국가방위발주(гособоронзаказ)",
+          "explanation": "정부가 방산기업에 무기·장비를 주문하는 국가 조달 체계다."
+        }
+      ],
+      "tags": [
+        "러시아경제",
+        "국방예산",
+        "우크라이나전쟁",
+        "재정"
+      ],
+      "relevance": 4,
+      "geo": {},
+      "orig_title": "Russia has spent nearly 19 trillion rubles on weapons and ammunition it wouldn’t have needed without the war — money effectively lost to the economy, Novaya Gazeta Europe reports",
+      "lang": "en",
+      "logistics": "",
+      "stance": "독립 언론 · 리가",
+      "score": 4
     },
     {
-      "id": "meduza:868531120d",
-      "source": "meduza",
-      "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
-      "url": "https://meduza.io/en/news/2026/11/25/english-textbook-in-russia-swaps-american-jeans-chips-and-coca-cola-for-valenki-kholodets-and-kvass",
-      "title": "English textbook in Russia swaps American jeans, chips, and Coca-Cola for valenki, kholodets, and kvass",
-      "description": "The authors of the Starlight English-language textbook for eighth grade replaced a text about American food and clothing with one about Russian dishes and everyday items, the independent Russian news outlet Verstka reported.",
-      "category": "",
-      "published": "2026-11-26T01:18:02+09:00"
+      "id": "portnews:fdd1aff9be",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "title": "원자력 쇄빙선 '레닌그라드', 12월 4일 발트조선소에서 진수",
+      "url": "https://portnews.ru/news/400164/",
+      "published": "2026-11-26T20:41:00+09:00",
+      "category": "судостроение",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "통합조선공사(OSK) 발트조선소는 22220 프로젝트의 범용 원자력 쇄빙선 '레닌그라드'를 2026년 12월 4일 진수한다고 밝혔다. 이 선박은 2024년 1월 26일 푸틴 대통령이 참석한 가운데 기공됐다. 22220형은 북극 연중 항행을 위한 것으로 '아르크티카', '시비리', '우랄', '야쿠티야'가 건조됐고 '추코트카'는 2027년 인도 예정이며 '스탈린그라드'는 2025년 11월 18일 기공됐다. 러시아 교통부는 추가 투자 항만 수수료로 건조 자금을 충당할 계획이라고 한다.",
+      "why": "러시아가 쇄빙선단 확충으로 북극항로 운영 능력을 키우고 있음을 보여 준다.",
+      "insight": "발트조선소는 서방 제재 아래서도 대형 쇄빙선을 계속 건조하며 '기술 주권'을 강조하고 있다. 선박 이름에 정치적 상징성이 담긴 점도 눈에 띈다.",
+      "terms": [
+        {
+          "term": "22220 프로젝트",
+          "explanation": "러시아의 범용 원자력 쇄빙선 시리즈로, 출력 60MW에 길이 173.3m이며 북극 연중 항행을 지원한다."
+        }
+      ],
+      "tags": [
+        "북극항로",
+        "쇄빙선",
+        "조선",
+        "러시아"
+      ],
+      "relevance": 4,
+      "geo": {},
+      "orig_title": "УАЛ «Ленинград» спустят на воду 4 декабря на Балтийском заводе",
+      "lang": "ru",
+      "logistics": "쇄빙선 증가는 NSR 연중 운항과 북극 LNG·화물 호송 역량을 높일 수 있으나, 건조 자금을 항만 수수료로 충당하면 화주 비용이 늘 수 있다.",
+      "stance": "러시아 해운 업계지 · 상트페테르부르크",
+      "score": 4
     },
     {
-      "id": "meduza:63535dc804",
-      "source": "meduza",
-      "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
-      "url": "https://meduza.io/en/news/2026/11/25/russia-s-transport-ministry-published-instructions-on-how-to-get-to-crimea-now-the-bridge-pictured-in-them-has-one-arch-not-two",
-      "title": "Russia’s Transport Ministry published instructions on how to get to Crimea now. The bridge pictured in them has one arch (not two).",
-      "description": "Russia’s Transport Ministry published instructions on its official Telegram channel for traveling from Russia to Crimea. The accompanying image shows the Crimean Bridge with only one arch.",
-      "category": "",
-      "published": "2026-11-26T01:00:44+09:00"
-    },
-    {
-      "id": "meduza:e5d1ae03f9",
-      "source": "meduza",
-      "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
-      "url": "https://meduza.io/en/feature/2026/11/25/more-than-700-000-russian-soldiers-have-died-in-ukraine-more-than-the-u-s-lost-in-world-war-ii-or-the-number-of-boys-born-in-russia-in-a-single-year",
-      "title": "More than 700,000 Russian soldiers have died in Ukraine — more than the U.S. lost in World War II or the number of boys born in Russia in a single year",
-      "description": "Over nearly five years of the full-scale war with Ukraine, at least 700,000 Russian troops have died. That estimate comes from journalists at Meduza and Mediazona, based on an analysis of data from a hacked Rosstat database and other sources. After the story was published, many people tried to grasp the scale of these losses by comparing them to the aftermath of other wars and disasters. Here is t",
-      "category": "",
-      "published": "2026-11-26T00:41:36+09:00"
-    },
-    {
-      "id": "timesca:4166eef27a",
+      "id": "timesca:6f75914a39",
       "source": "timesca",
       "source_name": "The Times of Central Asia",
+      "title": "카자흐스탄, 모스크바 넘어 경제·기술 자립 추진",
+      "url": "https://timesca.com/beyond-moscow-kazakhstans-push-for-economic-and-technological-independence/",
+      "published": "2026-11-26T20:25:15+09:00",
+      "category": "International Affairs",
+      "subtitle": "Kazakhstan’s President Kassym-Jomart Tokayev has called for expanded cooperation with Russia in artificial intelligence and digital technologies. While Astana is",
+      "author": "",
+      "body": "",
+      "summary": "Kazakhstan’s President Kassym-Jomart Tokayev has called for expanded cooperation with Russia in artificial intelligence and digital technologies. While Astana is",
+      "why": "",
+      "insight": "",
+      "terms": [],
+      "tags": [],
+      "relevance": 4,
+      "geo": {},
+      "orig_title": "Beyond Moscow: Kazakhstan’s Push for Economic and Technological Independence",
+      "lang": "en",
+      "logistics": "",
       "stance": "중앙아 지역 매체",
-      "url": "https://timesca.com/eu-notes-some-rights-progress-in-tajikistan-raises-concerns-over-freedoms/",
-      "title": "EU Notes Some Rights Progress in Tajikistan, Raises Concerns Over Freedoms",
-      "description": "Tajikistan has taken positive steps in the areas of prison reform, as well as the rights of women and people",
+      "score": 4
+    },
+    {
+      "id": "portnews:55fc74b061",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "title": "러시아발 튀르키예행 해상 화물 10월 60.3% 급감",
+      "url": "https://portnews.ru/news/400159/",
+      "published": "2026-11-26T18:35:00+09:00",
+      "category": "грузооборот",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "В турецких портах было перевалено 3,86 млн тонн грузов из России против 9,72 млн тонн годом ранее  Грузооборот турецких портов по итогам десяти месяцев 2026 года практически не изменился: показатель в",
+      "why": "",
+      "insight": "",
+      "terms": [],
+      "tags": [],
+      "relevance": 4,
+      "geo": {},
+      "orig_title": "Объемы перевозки грузов из России в Турцию морским путем сократились на 60,3% в октябре",
+      "lang": "ru",
+      "logistics": "",
+      "stance": "러시아 해운 업계지 · 상트페테르부르크",
+      "score": 4
+    },
+    {
+      "id": "timesca:fe917cbc2d",
+      "source": "timesca",
+      "source_name": "The Times of Central Asia",
+      "title": "파키스탄 국경 폐쇄로 아프간 무역 중앙아시아로 이동",
+      "url": "https://timesca.com/afghanistan-pakistan-conflict-central-asian-trade/",
+      "published": "2026-11-26T18:29:04+09:00",
       "category": "Home",
-      "published": "2026-11-26T03:42:05+09:00"
+      "subtitle": "Since Afghanistan’s main border crossings with Pakistan closed in October 2025, more of its imports have arrived through Central Asia.",
+      "author": "",
+      "body": "",
+      "summary": "Since Afghanistan’s main border crossings with Pakistan closed in October 2025, more of its imports have arrived through Central Asia.",
+      "why": "",
+      "insight": "",
+      "terms": [],
+      "tags": [],
+      "relevance": 4,
+      "geo": {},
+      "orig_title": "Pakistan Border Closures Shift Afghan Trade Toward Central Asia",
+      "lang": "en",
+      "logistics": "",
+      "stance": "중앙아 지역 매체",
+      "score": 4
     },
     {
-      "id": "barents:de70efb78c",
-      "source": "barents",
-      "source_name": "The Barents Observer",
-      "stance": "북극 독립 언론 · 노르웨이",
-      "url": "https://www.thebarentsobserver.com/security/ukraines-former-commanderinchief-helps-norway-improve-air-defences-along-the-border-with-russia/462650",
-      "title": "Ukraine’s former Commander-in-Chief helps Norway improve air defences along the border with Russia",
-      "description": "",
-      "category": "General Syrskyi",
-      "published": "2026-11-26T09:15:39.792566+09:00"
-    },
-    {
-      "id": "barents:694a96d6ac",
-      "source": "barents",
-      "source_name": "The Barents Observer",
-      "stance": "북극 독립 언론 · 노르웨이",
-      "url": "https://www.thebarentsobserver.com/security/russian-aggression-strengthens-nordic-defence-ties/461867",
-      "title": "Russian aggression strengthens Nordic defence ties",
-      "description": "",
-      "category": "NORDEFCO",
-      "published": "2026-11-26T09:15:39.792588+09:00"
-    },
-    {
-      "id": "barents:60fbfa52d1",
-      "source": "barents",
-      "source_name": "The Barents Observer",
-      "stance": "북극 독립 언론 · 노르웨이",
-      "url": "https://www.thebarentsobserver.com/news/first-grain-carrier-sets-out-from-murmansk/461772",
-      "title": "First grain carrier sets out from Murmansk",
-      "description": "",
-      "category": "Alternative route",
-      "published": "2026-11-26T09:15:39.792592+09:00"
-    },
-    {
-      "id": "barents:7dec476eab",
-      "source": "barents",
-      "source_name": "The Barents Observer",
-      "stance": "북극 독립 언론 · 노르웨이",
-      "url": "https://www.thebarentsobserver.com/news/important-northrussian-railway-bridge-collapses/461748",
-      "title": "Important north-Russian railway bridge collapses",
-      "description": "",
-      "category": "Near Kotlas",
-      "published": "2026-11-26T09:15:39.792595+09:00"
-    },
-    {
-      "id": "barents:d9f1c6d42e",
-      "source": "barents",
-      "source_name": "The Barents Observer",
-      "stance": "북극 독립 언론 · 노르웨이",
-      "url": "https://www.thebarentsobserver.com/news/koreas-historical-arctic-voyage-did-not-go-all-smoothly/461691",
-      "title": "Korea’s historic Arctic voyage did not go smoothly",
-      "description": "",
-      "category": "Northern Sea Route",
-      "published": "2026-11-26T09:15:39.792598+09:00"
-    },
-    {
-      "id": "barents:2e866d5356",
-      "source": "barents",
-      "source_name": "The Barents Observer",
-      "stance": "북극 독립 언론 · 노르웨이",
-      "url": "https://www.thebarentsobserver.com/news/smuggling-of-foreign-cash-continues-despite-sanctions/461580",
-      "title": "Smuggling of foreign cash continues despite sanctions",
-      "description": "",
-      "category": "Norway-Russia border",
-      "published": "2026-11-26T09:15:39.792601+09:00"
-    },
-    {
-      "id": "barents:1ee3725946",
-      "source": "barents",
-      "source_name": "The Barents Observer",
-      "stance": "북극 독립 언론 · 노르웨이",
-      "url": "https://www.thebarentsobserver.com/climate-crisis/marine-researchers-critical-of-plans-for-worlds-northernmost-oil-field/461468",
-      "title": "Marine researchers critical of plans for world’s northernmost oil field",
-      "description": "",
-      "category": "Wisting project",
-      "published": "2026-11-26T09:15:39.792603+09:00"
-    },
-    {
-      "id": "barents:f0fa274e3d",
-      "source": "barents",
-      "source_name": "The Barents Observer",
-      "stance": "북극 독립 언론 · 노르웨이",
-      "url": "https://www.thebarentsobserver.com/news/trumps-new-envoy-to-norway-travelled-straight-from-the-royal-palace-to-the-russian-border/461401",
-      "title": "Trump’s new envoy to Norway travelled straight from the Royal Palace to the Russian border",
-      "description": "",
-      "category": "Kirkenes",
-      "published": "2026-11-26T09:15:39.792606+09:00"
-    },
-    {
-      "id": "barents:f3d63187e4",
-      "source": "barents",
-      "source_name": "The Barents Observer",
-      "stance": "북극 독립 언론 · 노르웨이",
-      "url": "https://www.thebarentsobserver.com/news/30yearold-tanker-linked-with-iran-drifting-along-norways-arctic-coast/461333",
-      "title": "30-year-old tanker linked with Iran drifting along Norway’s Arctic coast",
-      "description": "",
-      "category": "Suspicious",
-      "published": "2026-11-26T09:15:39.792610+09:00"
-    },
-    {
-      "id": "barents:558070b20b",
-      "source": "barents",
-      "source_name": "The Barents Observer",
-      "stance": "북극 독립 언론 · 노르웨이",
-      "url": "https://www.thebarentsobserver.com/security/nasams-sensors-to-be-deployed-along-norways-border-with-russia/461203",
-      "title": "NASAMS sensors to be deployed along Norway’s border with Russia",
-      "description": "",
-      "category": "Drone threat",
-      "published": "2026-11-26T09:15:39.792612+09:00"
-    },
-    {
-      "id": "barents:86fd5f8d80",
-      "source": "barents",
-      "source_name": "The Barents Observer",
-      "stance": "북극 독립 언론 · 노르웨이",
-      "url": "https://www.thebarentsobserver.com/news/european-diplomats-stand-in-remembrance-as-political-repression-deepens-in-russia/461044",
-      "title": "European diplomats stand in remembrance as political repression deepens in Russia",
-      "description": "",
-      "category": "Solovetsky stone",
-      "published": "2026-11-26T09:15:39.792615+09:00"
-    },
-    {
-      "id": "portnews:515bcf343f",
+      "id": "portnews:d0c98d0ec8",
       "source": "portnews",
       "source_name": "PortNews",
+      "title": "IMO, 국기를 도용한 선박 587척 확인…선박등록 관리 강화 촉구",
+      "url": "https://portnews.ru/news/400156/",
+      "published": "2026-11-26T17:32:00+09:00",
+      "category": "регулирование",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "IMO 글로벌 데이터베이스에 국기를 불법 사용하는 선박이 587척 등재돼 있다. 아르세니오 도밍게스(Arsenio Domínguez) 사무총장은 우간다 캄팔라에서 열린 아프리카 해사행정협회(AAMA) 회의(11월 17~19일)를 계기로 각국에 국내 선박등록 관리 강화와 정보 공유 확대를 촉구했다. IMO 법률위원회는 4월 제113차 회의에서 직전 1년간 529척이 확인됐다고 보고했고, 소유자 검증·선박 식별·등록 요건·정보 공유를 담은 새 선박등록 지침도 승인했다.",
+      "why": "가짜 선박등록은 소유주 은폐와 제재 회피의 핵심 수단으로 꼽히며, 국제 해운 규범의 구멍을 보여 준다.",
+      "insight": "IMO는 선박등록을 규율하는 강제적 국제 규범이 없다는 점을 인정하고 있어, 이번 지침은 구속력이 없는 권고에 머문다. 그림자 선단 단속은 제재 목록 확대보다 등록 단계의 검증 강화 쪽으로 옮겨 갈 가능성이 있다.",
+      "terms": [
+        {
+          "term": "가짜 선박등록(fraudulent registry)",
+          "explanation": "실제 국기국 행정기관을 사칭해 위조 웹사이트와 등록증을 만들어 선박에 국적을 부여한 것처럼 꾸미는 수법이다."
+        },
+        {
+          "term": "GISIS",
+          "explanation": "IMO의 글로벌 통합 해운정보시스템으로, 국기 도용 선박 정보도 여기에 등재된다."
+        }
+      ],
+      "tags": [
+        "그림자선단",
+        "해상제재",
+        "IMO",
+        "선박등록"
+      ],
+      "relevance": 4,
+      "geo": {},
+      "orig_title": "ИМО выявила 587 судов под ложными флагами и призвала усилить контроль за регистрацией судов",
+      "lang": "ru",
+      "logistics": "위조 국기 선박이 늘수록 항만국 통제, 보험사, 은행, 선급의 소유자 실사 부담이 커지고 러시아·이란 등 제재 대상 화물 운송 단속에도 영향을 줄 수 있다.",
       "stance": "러시아 해운 업계지 · 상트페테르부르크",
-      "url": "https://portnews.ru/news/400119/",
-      "title": "Отряд кораблей ТОФ совершил деловой заход в порт Тилава в Мьянме",
-      "description": "",
-      "category": "ВМФ",
-      "published": "2026-11-26T01:00:00+09:00"
-    },
-    {
-      "id": "portnews:c15fd6f8bc",
-      "source": "portnews",
-      "source_name": "PortNews",
-      "stance": "러시아 해운 업계지 · 상트페테르부르크",
-      "url": "https://portnews.ru/news/400118/",
-      "title": "Ж/д перевозки по МТК «Север — Юг» за 10 месяцев 2026 года выросли на 11,5% и достигли 8,9 млн тонн",
-      "description": "",
-      "category": "грузоперевозки",
-      "published": "2026-11-26T00:29:00+09:00"
-    },
-    {
-      "id": "portnews:9ca729b9b8",
-      "source": "portnews",
-      "source_name": "PortNews",
-      "stance": "러시아 해운 업계지 · 상트페테르부르크",
-      "url": "https://portnews.ru/news/400114/",
-      "title": "ИМО повысит целевой показатель снижения углеродоемкости судов в 2027 году до 13,625%",
-      "description": "",
-      "category": "экология",
-      "published": "2026-11-26T00:11:00+09:00"
+      "score": 5
     },
     {
       "id": "meduza:eed78b8c39",
       "source": "meduza",
       "source_name": "Meduza",
-      "stance": "독립 언론 · 리가",
+      "title": "쿠슈너, 평화협상 교착 책임을 발다이 공격설로 돌려",
       "url": "https://meduza.io/en/news/2026/11/26/kushner-blames-stalled-peace-talks-on-alleged-ukrainian-attack-on-putin-s-residence-an-attack-both-u-s-intelligence-and-trump-say-did-not-happen",
-      "title": "Kushner blames stalled peace talks on alleged Ukrainian attack on Putin’s residence — an attack both U.S. intelligence and Trump say did not happen",
-      "description": "U.S. presidential envoy Jared Kushner said peace negotiations between Ukraine and Russia stalled in early 2026 after an alleged Ukrainian attack on Vladimir Putin’s residence in Valdai. He made the comments in an interview with Axel Springer CEO Mathias Döpfner for Döpfner’s podcast MD Meets.",
+      "published": "2026-11-26T16:55:19+09:00",
       "category": "",
-      "published": "2026-11-26T16:55:19+09:00"
+      "subtitle": "U.S. presidential envoy Jared Kushner said peace negotiations between Ukraine and Russia stalled in early 2026 after an alleged Ukrainian attack on Vladimir Putin’s residence in Valdai. He made the comments in an interview with Axel Springer CEO Mathias Döpfner for Döpfner’s podcast MD Meets.",
+      "author": "",
+      "body": "",
+      "summary": "U.S. presidential envoy Jared Kushner said peace negotiations between Ukraine and Russia stalled in early 2026 after an alleged Ukrainian attack on Vladimir Putin’s residence in Valdai. He made the comments in an interview with Axel Springer CEO Mathias Döpfner for Döpfner’s podcast MD Meets.",
+      "why": "",
+      "insight": "",
+      "terms": [],
+      "tags": [],
+      "relevance": 4,
+      "geo": {},
+      "orig_title": "Kushner blames stalled peace talks on alleged Ukrainian attack on Putin’s residence — an attack both U.S. intelligence and Trump say did not happen",
+      "lang": "en",
+      "logistics": "",
+      "stance": "독립 언론 · 리가",
+      "score": 4
+    },
+    {
+      "id": "portnews:c1dc4170a3",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "title": "수에즈운하 11월 수입 두 배 늘어 5.93억 달러",
+      "url": "https://portnews.ru/news/400152/",
+      "published": "2026-11-26T16:11:00+09:00",
+      "category": "судоходство",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "Число прошедших через канал судов выросло на 34,8% — с 886 до 1194  Выручка Суэцкого канала с начала ноября 2026 года увеличилась на 101,2% по сравнению с аналогичным периодом прошлого года и достигла",
+      "why": "",
+      "insight": "",
+      "terms": [],
+      "tags": [],
+      "relevance": 4,
+      "geo": {},
+      "orig_title": "Выручка Суэцкого канала с начала ноября выросла вдвое — до $593 млн",
+      "lang": "ru",
+      "logistics": "",
+      "stance": "러시아 해운 업계지 · 상트페테르부르크",
+      "score": 4
+    },
+    {
+      "id": "barents:f3d63187e4",
+      "source": "barents",
+      "source_name": "The Barents Observer",
+      "title": "이란 연계 30년 된 유조선, 노르웨이 북극 해안 따라 표류",
+      "url": "https://www.thebarentsobserver.com/news/30yearold-tanker-linked-with-iran-drifting-along-norways-arctic-coast/461333",
+      "published": "2026-11-26T09:15:39.792610+09:00",
+      "category": "Suspicious",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "According to ship traffic data, the Padre (IMO 9116632) has been situated in the area of the Norwegian-Russian maritime border for more than two weeks. The tanker, which previously sailed under the na",
+      "why": "",
+      "insight": "",
+      "terms": [],
+      "tags": [],
+      "relevance": 4,
+      "geo": {},
+      "orig_title": "30-year-old tanker linked with Iran drifting along Norway’s Arctic coast",
+      "lang": "en",
+      "logistics": "",
+      "stance": "북극 독립 언론 · 노르웨이",
+      "score": 4
+    },
+    {
+      "id": "barents:d9f1c6d42e",
+      "source": "barents",
+      "source_name": "The Barents Observer",
+      "title": "한국 첫 북극항로 컨테이너선 시범운항, 순탄치 않았다",
+      "url": "https://www.thebarentsobserver.com/news/koreas-historical-arctic-voyage-did-not-go-all-smoothly/461691",
+      "published": "2026-11-26T09:15:39.792598+09:00",
+      "category": "Northern Sea Route",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "팬스타그룹의 컨테이너선 팬스타 아크로(PanStar Acro)는 8월 말 부산을 출발해 21일 만에 영국 펠릭스토에 도착했고, 10월 중순 귀항해 이재명 대통령의 환영을 받았다. 러시아 해운 SNS 채널 '모르스카야 라보타'에 따르면 랭겔섬 부근에서 유빙을 만나 항로를 바꿨고, 저온으로 엔진·연료계통 문제와 GPS·위성통신 장애가 있었으며 보험 인수도 어려웠다고 한다. 적재량은 737TEU로 선복의 3분의 1에도 못 미쳐 큰 손실을 봤고, SBS 보도에 따르면 팬스타는 이 배를 원래 소유주 HMM에 되팔려 한다. 팬스타는 북극항로 사업을 포기하지 않고 내년에 다른 선박으로 다시 시험 운항하겠다고 밝혔다.",
+      "why": "한국 선사의 첫 NSR 컨테이너 운항이 상업성과 운항 리스크 면에서 한계를 드러냈다.",
+      "insight": "소유 선박을 한 달 만에 매각한다는 점에서 시범운항이 일회성에 그칠 수 있다는 비판이 나온다. 일부 내용은 러시아 SNS 채널 보도를 재인용한 것이어서 확인이 필요하다.",
+      "terms": [
+        {
+          "term": "NSR(북극항로, Northern Sea Route)",
+          "explanation": "러시아 북극 연안을 따라 유럽과 아시아를 잇는 항로로, 러시아 당국의 항행 허가와 쇄빙선 지원 체계 아래 운영된다."
+        }
+      ],
+      "tags": [
+        "북극항로",
+        "한국",
+        "컨테이너선",
+        "팬스타"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "Korea’s historic Arctic voyage did not go smoothly",
+      "lang": "en",
+      "logistics": "NSR 컨테이너 정기 운송은 얼음·보험·통신 문제와 낮은 적재율 때문에 아직 수익성이 불투명하고, 한국발 유럽행 대체 항로로 자리 잡으려면 시간이 더 필요해 보인다.",
+      "stance": "북극 독립 언론 · 노르웨이",
+      "score": 5
+    },
+    {
+      "id": "barents:7dec476eab",
+      "source": "barents",
+      "source_name": "The Barents Observer",
+      "title": "코틀라스 인근 러시아 북부 핵심 철도 교량 붕괴",
+      "url": "https://www.thebarentsobserver.com/news/important-northrussian-railway-bridge-collapses/461748",
+      "published": "2026-11-26T09:15:39.792595+09:00",
+      "category": "Near Kotlas",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "All traffic has come to a complete halt after the bridge collapsed on November 10. The bridge is the only route for delivering essential supplies to Vorkuta and the northern part of the Komi Republic,",
+      "why": "",
+      "insight": "",
+      "terms": [],
+      "tags": [],
+      "relevance": 4,
+      "geo": {},
+      "orig_title": "Important north-Russian railway bridge collapses",
+      "lang": "en",
+      "logistics": "",
+      "stance": "북극 독립 언론 · 노르웨이",
+      "score": 4
+    },
+    {
+      "id": "moscowtimes:096fa15e3a",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "title": "미국 억만장자 보일리, 미 정부 지원 주식 스왑으로 루크오일 해외자산 인수 계약",
+      "url": "https://www.themoscowtimes.com/2026/11/25/american-billionaire-signs-u-s-backed-share-swap-deal-to-buy-lukoil-global-a812372",
+      "published": "2026-11-26T01:50:54+09:00",
+      "category": "Latest Articles",
+      "subtitle": "The deal, which follows more than a year of negotiations, involves swapping Lukoil securities worth $10 billion for the company's international assets.",
+      "author": "",
+      "body": "",
+      "summary": "토드 보일리(Todd Boehly)는 미국 국제개발금융공사(DFC)가 포함된 컨소시엄이 제재 대상 루크오일(Lukoil)의 해외 에너지 자산을 인수하는 계약을 체결했다고 밝혔다. 1년 넘은 협상 끝에 100억 달러 상당의 루크오일 증권을 해외 자산과 맞바꾸는 구조이며, 자산 가치는 약 160억 달러로 평가된다. 자산은 11개국에 걸쳐 일일 약 35만 배럴을 생산하고 아제르바이잔·카자흐스탄 유전, 네덜란드·불가리아·루마니아 정유소, 미국 내 주유소망을 포함한다. 미 재무부 해외자산통제국(OFAC)의 승인이 필요하며, 재무부는 2025년 10월 루크오일을 제재했다.",
+      "why": "제재 대상 러시아 에너지 기업의 해외 자산을 미국·동맹 측으로 넘기는 선례가 될 수 있다.",
+      "insight": "재무부가 처음엔 이 구상을 거부했다가 국무부 지지를 얻었다는 대목은 미 행정부 내 이견을 보여 준다. OFAC 심사가 길어질 수 있다는 언급이 있어 성사 여부는 불확실하다.",
+      "terms": [
+        {
+          "term": "DFC(미국 국제개발금융공사)",
+          "explanation": "해외 투자에 금융을 지원하는 미국 정부의 투자 기관으로, 전략 자산 확보에도 쓰인다."
+        },
+        {
+          "term": "OFAC",
+          "explanation": "미 재무부 해외자산통제국으로, 제재 지정과 거래 허가를 맡는다."
+        }
+      ],
+      "tags": [
+        "제재",
+        "루크오일",
+        "미국",
+        "러시아에너지"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "American Billionaire Signs U.S.-Backed Share Swap Deal to Buy Lukoil Global Assets",
+      "lang": "en",
+      "logistics": "발트·흑해·중앙아시아 에너지 흐름과 유럽 내 루크오일 정유·유통망의 소유 구조가 바뀔 수 있고, 카자흐스탄 유전 지분 변동은 CPC 등 수출 경로에도 영향을 줄 수 있다.",
+      "stance": "독립 언론 · 암스테르담",
+      "score": 5
+    },
+    {
+      "id": "portnews:c15fd6f8bc",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "title": "러시아 철도, 1~10월 남북 회랑 물동량 11.5% 증가…동서 회랑 컨테이너 18.7% 증가",
+      "url": "https://portnews.ru/news/400118/",
+      "published": "2026-11-26T00:29:00+09:00",
+      "category": "грузоперевозки",
+      "subtitle": "",
+      "author": "",
+      "body": "",
+      "summary": "러시아철도(RZD)에 따르면 1~10월 국제운송회랑(INSTC) '북-남' 철도 물동량이 11.5% 늘었고, 10월에는 120만 톤으로 전년 동월 대비 27.1% 증가했다. 누적 물량은 제목에는 890만 톤, 본문에는 1,010만 톤으로 서로 다르게 적혀 있어 확인이 필요하다. '동-서' 회랑의 컨테이너 운송은 1~10월 18.7% 늘어 30만5,500TEU였고, 10월 단월은 5.2% 늘어 2만8,200TEU였다. 기사는 2030년까지 북-남 회랑의 러시아 화물이 현재 1,700만 톤에서 3,200만 톤으로 거의 두 배가 될 것으로 전망한다고 소개했다.",
+      "why": "서방과 단절된 러시아가 이란·인도 방향과 동방 회랑에 물류를 재편하고 있음을 보여 주는 수치다.",
+      "insight": "수치는 러시아 국영 철도의 발표여서 성장률은 낮은 기저와 정책적 홍보를 감안해 읽을 필요가 있다. 이란 정세에 따라 회랑 안정성이 크게 달라질 가능성이 있다.",
+      "terms": [
+        {
+          "term": "북-남 국제운송회랑(INSTC)",
+          "explanation": "상트페테르부르크에서 이란을 거쳐 인도까지 잇는 약 7,200km의 복합운송 경로로, 수에즈 경유 해상로의 대안으로 소개된다."
+        }
+      ],
+      "tags": [
+        "북남회랑",
+        "러시아철도",
+        "이란",
+        "동서회랑"
+      ],
+      "relevance": 5,
+      "geo": {},
+      "orig_title": "Ж/д перевозки по МТК «Север — Юг» за 10 месяцев 2026 года выросли на 11,5% и достигли 8,9 млн тонн",
+      "lang": "ru",
+      "logistics": "카스피해·이란 경유 노선과 동서 철도 컨테이너 수요가 늘면 카자흐스탄·아제르바이잔·투르크메니스탄 통과 물량과 접경 병목 문제가 부각될 수 있다.",
+      "stance": "러시아 해운 업계지 · 상트페테르부르크",
+      "score": 5
     }
   ],
-  "brief": {},
-  "published_at": null,
-  "collected_at": "2026-11-26T17:52:46+09:00"
+  "screened": [
+    {
+      "id": "barents:60fbfa52d1",
+      "source": "barents",
+      "source_name": "The Barents Observer",
+      "url": "https://www.thebarentsobserver.com/news/first-grain-carrier-sets-out-from-murmansk/461772",
+      "title": "First grain carrier sets out from Murmansk",
+      "title_ko": "무르만스크에서 첫 곡물 운반선 출항, 대체 경로로 부상",
+      "score": 4,
+      "published": "2026-11-26T09:15:39.792592+09:00"
+    },
+    {
+      "id": "portnews:1e70301be4",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400173/",
+      "title": "Работу судоходных гидротехнических сооружений на южном направлении продлили до 16 декабря",
+      "title_ko": "남부 방면 선박 통항 수문시설 운영 12월 16일까지 연장",
+      "score": 3,
+      "published": "2026-11-26T23:33:00+09:00"
+    },
+    {
+      "id": "portnews:9eb5030896",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400169/",
+      "title": "Порт Корсаков после модернизации получит статус глубоководного порта-убежища",
+      "title_ko": "코르사코프항, 현대화 후 심수 피항항 지위 획득",
+      "score": 3,
+      "published": "2026-11-26T22:36:00+09:00"
+    },
+    {
+      "id": "meduza:178e71a42a",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/news/2026/11/26/russia-s-murmansk-region-changes-acting-governors-twice-in-two-days-after-governor-s-arrest-on-embezzlement-and-bribery-charges",
+      "title": "Russia’s Murmansk region changes acting governors twice in two days after governor’s arrest on embezzlement and bribery charges",
+      "title_ko": "무르만스크주, 주지사 체포 후 이틀간 대행 두 차례 교체",
+      "score": 3,
+      "published": "2026-11-26T22:23:05+09:00"
+    },
+    {
+      "id": "meduza:60203be7af",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/feature/2026/11/26/besieged-fortress-or-new-tilsit-harvard-kennedy-school-project-outlines-four-scenarios-for-russia-s-future-through-2030",
+      "title": "‘Besieged Fortress’ or ‘New Tilsit’? Harvard Kennedy School project outlines four scenarios for Russia’s future through 2030",
+      "title_ko": "하버드 러시아 매터스, 2030년까지 러시아 4개 시나리오 제시",
+      "score": 3,
+      "published": "2026-11-26T21:45:48+09:00"
+    },
+    {
+      "id": "timesca:58d19b8017",
+      "source": "timesca",
+      "source_name": "The Times of Central Asia",
+      "url": "https://timesca.com/tajikistan-trade-paperless-border-delays/",
+      "title": "Tajikistan’s Paperless Trade Reforms Aim to Reduce Border Delays",
+      "title_ko": "타지키스탄 무서류 무역 개혁, 국경 지연 줄이기 목표",
+      "score": 3,
+      "published": "2026-11-26T21:43:36+09:00"
+    },
+    {
+      "id": "portnews:52e95bd4bb",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400165/",
+      "title": "Helsinki Shipyard меньше чем за два года построит новый ледокол для Финляндии",
+      "title_ko": "헬싱키 조선소, 2년 안에 핀란드용 신규 쇄빙선 건조",
+      "score": 3,
+      "published": "2026-11-26T21:07:00+09:00"
+    },
+    {
+      "id": "timesca:2beb87b9c3",
+      "source": "timesca",
+      "source_name": "The Times of Central Asia",
+      "url": "https://timesca.com/kyrgyzstan-fuel-subsidies-extended-amid-supply-concerns/",
+      "title": "Kyrgyzstan’s Fuel Subsidies Could Continue Through March 2027",
+      "title_ko": "키르기스스탄 연료 보조금 2027년 3월까지 연장 가능성",
+      "score": 3,
+      "published": "2026-11-26T21:04:56+09:00"
+    },
+    {
+      "id": "timesca:c6c0b10669",
+      "source": "timesca",
+      "source_name": "The Times of Central Asia",
+      "url": "https://timesca.com/taliban-say-second-phase-excavation-on-qosh-tepa-canal-is-99-complete/",
+      "title": "Taliban Say Second-Phase Excavation on Qosh Tepa Canal Is 99% Complete",
+      "title_ko": "탈레반 \"코시테파 운하 2단계 굴착 99% 완료\"",
+      "score": 3,
+      "published": "2026-11-26T20:26:48+09:00"
+    },
+    {
+      "id": "meduza:358c82992f",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/news/2026/11/26/deputy-commander-of-russia-s-aerospace-forces-arrested-on-bribery-charges-amid-ongoing-crackdown-on-senior-military-officials",
+      "title": "Deputy commander of Russia’s Aerospace Forces arrested on bribery charges amid ongoing crackdown on senior military officials",
+      "title_ko": "러시아 공군 부사령관 뇌물 혐의 체포, 군 고위층 숙청 지속",
+      "score": 3,
+      "published": "2026-11-26T19:32:09+09:00"
+    },
+    {
+      "id": "moscowtimes:dc8362e845",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/11/26/russia-and-ukraine-hold-first-exchange-of-war-dead-since-rebooted-peace-talks-a812378",
+      "title": "Russia and Ukraine Hold First Exchange of War Dead Since Rebooted Peace Talks",
+      "title_ko": "러·우, 재개된 평화협상 후 첫 전사자 시신 교환",
+      "score": 3,
+      "published": "2026-11-26T19:18:18+09:00"
+    },
+    {
+      "id": "portnews:b29ee99f2c",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400158/",
+      "title": "Индия за $465 млн построит в порту Камараджар терминал для приема крупнотоннажных контейнеровозов",
+      "title_ko": "인도, 카마라자르항에 4.65억 달러 규모 초대형 컨테이너선 터미널 건설",
+      "score": 3,
+      "published": "2026-11-26T18:18:00+09:00"
+    },
+    {
+      "id": "moscowtimes:fc7dc059f1",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/11/26/trump-and-nato-chief-urge-russia-to-avoid-actions-that-widen-ukraine-war-a812374",
+      "title": "Trump and NATO Chief Urge Russia to Avoid Actions That Widen Ukraine War",
+      "title_ko": "트럼프·나토 사무총장, 러시아에 전쟁 확대 자제 촉구",
+      "score": 3,
+      "published": "2026-11-26T17:49:04+09:00"
+    },
+    {
+      "id": "portnews:7faa80740a",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400154/",
+      "title": "Период ледокольных проводок на участке № 3 порта Ванино начнется 10 декабря 2026 года",
+      "title_ko": "바니노항 3구역 쇄빙 선도 운항, 12월 10일 시작",
+      "score": 3,
+      "published": "2026-11-26T16:57:00+09:00"
+    },
+    {
+      "id": "moscowtimes:7b0b4c256f",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/11/25/russian-official-warns-of-ukrainian-drone-attacks-on-utility-infrastructure-this-a812373",
+      "title": "Russian Official Warns of Ukrainian Drone Attacks on Utility Infrastructure This Winter",
+      "title_ko": "러시아 당국자, 올겨울 우크라이나의 공공 인프라 드론 공격 경고",
+      "score": 3,
+      "published": "2026-11-26T02:00:56+09:00"
+    },
+    {
+      "id": "meduza:e5d1ae03f9",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/feature/2026/11/25/more-than-700-000-russian-soldiers-have-died-in-ukraine-more-than-the-u-s-lost-in-world-war-ii-or-the-number-of-boys-born-in-russia-in-a-single-year",
+      "title": "More than 700,000 Russian soldiers have died in Ukraine — more than the U.S. lost in World War II or the number of boys born in Russia in a single year",
+      "title_ko": "러시아군 전사자 최소 70만 명, 메두자·미디어조나 추산",
+      "score": 3,
+      "published": "2026-11-26T00:41:36+09:00"
+    },
+    {
+      "id": "portnews:9ca729b9b8",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400114/",
+      "title": "ИМО повысит целевой показатель снижения углеродоемкости судов в 2027 году до 13,625%",
+      "title_ko": "IMO, 2027년 선박 탄소집약도 감축 목표 13.625%로 상향",
+      "score": 3,
+      "published": "2026-11-26T00:11:00+09:00"
+    },
+    {
+      "id": "portnews:ffb5a560e9",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400174/",
+      "title": "NYK возглавила проект по измерению выбросов с судов",
+      "title_ko": "NYK, 선박 배출량 측정 프로젝트 주도",
+      "score": 2,
+      "published": "2026-11-26T23:52:00+09:00"
+    },
+    {
+      "id": "moscowtimes:26ebed4344",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/11/26/blackout-hits-annexed-crimea-after-morning-air-raid-a812385",
+      "title": "Blackout Hits Annexed Crimea After Morning Air Raid",
+      "title_ko": "공습 뒤 크림반도 정전 발생",
+      "score": 2,
+      "published": "2026-11-26T23:34:35+09:00"
+    },
+    {
+      "id": "meduza:a4049909e7",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/news/2026/11/26/trump-envoy-jared-kushner-calls-putin-a-historic-figure-and-a-grandmaster-of-politics-praises-his-deep-understanding-of-the-issues",
+      "title": "Trump envoy Jared Kushner calls Putin a ‘historic figure’ and a ‘grandmaster of politics,’ praises his ‘deep understanding of the issues’",
+      "title_ko": "쿠슈너, 푸틴을 '역사적 인물'·'정치 그랜드마스터'로 칭송",
+      "score": 2,
+      "published": "2026-11-26T23:19:52+09:00"
+    },
+    {
+      "id": "portnews:718158b7d3",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400172/",
+      "title": "На Дальнем Востоке предлагают расширить географию промысла иваси крупнотоннажным флотом",
+      "title_ko": "극동 이와시 어업 대형 선단으로 확대 제안",
+      "score": 2,
+      "published": "2026-11-26T23:07:00+09:00"
+    },
+    {
+      "id": "meduza:c8eaa441bb",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/news/2026/11/26/russian-border-guards-will-be-completely-withdrawn-from-armenia-in-the-coming-years-says-armenian-prime-minister-they-have-been-stationed-there-since-1992",
+      "title": "Russian border guards will be completely withdrawn from Armenia ‘in the coming years,’ says Armenian prime minister. They have been stationed there since 1992.",
+      "title_ko": "아르메니아 총리, 러 국경수비대 향후 몇 년 내 완전 철수 밝혀",
+      "score": 2,
+      "published": "2026-11-26T22:37:19+09:00"
+    },
+    {
+      "id": "portnews:d541cae5c3",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400168/",
+      "title": "Контейнеровоз PIL стал первым судном международного плавания, заправленным био-СПГ в Китае",
+      "title_ko": "PIL 컨테이너선, 중국서 바이오LNG 첫 급유 국제선",
+      "score": 2,
+      "published": "2026-11-26T22:08:00+09:00"
+    },
+    {
+      "id": "portnews:e7a69cf52b",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400166/",
+      "title": "На два строящихся судна проекта МПКС-L установлены главные двигатели",
+      "title_ko": "MPKS-L 사업 건조 중인 선박 2척에 주기관 설치",
+      "score": 2,
+      "published": "2026-11-26T21:31:00+09:00"
+    },
+    {
+      "id": "timesca:aff8d0136e",
+      "source": "timesca",
+      "source_name": "The Times of Central Asia",
+      "url": "https://timesca.com/turkmenistan-budget-2027/",
+      "title": "Turkmenistan Budget for 2027 Approved Without Disclosure of Key Figures",
+      "title_ko": "투르크메니스탄 2027 예산안, 핵심 수치 비공개 통과",
+      "score": 2,
+      "published": "2026-11-26T21:22:20+09:00"
+    },
+    {
+      "id": "timesca:5af30f97d8",
+      "source": "timesca",
+      "source_name": "The Times of Central Asia",
+      "url": "https://timesca.com/uzbekistan-smes-face-a-6-billion-financing-gap/",
+      "title": "Uzbekistan Proposes Single Application for Small Business Loans",
+      "title_ko": "우즈베키스탄, 소기업 대출 단일 신청 창구 제안",
+      "score": 2,
+      "published": "2026-11-26T20:38:21+09:00"
+    },
+    {
+      "id": "portnews:c6f93f9162",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400163/",
+      "title": "Три современных модульных причала начнут работу в Пермском крае в 2027 году",
+      "title_ko": "페름 지방에 모듈식 현대식 부두 3곳, 2027년 가동 예정",
+      "score": 2,
+      "published": "2026-11-26T20:20:00+09:00"
+    },
+    {
+      "id": "portnews:1c890ae7ea",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400162/",
+      "title": "Танкер с 7 тыс. тонн дизельного топлива перевернулся у Ибицы, один моряк погиб",
+      "title_ko": "이비사 앞바다서 디젤 7천 톤 적재 유조선 전복, 선원 1명 사망",
+      "score": 2,
+      "published": "2026-11-26T20:09:00+09:00"
+    },
+    {
+      "id": "portnews:643ba17344",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400160/",
+      "title": "Сдача гидрографического судна «Павел Михаленко» снова перенесена — теперь на 2028 год",
+      "title_ko": "수로측량선 '파벨 미할렌코' 인도 또 연기, 2028년으로",
+      "score": 2,
+      "published": "2026-11-26T19:22:00+09:00"
+    },
+    {
+      "id": "meduza:a5d831ad58",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/news/2026/11/26/russian-strikes-on-ukraine-kill-two-in-kharkiv-and-injure-seven-in-kyiv",
+      "title": "Russian strikes on Ukraine kill two in Kharkiv and injure seven in Kyiv",
+      "title_ko": "러 공습으로 하르키우 2명 사망, 키이우 7명 부상",
+      "score": 2,
+      "published": "2026-11-26T18:30:14+09:00"
+    },
+    {
+      "id": "meduza:225842e8c3",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/news/2026/11/26/putin-to-hold-call-in-show-and-press-conference-on-december-10",
+      "title": "Putin to hold call-in show and press conference on December 10",
+      "title_ko": "푸틴, 12월 10일 연례 직접 소통 행사·기자회견",
+      "score": 2,
+      "published": "2026-11-26T18:14:58+09:00"
+    },
+    {
+      "id": "portnews:f817ee7fea",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400157/",
+      "title": "В Находкинском МТП завершается пусконаладка нового оборудования для навалочных грузов",
+      "title_ko": "나홋카 상업항, 벌크화물 신규 장비 시운전 마무리 단계",
+      "score": 2,
+      "published": "2026-11-26T17:56:00+09:00"
+    },
+    {
+      "id": "moscowtimes:2d70cfb964",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/11/26/trapped-in-grief-wife-of-japanese-journalist-jailed-by-russia-pleads-for-his-a812376",
+      "title": "‘Trapped in Grief’: Wife of Japanese Journalist Jailed by Russia Pleads for His Release",
+      "title_ko": "러시아에 수감된 일본 기자 아내, 석방 호소",
+      "score": 2,
+      "published": "2026-11-26T17:27:53+09:00"
+    },
+    {
+      "id": "portnews:8ac68a42a0",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400155/",
+      "title": "PSA начала строительство глубоководного контейнерного терминала мощностью 4,7 млн TEU во Вьетнаме",
+      "title_ko": "PSA, 베트남에 연 470만 TEU급 심해 컨테이너 터미널 착공",
+      "score": 2,
+      "published": "2026-11-26T17:09:00+09:00"
+    },
+    {
+      "id": "portnews:22d97b7e5a",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400153/",
+      "title": "Глава CMA CGM признал недостижимой цель по углеродной нейтральности к 2050 году",
+      "title_ko": "CMA CGM 회장, 2050 탄소중립 목표 달성 불가능 인정",
+      "score": 2,
+      "published": "2026-11-26T16:39:00+09:00"
+    },
+    {
+      "id": "portnews:bdec80d9a2",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400138/",
+      "title": "Плюс 11%: шлюзы Яхромского РГС (Канал им. Москвы) пропустили 11 тыс. грузовых судов за навигацию-2026",
+      "title_ko": "모스크바운하 야흐로마 수문, 2026 항행기 화물선 1.1만 척 통과(11%↑)",
+      "score": 2,
+      "published": "2026-11-26T14:51:00+09:00"
+    },
+    {
+      "id": "portnews:c667d727f7",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400137/",
+      "title": "Терминал «Малый порт» (Находка) обработал 71 судно за 10 месяцев 2026 года",
+      "title_ko": "나홋카 '말리 포르트' 터미널, 10개월간 71척 처리",
+      "score": 2,
+      "published": "2026-11-26T14:26:00+09:00"
+    },
+    {
+      "id": "portnews:7c5685613d",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400121/",
+      "title": "Севмаш и судоремонтные заводы Ленобласти намерены сотрудничать в рамках Союза машиностроителей России",
+      "title_ko": "세브마시, 레닌그라드주 수리조선소와 기계제작연합 틀에서 협력 추진",
+      "score": 2,
+      "published": "2026-11-26T14:00:00+09:00"
+    },
+    {
+      "id": "barents:558070b20b",
+      "source": "barents",
+      "source_name": "The Barents Observer",
+      "url": "https://www.thebarentsobserver.com/security/nasams-sensors-to-be-deployed-along-norways-border-with-russia/461203",
+      "title": "NASAMS sensors to be deployed along Norway’s border with Russia",
+      "title_ko": "노르웨이 러시아 접경에 NASAMS 센서 배치",
+      "score": 2,
+      "published": "2026-11-26T09:15:39.792612+09:00"
+    },
+    {
+      "id": "barents:f0fa274e3d",
+      "source": "barents",
+      "source_name": "The Barents Observer",
+      "url": "https://www.thebarentsobserver.com/news/trumps-new-envoy-to-norway-travelled-straight-from-the-royal-palace-to-the-russian-border/461401",
+      "title": "Trump’s new envoy to Norway travelled straight from the Royal Palace to the Russian border",
+      "title_ko": "트럼프의 신임 노르웨이 대사, 왕궁에서 곧장 러시아 국경으로",
+      "score": 2,
+      "published": "2026-11-26T09:15:39.792606+09:00"
+    },
+    {
+      "id": "barents:1ee3725946",
+      "source": "barents",
+      "source_name": "The Barents Observer",
+      "url": "https://www.thebarentsobserver.com/climate-crisis/marine-researchers-critical-of-plans-for-worlds-northernmost-oil-field/461468",
+      "title": "Marine researchers critical of plans for world’s northernmost oil field",
+      "title_ko": "세계 최북단 유전 계획에 해양 연구자들 비판",
+      "score": 2,
+      "published": "2026-11-26T09:15:39.792603+09:00"
+    },
+    {
+      "id": "barents:2e866d5356",
+      "source": "barents",
+      "source_name": "The Barents Observer",
+      "url": "https://www.thebarentsobserver.com/news/smuggling-of-foreign-cash-continues-despite-sanctions/461580",
+      "title": "Smuggling of foreign cash continues despite sanctions",
+      "title_ko": "제재에도 노르웨이–러시아 국경 외화 밀반입 계속",
+      "score": 2,
+      "published": "2026-11-26T09:15:39.792601+09:00"
+    },
+    {
+      "id": "barents:694a96d6ac",
+      "source": "barents",
+      "source_name": "The Barents Observer",
+      "url": "https://www.thebarentsobserver.com/security/russian-aggression-strengthens-nordic-defence-ties/461867",
+      "title": "Russian aggression strengthens Nordic defence ties",
+      "title_ko": "러시아 위협에 북유럽 국방 협력 강화",
+      "score": 2,
+      "published": "2026-11-26T09:15:39.792588+09:00"
+    },
+    {
+      "id": "barents:de70efb78c",
+      "source": "barents",
+      "source_name": "The Barents Observer",
+      "url": "https://www.thebarentsobserver.com/security/ukraines-former-commanderinchief-helps-norway-improve-air-defences-along-the-border-with-russia/462650",
+      "title": "Ukraine’s former Commander-in-Chief helps Norway improve air defences along the border with Russia",
+      "title_ko": "우크라이나 전 총사령관, 노르웨이의 러시아 접경 방공 강화 지원",
+      "score": 2,
+      "published": "2026-11-26T09:15:39.792566+09:00"
+    },
+    {
+      "id": "timesca:4166eef27a",
+      "source": "timesca",
+      "source_name": "The Times of Central Asia",
+      "url": "https://timesca.com/eu-notes-some-rights-progress-in-tajikistan-raises-concerns-over-freedoms/",
+      "title": "EU Notes Some Rights Progress in Tajikistan, Raises Concerns Over Freedoms",
+      "title_ko": "EU, 타지키스탄 인권 일부 진전 평가하면서도 자유 침해 우려",
+      "score": 2,
+      "published": "2026-11-26T03:42:05+09:00"
+    },
+    {
+      "id": "meduza:1ef1cd829d",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/news/2026/11/25/russian-billionaire-and-senator-suleiman-kerimov-moved-1-16-billion-from-russia-to-switzerland-through-deutsche-bank-in-2020-investigation-finds",
+      "title": "Russian senator Suleiman Kerimov moved more than a billion euros from Russia to Switzerland through Deutsche Bank in 2020, investigation finds",
+      "title_ko": "케리모프 상원의원, 2020년 도이체방크 통해 11.6억 유로 스위스로 이전",
+      "score": 2,
+      "published": "2026-11-26T02:05:29+09:00"
+    },
+    {
+      "id": "meduza:63535dc804",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/news/2026/11/25/russia-s-transport-ministry-published-instructions-on-how-to-get-to-crimea-now-the-bridge-pictured-in-them-has-one-arch-not-two",
+      "title": "Russia’s Transport Ministry published instructions on how to get to Crimea now. The bridge pictured in them has one arch (not two).",
+      "title_ko": "러시아 교통부 크림 가는 법 안내에 아치 하나뿐인 크림대교 이미지",
+      "score": 2,
+      "published": "2026-11-26T01:00:44+09:00"
+    },
+    {
+      "id": "portnews:515bcf343f",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400119/",
+      "title": "Отряд кораблей ТОФ совершил деловой заход в порт Тилава в Мьянме",
+      "title_ko": "태평양함대 함정 대열, 미얀마 틸라와항 친선 기항",
+      "score": 2,
+      "published": "2026-11-26T01:00:00+09:00"
+    },
+    {
+      "id": "moscowtimes:23c22dce96",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/11/25/putin-orders-data-center-construction-plan-for-russia-s-coal-regions-a812371",
+      "title": "Putin Orders Data Center Construction Plan for Russia’s Coal Regions",
+      "title_ko": "푸틴, 석탄 지역에 데이터센터 건설 계획 수립 지시",
+      "score": 2,
+      "published": "2026-11-26T00:21:54+09:00"
+    },
+    {
+      "id": "moscowtimes:d6d8974613",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/11/26/russia-lost-track-of-a-beloved-seal-scientists-lost-a-window-into-the-wild-a812379",
+      "title": "Russia Lost Track of a Beloved Seal. Scientists Lost a Window Into the Wild.",
+      "title_ko": "프랑스 위성업체 차단에 러시아 연구용 물범 추적 중단",
+      "score": 1,
+      "published": "2026-11-26T23:31:00+09:00"
+    },
+    {
+      "id": "moscowtimes:b262b003be",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/11/26/russian-tv-star-with-ties-to-vtb-chief-backed-telegram-s-failed-crypto-venture-a812384",
+      "title": "Russian TV Star With Ties to VTB Chief Backed Telegram’s Failed Crypto Venture – Report",
+      "title_ko": "푸틴 측근 VTB 수장 연계 러 TV스타, 텔레그램 암호화폐 사업 투자",
+      "score": 1,
+      "published": "2026-11-26T22:29:03+09:00"
+    },
+    {
+      "id": "portnews:b5b14fe8ad",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400167/",
+      "title": "РС и RBI Concept объединяют экспертизу для развития риск-ориентированных инспекций",
+      "title_ko": "러시아선급, RBI 컨셉과 위험기반 검사 협력",
+      "score": 1,
+      "published": "2026-11-26T21:51:00+09:00"
+    },
+    {
+      "id": "timesca:f38b471ddd",
+      "source": "timesca",
+      "source_name": "The Times of Central Asia",
+      "url": "https://timesca.com/before-the-film-turns-to-dust-central-asias-race-to-save-its-cinema/",
+      "title": "Before the Film Turns to Dust: Central Asia’s Race to Save Its Cinema",
+      "title_ko": "중앙아시아 영화 필름 보존 경쟁",
+      "score": 1,
+      "published": "2026-11-26T21:27:06+09:00"
+    },
+    {
+      "id": "timesca:6d111d9f3f",
+      "source": "timesca",
+      "source_name": "The Times of Central Asia",
+      "url": "https://timesca.com/kazakhstan-ai-in-healthcare/",
+      "title": "Kazakhstan Moves to Regulate AI in Healthcare",
+      "title_ko": "카자흐스탄, 의료 AI 규제 추진",
+      "score": 1,
+      "published": "2026-11-26T20:52:49+09:00"
+    },
+    {
+      "id": "moscowtimes:bdb67e843b",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/11/26/judge-confiscates-11-8m-in-property-from-krasnodar-first-deputy-governor-a812381",
+      "title": "Judge Confiscates $11.8M in Property From Krasnodar First Deputy Governor",
+      "title_ko": "크라스노다르 제1부지사 재산 1180만 달러 몰수",
+      "score": 1,
+      "published": "2026-11-26T20:49:04+09:00"
+    },
+    {
+      "id": "portnews:d7e95e350f",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400161/",
+      "title": "Специалисты Морспасслужбы спасли более 1000 человек за 10 месяцев 2026 года",
+      "title_ko": "러시아 해상구조대, 2026년 10개월간 1천 명 이상 구조",
+      "score": 1,
+      "published": "2026-11-26T19:47:00+09:00"
+    },
+    {
+      "id": "meduza:05f03caa2b",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/feature/2026/11/26/moscow-high-society-celebrities-pose-for-photos-in-front-of-giant-stalin-sign-scenes-from-the-premiere-of-a-new-russian-miniseries-about-the-soviet-dictator",
+      "title": "Moscow high society: celebrities pose for photos in front of giant ‘STALIN’ sign. Scenes from the premiere of a new Russian miniseries about the Soviet dictator.",
+      "title_ko": "모스크바 상류층, 스탈린 드라마 시사회 참석",
+      "score": 1,
+      "published": "2026-11-26T19:45:15+09:00"
+    },
+    {
+      "id": "meduza:d68a2baf8b",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/news/2026/11/26/five-year-old-girl-dies-of-starvation-in-russian-family-with-11-children-parents-reportedly-detained",
+      "title": "Five-year-old girl dies of starvation in Russian family with 11 children, parents reportedly detained",
+      "title_ko": "볼로그다서 11남매 가정 5세 여아 아사",
+      "score": 1,
+      "published": "2026-11-26T19:06:30+09:00"
+    },
+    {
+      "id": "meduza:09e1c3771c",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/news/2026/11/26/moscow-court-closes-trial-of-novaya-gazeta-journalist-oleg-roldugin-to-public-and-press-citing-officials-personal-data",
+      "title": "Moscow court closes trial of Novaya Gazeta journalist Oleg Roldugin to public and press, citing officials’ personal data",
+      "title_ko": "노바야가제타 기자 롤두긴 재판, 비공개 전환",
+      "score": 1,
+      "published": "2026-11-26T18:47:17+09:00"
+    },
+    {
+      "id": "moscowtimes:815690b957",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/11/26/deputy-commander-of-russia-s-aerospace-forces-arrested-in-moscow-reports-a812377",
+      "title": "Deputy Commander of Russia’s Aerospace Forces Arrested in Moscow – Reports",
+      "title_ko": "러시아 공군 부사령관 모스크바서 체포",
+      "score": 1,
+      "published": "2026-11-26T18:14:43+09:00"
+    },
+    {
+      "id": "portnews:a81bad200b",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400151/",
+      "title": "Срок подъема затонувшего в порту Мурманск судна «Бриз» перенесен на 1 апреля 2028 года",
+      "title_ko": "무르만스크항 침몰선 '브리즈' 인양 시한 2028년 4월 1일로 연기",
+      "score": 1,
+      "published": "2026-11-26T15:58:00+09:00"
+    },
+    {
+      "id": "portnews:28550fcb6a",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "url": "https://portnews.ru/news/400150/",
+      "title": "Земснаряд МП-9 Чебоксарского речного порта поднят на слип судоремонтного завода «Базис-Групп»",
+      "title_ko": "체복사르 하항 준설선 MP-9, 바지스그룹 조선소 슬립에 인양",
+      "score": 1,
+      "published": "2026-11-26T15:29:00+09:00"
+    },
+    {
+      "id": "barents:86fd5f8d80",
+      "source": "barents",
+      "source_name": "The Barents Observer",
+      "url": "https://www.thebarentsobserver.com/news/european-diplomats-stand-in-remembrance-as-political-repression-deepens-in-russia/461044",
+      "title": "European diplomats stand in remembrance as political repression deepens in Russia",
+      "title_ko": "유럽 외교관들, 러시아 정치탄압 심화 속 솔로베츠키 추모",
+      "score": 1,
+      "published": "2026-11-26T09:15:39.792615+09:00"
+    },
+    {
+      "id": "meduza:868531120d",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "url": "https://meduza.io/en/news/2026/11/25/english-textbook-in-russia-swaps-american-jeans-chips-and-coca-cola-for-valenki-kholodets-and-kvass",
+      "title": "English textbook in Russia swaps American jeans, chips, and Coca-Cola for valenki, kholodets, and kvass",
+      "title_ko": "러시아 영어 교과서, 미국 청바지·콜라 대신 발렌키·크바스 수록",
+      "score": 1,
+      "published": "2026-11-26T01:18:02+09:00"
+    },
+    {
+      "id": "moscowtimes:d93f339500",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/11/25/z-blogger-vladimir-romanov-resurfaces-following-rumors-of-arrest-a812370",
+      "title": "Z-Blogger Vladimir Romanov Resurfaces Following Rumors of Arrest",
+      "title_ko": "러시아 Z블로거 로마노프, 체포설 속에 다시 모습 드러내",
+      "score": 1,
+      "published": "2026-11-26T00:46:18+09:00"
+    }
+  ],
+  "pending": [],
+  "brief": {
+    "headline": "루크오일 자산 이전·북극항로 시험·코카서스 균열",
+    "overview": "제재 대상 루크오일의 해외 자산을 미국 주도 컨소시엄이 넘겨받는 계약이 나오면서 제재가 실제 소유 구조를 바꾸는 단계로 들어섰다. 한편 러시아는 남북 회랑·동서 철도 물량 증가와 쇄빙선 확충으로 동·남·북 방향 물류망을 넓히고 있다. 그러나 한국 첫 NSR 컨테이너 시범운항은 얼음·보험·낮은 적재율 문제를 드러냈다. 러시아발 튀르키예행 해상 화물이 10월에 60.3% 급감했다는 PortNews 보도와 IMO의 위조 국기 선박 587척 확인은 우회 무역과 해상 제재 집행의 변화를 가늠하게 한다. 아르메니아는 EU 가입 의지를 재확인했고 EAEU가 12월에 회원 자격 정지 가능성을 논의한다고 매체는 전해, 러시아의 코카서스 영향력 약화를 보여 준다. 독립 언론인 Meduza는 전쟁 비용과 재정 부담을 부각했고, 쿠슈너는 협상 교착의 책임을 발다이 공격설로 돌렸는데 이는 일방적 주장이어서 교차 확인이 필요하다.",
+    "watch": [
+      "OFAC가 루크오일 해외 자산 인수 계약을 승인할지, 카자흐스탄·아제르바이잔 지분과 CPC 수출 경로가 어떻게 되는지 지켜볼 필요가 있다.",
+      "12월 3일 파시냔·푸틴 회담과 EAEU의 아르메니아 회원 자격 논의 결과를 봐야 한다.",
+      "팬스타의 내년 NSR 재시험과, 12월 4일 쇄빙선 '레닌그라드' 진수로 이어지는 북극 운영 능력 확대를 주시해야 한다."
+    ],
+    "top_source": "model",
+    "top": [
+      {
+        "id": "moscowtimes:096fa15e3a",
+        "reason": "제재 대상 러시아 에너지 기업의 해외 자산(카자흐스탄·아제르바이잔 유전 포함)이 미국 측으로 넘어가는 선례여서, 제재 집행과 에너지 물류 소유 구조를 함께 볼 수 있다."
+      },
+      {
+        "id": "barents:d9f1c6d42e",
+        "reason": "한국 선사의 첫 NSR 컨테이너 운항에서 드러난 얼음·보험·통신·적재율 문제는 북극항로의 상업성을 현실적으로 판단하는 근거다."
+      },
+      {
+        "id": "portnews:c15fd6f8bc",
+        "reason": "러시아철도 통계로 남북 회랑과 동서 컨테이너 물량이 모두 늘었음을 확인할 수 있어, 제재 이후 러시아 물류 재편의 방향을 보여 준다."
+      }
+    ],
+    "model": "claude-sonnet-5-5",
+    "summarized_at": "2026-11-27T11:12:52.451511+09:00"
+  },
+  "published_at": "2026-11-27T11:10:21+09:00",
+  "collected_at": "2026-11-27T11:10:21+09:00",
+  "generated_at": "2026-11-27T11:12:52.451774+09:00"
 }

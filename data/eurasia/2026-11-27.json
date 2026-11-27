@@ -1,0 +1,142 @@
+{
+  "date": "2026-11-27",
+  "articles": [],
+  "screened": [],
+  "pending": [
+    {
+      "id": "moscowtimes:22681f26b8",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "stance": "독립 언론 · 암스테르담",
+      "url": "https://www.themoscowtimes.com/2026/11/26/ukrainian-drone-strike-sparks-fire-and-inflicts-serious-damage-at-krasnodar-a812387",
+      "title": "Ukrainian Drone Strike Sparks Fire and Inflicts Serious Damage at Krasnodar Refinery",
+      "description": "The company operating the refinery said the attack took place during a maintenance stoppage that has been in place since a previous drone strike in September.",
+      "category": "Latest Articles",
+      "published": "2026-11-27T00:59:43+09:00"
+    },
+    {
+      "id": "moscowtimes:859e4e8357",
+      "source": "moscowtimes",
+      "source_name": "The Moscow Times",
+      "stance": "독립 언론 · 암스테르담",
+      "url": "https://www.themoscowtimes.com/2026/11/26/finland-extends-russian-border-closure-for-another-2-years-a812386",
+      "title": "Finland Extends Russian Border Closure for Another 2 Years",
+      "description": "The Nordic country said the widely anticipated move was necessary to “combat attempts to put pressure on Finland, strengthen border security and help Finland prepare for the most serious incidents of instrumentalized migration.”",
+      "category": "Latest Articles",
+      "published": "2026-11-27T00:32:26+09:00"
+    },
+    {
+      "id": "meduza:970d2661f1",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/26/russia-opposes-granting-ukraine-security-guarantees-modeled-on-nato-s-article-5-rbc-ukraine-reports",
+      "title": "Russia opposes granting Ukraine security guarantees modeled on NATO’s Article 5, RBC-Ukraine reports",
+      "description": "Russia opposes security guarantees for Ukraine modeled on Article 5 of the NATO Charter, a source told RBC-Ukraine.",
+      "category": "",
+      "published": "2026-11-27T02:00:52+09:00"
+    },
+    {
+      "id": "meduza:bd666b9619",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/26/russian-lawmakers-advance-bill-to-automatically-transfer-6-6-trillion-rubles-in-pension-savings-to-long-term-savings-program",
+      "title": "Russian lawmakers advance bill to automatically transfer 6.6 trillion rubles in pension savings to long-term savings program",
+      "description": "Lawmakers in Russia’s State Duma approved a bill in a first reading that would automatically transfer the funded portion of pensions into the long-term savings program (PDS).",
+      "category": "",
+      "published": "2026-11-27T01:53:28+09:00"
+    },
+    {
+      "id": "meduza:aaffa25c3a",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/26/russian-lawmakers-propose-up-to-five-years-in-prison-for-sharing-photos-and-videos-of-drone-strike-aftermath",
+      "title": "Russian lawmakers propose up to five years in prison for sharing photos and videos of drone strike aftermath",
+      "description": "A group of Russian senators has submitted a bill to the State Duma that would make it a crime to unlawfully disseminate information about the aftermath of attacks on sites in Russia. The bill has been published in the State Duma’s database.",
+      "category": "",
+      "published": "2026-11-27T01:49:42+09:00"
+    },
+    {
+      "id": "meduza:6ad3b83af4",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/26/russian-political-prisoner-jailed-at-15-to-be-transferred-to-adult-penal-colony-after-turning-18",
+      "title": "Russian political prisoner jailed at 15 to be transferred to adult penal colony after turning 18",
+      "description": "A court in Perm granted a request from the local Pretrial Detention Center No. 5 to transfer political prisoner Arseny Turbin to an adult detention regime after he turned 18, his support group said. Turbin, who is serving a sentence for participating in an organization designated as terrorist by Russian authorities, will be moved from a juvenile facility to a general-regime prison.",
+      "category": "",
+      "published": "2026-11-27T01:37:01+09:00"
+    },
+    {
+      "id": "meduza:41b67d34be",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/feature/2026/11/26/please-return-this-precious-papa-to-his-little-daughter-wife-of-japanese-journalist-jailed-in-russia-on-espionage-charges-pleads-for-his-release",
+      "title": "‘Please return this precious papa to his little daughter’: Wife of Japanese journalist jailed in Russia on espionage charges pleads for his release",
+      "description": "The Japanese newspaper Hokkaido Shimbun published a letter from Nozomi Imai, wife of the paper’s journalist Yuki Imai, who was arrested in Russia on espionage charges. In the letter, Nozomi describes how the family is coping with her husband’s arrest and calls for his release. The letter (available as a PDF) is handwritten in three languages: Japanese, English, and Russian, and is addressed “to ev",
+      "category": "",
+      "published": "2026-11-27T01:16:42+09:00"
+    },
+    {
+      "id": "meduza:afaa766fb4",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/feature/2026/11/26/jared-kushner-says-putin-has-shown-restraint-in-ukraine-and-promised-not-to-use-nuclear-weapons",
+      "title": "Jared Kushner says Putin has shown ‘restraint’ in Ukraine and promised not to use nuclear weapons",
+      "description": "U.S. presidential envoy Jared Kushner claimed that Vladimir Putin had promised not to use nuclear weapons in Ukraine, speaking in an interview with the MD Meets podcast. “So far Putin has showed restraint. He’s agreed not to use nuclear weapons, which obviously is a big thing,” Kushner said. He also described Putin as “very organized” and said he has “some very strong perspectives.” “People can li",
+      "category": "",
+      "published": "2026-11-27T00:37:52+09:00"
+    },
+    {
+      "id": "barents:7b9a6b166e",
+      "source": "barents",
+      "source_name": "The Barents Observer",
+      "stance": "북극 독립 언론 · 노르웨이",
+      "url": "https://www.thebarentsobserver.com/news/andrei-chibis-is-out-in-comes-dmitry-panychev/462816",
+      "title": "Andrei Chibis is out; in comes Dmitry Panychev",
+      "description": "The new acting governor of Murmansk is Dmitry Panychev, who has served as health minister and deputy governor under Andrei Chibis for more than seven years.",
+      "category": "Reshuffle in Murmansk",
+      "published": "2026-11-27T03:19:05+09:00"
+    },
+    {
+      "id": "portnews:51daaf1a35",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "stance": "러시아 해운 업계지 · 상트페테르부르크",
+      "url": "https://portnews.ru/news/400171/",
+      "title": "ААНИИ: в проливе Санникова наблюдается однолетний тонкий лед",
+      "description": "",
+      "category": "Арктика",
+      "published": "2026-11-27T01:00:00+09:00"
+    },
+    {
+      "id": "portnews:9e9cfe06d9",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "stance": "러시아 해운 업계지 · 상트페테르부르크",
+      "url": "https://portnews.ru/news/400176/",
+      "title": "HR-директор «Портового альянса» рассказала о вызовах, которые современная логистика ставит перед кадровыми службами",
+      "description": "",
+      "category": "логистика",
+      "published": "2026-11-27T00:29:00+09:00"
+    },
+    {
+      "id": "portnews:291acb442d",
+      "source": "portnews",
+      "source_name": "PortNews",
+      "stance": "러시아 해운 업계지 · 상트페테르부르크",
+      "url": "https://portnews.ru/news/400175/",
+      "title": "На Дальнем Востоке за 1,5 года сдано 11 новых объектов рыбной отрасли",
+      "description": "",
+      "category": "рыболовство",
+      "published": "2026-11-27T00:11:00+09:00"
+    }
+  ],
+  "brief": {},
+  "published_at": null,
+  "collected_at": "2026-11-27T11:10:21+09:00"
+}
