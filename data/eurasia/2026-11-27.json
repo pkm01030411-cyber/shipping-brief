@@ -134,9 +134,75 @@
       "description": "",
       "category": "рыболовство",
       "published": "2026-11-27T00:11:00+09:00"
+    },
+    {
+      "id": "meduza:b6926f065a",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/27/russia-s-yandex-to-launch-delivery-using-humanoid-robots-kommersant-reports",
+      "title": "Russia’s Yandex to launch delivery using humanoid robots",
+      "description": "Yandex plans to launch a pilot project using humanoid robots to deliver packages by the end of 2026, two sources in the IT industry told Kommersant, a Russian business daily.",
+      "category": "",
+      "published": "2026-11-27T19:41:32+09:00"
+    },
+    {
+      "id": "meduza:3f723096a0",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/27/trump-unilaterally-changes-joint-statement-with-nato-chief-adding-warning-for-ukraine-not-to-escalate-war-politico-reports",
+      "title": "Trump unilaterally changes joint statement with NATO chief, adding warning for Ukraine not to escalate war, Politico reports",
+      "description": "US President Donald Trump unilaterally edited the text of a joint statement with NATO Secretary General Mark Rutte, Politico reported.",
+      "category": "",
+      "published": "2026-11-27T19:18:49+09:00"
+    },
+    {
+      "id": "meduza:f602e735fe",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/27/russia-s-fsb-expands-list-of-sensitive-information-to-include-military-and-defense-industry-salaries-and-data-on-prisoners-recruited-for-war",
+      "title": "Russia’s FSB expands list of sensitive information to include military and defense industry salaries and data on prisoners recruited for war",
+      "description": "Russia’s Federal Security Service (FSB) has issued an order expanding its list of information that could be used against Russia’s security.",
+      "category": "",
+      "published": "2026-11-27T18:10:26+09:00"
+    },
+    {
+      "id": "meduza:fab4594b2a",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/feature/2026/11/27/russian-orthodox-patriarch-kirill-says-god-will-task-christians-with-taming-ai-and-russia-has-a-special-role-to-play-thanks-to-its-advanced-technology-and-deep-faith",
+      "title": "Russian Orthodox Patriarch Kirill says God will task Christians with taming AI — and Russia has a special role to play thanks to its ‘advanced technology and deep faith’",
+      "description": "Artificial intelligence can bring both benefits and harm. It claims the right to make decisions for people, effectively freeing them from the need to take responsibility and think. Some already treat AI’s advice as truth, while others fear it will take over every process and decide that people are no longer necessary. Would it be better to hand decision-making over to a non-human intelligence?",
+      "category": "",
+      "published": "2026-11-27T17:54:27+09:00"
+    },
+    {
+      "id": "meduza:2a698e2705",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/feature/2026/11/27/a-young-ukrainian-man-set-himself-on-fire-across-from-poland-s-presidential-palace-according-to-unconfirmed-reports-he-was-protesting-discrimination-against-ukrainians",
+      "title": "A young Ukrainian man set himself on fire across from Poland’s Presidential Palace. According to unconfirmed reports, he was protesting discrimination against Ukrainians.",
+      "description": "A young man set himself on fire in central Warsaw on the evening of November 25, near Poland’s Culture Ministry building, across the street from the Presidential Palace. He doused himself with a flammable liquid before setting himself alight. Passersby were the first to help him: one ran up with a fire extinguisher and put out the flames. Government Protection Service officers on duty nearby calle",
+      "category": "",
+      "published": "2026-11-27T17:32:32+09:00"
+    },
+    {
+      "id": "meduza:b292411696",
+      "source": "meduza",
+      "source_name": "Meduza",
+      "stance": "독립 언론 · 리가",
+      "url": "https://meduza.io/en/news/2026/11/27/ukrainian-drones-strike-st-petersburg-and-three-russian-regions-injuring-three-and-disrupting-flights",
+      "title": "Ukrainian drones strike St. Petersburg and three Russian regions, injuring three and disrupting flights",
+      "description": "A Ukrainian drone attack injured three people in Novorossiysk, Krasnodar Krai, the regional emergency response headquarters said. Windows were blown out in an apartment building, and fires broke out in two private houses because of “debris falling.”",
+      "category": "",
+      "published": "2026-11-27T17:12:32+09:00"
     }
   ],
   "brief": {},
   "published_at": null,
-  "collected_at": "2026-11-27T11:10:21+09:00"
+  "collected_at": "2026-11-27T20:22:26+09:00"
 }
