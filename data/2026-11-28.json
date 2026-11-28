@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-28",
+  "articles": [
+    {
+      "id": "cargonews:61326",
+      "source": "cargonews",
+      "source_name": "카고뉴스",
+      "title": "현대글로비스, 항공물류 사업 확대",
+      "url": "https://www.cargonews.co.kr/news/articleView.html?idxno=61326",
+      "published": "2026-11-28T09:28:05+09:00",
+      "category": "복운",
+      "subtitle": "",
+      "author": "임조은 기자",
+      "body": "",
+      "summary": "",
+      "why": "",
+      "insight": "",
+      "terms": [],
+      "tags": [],
+      "relevance": 0,
+      "geo": {}
+    },
+    {
+      "id": "cargonews:61325",
+      "source": "cargonews",
+      "source_name": "카고뉴스",
+      "title": "유럽항로 강세에 ‘태평양항로 약세’",
+      "url": "https://www.cargonews.co.kr/news/articleView.html?idxno=61325",
+      "published": "2026-11-28T09:17:35+09:00",
+      "category": "해운",
+      "subtitle": "",
+      "author": "김종휘 기자",
+      "body": "",
+      "summary": "",
+      "why": "",
+      "insight": "",
+      "terms": [],
+      "tags": [],
+      "relevance": 0,
+      "geo": {}
+    }
+  ],
+  "brief": {},
+  "published_at": null,
+  "collected_at": "2026-11-28T11:56:51+09:00"
+}
